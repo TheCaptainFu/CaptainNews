@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-01-31T13:26:37.185Z",
+  "lastUpdated": "2026-01-31T13:53:40.053Z",
   "totalArticles": 180,
   "totalFeeds": 24,
   "successfulFeeds": 15,
@@ -9,11 +9,83 @@
       "color": "red",
       "articles": [
         {
-          "title": "Καιρός: Για «κακοκαιρία ευρείας κλίμακας, με μεγάλα ύψη βροχής» προειδοποιεί ο μετεωρολόγος Γιάννης Καλλιάνος",
-          "link": "https://www.newsit.gr/ellada/kairos-gia-kakokairia-eyreias-klimakas-me-megala-ypsi-vroxis-proeidopoiei-o-meteorologos-giannis-kallianos/4588590/",
+          "title": "Από τον Παναθηναϊκό στον ΑΠΟΕΛ ο Ντάνιελ Μαντσίνι",
+          "link": "https://www.newsit.gr/athlitika/apo-ton-panathinaiko-ston-apoel-o-ntaniel-mantsini/4588615/",
+          "pubDate": "Sat, 31 Jan 2026 13:53:02 +0000",
+          "description": "Παίκτης του ΑΠΟΕΛ είναι επίσημα ο Ντάνιελ Μαντσίνι, ο οποίος αποχώρησε από τον Παναθηναϊκό. Ο Ντάνιελ Μαντσίνι δεν βρισκόταν στα πλάνα του Ράφα Μπενίτεθ, με ...  \nTo άρθρο Από τον Παναθηναϊκό στον ΑΠΟΕΛ ο Ντάνιελ Μαντσίνι δημοσιεύτηκε στο NewsIT .",
+          "thumbnail": "https://www.newsit.gr/wp-content/uploads/2025/02/mancini-panathinaikos-1200x800.jpg",
+          "source": "NewsIT"
+        },
+        {
+          "title": "Ουκρανία: Μαζικές διακοπές ρεύματος λόγω τεχνικής βλάβης – «Βυθίστηκε» στο σκοτάδι και η Μολδαβία",
+          "link": "https://www.newsit.gr/kosmos/oukrania-mazikes-diakopes-reymatos-logo-texnikis-vlavis-vythistike-sto-skotadi-kai-i-moldavia/4588608/",
+          "pubDate": "Sat, 31 Jan 2026 13:48:22 +0000",
+          "description": "Το ηλεκτρικό δίκτυο της Ουκρανίας αντιμετωπίζει σήμερα (31/1/2026) μαζικές διακοπές ρεύματος λόγω «τεχνικής βλάβης» σε γραμμές ηλεκτρικού ρεύματος που συνδέουν την Ουκρανία, τη Μολδαβία και ...  \nTo άρθρο Ουκρανία: Μαζικές διακοπές ρεύματος λόγω τεχνικής βλάβης – «Βυθίστηκε» στο σκοτάδι και η Μολδαβία δημοσιεύτηκε στο NewsIT .",
+          "thumbnail": "https://www.newsit.gr/wp-content/uploads/2026/01/oukrania-3.jpg",
+          "source": "NewsIT"
+        },
+        {
+          "title": "Συνελήφθησαν για μαστροπεία δύο γυναίκες που λειτουργούσαν οίκους ανοχής στη Θεσσαλονίκη χωρίς άδεια",
+          "link": "https://www.protothema.gr/greece/article/1766410/sunelifthisan-gia-mastropeia-duo-gunaikes-pou-leitourgousan-oikous-anohis-sti-thessaloniki-horis-adeia/?utm_source=rss",
+          "pubDate": "Sat, 31 Jan 2026 15:45:01 +0200",
+          "description": "Στους συγκεκριμένους χώρους εντοπίστηκαν δύο γυναίκες που εκδίδονταν επ' αμοιβή",
+          "thumbnail": "https://i1.prth.gr/images/w640/2/jpg/files/2023-06-17/mastropeia-mak.jpg",
+          "source": "Πρώτο Θέμα"
+        },
+        {
+          "title": "Κυριάκος Μητσοτάκης: «Είναι σημαντική στρατηγική επένδυση» τονίζει ο πρωθυπουργός για τον κάθετο διάδρομο",
+          "link": "https://www.newsit.gr/politikh/kyriakos-mitsotakis-einai-simantiki-stratigiki-ependysi-tonizei-o-prothypourgos-gia-ton-katheto-diadromo/4588606/",
+          "pubDate": "Sat, 31 Jan 2026 13:44:36 +0000",
+          "description": "Την στρατηγική σημασία του κάθετου διαδρόμου τόσο σε φυσικό αέριο όσο και σε LNG για την ενεργειακή αυτονομία της ευρύτερης περιοχής των Βαλκανίων μέχρι και ...  \nTo άρθρο Κυριάκος Μητσοτάκης: «Είναι σημαντική στρατηγική επένδυση» τονίζει ο πρωθυπουργός για τον κάθετο διάδρομο δημοσιεύτηκε στο NewsIT .",
+          "thumbnail": "https://www.newsit.gr/wp-content/uploads/2026/01/mitsotakis-1-2.jpg",
+          "source": "NewsIT"
+        },
+        {
+          "title": "Γιώργος Λιάνης: Μου έκαναν πρόταση να είμαι στην εκπομπή του Τσουρού, ζήτησα ένα 24ωρο να το σκεφτώ",
+          "link": "https://www.newsit.gr/media/giorgos-lianis-mou-ekanan-protasi-na-eimai-stin-ekpompi-tou-tsourou-zitisa-ena-24oro-na-to-skefto/4588604/",
+          "pubDate": "Sat, 31 Jan 2026 13:39:39 +0000",
+          "description": "Ο Γιώργος Λιάνης παραχώρησε δηλώσεις στην εκπομπή «Ραντεβού το ΣΚ» και μίλησε για τη δημοσιογραφία, την απόφασή του να εγκαταλείψει οριστικά την πολιτική και την ...  \nTo άρθρο Γιώργος Λιάνης: Μου έκαναν πρόταση να είμαι στην εκπομπή του Τσουρού, ζήτησα ένα 24ωρο να το σκεφτώ δημοσιεύτηκε στο NewsIT .",
+          "thumbnail": "https://www.newsit.gr/wp-content/uploads/2026/01/lianis-ndp-1200x666.jpg",
+          "source": "NewsIT"
+        },
+        {
+          "title": "Φυλακές Κορυδαλλού: Εντοπίστηκαν κινητά τηλέφωνα και κατεργασμένη κάνναβη σε 10 κελιά",
+          "link": "https://www.newsit.gr/ellada/fylakes-korydallou-entopistikan-kinita-tilefona-kai-katergasmeni-kannavi-se-10-kelia/4588605/",
+          "pubDate": "Sat, 31 Jan 2026 13:36:36 +0000",
+          "description": "Επιχείρηση στις φυλακές Κορυδαλλού πραγματοποιήθηκε από τη Διεύθυνση Αντιμετώπισης Οργανωμένου Εγκλήματος, όπως έγινε γνωστό σήμερα Σάββατο (31.1.26). Οι αστυνομικοί εντόπισαν κινητά τηλέφωνα και κατεργασμένη κάνναβη. ...  \nTo άρθρο Φυλακές Κορυδαλλού: Εντοπίστηκαν κινητά τηλέφωνα και κατεργασμένη κάνναβη σε 10 κελιά δημοσιεύτηκε στο NewsIT .",
+          "thumbnail": "https://www.newsit.gr/wp-content/uploads/2025/05/fylakes_korydallou_eurokinissi.jpg",
+          "source": "NewsIT"
+        },
+        {
+          "title": "Έφοδος της ΕΛΑΣ στις φυλακές Κορυδαλλού: Βρέθηκαν κινητά τηλέφωνα και κατεργασμένη κάνναβη",
+          "link": "https://www.protothema.gr/greece/article/1766405/efodos-tis-elas-stis-fulakes-korudallou-vrethikan-kinita-tilefona-kai-katergasmeni-kannavi/?utm_source=rss",
+          "pubDate": "Sat, 31 Jan 2026 15:35:00 +0200",
+          "description": "Σχηματίστηκαν δικογραφίες σε βάρος δύο έγκλειστων, οι οποίοι κατελήφθησαν να κατέχουν συσκευές κινητών τηλεφώνων",
+          "thumbnail": "https://i1.prth.gr/images/w640/2/jpg/files/2021-06-27/fylakes_korydallou.jpg",
+          "source": "Πρώτο Θέμα"
+        },
+        {
+          "title": "Πιερρακάκης: Το στεγαστικό αποτελεί εθνική πρόκληση και δεν μπορεί να αντιμετωπιστεί χωρίς τους ιδιοκτήτες ακινήτων",
+          "link": "https://www.newsit.gr/oikonomia/finance/pierrakakis-to-stegastiko-apotelei-ethniki-proklisi-kai-den-mporei-na-antimetopistei-xoris-tous-idioktites-akiniton/4588593/",
+          "pubDate": "Sat, 31 Jan 2026 13:29:38 +0000",
+          "description": "«Θέλουμε μια Ελλάδα όπου το σπίτι δεν είναι βάρος αλλά ευκαιρία και δημιουργική δύναμη. Μια χώρα στην οποία το κράτος δεν στέκεται απέναντι στον ιδιοκτήτη, ...  \nTo άρθρο Πιερρακάκης: Το στεγαστικό αποτελεί εθνική πρόκληση και δεν μπορεί να αντιμετωπιστεί χωρίς τους ιδιοκτήτες ακινήτων δημοσιεύτηκε στο NewsIT .",
+          "thumbnail": "https://www.newsit.gr/wp-content/uploads/2026/01/pierrakakis-pomida.jpg",
+          "source": "NewsIT"
+        },
+        {
+          "title": "Ο Αντόνιο Μπαντέρας στο σκοτεινό υπερφυσικό θρίλερ «Unmerciful Good Fortune» που σκηνοθετεί η Τίρσα Χάκσο",
+          "link": "https://www.newsit.gr/lifestyle/o-antonio-mpanteras-sto-skoteino-yperfysiko-thriler-unmerciful-good-fortune-pou-skinothetei-i-tirsa-xakso/4588599/",
+          "pubDate": "Sat, 31 Jan 2026 13:26:06 +0000",
+          "description": "Με ένα λαμπερό καστ και μια σκοτεινή, μεταφυσική πλοκή, το «Unmerciful Good Fortune» υπόσχεται να καθηλώσει το κοινό. Η ταινία της 308 Entertainment αποτελεί την ...  \nTo άρθρο Ο Αντόνιο Μπαντέρας στο σκοτεινό υπερφυσικό θρίλερ «Unmerciful Good Fortune» που σκηνοθετεί η Τίρσα Χάκσο δημοσιεύτηκε στο NewsIT .",
+          "thumbnail": "https://www.newsit.gr/wp-content/uploads/2026/01/banderas-apempe-1200x774.jpg",
+          "source": "NewsIT"
+        },
+        {
+          "title": "Καιρός: Για «κακοκαιρία σε όλη την Ελλάδα, με ισχυρές βροχές» προειδοποιεί ο μετεωρολόγος Γιάννης Καλλιάνος",
+          "link": "https://www.newsit.gr/ellada/kairos-gia-kakokairia-se-oli-tin-ellada-me-isxyres-vroxes-proeidopoiei-o-meteorologos-giannis-kallianos/4588590/",
           "pubDate": "Sat, 31 Jan 2026 13:24:54 +0000",
-          "description": "Νέο κύμα κακοκαιρίας θα χτυπήσει την χώρα μας σε λίγες ώρες, σύμφωνα με τον μετεωρολόγο, Γιάννη Καλλιάνο, με μεγάλες ποσότητες βροχής να σημειώνονται σε σχεδόν ...  \nTo άρθρο Καιρός: Για «κακοκαιρία ευρείας κλίμακας, με μεγάλα ύψη βροχής» προειδοποιεί ο μετεωρολόγος Γιάννης Καλλιάνος δημοσιεύτηκε στο NewsIT .",
-          "thumbnail": "https://www.newsit.gr/wp-content/uploads/2026/01/kairos-95.jpg",
+          "description": "Νέο κύμα κακοκαιρίας θα χτυπήσει την χώρα μας σε λίγες ώρες, σύμφωνα με τον μετεωρολόγο, Γιάννη Καλλιάνο, με μεγάλες ποσότητες βροχής να σημειώνονται σε σχεδόν ...  \nTo άρθρο Καιρός: Για «κακοκαιρία σε όλη την Ελλάδα, με ισχυρές βροχές» προειδοποιεί ο μετεωρολόγος Γιάννης Καλλιάνος δημοσιεύτηκε στο NewsIT .",
+          "thumbnail": "https://www.newsit.gr/wp-content/uploads/2026/01/airos.jpg",
           "source": "NewsIT"
         },
         {
@@ -57,12 +129,36 @@
           "source": "NewsIT"
         },
         {
+          "title": "Έφοδος της ΕΛ.ΑΣ. στις φυλακές Κορυδαλλού – Τι εντοπίστηκε",
+          "link": "https://www.in.gr/2026/01/31/greece/efodos-tis-el-stis-fylakes-korydallou-ti-entopistike/",
+          "pubDate": "Sat, 31 Jan 2026 15:51:43 +0300",
+          "description": "Σχηματίστηκαν δικογραφίες σε βάρος δύο έγκλειστων, οι οποίοι κατελήφθησαν να κατέχουν συσκευές κινητών τηλεφώνων",
+          "thumbnail": "https://www.in.gr/wp-content/uploads/2026/01/fylakes-koryda8-1-768x509.jpg",
+          "source": "In.gr"
+        },
+        {
           "title": "Ελλάδα – Ιταλία live η μάχη της εθνικής πόλο γυναικών για πρόκριση στα ημιτελικά του ευρωπαϊκού πρωταθλήματος",
           "link": "https://www.newsit.gr/athlitika/ellada-italia-live-i-maxi-tis-ethnikis-polo-gynaikon-gia-prokrisi-sta-imitelika-tou-eyropaikou-protathlimatos/4588580/",
           "pubDate": "Sat, 31 Jan 2026 12:49:06 +0000",
           "description": "Παρακολουθήστε live την αναμέτρηση της Εθνικής πόλο των γυναικών με την Ιταλία για το ευρωπαϊκό πρωτάθλημα.\nTo άρθρο Ελλάδα – Ιταλία live η μάχη της εθνικής πόλο γυναικών για πρόκριση στα ημιτελικά του ευρωπαϊκού πρωταθλήματος δημοσιεύτηκε στο NewsIT .",
           "thumbnail": "https://www.newsit.gr/wp-content/uploads/2026/01/polo-ginaikwn-1200x800.jpg",
           "source": "NewsIT"
+        },
+        {
+          "title": "Μισθοί: Γιατί δεν είδατε ολόκληρη την αύξηση στον μισθό σας – Τι πρέπει να κάνετε",
+          "link": "https://www.in.gr/2026/01/31/economy/oikonomikes-eidiseis/misthoi-giati-den-eidate-olokliri-tin-ayksisi-ston-mistho-sas-ti-prepei-na-kanete/",
+          "pubDate": "Sat, 31 Jan 2026 15:45:01 +0300",
+          "description": "Πού οφείλεται το γεγονός ότι πολλοί εργαζόμενοι δεν είδαν να αυξάνονται οι μισθοί τους όσο περίμεναν",
+          "thumbnail": "https://www.in.gr/wp-content/uploads/2026/01/χρηματα23-768x431.jpg",
+          "source": "In.gr"
+        },
+        {
+          "title": "Η συνύπαρξη του Μπενίτεθ με τον Σισοκό στη Νιούκαστλ (vid)",
+          "link": "https://www.in.gr/2026/01/31/sports/football/otan-o-mpeniteth-ekane-ton-sisoko-arxigo-tis-nioukastl-vid/",
+          "pubDate": "Sat, 31 Jan 2026 15:41:19 +0300",
+          "description": "Ο Ράφα Μπενίτεθ κατέληξε στον Μούσα Σισοκό για τον άξονα του Παναθηναϊκού, με τον Ισπανό τεχνικό να έχει συνυπάρξει μαζί του και στη Νιούκαστλ.",
+          "thumbnail": "https://www.in.gr/wp-content/uploads/2026/01/58658585856-768x474.jpg",
+          "source": "In.gr"
         },
         {
           "title": "Ιράν: Έκρηξη στο λιμάνι Μπαντάρ Αμπάς",
@@ -87,6 +183,14 @@
           "description": "Λίγες ημέρες πριν τον ελληνικό τελικό της Eurovision, ο Good Job Nicky που παίρνει μέρος στον Β’ Ημιτελικό, παραχώρησε συνέντευξη στην εκπομπή «Καλημέρα είπαμε;» που ...  \nTo άρθρο Ο Good Job Nicky για τον ελληνικό τελικό της Eurovision: «Είμαστε κερδισμένοι και οι 28, ό,τι και να γίνει» δημοσιεύτηκε στο NewsIT .",
           "thumbnail": "https://www.newsit.gr/wp-content/uploads/2026/01/niky-arxiki-1200x766.jpg",
           "source": "NewsIT"
+        },
+        {
+          "title": "S&P Global Sees Solid Growth for Greece, Cyprus",
+          "link": "https://www.in.gr/2026/01/31/english-edition/sp-global-sees-solid-growth-greece-cyprus/",
+          "pubDate": "Sat, 31 Jan 2026 15:32:43 +0300",
+          "description": "In a report titled “2026 Greece And Cyprus Economic And Sovereign Rating Outlooks,” the ratings agency said the two economies continue to show favourable medium-term prospects, broadly converging with the rest of the euro zone.",
+          "thumbnail": "https://www.in.gr/wp-content/uploads/2026/01/ot_greek_economy24a-1024x600-3-1-768x450.jpg",
+          "source": "In.gr"
         },
         {
           "title": "Grand Hotel – επόμενα επεισόδια: O Ρήγας συλλαμβάνεται για τα εγκλήματά του κατά των προσφύγων",
@@ -121,6 +225,14 @@
           "source": "NewsIT"
         },
         {
+          "title": "HOTΕΛ ΕΛVIRA: Τι θα δούμε στο αποψινό επεισόδιο στο MEGA",
+          "link": "https://www.in.gr/2026/01/31/plus/medianews/hotel-elvira-ti-tha-doume-sto-apopsino-epeisodio-sto-mega-2/",
+          "pubDate": "Sat, 31 Jan 2026 15:26:36 +0300",
+          "description": "Οι ήρωες σε νέες περιπέτειες.",
+          "thumbnail": "https://www.in.gr/wp-content/uploads/2026/01/hotelelvira-ep23-3-768x467.jpg",
+          "source": "In.gr"
+        },
+        {
           "title": "Δυστύχημα στη Ρουμανία: Η τελευταία πράξη του δράματος – Κηδεύτηκαν οι πέντε οπαδοί του ΠΑΟΚ",
           "link": "https://www.in.gr/2026/01/31/greece/dystyxima-sti-roumania-teleytaia-praksi-tou-dramatos-kideytikan-oi-pente-opadoi-tou-paok/",
           "pubDate": "Sat, 31 Jan 2026 15:21:28 +0300",
@@ -135,118 +247,6 @@
           "description": "Δίχως τον κορυφαίο παίκτη του θα παραταχθεί ο Ολυμπιακός στο ντέρμπι κορυφής με την ΑΕΚ (01/02, 21:00) στη Νέα Φιλαδέλφεια για την 19η αγωνιστική της ...  \nTo άρθρο Ολυμπιακός: Χωρίς Ελ Κααμπί αλλά με Αντρέ Λουίς κόντρα στην ΑΕΚ δημοσιεύτηκε στο NewsIT .",
           "thumbnail": "https://www.newsit.gr/wp-content/uploads/2025/12/el-kaampi-eurokinissi-2-1200x798.jpg",
           "source": "NewsIT"
-        },
-        {
-          "title": "Κακοκαιρία: Οι χάρτες με τις «κόκκινες» περιοχές και τα ύψη βροχής που αναμένονται την Κυριακή σε Αττική και Γλυφάδα",
-          "link": "https://www.newsit.gr/ellada/kakokairia-oi-xartes-me-tis-kokkines-perioxes-kai-ta-ypsi-vroxis-pou-anamenontai-tin-kyriaki-se-attiki-kai-glyfada/4588538/",
-          "pubDate": "Sat, 31 Jan 2026 12:17:34 +0000",
-          "description": "Τον κώδωνα του κινδύνου έκρουσαν το πρωί του Σαββάτου (31.01.2026) οι μετεωρολόγοι αλλά και η ΕΜΥ που έβγαλε έκτακτο δελτίο επικίνδυνων καιρικών φαινομένων για την ...  \nTo άρθρο Κακοκαιρία: Οι χάρτες με τις «κόκκινες» περιοχές και τα ύψη βροχής που αναμένονται την Κυριακή σε Αττική και Γλυφάδα δημοσιεύτηκε στο NewsIT .",
-          "thumbnail": "https://www.newsit.gr/wp-content/uploads/2026/01/kakokairia-kataigida-eurok-1200x799.jpg",
-          "source": "NewsIT"
-        },
-        {
-          "title": "«John Rambo»: Ξεκίνησαν στην Ταϊλάνδη τα γυρίσματα του prequel",
-          "link": "https://www.in.gr/2026/01/31/life/culture-live/john-rambo-ksekinisan-stin-tailandi-ta-gyrismata-tou-prequel/",
-          "pubDate": "Sat, 31 Jan 2026 15:15:55 +0300",
-          "description": "Ο θρυλικός ήρωας δράσης John Rambo ετοιμάζεται για τη μεγάλη επιστροφή του στις αίθουσες, εγκαινιάζοντας ένα νέο κεφάλαιο για το διάσημο franchise.",
-          "thumbnail": "https://www.in.gr/wp-content/uploads/2026/01/w30-154931w1616223121669586.jpg",
-          "source": "In.gr"
-        },
-        {
-          "title": "Στιγμές τρόμου για τη Μαρία και τη Βίκυ στο υπόγειο του 52χρονου στη Θεσσαλονίκη - Όταν ο δράστης έπαιζε θέατρο «βοηθώντας» στις έρευνες",
-          "link": "https://www.protothema.gr/greece/article/1766390/dipli-dolofonia-sti-thessaloniki-otan-o-drastis-ekane-pos-prospathouse-na-voithisei-stis-ereunes-gia-tin-47hroni-maria/?utm_source=rss",
-          "pubDate": "Sat, 31 Jan 2026 14:15:00 +0200",
-          "description": "Ο 52χρονος έχει ομολογήσει τις πράξεις του, ενώ λίγο καιρό πριν έβγαινε στην εκπομπή της Αγγελικής Νικολούλη προσποιούμενος πως ήθελε να βοηθήσει στις έρευνες",
-          "thumbnail": "https://i1.prth.gr/images/w640/jpg/files/2026-01-31/thessaloniki_2maketa.jpg",
-          "source": "Πρώτο Θέμα"
-        },
-        {
-          "title": "Βίντεο-ντοκουμέντο: Πώς οι αστυνομικοί έπιασαν τη σπείρα ναρκωτικών στην Πανεπιστημιούπολη",
-          "link": "https://www.in.gr/2026/01/31/greece/vinteo-ntokoumento-pos-oi-astynomikoi-epiasan-ti-speira-narkotikon-stin-panepistimioupoli/",
-          "pubDate": "Sat, 31 Jan 2026 15:13:11 +0300",
-          "description": "Αστυνομικός, με κρυφή κάμερα, πηγαίνει στο σημείο πώλησης των ναρκωτικών όπου όπως φαίνεται προσεγγίζει τον 49χρονο «πωλητή» ο οποίος του πούλησε μικροποσότητα ακατέργαστης κάνναβης έναντι του χρηματικού ποσού των 10 ευρώ.",
-          "thumbnail": "https://www.in.gr/wp-content/uploads/2026/01/ffffff-768x441.jpg",
-          "source": "In.gr"
-        },
-        {
-          "title": "Τραγωδία με οπαδούς του ΠΑΟΚ: Ανείπωτη θλίψη στις κηδείες των 5 νεαρών σε Ημαθία και Θεσσαλονίκη",
-          "link": "https://www.newsit.gr/ellada/tragodia-me-opadous-tou-paok-aneipoti-thlipsi-stis-kideies-ton-5-nearon-se-imathia-kai-thessaloniki/4588551/",
-          "pubDate": "Sat, 31 Jan 2026 12:12:55 +0000",
-          "description": "Τελευταίο αντίο στους αδικοχαμένους φίλους του ΠΑΟΚ που σκοτώθηκαν το μεσημέρι της Τρίτης (27-01-2026) σε έναν άκρως επικίνδυνο δρόμο της Ρουμανίας. Οι πέντε τελευταίες κηδείες ...  \nTo άρθρο Τραγωδία με οπαδούς του ΠΑΟΚ: Ανείπωτη θλίψη στις κηδείες των 5 νεαρών σε Ημαθία και Θεσσαλονίκη δημοσιεύτηκε στο NewsIT .",
-          "thumbnail": "https://www.newsit.gr/wp-content/uploads/2026/01/paok-toumpa.jpg",
-          "source": "NewsIT"
-        },
-        {
-          "title": "«Ο Άρης δίνει δανεικό τον Μόντσου στη Χουάρες»",
-          "link": "https://www.in.gr/2026/01/31/sports/football/apoxorei-apo-ton-ari-o-montsou-pigainei-daneikos-sti-xouares/",
-          "pubDate": "Sat, 31 Jan 2026 15:10:47 +0300",
-          "description": "Σύμφωνα με τον διάσημο ρεπόρτερ, Φαμπρίτσιο Ρομάνο, ο Μόντσου πρόκειται να παραχωρηθεί δανεικός από τον Άρη στην μεξικανική Χουάρες.",
-          "thumbnail": "https://www.in.gr/wp-content/uploads/2026/01/6825097-768x511.jpg",
-          "source": "In.gr"
-        },
-        {
-          "title": "Μη χάσετε το ΘΕΜΑ που κυκλοφορεί",
-          "link": "https://www.protothema.gr/greece/article/1766347/mi-hasete-to-thema-pou-kukloforei/?utm_source=rss",
-          "pubDate": "Sat, 31 Jan 2026 14:03:21 +0200",
-          "description": "Διαβάστε το «ΠΡΩΤΟ ΘΕΜΑ» στο PC, το Laptop, το tablet ή το κινητό σας τηλέφωνο όπως είναι τυπωμένο στο χαρτί",
-          "thumbnail": "https://i1.prth.gr/images/w640/jpg/files/2026-01-31/31012026_mh_xasete_xrwma.jpg",
-          "source": "Πρώτο Θέμα"
-        },
-        {
-          "title": "Να μ’ αγαπάς – επόμενα επεισόδια: Ο δρόμος για την απελευθέρωση της Φωτεινής δείχνει να ανοίγει",
-          "link": "https://www.newsit.gr/media/na-m-agapas-epomena-epeisodia-o-dromos-gia-tin-apeleytherosi-tis-foteinis-deixnei-na-anoigei/4585451/",
-          "pubDate": "Sat, 31 Jan 2026 12:01:00 +0000",
-          "description": "Εξελίξεις στα επόμενα επεισόδια του «Να μ’ αγαπάς» του Alpha που θα προβληθούν από τη Δευτέρα έως την Τετάρτη 2 με 4 Φεβρουαρίου στις 20:00 ...  \nTo άρθρο Να μ’ αγαπάς – επόμενα επεισόδια: Ο δρόμος για την απελευθέρωση της Φωτεινής δείχνει να ανοίγει δημοσιεύτηκε στο NewsIT .",
-          "thumbnail": "https://www.newsit.gr/wp-content/uploads/2026/01/na-me-agapas-1200x675-1.jpg",
-          "source": "NewsIT"
-        },
-        {
-          "title": "Βλάβη στη γραμμή «100»: «Δεν στερήθηκαν οι πολίτες τη συνδρομή της Αστυνομίας» – Η ανακοίνωση της ΕΛ.ΑΣ",
-          "link": "https://www.newsit.gr/ellada/vlavi-sti-grammi-100-den-sterithikan-oi-polites-ti-syndromi-tis-astynomias-i-anakoinosi-tis-el-as/4588549/",
-          "pubDate": "Sat, 31 Jan 2026 12:00:42 +0000",
-          "description": "Ανακοίνωση για τη βλάβη που υπήρξε στην τηλεφωνική γραμμή «100» της Άμεσης Δράσης το βράδυ της Παρασκευής (30.1.26) εξέδωσε το Αρχηγείο της Ελληνικής Αστυνομίας, σήμερα ...  \nTo άρθρο Βλάβη στη γραμμή «100»: «Δεν στερήθηκαν οι πολίτες τη συνδρομή της Αστυνομίας» – Η ανακοίνωση της ΕΛ.ΑΣ δημοσιεύτηκε στο NewsIT .",
-          "thumbnail": "https://www.newsit.gr/wp-content/uploads/2026/01/peripoliko-3.jpg",
-          "source": "NewsIT"
-        },
-        {
-          "title": "Συνελήφθη μπασκετμπολίστας της Α2: Μπήκε μεθυσμένος στις γραμμές του τρένου στην Ιερά Οδό και οδήγησε για 300 μέτρα",
-          "link": "https://www.protothema.gr/greece/article/1766387/sunelifthi-basketbolistas-tis-a2-bike-methusmenos-stis-grammes-tou-trenou-kai-odigise-gia-300-metra/?utm_source=rss",
-          "pubDate": "Sat, 31 Jan 2026 14:00:00 +0200",
-          "description": "Το απίστευτο περιστατικό έλαβε χώρα στη συμβολή της Λ. Κωνσταντινουπόλεως με την Ιερά Οδό - Ο 28χρονος Αμερικανός δεν διέθετε καν τα έγγραφα που απαιτούνται για την παραμονή του στη χώρα",
-          "thumbnail": "https://i1.prth.gr/images/w640/jpg/files/2026-01-25/maketa-peripoliko.jpg",
-          "source": "Πρώτο Θέμα"
-        },
-        {
-          "title": "ΕΛ.ΑΣ. για τη βλάβη στο «100»: Σε κανένα στάδιο δεν διακόπηκε η επιχειρησιακή δυνατότητα ανταπόκρισης",
-          "link": "https://www.in.gr/2026/01/31/greece/el-gia-ti-vlavi-sto-100-se-kanena-stadio-den-diakopike-epixeirisiaki-dynatotita-antapokrisis/",
-          "pubDate": "Sat, 31 Jan 2026 14:59:10 +0300",
-          "description": "«Ισχυρισμοί περί αλαλούμ, απουσίας τεχνικού ή κατάρρευσης της υπηρεσίας δεν ανταποκρίνονται στην πραγματικότητα», αναφέρει ανακοίνωση της ΕΛ.ΑΣ. για το τεχνικό πρόβλημα με το «100»",
-          "thumbnail": "https://www.in.gr/wp-content/uploads/2026/01/evaELAS_PER-3-768x512.jpg",
-          "source": "In.gr"
-        },
-        {
-          "title": "Γεωργιάδης: Έλλειμμα 4.000 νοσηλευτών το βασικό «αγκάθι» για το σύστημα Υγείας",
-          "link": "https://www.protothema.gr/greece/article/1766386/georgiadis-elleimma-4000-nosileuton-to-vasiko-agathi-gia-to-sustima-ugeias/?utm_source=rss",
-          "pubDate": "Sat, 31 Jan 2026 13:57:52 +0200",
-          "description": "Ο υπουργός Υγείας μιλά για κρίσιμες ελλείψεις προσωπικού, τις δυσκολίες στις προσλήψεις μέσω ΑΣΕΠ, το «βραχιολάκι» στα ΤΕΠ και τη μήνυση από την πρόεδρο της Πλεύσης Ελευθερίας",
-          "thumbnail": "https://i1.prth.gr/images/w640/jpg/files/2026-01-31/adonis-georgiadis.jpg",
-          "source": "Πρώτο Θέμα"
-        },
-        {
-          "title": "Αλυσιδωτό μπλακάουτ σε Ουκρανία και γειτονικές χώρες – «Βλάβη» στο δίκτυο της χώρας ανέφερε ο υπ. Ενέργειας",
-          "link": "https://www.in.gr/2026/01/31/world/alysidoto-mplakaout-se-oukrania-kai-geitonikes-xores-vlavi-sto-diktyo-tis-xoras-anefere-o-yp-energeias/",
-          "pubDate": "Sat, 31 Jan 2026 14:50:25 +0300",
-          "description": "Το δίκτυο ηλεκτρικού ρεύματος στην Ουκρανία έχει αποτελέσει για μήνες έναν από τους βασικούς στόχους των ρωσικών πληγμάτων - Το μπλακάουτ επηρέασε προσωρινά και το μετρό του Κιέβου",
-          "thumbnail": "https://www.in.gr/wp-content/uploads/2026/01/15229151-768x514.jpg",
-          "source": "In.gr"
-        },
-        {
-          "title": "Διαδοχικές εκρήξεις στο Ιράν – Τέσσερις νεκροί στα νότια",
-          "link": "https://www.in.gr/2026/01/31/world/ekrikseis-se-oktaorofo-ktirio-sto-iran/",
-          "pubDate": "Sat, 31 Jan 2026 14:49:23 +0300",
-          "description": "Διαδοχικές εκρήξεις στο Ιράν - Ζημιές σε πολυώροφο κτίριο - Έκρηξη στα νότια σκότωσε τετραμελή οικογένεια, ενώ δύο άτομα ανασύρθηκαν ζωντανά.",
-          "thumbnail": "https://www.in.gr/wp-content/uploads/2026/01/Capture-219.jpg",
-          "source": "In.gr"
         }
       ]
     },
@@ -501,6 +501,22 @@
       "color": "blue",
       "articles": [
         {
+          "title": "Ισχυρή έκρηξη στο λιμάνι Μπαντάρ Αμπάς στο νότιο Ιράν",
+          "link": "http://gr.euronews.com/2026/01/31/isxyrh-ekrh3h-sto-limani-mpantar-ampas-sto-notio-iran",
+          "pubDate": "Sat, 31 Jan 2026 14:35:36 +0100",
+          "description": "Διαψεύδονται οι φήμες περί στοχοποίησης διοικητή των Φρουρών της Επανάστασης – Τουλάχιστον τέσσερις νεκροί",
+          "thumbnail": null,
+          "source": "Euronews"
+        },
+        {
+          "title": "Israeli air strikes kill at least 27 Palestinians in Gaza, rescue officials say",
+          "link": "https://www.bbc.com/news/articles/c701g1g00gdo?at_medium=RSS&at_campaign=rss",
+          "pubDate": "Sat, 31 Jan 2026 13:29:56 GMT",
+          "description": "Israel's military confirmed the strikes, which come during a ceasefire that Israel and Hamas accuse each other of breaking.",
+          "thumbnail": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/77d5/live/cbf50f70-fe96-11f0-ae1d-b56660f38b59.jpg",
+          "source": "BBC News"
+        },
+        {
           "title": "More than 200 killed in mine collapse in DR Congo",
           "link": "https://www.bbc.com/news/articles/cly381dvnvzo?at_medium=RSS&at_campaign=rss",
           "pubDate": "Sat, 31 Jan 2026 13:18:00 GMT",
@@ -723,22 +739,6 @@
           "description": "Η Αντζελίνα Κατσάνις κάλυψε την πρόσφατη κρίση στη Μινεσότα για το Associated Press και περιέγραψε στο Euronews τις εμπειρίες της",
           "thumbnail": null,
           "source": "Euronews"
-        },
-        {
-          "title": "Κανείς δεν θρηνεί το metaverse: Τι πήγε στραβά με το όραμα του Ζάκερμπεργκ και τι έπεται για το VR;",
-          "link": "http://gr.euronews.com/next/2026/01/31/nobody-mourns-the-metaverse-what-went-wrong-with-zuckerbergs-vision-and-what-is-next-for-v",
-          "pubDate": "Sat, 31 Jan 2026 08:00:15 +0100",
-          "description": "Μετά την αλλαγή ονόματος και την ολική στροφή στην εικονική πραγματικότητα, η Meta περιορίζει το metaverse. Αυτό ίσως ωφελήσει τη VR, λένε ειδικοί στο Euronews Next.",
-          "thumbnail": null,
-          "source": "Euronews"
-        },
-        {
-          "title": "Israel split over plans to bring back death penalty for deadly attacks",
-          "link": "https://www.bbc.com/news/articles/clymp8v7ye2o?at_medium=RSS&at_campaign=rss",
-          "pubDate": "Sat, 31 Jan 2026 06:09:39 GMT",
-          "description": "In a highly controversial move, some Israeli MPs are trying to introduce the death penalty for Palestinian attackers.",
-          "thumbnail": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/d2a2/live/df6309f0-fdf5-11f0-a402-95e95a98d0ec.jpg",
-          "source": "BBC News"
         }
       ]
     },
@@ -746,6 +746,62 @@
       "title": "ΑΘΛΗΤΙΣΜΟΣ & SUPER LEAGUE",
       "color": "green",
       "articles": [
+        {
+          "title": "Α΄Εθνική Γυναικών: Η ΡΕΑ έφυγε με το διπλό, ο Οδυσσέας Μοσχάτου ισοφάρισε στο φινάλε την ΑΕΚ",
+          "link": "https://www.gazzetta.gr/football/ethniki-gynaikon/2511874/aethniki-gynaikon-g-rea-efyge-me-diplo-o-odysseas-moshatoy",
+          "pubDate": "Sat, 31 Jan 2026 15:49:07 +0200",
+          "description": "Ξέσπασε με πεντάρα η Ρέα κόντρα στις Νέες Ατρομήτου, ενώ ο Οδυσσέας Μοσχάτου τσίμπησε βαθμό στο φινάλε απέναντι στην ΑΕΚ (1-1), στη 16η στροφή του πρωταθλήματος.",
+          "thumbnail": "https://www.gazzetta.gr/sites/default/files/styles/article_main_image/public/2026-01/aek_women_2.jpg?itok=snTHEz_m",
+          "source": "Gazzetta"
+        },
+        {
+          "title": "Παναθηναϊκός: Στον ΑΠΟΕΛ συνεχίζει ο Μαντσίνι",
+          "link": "https://www.gazzetta.gr/football/superleague/2511873/panathinaikos-ston-apoel-synehizei-o-mantsini",
+          "pubDate": "Sat, 31 Jan 2026 15:48:50 +0200",
+          "description": "Ποδοσφαιριστής του ΑΠΟΕΛ είναι και επίσημα ο Ντάνιελ Μαντσίνι, λίγες ώρες αφότου έμεινε ελεύθερος από τον Παναθηναϊκό.",
+          "thumbnail": "https://www.gazzetta.gr/sites/default/files/styles/article_main_image/public/2026-01/mancini.jpg?itok=ZVb_E-Kh",
+          "source": "Gazzetta"
+        },
+        {
+          "title": "Ολυμπιακός, Champions League: Οι πιθανότητες πρόκρισης στους «16»",
+          "link": "https://www.gazzetta.gr/football/champions-league/2511871/olympiakos-champions-league-oi-pithanotites-prokrisis-stoys-16",
+          "pubDate": "Sat, 31 Jan 2026 15:38:06 +0200",
+          "description": "Οι πιθανότητες πρόκρισης του Ολυμπιακού επί της Μπάγερ Λεβερκούζεν, σύμφωνα με το Football Meets Data.",
+          "thumbnail": "https://www.gazzetta.gr/sites/default/files/styles/article_main_image/public/2026-01/ajax_olympiacos.jpg?itok=ereeIbpO",
+          "source": "Gazzetta"
+        },
+        {
+          "title": "ΑΕΚ: Επίθεση κουκουλοφόρων σε φιλάθλους της Ένωσης στο Μοσχάτο",
+          "link": "https://www.gazzetta.gr/football/ethniki-gynaikon/2511867/aek-epithesi-koykoyloforon-se-filathloys-tis-enosis-sto-moshato",
+          "pubDate": "Sat, 31 Jan 2026 15:33:37 +0200",
+          "description": "Απρόκλητη επίθεση από περίπου 50 κουκουλοφόρους δέχθηκαν φίλαθλοι που βρέθηκαν στο Μοσχάτο για την αναμέτρηση της ΑΕΚ κόντρα στον τοπικό Οδυσσέα για την Α' Εθνική Γυναικών ποδοσφαίρου, όπως καταγγέλλουν οι ιθύνοντες της Ένωσης.",
+          "thumbnail": "https://www.gazzetta.gr/sites/default/files/styles/article_main_image/public/2026-01/aek_13.jpg?itok=GsBOmSEk",
+          "source": "Gazzetta"
+        },
+        {
+          "title": "Παναιτωλικός: Πανό στη μνήμη των αδικοχαμένων φιλάθλων του ΠΑΟΚ",
+          "link": "https://www.gazzetta.gr/football/superleague/2511870/panaitolikos-pano-sti-mnimi-ton-adikohamenon-filathlon-toy-paok",
+          "pubDate": "Sat, 31 Jan 2026 15:30:49 +0200",
+          "description": "Ένα πανό αφιερωμένο στη μνήμη των οπαδών του ΠΑΟΚ βρίσκεται στις εξέδρες του γηπέδου του Παναιτωλικού πριν την αναμέτρηση με τον Άρη για τη Super League.",
+          "thumbnail": "https://www.gazzetta.gr/sites/default/files/styles/article_main_image/public/2026-01/panaitolikos_pano_1.jpg?itok=X17IN638",
+          "source": "Gazzetta"
+        },
+        {
+          "title": "F1 - Δοκιμές Βαρκελώνης: Η τελική κατάταξη του πρώτου τεστ της χρονιάς",
+          "link": "https://www.gazzetta.gr/gmotion/2511837/f1-dokimes-barkelonis-i-teliki-katataxi-toy-protoy-test-tis-hronias",
+          "pubDate": "Sat, 31 Jan 2026 15:30:00 +0200",
+          "description": "Πώς διαμορφώθηκε η κατάταξη του πρώτου χειμερινού τεστ της φετινής σεζόν της Formula 1 και πόσους γύρους κάλυψαν οι ομάδες; Ακολουθούν οι απαντήσεις.",
+          "thumbnail": "https://www.gazzetta.gr/sites/default/files/styles/article_main_image/public/2026-01/a261662_large1.jpg?itok=Hh36XPpK",
+          "source": "Gazzetta"
+        },
+        {
+          "title": "Πρωτέας Βούλας – Αμύντας 78-59: Άνετη επικράτηση και τρίτη σερί νίκη ",
+          "link": "https://www.gazzetta.gr/basketball/a1-mpasket-gynaikon/2511869/proteas-boylas-amyntas-78-59-aneti-epikratisi-kai-triti-seri",
+          "pubDate": "Sat, 31 Jan 2026 15:29:38 +0200",
+          "description": "Ο Πρωτέας Βούλας επέβαλε τον ρυθμό του και χωρίς να δυσκολευτεί επικράτησε του Αμύντα με 78-59, συνεχίζοντας την ανοδική του πορεία στην Α1 Γυναικών.",
+          "thumbnail": "https://www.gazzetta.gr/sites/default/files/styles/article_main_image/public/2026-01/proteas.jpg?itok=P8KrNI-o",
+          "source": "Gazzetta"
+        },
         {
           "title": "Hoopfellas: «Ο Ολυμπιακός παίζει το καλύτερο μπάσκετ στην Ευρώπη»",
           "link": "https://www.gazzetta.gr/basketball/euroleague/2511868/hoopfellas-o-olympiakos-paizei-kalytero-mpasket-stin-eyropi",
@@ -929,62 +985,6 @@
           "description": "Ο Εργκίν Άταμαν γνωστός για το ταπεραμέντο και την ευθύτητά του έχει τοποθετηθεί πολλές φορές δημόσια εκφράζοντας τη δυσαρέσκειά του με στόχο να αφυπνίσει τους παίκτες του Παναθηναϊκού.",
           "thumbnail": "https://www.gazzetta.gr/sites/default/files/styles/article_main_image/public/2026-01/ataman_eurokinissi_7_1.jpg?itok=8-G7DeHQ",
           "source": "Gazzetta"
-        },
-        {
-          "title": "Ολυμπιακός: Εκτός αποστολής ο Ελ Καμπί, μέσα ο Αντρέ Λουίζ για το ντέρμπι με την ΑΕΚ",
-          "link": "https://www.gazzetta.gr/football/superleague/2511847/olympiakos-ektos-apostolis-o-el-kampi-mesa-o-antre-loyiz-gia-ntermpi",
-          "pubDate": "Sat, 31 Jan 2026 13:44:34 +0200",
-          "description": "Έκπληξη στην αποστολή που πήρε ο Χοσέ Λουίς Μεντιλίμπαρ για το ντέρμπι με την ΑΕΚ καθώς δεν βρίσκεται το όνομα του Αγιούμπ Ελ Καμπί ανάμεσα στους εκλεκτούς.",
-          "thumbnail": "https://www.gazzetta.gr/sites/default/files/styles/article_main_image/public/2026-01/elkaabi_intime.jpg?itok=CMA-cGFQ",
-          "source": "Gazzetta"
-        },
-        {
-          "title": "ΕΛ.ΑΣ για τη χθεσινή βλάβη στη γραμμή «100»: «Δεν στερήθηκαν οι πολίτες τη συνδρομή της Αστυνομίας» ",
-          "link": "https://www.gazzetta.gr/plus/2511853/elas-gia-ti-hthesini-blabi-sti-grammi-100-den-sterithikan-oi-polites-ti-syndromi-tis",
-          "pubDate": "Sat, 31 Jan 2026 13:44:17 +0200",
-          "description": "Η Ελληνική Αστυνομία εξέδωσε ανακοίνωση για την βλάβη που σημειώθηκε το βράδυ της Παρασκευής (30/1) στην έκτακτη γραμμή ανάγκης «100».",
-          "thumbnail": "https://www.gazzetta.gr/sites/default/files/styles/article_main_image/public/2026-01/elas-100.jpg?itok=Y_3Z-8fm",
-          "source": "Gazzetta"
-        },
-        {
-          "title": "Μπαρτσελόνα: Η γυναίκα του Λεβαντόφσκι «φωτογράφισε» την αποχώρησή του",
-          "link": "https://www.gazzetta.gr/football/la-liga/2511846/mpartselona-i-gynaika-toy-lebantofski-fotografise-tin-apohorisi-toy",
-          "pubDate": "Sat, 31 Jan 2026 13:43:22 +0200",
-          "description": "Η Άννα Λεβαντόφσκα έδωσε το update που περίμεναν όλοι οι φίλοι της Μπαρτσελόνα, αναφορικά με το μέλλον του συζύγου της.",
-          "thumbnail": "https://www.gazzetta.gr/sites/default/files/styles/article_main_image/public/2026-01/anna_lewandowska.jpg?itok=LtRKVrLZ",
-          "source": "Gazzetta"
-        },
-        {
-          "title": "Ολυμπιακός: Έκλεισε στη Λιόν ο Γιάρεμτσουκ, ανοιχτό για Κλέιτον",
-          "link": "https://www.gazzetta.gr/football/superleague/2511845/olympiakos-ekleise-sti-lion-o-giaremtsoyk-anoihto-gia-kleiton",
-          "pubDate": "Sat, 31 Jan 2026 13:40:14 +0200",
-          "description": "Στη Λιόν θα συνεχίσει την καριέρα του ο Ρόμαν Γιάρεμτσουκ με τη μορφή δανεισμού από τον Ολυμπιακού.",
-          "thumbnail": "https://www.gazzetta.gr/sites/default/files/styles/article_main_image/public/2025-12/yaremchuk_3.jpg?itok=A5RVTHu4",
-          "source": "Gazzetta"
-        },
-        {
-          "title": "Athens Kallithea: Τέλος ο Οφρυδόπουλος ",
-          "link": "https://www.gazzetta.gr/football/superleague-2/2511844/athens-kallithea-telos-o-ofrydopoylos",
-          "pubDate": "Sat, 31 Jan 2026 13:29:03 +0200",
-          "description": "Παρελθόν από την τεχνική ηγεσία της Athens Kallithea αποτελεί ο Σωκράτης Οφρυδόπουλος, ύστερα από τρεις μήνες.",
-          "thumbnail": "https://www.gazzetta.gr/sites/default/files/styles/article_main_image/public/2024-06/ofrydopoulos_eurokinisi.jpg?itok=GmHrxT9h",
-          "source": "Gazzetta"
-        },
-        {
-          "title": "Μπενίτεθ: Ελπίζω να έχουμε κάποιες εκπλήξεις, με παίκτες που θα έρθουν να μας βοηθήσουν",
-          "link": "https://www.newsit.gr/athlitika/mpeniteth-elpizo-na-exoume-kapoies-ekplikseis-me-paiktes-pou-tha-erthoun-na-mas-voithisoun/4588530/",
-          "pubDate": "Sat, 31 Jan 2026 11:23:47 +0000",
-          "description": "Ο Ράφα Μπενίτεθ μίλησε για την αναμέτρηση του Παναθηναϊκού με τη Κηφισιά και προανήγγειλε μεταγραφική ενίσχυση για το τριφύλλι. Ο Παναθηναϊκός υποδέχεται την Κηφισιά το ...  \nTo άρθρο Μπενίτεθ: Ελπίζω να έχουμε κάποιες εκπλήξεις, με παίκτες που θα έρθουν να μας βοηθήσουν δημοσιεύτηκε στο NewsIT .",
-          "thumbnail": "https://www.newsit.gr/wp-content/uploads/2026/01/benitez-3-1200x801.jpg",
-          "source": "NewsIT"
-        },
-        {
-          "title": "ΑΕΚ: Ακυρώνονται οι εορτασμοί πριν το ντέρμπι έξω από την Allwyn Arena",
-          "link": "https://www.gazzetta.gr/football/superleague/2511842/aek-akyronontai-oi-eortasmoi-prin-ntermpi-exo-apo-tin-allwyn-arena",
-          "pubDate": "Sat, 31 Jan 2026 13:19:06 +0200",
-          "description": "Η ΑΕΚ ακύρωσε τα εορταστικά events έξω από την Allwyn Arena πριν από το ματς με τον Ολυμπιακό (1/2, 21:00), σε ένδειξη σεβασμού για τα θύματα του τροχαίου στη Ρουμανία.",
-          "thumbnail": "https://www.gazzetta.gr/sites/default/files/styles/article_main_image/public/2026-01/111_3.jpg?itok=vs6ObA_8",
-          "source": "Gazzetta"
         }
       ]
     },
@@ -992,6 +992,14 @@
       "title": "ΠΑΝΑΘΗΝΑΪΚΟΣ",
       "color": "lime",
       "articles": [
+        {
+          "title": "Παναθηναϊκός Κ19: Εύκολη νίκη επί της Κηφισιάς",
+          "link": "https://panathinaikos24.gr/2026/01/31/618616/panathinaikos-k19-eykoli-niki-epi-tis-kifisias/",
+          "pubDate": "Sat, 31 Jan 2026 13:48:49 +0000",
+          "description": "Σε μια εύκολη νίκη έφτασε η Κ19 του Παναθηναϊκού επί της Κηφισιάς με 4-2 στο «Γ. Καλαφάτης», για την 19η αγωνιστική της Super League. Δύο γκολ πέτυχε ο Νεμπής και από ένα οι Καλοσκάμης και Τερζής.",
+          "thumbnail": "https://i0.wp.com/panathinaikos24.gr/wp-content/uploads/2026/01/5010866-1024x683-1.jpg?fit=1024%2C683&amp;ssl=1",
+          "source": "Panathinaikos24"
+        },
         {
           "title": "Έλτσε – Μπαρτσελόνα με σούπερ «Ενισχυμένα» ημίχρονα",
           "link": "https://olaprasina1908.gr/%cf%80%ce%bf%ce%b4%cf%8c%cf%83%cf%86%ce%b1%ce%b9%cf%81%ce%bf/eltse-bartselona-me-souper-enischym/?utm_source=rss&utm_medium=rss&utm_campaign=eltse-bartselona-me-souper-enischym",
@@ -1223,14 +1231,6 @@
           "description": "Ο Ντίνος Μήτογλου σχολίασε τα όσα έγιναν στην αναμέτρηση ανάμεσα στον Παναθηναϊκό και την Βιλερμπάν αποθεώνοντας τον Κώστα Σλούκα.\nThe post Μήτογλου: «Τον θαυμάζω, είναι… καθηγητής – Προσπάθησα και δούλεψα πολύ» appeared first on Trifilara.gr.",
           "thumbnail": null,
           "source": "Trifilara"
-        },
-        {
-          "title": "Αταμάν: «Συγχαρητήρια στους Ερτέλ και Σλούκα – Βασικό κομμάτι του μπάσκετ μου οι έξυπνοι γκαρντ»",
-          "link": "https://panathinaikos24.gr/2026/01/31/618572/ataman-sygxaritiria-stous-ertel-kai-slouka-vasiko-kommati-tou-mpasket-mou-oi-eksypnoi-gkarnt/",
-          "pubDate": "Fri, 30 Jan 2026 22:51:46 +0000",
-          "description": "Μετά τη νίκη του Παναθηναϊκού AKTOR απέναντι στην Βιλερμπάν, ο Εργκίν Αταμάν έδωσε τα συγχαρητήριά του στους Κώστα Σλούκα και Τομά Ερτέλ και τόνισε το πόσο κομβικοί είναι οι έξυπνοι γκαρντ για το στυλ που θέλει να παίζει.",
-          "thumbnail": "https://i0.wp.com/panathinaikos24.gr/wp-content/uploads/2026/01/5010788-1.jpg?fit=1200%2C800&amp;ssl=1",
-          "source": "Panathinaikos24"
         }
       ]
     },
