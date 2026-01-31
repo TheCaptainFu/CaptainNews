@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-01-31T13:55:24.536Z",
+  "lastUpdated": "2026-01-31T13:58:55.827Z",
   "totalArticles": 180,
   "totalFeeds": 24,
   "successfulFeeds": 15,
@@ -8,6 +8,14 @@
       "title": "ΕΚΤΑΚΤΗ ΕΠΙΚΑΙΡΟΤΗΤΑ & ΕΛΛΑΔΑ",
       "color": "red",
       "articles": [
+        {
+          "title": "Γιώργος Μουκίδης για Δέσποινα Βανδή: Δεν τη βλέπω, πες μου ένα σοβαρό κομμάτι που έχει πει στην καριέρα της",
+          "link": "https://www.newsit.gr/lifestyle/giorgos-moukidis-gia-despoina-vandi-den-ti-vlepo-pes-mou-ena-sovaro-kommati-pou-exei-pei-stin-kariera-tis/4588613/",
+          "pubDate": "Sat, 31 Jan 2026 13:57:35 +0000",
+          "description": "Ο Γιώργος Μουκίδης παραχώρησε συνέντευξη στην εκπομπή «Ραντεβού το ΣΚ» και μίλησε για τον ελληνικό τελικό της Eurovision, αλλά και για τις πρόσφατες δηλώσεις που ...  \nTo άρθρο Γιώργος Μουκίδης για Δέσποινα Βανδή: Δεν τη βλέπω, πες μου ένα σοβαρό κομμάτι που έχει πει στην καριέρα της δημοσιεύτηκε στο NewsIT .",
+          "thumbnail": "https://www.newsit.gr/wp-content/uploads/2026/01/moukidis-ndp-1200x803.jpg",
+          "source": "NewsIT"
+        },
         {
           "title": "Από τον Παναθηναϊκό στον ΑΠΟΕΛ ο Ντάνιελ Μαντσίνι",
           "link": "https://www.newsit.gr/athlitika/apo-ton-panathinaiko-ston-apoel-o-ntaniel-mantsini/4588615/",
@@ -239,14 +247,6 @@
           "description": "Το τελευταίο «αντίο» στα πέντε «αετόπουλα» που έχασαν τη ζωή τους στον DN6 - Οι άλλοι δύο οπαδοί του ΠΑΟΚ κηδεύτηκαν χθες - Η κατάσταση του τραυματία που παραμένει στην Τιμισοάρα",
           "thumbnail": "https://www.in.gr/wp-content/uploads/2026/01/6829780-768x512.jpg",
           "source": "In.gr"
-        },
-        {
-          "title": "Ολυμπιακός: Χωρίς Ελ Κααμπί αλλά με Αντρέ Λουίς κόντρα στην ΑΕΚ",
-          "link": "https://www.newsit.gr/athlitika/olympiakos-xoris-el-kaampi-alla-me-antre-louis-kontra-stin-aek/4588565/",
-          "pubDate": "Sat, 31 Jan 2026 12:17:35 +0000",
-          "description": "Δίχως τον κορυφαίο παίκτη του θα παραταχθεί ο Ολυμπιακός στο ντέρμπι κορυφής με την ΑΕΚ (01/02, 21:00) στη Νέα Φιλαδέλφεια για την 19η αγωνιστική της ...  \nTo άρθρο Ολυμπιακός: Χωρίς Ελ Κααμπί αλλά με Αντρέ Λουίς κόντρα στην ΑΕΚ δημοσιεύτηκε στο NewsIT .",
-          "thumbnail": "https://www.newsit.gr/wp-content/uploads/2025/12/el-kaampi-eurokinissi-2-1200x798.jpg",
-          "source": "NewsIT"
         }
       ]
     },
@@ -751,7 +751,7 @@
           "link": "https://www.gazzetta.gr/football/ethniki-gynaikon/2511875/aek-binteo-me-tin-eisboli-ton-koykoyloforon-kai-ti-diakopi-sto",
           "pubDate": "Sat, 31 Jan 2026 15:53:51 +0200",
           "description": "Η στιγμή που οι κουκουλοφόροι μπαίνουν στην κερκίδα και προκαλούν τη διακοπή στο παιχνίδι της ΑΕΚ με τον Οδυσσέα Μοσχάτου για το πρωτάθλημα γυναικών.",
-          "thumbnail": "https://www.gazzetta.gr/sites/default/files/styles/article_main_image/public/2026-01/binteo_aek.jpg?itok=5Y8HP3wt",
+          "thumbnail": "https://www.gazzetta.gr/sites/default/files/styles/article_main_image/public/2026-01/ntoy_aek_moshato.jpg?itok=twqn4I2M",
           "source": "Gazzetta"
         },
         {
