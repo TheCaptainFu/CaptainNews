@@ -223,7 +223,7 @@ function renderNews(categories) {
                         <a href="${art.link}" target="_blank" class="block group h-full">
                             <div class="grid md:grid-cols-2 gap-0 h-full min-h-0">
                                 ${thumbnail ? `
-                                    <div class="relative overflow-hidden bg-zinc-900 order-1 self-stretch h-full">
+                                    <div class="relative overflow-hidden bg-zinc-900 order-1 max-h-[400px] self-stretch h-full">
                                         <img 
                                             src="${thumbnail}" 
                                             alt="${art.title}"
