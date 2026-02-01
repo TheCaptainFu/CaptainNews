@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-02-01T13:50:26.239Z",
+  "lastUpdated": "2026-02-01T13:55:26.571Z",
   "totalArticles": 180,
   "totalFeeds": 24,
   "successfulFeeds": 15,
@@ -8,6 +8,30 @@
       "title": "ΕΚΤΑΚΤΗ ΕΠΙΚΑΙΡΟΤΗΤΑ & ΕΛΛΑΔΑ",
       "color": "red",
       "articles": [
+        {
+          "title": "Σέρρες: Έντονη χιονόπτωση στον Λαϊλιά – Έμειναν στον δρόμο 15 άτομα με τα αυτοκίνητά τους και κάλεσαν το 112",
+          "link": "https://www.protothema.gr/greece/article/1766732/serres-edoni-hionoptosi-ston-lailia-emeinan-ston-dromo-15-atoma-me-ta-autokinita-tous-kai-kalesan-to-112/?utm_source=rss",
+          "pubDate": "Sun, 01 Feb 2026 15:53:54 +0200",
+          "description": "Η κατάσταση επιβαρύνθηκε από την αυξημένη προσέλευση επισκεπτών στον Λαϊλιά, καθώς πλήθος κόσμου ανέβηκε στο βουνό για να απολαύσει το χιόνι και να κάνει σκι",
+          "thumbnail": "https://i1.prth.gr/images/w640/jpg/files/2026-02-01/serres-xionia-1.jpg",
+          "source": "Πρώτο Θέμα"
+        },
+        {
+          "title": "Κακοκαιρία: Υπερχείλισε ρέμα στα Σπάτα – Φόβοι για πλημμύρες σε Γλυφάδα και Βάρη",
+          "link": "https://www.newsit.gr/ellada/kakokairia-yperxeilise-rema-sta-spata-fovoi-gia-plimmyres-se-glyfada-kai-vari/4589237/",
+          "pubDate": "Sun, 01 Feb 2026 13:51:03 +0000",
+          "description": "Συνεχίζεται η κακοκαιρία που επηρεάζει πολλές περιοχές της χώρας μεταξύ των οποίων και την Αττική την Κυριακή 01.02.2026 και φέρνει δυνατές βροχές και καταιγίδες, μαζί ...  \nTo άρθρο Κακοκαιρία: Υπερχείλισε ρέμα στα Σπάτα – Φόβοι για πλημμύρες σε Γλυφάδα και Βάρη δημοσιεύτηκε στο NewsIT .",
+          "thumbnail": "https://www.newsit.gr/wp-content/uploads/2026/02/rema-pikermi-1.jpg",
+          "source": "NewsIT"
+        },
+        {
+          "title": "Η κακοκαιρία μετέτρεψε σε ποτάμια δρόμους στη Σαντορίνη, δείτε βίντεο",
+          "link": "https://www.protothema.gr/greece/article/1766730/i-kakokairia-metetrepse-se-potamia-dromous-sti-sadorini-deite-video/?utm_source=rss",
+          "pubDate": "Sun, 01 Feb 2026 15:51:01 +0200",
+          "description": "Χείμαρροι παρέσυραν κάδους απορριμμάτων, κλαδιά και άλλα φερτά υλικά, δυσχεραίνοντας σημαντικά τις μετακινήσεις κατοίκων και επισκεπτών",
+          "thumbnail": "https://i1.prth.gr/images/w640/jpg/files/2026-02-01/santor.jpg",
+          "source": "Πρώτο Θέμα"
+        },
         {
           "title": "Ρία Ελληνίδου για το σεξιστικό σύνθημα οπαδών: Το αντιμετώπισα με πλάκα, δεν πήγαμε σε χορό λογιστών",
           "link": "https://www.newsit.gr/lifestyle/ria-ellinidou-gia-to-seksistiko-synthima-opadon-to-antimetopisa-me-plaka-den-pigame-se-xoro-logiston/4589232/",
@@ -121,12 +145,28 @@
           "source": "NewsIT"
         },
         {
+          "title": "LIVE: Μάντσεστερ Γιουνάιτεντ – Φούλαμ",
+          "link": "https://www.in.gr/matchcenter/4813610/",
+          "pubDate": "Sun, 01 Feb 2026 15:53:13 +0300",
+          "description": "LIVE: Μάντσεστερ Γιουνάιτεντ – Φούλαμ. Παρακολουθήστε live στις 16:00 την εξέλιξη της αναμέτρησης Μάντσεστερ Γιουνάιτεντ – Φούλαμ για την 24η αγωνιστική της Premier League. Τηλεοπτικά από το Novasports Premier League.",
+          "thumbnail": "https://www.in.gr/wp-content/uploads/2026/02/2-mu-fulham-17699203053872106353131-768x664.jpg",
+          "source": "In.gr"
+        },
+        {
           "title": "ΑΕΚ: Τη Δευτέρα ανακοινώνεται ο Σαχαμπό από την Ένωση",
           "link": "https://www.newsit.gr/athlitika/aek-ti-deytera-anakoinonetai-o-saxampo-apo-tin-enosi/4589218/",
           "pubDate": "Sun, 01 Feb 2026 12:51:27 +0000",
           "description": "Ο Χακίμ Σαχαμπό είναι έτοιμος να ολοκληρώσει τη μεταγραφή του στην ΑΕΚ, αφού πέρασε και τις ιατρικές εξετάσεις στις οποίες υποβλήθηκε. Ο 20χρονος μέσος από ...  \nTo άρθρο ΑΕΚ: Τη Δευτέρα ανακοινώνεται ο Σαχαμπό από την Ένωση δημοσιεύτηκε στο NewsIT .",
           "thumbnail": "https://www.newsit.gr/wp-content/uploads/2026/02/sahabo-1200x799.jpg",
           "source": "NewsIT"
+        },
+        {
+          "title": "Προ των πυλών το πόρισμα του ΟΜΕΔ για τη συλλογική σύμβαση εργασίας των διανομέων της efood",
+          "link": "https://www.in.gr/2026/02/01/greece/pro-ton-pylon-porisma-tou-omed-gia-ti-syllogiki-symvasi-ergasias-ton-dianomeon-tis-efood/",
+          "pubDate": "Sun, 01 Feb 2026 15:51:03 +0300",
+          "description": "Αναμένεται να επιδοθεί στους οδηγούς της efood τη Δευτέρα - πυκνώνουν οι κινητοποιήσεις των εργαζομένων στις πλατφόρμες σε όλη την Ευρωπαϊκή Ένωση",
+          "thumbnail": "https://www.in.gr/wp-content/uploads/2026/01/kapa12041659864123-768x512.jpg",
+          "source": "In.gr"
         },
         {
           "title": "Στα λευκά «ντύθηκαν» Κοζάνη, Γρεβενά, Καστοριά και Φλώρινα – Μεγάλα προβλήματα στο οδικό δίκτυο της βόρειας Ελλάδας",
@@ -207,46 +247,6 @@
           "description": "Η Αγγελική Νικολούλη αισθάνθηκε την ανάγκη να μοιραστεί σκέψεις και συναισθήματα, τρεις μήνες μετά τον θάνατο της μητέρας της, που την συνέτριψε. Η δημοσιογράφος και ...  \nTo άρθρο Η Αγγελική Νικολούλη 3 μήνες μετά τον θάνατο της μητέρας της: Το σπίτι άδειο, η σιωπή ασήκωτη δημοσιεύτηκε στο NewsIT .",
           "thumbnail": "https://www.newsit.gr/wp-content/uploads/2026/02/nikolouli-ndp-1200x816.jpg",
           "source": "NewsIT"
-        },
-        {
-          "title": "Εύβοια: Μεγάλες καταστροφές από την κακοκαιρία – Δρόμοι και πεζοδρόμια έγιναν ποτάμια, δέντρο ξεριζώθηκε και έπεσε",
-          "link": "https://www.newsit.gr/ellada/eyvoia-megales-katastrofes-apo-tin-kakokairia-dromoi-kai-pezodromia-eginan-potamia-dentro-kserizothike-kai-epese/4589188/",
-          "pubDate": "Sun, 01 Feb 2026 12:25:03 +0000",
-          "description": "Σοβαρά προβλήματα έχει δημιουργήσει η κακοκαιρία που βρίσκεται σε εξέλιξη στην Εύβοια, με δρόμους να πλημμυρίζουν και να κάνουν τις συνθήκες για μετακίνηση των πολιτών ...  \nTo άρθρο Εύβοια: Μεγάλες καταστροφές από την κακοκαιρία – Δρόμοι και πεζοδρόμια έγιναν ποτάμια, δέντρο ξεριζώθηκε και έπεσε δημοσιεύτηκε στο NewsIT .",
-          "thumbnail": "https://www.newsit.gr/wp-content/uploads/2026/02/evoia-kakokairia4.jpg",
-          "source": "NewsIT"
-        },
-        {
-          "title": "Νέα Ιωνία: Συνελήφθη επ’ αυτοφώρω 20χρονη για κλοπή – Κρύφτηκε σε ντουλάπα και απείλησε με μαχαίρι",
-          "link": "https://www.in.gr/2026/02/01/greece/nea-ionia-synelifthi-ep-aytoforo-20xroni-gia-klopi-kryfthike-se-ntoulapa-kai-apeilise-maxairi/",
-          "pubDate": "Sun, 01 Feb 2026 15:22:38 +0300",
-          "description": "Η 20χρονη μπήκε σε δωμάτιο της οικίας από ανασφάλιστη πόρτα, ενώ οι ένοικοι βρίσκονταν σε άλλους χώρους, και αφαίρεσε κοσμήματα και τιμαλφή.",
-          "thumbnail": "https://www.in.gr/wp-content/uploads/2026/02/ImgSrc-2022-05-25T130319.704-600x400-2-7.jpg",
-          "source": "In.gr"
-        },
-        {
-          "title": "Ολυμπιακός: Μόλις 650 εισιτήρια έμειναν για το παιχνίδι με τον Αστέρα Τρίπολης",
-          "link": "https://www.newsit.gr/athlitika/olympiakos-molis-650-eisitiria-emeinan-gia-to-paixnidi-me-ton-astera-tripolis/4589198/",
-          "pubDate": "Sun, 01 Feb 2026 12:21:39 +0000",
-          "description": "Ο Ολυμπιακός φιλοξενείται από τον Αστέρα Τρίπολης για το εξ΄αναβολής παιχνίδι της 17ης αγωνιστικής και ενημέρωσε ότι έχουν μείνει μόλις 650 εισιτήρια για το πέταλο ...  \nTo άρθρο Ολυμπιακός: Μόλις 650 εισιτήρια έμειναν για το παιχνίδι με τον Αστέρα Τρίπολης δημοσιεύτηκε στο NewsIT .",
-          "thumbnail": "https://www.newsit.gr/wp-content/uploads/2025/05/fans_olympiacos-1200x801.jpg",
-          "source": "NewsIT"
-        },
-        {
-          "title": "Θανατηφόρο τροχαίο στη Θεσσαλονίκη, νεκρός 44χρονος",
-          "link": "https://www.protothema.gr/greece/article/1766680/thanatiforo-trohaio-sti-thessaloniki-nekros-44hronos/?utm_source=rss",
-          "pubDate": "Sun, 01 Feb 2026 14:16:00 +0200",
-          "description": "Ο άτυχος άνδρας έχασε τη ζωή του όταν το αυτοκίνητό του εξετράπη της πορείας και προσέκρουσε σε στηθαία ασφαλείας",
-          "thumbnail": "https://i1.prth.gr/images/w640/png/files/2026-02-01/troxaio9.png",
-          "source": "Πρώτο Θέμα"
-        },
-        {
-          "title": "Θανατηφόρο τροχαίο στη Θεσσαλονίκη – Nεκρός 44χρονος",
-          "link": "https://www.in.gr/2026/02/01/greece/thanatiforo-troxaio-sti-thessaloniki-nekros-44xronos/",
-          "pubDate": "Sun, 01 Feb 2026 15:15:52 +0300",
-          "description": "Ο άτυχος άνδρας έχασε τη ζωή του όταν το αυτοκίνητό του εξετράπη της πορείας και προσέκρουσε σε στηθαία ασφαλείας",
-          "thumbnail": "https://www.in.gr/wp-content/uploads/2026/02/Capture-12-768x538.jpg",
-          "source": "In.gr"
         }
       ]
     },
