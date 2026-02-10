@@ -1,7 +1,19 @@
 @import "tailwindcss";
 
 .gg-container {
-    width: 1200px;
+    width: 1230px;
     padding:  0 15px;
     margin: 0 auto;
+}
+
+body {
+    background-color: var(--color-main-black);
+    color: #fff;
+}
+
+@theme {
+    --color-main-black: #010409;
+    --color-main-grey: #0d1117;
+    --color-main-grey-2: #151b23;
+    --color-main-grey-3: #0d1117;
 }

@@ -1,0 +1,782 @@
+{
+     "politics_greece": [
+          {
+               "title": "Κίμπερλι Γκιλφόιλ μετά τη συνάντηση με Χρίστο Δήμα: Οι μεταφορές είναι η ραχοκοκαλιά μίας ισχυρής οικονομίας",
+               "image": "https://www.newsit.gr/wp-content/uploads/2026/02/kimberly-guilfoylle-10022025.jpg",
+               "link": "https://www.newsit.gr/politikh/kimperli-gkilfoil-meta-ti-synantisi-me-xristo-dima-oi-metafores-einai-i-raxokokalia-mias-isxyris-oikonomias/4597485/",
+               "date": "2026-02-10 18:38:00",
+               "source": "Newsit"
+          },
+          {
+               "title": "Η Νίκη Κεραμέως για το σκάνδαλο Παναγόπουλου: Άπλετο φως στη συγκεκριμένη υπόθεση που αφορά το φυσικό πρόσωπο",
+               "image": "https://www.newsit.gr/wp-content/uploads/2026/02/niki-kerameos-10022026.jpg",
+               "link": "https://www.newsit.gr/politikh/i-niki-kerameos-gia-to-skandalo-panagopoulou-apleto-fos-sti-sygkekrimeni-ypothesi-pou-afora-to-fysiko-prosopo/4597420/",
+               "date": "2026-02-10 17:32:19",
+               "source": "Newsit"
+          },
+          {
+               "title": "Παύλος Πολάκης: Χυδαία και προκλητική η αίτηση άρσης ασυλίας μου, έχω καταρρίψει το ρεκόρ Γκίνες",
+               "image": "https://www.newsit.gr/wp-content/uploads/2025/12/pavlos-polakis-27102025.jpg",
+               "link": "https://www.newsit.gr/politikh/paylos-polakis-xydaia-kai-proklitiki-i-aitisi-arsis-asylias-mou-exo-katarripsei-to-rekor-gkines/4597441/",
+               "date": "2026-02-10 17:28:05",
+               "source": "Newsit"
+          },
+          {
+               "title": "Συνάντηση Μητσοτάκη και Ερντογάν: Στις 15.15 την Τετάρτη το τετ α τετ των δύο ηγετών στην Άγκυρα",
+               "image": "https://www.newsit.gr/wp-content/uploads/2026/02/mitsotakis-erdogan1-1200x800.jpg",
+               "link": "https://www.newsit.gr/politikh/synantisi-mitsotaki-kai-erntogan-stis-15-15-tin-tetarti-to-tet-a-tet-ton-dyo-igeton-stin-agkyra/4597359/",
+               "date": "2026-02-10 15:48:06",
+               "source": "Newsit"
+          },
+          {
+               "title": "Μνημείο Αγνώστου Στρατιώτη: Συγκροτείται Μικτή Συμβουλευτική Επιτροπή για την ανάδειξη και τη συντήρησή του",
+               "image": "https://www.newsit.gr/wp-content/uploads/2026/02/agnostos-stratiotis-eurokinissi-1200x800.jpg",
+               "link": "https://www.newsit.gr/politikh/mnimeio-agnostou-stratioti-sygkroteitai-mikti-symvouleytiki-epitropi-gia-tin-anadeiksi-kai-ti-syntirisi-tou/4597336/",
+               "date": "2026-02-10 15:46:19",
+               "source": "Newsit"
+          },
+          {
+               "title": "Οι προκλητικές NAVTEX της Τουρκίας για το Αιγαίο ενώπιον του Διεθνούς Οργανισμού Ναυτιλίας με ελληνικό διάβημα",
+               "image": "https://www.newsit.gr/wp-content/uploads/2026/02/fregata-adrias-polemiko-nautiko-eurokinissi-1200x800.jpg",
+               "link": "https://www.newsit.gr/politikh/oi-proklitikes-navtex-tis-tourkias-gia-to-aigaio-enopion-tou-diethnous-organismou-naytilias-me-elliniko-diavima/4597316/",
+               "date": "2026-02-10 15:23:24",
+               "source": "Newsit"
+          },
+          {
+               "title": "Κώστας Τσιάρας: Έγινε μια πολύ παραγωγική συζήτηση με τους κτηνοτρόφους",
+               "image": "https://www.newsit.gr/wp-content/uploads/2026/02/tsiaras-1200x800.jpg",
+               "link": "https://www.newsit.gr/politikh/kostas-tsiaras-egine-mia-poly-paragogiki-syzitisi-me-tous-ktinotrofous/4597320/",
+               "date": "2026-02-10 15:13:15",
+               "source": "Newsit"
+          },
+          {
+               "title": "Η ΠΑΣΚΕ απειλεί τον Νίκο Ανδρουλάκη με αποχώρηση από το ΠΑΣΟΚ λόγω Παναγόπουλου, κάνουν λόγο για «λιντσάρισμα»",
+               "image": "https://www.newsit.gr/wp-content/uploads/2026/02/panagopoulos-1200x800.jpg",
+               "link": "https://www.newsit.gr/politikh/i-paske-apeilei-ton-niko-androulaki-me-apoxorisi-apo-to-pasok-logo-panagopoulou-kanoun-logo-gia-lintsarisma/4597267/",
+               "date": "2026-02-10 14:43:43",
+               "source": "Newsit"
+          },
+          {
+               "title": "Μαρία Καρυστιανού: Δεν έχουμε ταμπέλα, δεν έπρεπε να γίνει η συνάντηση Μητσοτάκη με Ερντογάν",
+               "image": "https://www.newsit.gr/wp-content/uploads/2026/01/karistianou-eurok-1-1200x825.jpg",
+               "link": "https://www.newsit.gr/politikh/maria-karystianou-den-exoume-tampela-den-eprepe-na-ginei-i-synantisi-mitsotaki-me-erntogan/4597201/",
+               "date": "2026-02-10 14:21:50",
+               "source": "Newsit"
+          },
+          {
+               "title": "Παύλος Πολάκης: Άρση της ασυλίας του βουλευτή του ΣΥΡΙΖΑ εισηγείται η επιτροπή δεοντολογίας της Βουλής",
+               "image": "https://www.newsit.gr/wp-content/uploads/2026/01/pavlos-polakis-06012026.jpg",
+               "link": "https://www.newsit.gr/politikh/paylos-polakis-arsi-tis-asylias-tou-vouleyti-tou-syriza-eisigeitai-i-epitropi-deontologias-tis-voulis/4597240/",
+               "date": "2026-02-10 13:51:12",
+               "source": "Newsit"
+          }
+     ],
+     "sports": [
+          {
+               "title": "Πώς τα πάει η Ελλάδα στην καταπολέμηση της διαφθοράς",
+               "image": "https://www.gazzetta.gr/sites/default/files/styles/article_main_image/public/2026-02/ellada-greece-shutterstock.jpg?itok=-GlO1fXD",
+               "link": "https://www.gazzetta.gr/2436947/boyliazoyn-10-ipeirotikoi-proorismoi-gia-pasha",
+               "date": "2026-02-10 17:06:00",
+               "source": "Gazzetta"
+          },
+          {
+               "title": "Τσιτσιπάς: Μεσημέρι Τετάρτης (11/2) η πρεμιέρα του στο Ρότερνταμ",
+               "image": "https://www.gazzetta.gr/sites/default/files/styles/article_main_image/public/2026-02/tsitsipas_davis_cup.jpg?itok=kE1hIlUe",
+               "link": "https://www.gazzetta.gr/tennis/atp/2514921/tsitsipas-mesimeri-tetartis-112-i-premiera-toy-sto-roterntam",
+               "date": "2026-02-10 17:02:00",
+               "source": "Gazzetta"
+          },
+          {
+               "title": "Άρης: Ο ανταγωνισμός γεννήθηκε μέσα από τις επιδόσεις του Μορόν",
+               "image": "https://www.gazzetta.gr/sites/default/files/styles/article_main_image/public/2026-02/6810976_1.jpg?itok=GHI9B7j_",
+               "link": "https://www.gazzetta.gr/football/superleague/2514909/aris-o-antagonismos-gennithike-mesa-apo-tis-epidoseis-toy-moron",
+               "date": "2026-02-10 16:58:19",
+               "source": "Gazzetta"
+          },
+          {
+               "title": "Παναθηναϊκός: Οι τέσσερις σωματοφύλακες!",
+               "image": "https://www.gazzetta.gr/sites/default/files/styles/article_main_image/public/2026-02/themas.jpg?itok=EI1AFSbO",
+               "link": "https://www.gazzetta.gr/football/superleague/2514915/panathinaikos-oi-tesseris-somatofylakes",
+               "date": "2026-02-10 16:55:01",
+               "source": "Gazzetta"
+          },
+          {
+               "title": "Παιδόφιλος ταξίδεψε σε όλο τον κόσμο, βίασε περίπου 100 ανήλικους και δολοφόνησε τη μητέρα και τη θεία του",
+               "image": "https://www.gazzetta.gr/sites/default/files/styles/article_main_image/public/2026-02/paidofilos-gallia.jpg?itok=oW1hU9r0",
+               "link": "https://www.gazzetta.gr/plus/2514907/paidofilos-taxidepse-se-olo-ton-kosmo-biase-peripoy-100-anilikoys-kai-dolofonise-ti",
+               "date": "2026-02-10 16:55:00",
+               "source": "Gazzetta"
+          },
+          {
+               "title": "Ολυμπιακός: Η ΔΕΑΒ τιμώρησε με πρόστιμο ομάδα και Ποντένσε",
+               "image": "https://www.gazzetta.gr/sites/default/files/styles/article_main_image/public/2026-02/podence_oly_1_4.jpg?itok=Wc3-4c-Y",
+               "link": "https://www.gazzetta.gr/football/superleague/2514920/olympiakos-i-deab-timorise-me-prostima-omada-kai-pontense",
+               "date": "2026-02-10 16:54:56",
+               "source": "Gazzetta"
+          },
+          {
+               "title": "Ο πρόεδρος της Χάποελ για τον Χέιζ-Ντέιβις: «Δεν έχει υπογράψει, ελπίζουμε να αποδεχτεί την πρότασή μας»",
+               "image": "https://www.gazzetta.gr/sites/default/files/styles/article_main_image/public/2026-02/heyz-davis.jpg?itok=gc91zleW",
+               "link": "https://www.gazzetta.gr/basketball/euroleague/2514919/o-proedros-tis-hapoel-gia-ton-heiz-nteibis-den-ehei-ypograpsei",
+               "date": "2026-02-10 16:47:49",
+               "source": "Gazzetta"
+          },
+          {
+               "title": "Μπαρτσελόνα: Αμφίβολος ο Ραφίνια στον ημιτελικό του Copa del Rey κόντρα στην Ατλέτικο",
+               "image": "https://www.gazzetta.gr/sites/default/files/styles/article_main_image/public/2025-10/raphinha_0.jpg?itok=epBW48Jj",
+               "link": "https://www.gazzetta.gr/football/copa-del-rey/2514918/mpartselona-amfibolos-o-rafinia-ston-imiteliko-toy-copa-del-rey",
+               "date": "2026-02-10 16:45:46",
+               "source": "Gazzetta"
+          },
+          {
+               "title": "ΑΕΚ: Η 12άδα κόντρα στην Καρδίτσα",
+               "image": "https://www.gazzetta.gr/sites/default/files/styles/article_main_image/public/2026-01/brown2121.jpg?itok=H05e7Bcy",
+               "link": "https://www.gazzetta.gr/basketball/basketball-champions-league/2514917/aek-i-12ada-kontra-stin-karditsa",
+               "date": "2026-02-10 16:41:27",
+               "source": "Gazzetta"
+          },
+          {
+               "title": "Μουντιάλ 2026: Το Μεξικό επιστρατεύει σκύλους-ρομπότ για θέματα ασφαλείας",
+               "image": "https://www.gazzetta.gr/sites/default/files/styles/article_main_image/public/2026-02/robot_dogs_mexico.png?itok=p1ujdg28",
+               "link": "https://www.gazzetta.gr/football/mundial/2514914/moyntial-2026-mexiko-epistrateyei-skyloys-rompot-gia-themata-asfaleias",
+               "date": "2026-02-10 16:32:42",
+               "source": "Gazzetta"
+          }
+     ],
+     "technology": [
+          {
+               "title": "FBI releases recovered footage from Nancy Guthrie’s Nest cam",
+               "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/02/nancy-guthrie-poster.jpg?quality=90&strip=all&crop=0,0,100,100",
+               "link": "https://www.theverge.com/tech/876542/fbi-nancy-guthrie-nest-cam-video",
+               "date": "2026-02-10 19:43:46",
+               "source": "The Verge"
+          },
+          {
+               "title": "Here’s how Rivian changed the rear door manual release on the R2",
+               "image": "",
+               "link": "https://techcrunch.com/2026/02/10/heres-how-rivian-changed-the-rear-door-manual-release-on-the-r2/",
+               "date": "2026-02-10 19:38:54",
+               "source": "TechCrunch"
+          },
+          {
+               "title": "Facebook adds new AI features, animated profile photos, and backgrounds for text posts",
+               "image": "",
+               "link": "https://techcrunch.com/2026/02/10/facebook-adds-new-ai-features-animated-profile-photos-and-backgrounds-for-text-posts/",
+               "date": "2026-02-10 19:34:51",
+               "source": "TechCrunch"
+          },
+          {
+               "title": "Sharge’s new power bank can charge two laptops while putting on a light show",
+               "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/02/shargeek300_1.jpg?quality=90&strip=all&crop=0,0,100,100",
+               "link": "https://www.theverge.com/tech/876432/sharge-shargeek-300w-power-bank-rgb-lighting-kickstarter",
+               "date": "2026-02-10 18:43:16",
+               "source": "The Verge"
+          },
+          {
+               "title": "This GoPro and Lens Bundle Is $200 Off",
+               "image": "https://media.wired.com/photos/698b75a2dbf6cd0017b8e44e/master/pass/This%20GoPro%20and%20Lens%20Bundle%20Is%20$200%20Off.png",
+               "link": "https://www.wired.com/story/gopro-hero-lens-bundle-deal-226/",
+               "date": "2026-02-10 18:21:44",
+               "source": "Wired"
+          },
+          {
+               "title": "Facebook can animate your profile pic with AI",
+               "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/04/STK040_VRG_Illo_N_Barclay_2_facebook.jpg?quality=90&strip=all&crop=0,0,100,100",
+               "link": "https://www.theverge.com/tech/876480/meta-facebook-animate-profile-picture-restyle-ai",
+               "date": "2026-02-10 18:14:21",
+               "source": "The Verge"
+          },
+          {
+               "title": "An Ark showed me augmented reality’s true artistic potential",
+               "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/02/anarccast.jpg?quality=90&strip=all&crop=3.6418731689453,0,96.358126831055,100",
+               "link": "https://www.theverge.com/gadgets/875869/an-ark-mixed-reality-simon-stephens-sarah-frankcom-todd-eckert",
+               "date": "2026-02-10 17:20:00",
+               "source": "The Verge"
+          },
+          {
+               "title": "The Shokz OpenFit Air earbuds are matching their all-time low price",
+               "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/02/vergedealswildrobot-1.png?quality=90&strip=all&crop=0,0,100,100",
+               "link": "https://www.theverge.com/gadgets/876392/shokz-openfit-air-earbuds-kobo-clara-colour-deal-sale",
+               "date": "2026-02-10 17:05:02",
+               "source": "The Verge"
+          },
+          {
+               "title": "Microsoft is keeping Secure Boot alive with Windows updates",
+               "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/02/STK109_WINDOWS_C.jpg?quality=90&strip=all&crop=0,0,100,100",
+               "link": "https://www.theverge.com/tech/876336/microsoft-windows-secure-boot-certificate-renewal",
+               "date": "2026-02-10 17:00:00",
+               "source": "The Verge"
+          },
+          {
+               "title": "Google can now help you find and remove your ID from search results",
+               "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/02/STK093_GOOGLE_B.jpg?quality=90&strip=all&crop=0,0,100,100",
+               "link": "https://www.theverge.com/tech/876352/google-search-remove-sensitive-information-nonconsensual-images",
+               "date": "2026-02-10 16:45:56",
+               "source": "The Verge"
+          },
+          {
+               "title": "Razer’s resurrected 25-year-old gaming mouse will cost you $1,337",
+               "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/02/razer_boomslang1.jpg?quality=90&strip=all&crop=0,0,100,100",
+               "link": "https://www.theverge.com/gadgets/876333/razer-boomslang-20th-anniversary-edition-wireless-mouse-preorder-price",
+               "date": "2026-02-10 16:41:54",
+               "source": "The Verge"
+          },
+          {
+               "title": "Telegram is reportedly being slowed down and restricted in Russia",
+               "image": "https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/24008017/acastro_STK085_Telegram_02.jpg?quality=90&strip=all&crop=0,0,100,100",
+               "link": "https://www.theverge.com/tech/876351/telegram-russia-restrictions",
+               "date": "2026-02-10 16:39:16",
+               "source": "The Verge"
+          },
+          {
+               "title": "Former Tesla product manager wants to make luxury goods impossible to fake, starting with a chip",
+               "image": "",
+               "link": "https://techcrunch.com/2026/02/10/former-tesla-product-manager-wants-to-make-luxury-goods-impossible-to-fake-starting-with-a-chip/",
+               "date": "2026-02-10 16:30:00",
+               "source": "TechCrunch"
+          },
+          {
+               "title": "Singapore says China-backed hackers targeted its four largest phone companies",
+               "image": "",
+               "link": "https://techcrunch.com/2026/02/10/singapore-china-backed-hackers-targeted-largest-phone-companies-salt-typhoon/",
+               "date": "2026-02-10 16:19:39",
+               "source": "TechCrunch"
+          },
+          {
+               "title": "ICE Is Expanding Across the US at Breakneck Speed. Here’s Where It’s Going Next",
+               "image": "https://media.wired.com/photos/6986655d619933b7c3265278/master/pass/politics_ice_offices_sprawl.jpg",
+               "link": "https://www.wired.com/story/ice-expansion-across-us-at-heres-where-its-going-next/",
+               "date": "2026-02-10 16:05:43",
+               "source": "Wired"
+          },
+          {
+               "title": "Microsoft wants to rewire data centers to save space",
+               "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/02/gettyimages-2243425240.jpg?quality=90&strip=all&crop=0,0,100,100",
+               "link": "https://www.theverge.com/science/876083/microsoft-ai-data-center-superconductor",
+               "date": "2026-02-10 16:01:40",
+               "source": "The Verge"
+          },
+          {
+               "title": "Vega raises $120M Series B to rethink how enterprises detect cyber threats",
+               "image": "",
+               "link": "https://techcrunch.com/2026/02/10/vega-raises-120m-series-b-to-rethink-how-enterprises-detect-cyber-threats/",
+               "date": "2026-02-10 16:00:00",
+               "source": "TechCrunch"
+          },
+          {
+               "title": "What to know about Netflix’s landmark acquisition of Warner Bros.",
+               "image": "",
+               "link": "https://techcrunch.com/2026/02/10/what-to-know-about-netflixs-landmark-acquisition-of-warner-bros/",
+               "date": "2026-02-10 15:56:21",
+               "source": "TechCrunch"
+          },
+          {
+               "title": "Google expands tools to let users remove sensitive data about themselves from Search",
+               "image": "",
+               "link": "https://techcrunch.com/2026/02/10/google-remove-sensitive-personal-data-from-search/",
+               "date": "2026-02-10 15:54:48",
+               "source": "TechCrunch"
+          },
+          {
+               "title": "Trump EPA reportedly seeks to revoke landmark air pollution rule",
+               "image": "",
+               "link": "https://techcrunch.com/2026/02/10/trump-epa-reportedly-seeks-to-revoke-landmark-air-pollution-rule/",
+               "date": "2026-02-10 15:47:13",
+               "source": "TechCrunch"
+          },
+          {
+               "title": "YouTubers aren’t relying on ad revenue anymore — here’s how some are diversifying",
+               "image": "",
+               "link": "https://techcrunch.com/2026/02/10/youtubers-arent-relying-on-ad-revenue-anymore-heres-how-some-are-diversifying/",
+               "date": "2026-02-10 15:06:26",
+               "source": "TechCrunch"
+          },
+          {
+               "title": "Hauler Hero collects $16M for its AI waste management software",
+               "image": "",
+               "link": "https://techcrunch.com/2026/02/10/hauler-hero-collects-16m-for-its-ai-waste-management-software/",
+               "date": "2026-02-10 15:00:00",
+               "source": "TechCrunch"
+          },
+          {
+               "title": "The Best TVs We’ve Reviewed in 2026: Sony, Samsung, LG, and More",
+               "image": "https://media.wired.com/photos/683104b3e6043309df61481d/master/pass/The%20Best%20TVs%20(and%20Helpful%20Buying%20Tips).png",
+               "link": "https://www.wired.com/gallery/best-tvs/",
+               "date": "2026-02-10 14:00:00",
+               "source": "Wired"
+          },
+          {
+               "title": "6 Best Gaming Laptops (2026): Tested and Reviewed",
+               "image": "https://media.wired.com/photos/6843d25f93d1ae9631e55a37/master/pass/Best%20gaming%20laptops%202025%20update_.png",
+               "link": "https://www.wired.com/gallery/best-gaming-laptops/",
+               "date": "2026-02-10 13:00:00",
+               "source": "Wired"
+          },
+          {
+               "title": "4 Best Résumé Builders (2026), Tested and Reviewed",
+               "image": "https://media.wired.com/photos/68eeae717c200f52288c73c6/master/pass/W1102806-Credit-Jacob-Roach.JPG",
+               "link": "https://www.wired.com/gallery/best-resume-builders/",
+               "date": "2026-02-10 12:30:00",
+               "source": "Wired"
+          },
+          {
+               "title": "Even Realities G2 Review: Smarter Glasses",
+               "image": "https://media.wired.com/photos/698a6e3b972bf41b68e7f15d/master/pass/Review-%20Even%20Realities%20G2.png",
+               "link": "https://www.wired.com/review/even-realities-g2/",
+               "date": "2026-02-10 12:00:00",
+               "source": "Wired"
+          },
+          {
+               "title": "Bidets Are Confusing Visitors at the 2026 Winter Olympics",
+               "image": "https://media.wired.com/photos/6989f3d4c2e94008de6beca9/master/pass/1255140768",
+               "link": "https://www.wired.com/story/2026-winter-olympics-bidets/",
+               "date": "2026-02-10 12:00:00",
+               "source": "Wired"
+          },
+          {
+               "title": "8 Best Space Heaters (2026): Tested, Measured, and Mistreated",
+               "image": "https://media.wired.com/photos/68e1fd1eb7a56a189ed91b44/master/pass/The%208%20Best%20Space%20Heaters%20of%202025.%20I%20Tested%20Dozens%20to%20Find%20Them.png",
+               "link": "https://www.wired.com/gallery/the-best-space-heaters/",
+               "date": "2026-02-10 11:34:00",
+               "source": "Wired"
+          },
+          {
+               "title": "Samsung Galaxy A17 5G Review: Crippling Performance",
+               "image": "https://media.wired.com/photos/698a7a42c46327732f7f76fd/master/pass/Samsung%20Galaxy%20A17%205G%20SOURCE%20Julian%20Chokkattu.jpg",
+               "link": "https://www.wired.com/review/samsung-galaxy-a17-5g/",
+               "date": "2026-02-10 11:30:00",
+               "source": "Wired"
+          },
+          {
+               "title": "The Best Streaming Bundles and Streaming Deals of February 2026",
+               "image": "https://media.wired.com/photos/698a214a5d41364caf4502cc/master/pass/The%20Best%20Deals%20on%20Peacock,%20HBO,%20Apple%20TV,%20and%20Disney%20Streaming%20for%20February%202026.png",
+               "link": "https://www.wired.com/story/best-streaming-deals-and-streaming-bundles/",
+               "date": "2026-02-10 11:01:00",
+               "source": "Wired"
+          }
+     ],
+     "music": [
+          {
+               "title": "Don Toliver Scores His First No. 1 Hit on Hot Rap Songs Chart",
+               "image": "https://www.billboard.com/",
+               "link": "https://www.billboard.com/music/chart-beat/don-toliver-body-number-1-hot-rap-songs-chart-1236177416/",
+               "date": "2026-02-10 19:52:18",
+               "source": "Billboard"
+          },
+          {
+               "title": "Baby Keem Announces ‘Ca$ino’ Album Release Date &amp; Previews Kendrick Lamar Collaboration",
+               "image": "https://www.billboard.com/",
+               "link": "https://www.billboard.com/music/rb-hip-hop/baby-keem-new-album-casino-release-date-1236177373/",
+               "date": "2026-02-10 19:44:37",
+               "source": "Billboard"
+          },
+          {
+               "title": "Mike Easterlin to Oversee ONErpm Nashville Office",
+               "image": "https://www.billboard.com/",
+               "link": "https://www.billboard.com/pro/mike-easterlin-lead-onerpm-nashville-office/",
+               "date": "2026-02-10 19:01:25",
+               "source": "Billboard"
+          },
+          {
+               "title": "Megan Thee Stallion Surprises Klay Thompson With Bone Thugs-N-Harmony Performance at His Birthday Party",
+               "image": "https://i.imgur.com/2HpFicp.png",
+               "link": "https://www.billboard.com/music/rb-hip-hop/megan-thee-stallion-klay-thompson-bone-thugs-n-harmony-1236177309/",
+               "date": "2026-02-10 18:56:26",
+               "source": "Billboard"
+          },
+          {
+               "title": "Kid Rock Confirms His Turning Point USA Halftime Show Wasn’t Live, But Denies Lip-Synching",
+               "image": "https://www.billboard.com/",
+               "link": "https://www.billboard.com/music/music-news/kid-rock-denies-lip-synching-turning-point-halftime-show-1236177353/",
+               "date": "2026-02-10 18:44:56",
+               "source": "Billboard"
+          },
+          {
+               "title": "Billboard’s Music Industry Events Calendar",
+               "image": "https://www.billboard.com/",
+               "link": "https://www.billboard.com/pro/music-industry-events-calendar-festivals-awards-conferences/",
+               "date": "2026-02-10 18:38:00",
+               "source": "Billboard"
+          },
+          {
+               "title": "Wednesday Leave Wasserman Over CEO’s Ties to Jeffrey Epstein",
+               "image": "https://media.pitchfork.com/photos/698a47970f5a90a95509c62d/master/pass/GettyImages-2259112568.jpg",
+               "link": "https://pitchfork.com/news/wednesday-leaves-wasserman-over-ceos-ties-to-jeffrey-epstein/",
+               "date": "2026-02-10 18:22:26",
+               "source": "Pitchfork"
+          },
+          {
+               "title": "October London Has Magic ‘Touch’ With Third Adult R&amp;B Airplay No. 1",
+               "image": "https://www.billboard.com/",
+               "link": "https://www.billboard.com/music/chart-beat/october-london-touch-on-me-number-1-adult-rb-airplay-chart-1236177336/",
+               "date": "2026-02-10 18:14:57",
+               "source": "Billboard"
+          },
+          {
+               "title": "Nick Jonas Is Hollywood’s Next Action Star After Landing a Lead Role in ‘Bodyman’ Thriller",
+               "image": "https://www.billboard.com/",
+               "link": "https://www.billboard.com/culture/tv-film/nick-jonas-star-movie-bodyman-action-thriller-1236177322/",
+               "date": "2026-02-10 17:57:51",
+               "source": "Billboard"
+          },
+          {
+               "title": "Bad Bunny Reveals the Special Meaning Behind the ’64’ on His Super Bowl Halftime Show Jersey",
+               "image": "https://www.billboard.com/",
+               "link": "https://www.billboard.com/music/latin/bad-bunny-super-bowl-jersey-64-meaning-1236177290/",
+               "date": "2026-02-10 17:54:26",
+               "source": "Billboard"
+          },
+          {
+               "title": "Dictators/Manowar Guitarist Ross ‘The Boss’ Friedman Reveals ALS Diagnosis: ‘Crushes Me Not To Be Able To Play Guitar’",
+               "image": "https://i.imgur.com/2HpFicp.png",
+               "link": "https://www.billboard.com/music/rock/dictators-manowar-guitarist-ross-boss-friedman-als-diagnosis-1236177298/",
+               "date": "2026-02-10 17:38:12",
+               "source": "Billboard"
+          },
+          {
+               "title": "Knocked Loose and Denzel Curry Warn You Against Joining the ‘Hive Mind’ on New Collab",
+               "image": "",
+               "link": "https://www.rollingstone.com/music/music-news/knocked-loose-denzel-curry-hive-mind-video-1235514120/",
+               "date": "2026-02-10 17:30:00",
+               "source": "Rolling Stone"
+          },
+          {
+               "title": "Lip Critic Announce New Album and Tour, Share Video for New Song",
+               "image": "https://media.pitchfork.com/photos/698b5053bece0f8a29b0806b/master/pass/LIPCRITIC_02_352.jpg",
+               "link": "https://pitchfork.com/news/lip-critic-announce-new-album-and-tour-share-video-for-new-song/",
+               "date": "2026-02-10 17:23:31",
+               "source": "Pitchfork"
+          },
+          {
+               "title": "Muna Announce First Album in Four Years, Share Song",
+               "image": "https://media.pitchfork.com/photos/698abd264a5bc1c84125ffd3/master/pass/Photo%20Credit%20Dean%20Bradshaw.jpeg",
+               "link": "https://pitchfork.com/news/muna-announce-first-album-in-four-years-share-song/",
+               "date": "2026-02-10 17:05:30",
+               "source": "Pitchfork"
+          },
+          {
+               "title": "The Black Keys Line Up Massive 2026 Tour",
+               "image": "https://media.pitchfork.com/photos/698b5a251dded9037f1a8e23/master/pass/the-black-keys-2026-tour.jpg",
+               "link": "https://pitchfork.com/news/the-black-keys-line-up-massive-2026-tour/",
+               "date": "2026-02-10 16:22:48",
+               "source": "Pitchfork"
+          },
+          {
+               "title": "Demi Lovato Cancels Five Shows Ahead of ‘It’s Not That Deep’ Tour to Protect Health",
+               "image": "",
+               "link": "https://www.rollingstone.com/music/music-news/demi-lovato-cancels-five-shows-its-not-that-deep-tour-1235514042/",
+               "date": "2026-02-10 16:22:41",
+               "source": "Rolling Stone"
+          },
+          {
+               "title": "Devo Add Yet More Tours to Their 2026 Slate",
+               "image": "https://media.pitchfork.com/photos/693883a86ff982558515b656/master/pass/GettyImages-2241641359.jpg",
+               "link": "https://pitchfork.com/news/devo-add-yet-more-tours-to-their-2026-slate/",
+               "date": "2026-02-10 15:40:05",
+               "source": "Pitchfork"
+          },
+          {
+               "title": "Jimmy Eat World Plot Bleed American Anniversary Tour",
+               "image": "https://media.pitchfork.com/photos/698b3b361dded9037f1a8c75/master/pass/jimmy-eat-world-tour-2026%5D.jpg",
+               "link": "https://pitchfork.com/news/jimmy-eat-world-plot-bleed-american-anniversary-tour/",
+               "date": "2026-02-10 14:30:26",
+               "source": "Pitchfork"
+          },
+          {
+               "title": "Los Thuthanaka’s Chuquimamani-Condori Releases New EP, Luzmila Edits",
+               "image": "https://media.pitchfork.com/photos/6986264ced11b0ed3c83f871/master/pass/chuquimamanu-condori%20.jpg",
+               "link": "https://pitchfork.com/news/los-thuthanakas-chuquimamani-condori-releases-new-ep-luzmila-edits/",
+               "date": "2026-02-10 12:09:13",
+               "source": "Pitchfork"
+          },
+          {
+               "title": "Judge Bans Some Lil Durk Lyrics as Evidence in Murder-for-Hire Trial, Still Weighing Others",
+               "image": "",
+               "link": "https://www.rollingstone.com/music/music-news/lil-durk-lyrics-evidence-murder-for-hire-trial-1235513769/",
+               "date": "2026-02-10 04:14:07",
+               "source": "Rolling Stone"
+          },
+          {
+               "title": "Chappell Roan Exits Wasserman Agency Following Epstein Fallout: ‘I Refuse to Passively Stand By’",
+               "image": "",
+               "link": "https://www.rollingstone.com/music/music-news/chappell-roan-exits-wasserman-agency-epstein-fallout-1235513841/",
+               "date": "2026-02-10 02:32:26",
+               "source": "Rolling Stone"
+          },
+          {
+               "title": "Chappell Roan Exits Wasserman Music Agency Due to CEO’s Epstein Emails",
+               "image": "https://media.pitchfork.com/photos/698a9531b5319edde94cd631/master/pass/GettyImages-2255735636.jpg",
+               "link": "https://pitchfork.com/news/chappell-roan-exits-wasserman-music-agency-due-to-ceos-epstein-emails/",
+               "date": "2026-02-10 02:24:34",
+               "source": "Pitchfork"
+          },
+          {
+               "title": "From Lenny Kravitz to the Spice Girls, Nineties Music Takes Over Olympic Figure Skating Ice Dance Event",
+               "image": "",
+               "link": "https://www.rollingstone.com/music/music-news/olympic-figure-skating-rhythm-ice-dance-music-choices-watch-1235513778/",
+               "date": "2026-02-10 01:51:20",
+               "source": "Rolling Stone"
+          },
+          {
+               "title": "Savannah Guthrie Calls on Public for Help Finding Missing Mom: ‘We Are in an Hour of Desperation’",
+               "image": "",
+               "link": "https://www.rollingstone.com/music/music-news/savannah-guthrie-calls-on-public-for-help-finding-mom-1235513662/",
+               "date": "2026-02-09 22:26:32",
+               "source": "Rolling Stone"
+          },
+          {
+               "title": "Feng Announces Debut Album Weekend Rockstar",
+               "image": "https://media.pitchfork.com/photos/698a4eb9161df22e0c640ab6/master/pass/Feng.jpeg",
+               "link": "https://pitchfork.com/news/feng-announces-debut-album-weekend-rockstar/",
+               "date": "2026-02-09 22:16:23",
+               "source": "Pitchfork"
+          },
+          {
+               "title": "Ross ‘the Boss’ Friedman, of Manowar and the Dictators, Diagnosed With ALS",
+               "image": "",
+               "link": "https://www.rollingstone.com/music/music-news/manowar-ross-the-boss-friedman-diagnosed-als-1235513622/",
+               "date": "2026-02-09 20:57:52",
+               "source": "Rolling Stone"
+          },
+          {
+               "title": "New Music Releases and Upcoming Albums in 2026",
+               "image": "https://media.pitchfork.com/photos/695c3b7ccbe218402ba3e885/master/pass/1.png",
+               "link": "https://pitchfork.com/news/new-album-releases/",
+               "date": "2026-02-09 20:42:23",
+               "source": "Pitchfork"
+          },
+          {
+               "title": "AOC Knows Why Jake Paul Didn’t Want to Watch Bad Bunny’s Super Bowl Set: ‘He Makes You Look Small’",
+               "image": "",
+               "link": "https://www.rollingstone.com/music/music-news/aoc-jake-paul-bad-bunny-fake-american-citizen-1235513476/",
+               "date": "2026-02-09 18:02:37",
+               "source": "Rolling Stone"
+          },
+          {
+               "title": "Drake Is Down $1 Million Over Super Bowl Loss After Warning ‘Bet Against Me if You Dare’",
+               "image": "",
+               "link": "https://www.rollingstone.com/music/music-news/drake-loses-super-bowl-bet-favoring-patriots-win-1235513418/",
+               "date": "2026-02-09 17:35:09",
+               "source": "Rolling Stone"
+          },
+          {
+               "title": "Jonny Greenwood, Paul Thomas Anderson Want the ‘Phantom Thread’ Score Axed From ‘Melania’",
+               "image": "",
+               "link": "https://www.rollingstone.com/music/music-news/jonny-greenwood-melania-doc-phantom-thread-score-removed-1235513362/",
+               "date": "2026-02-09 16:28:07",
+               "source": "Rolling Stone"
+          }
+     ],
+     "world_politics": [
+          {
+               "title": "FBI releases images of masked person in hunt for Savannah Guthrie's mother",
+               "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/6def/live/a79545d0-06ae-11f1-b7e1-afb6d0884c18.jpg",
+               "link": "https://www.bbc.com/news/articles/cy4wdgxr081o?at_medium=RSS&at_campaign=rss",
+               "date": "2026-02-10 19:04:23",
+               "source": "BBC World"
+          },
+          {
+               "title": "Starmer says he ‘will never walk away’ as Burnham joins Labour figures backing PM – as it happened",
+               "image": "https://i.guim.co.uk/img/media/ce57bb91e2f453d683530d99e2abb7e688623636/771_407_4406_3525/master/4406.jpg?width=140&amp;quality=85&amp;auto=format&amp;fit=max&amp;s=6eea3a079ae7b837838c6de6d99aa99c",
+               "link": "https://www.theguardian.com/politics/live/2026/feb/10/keir-starmer-labour-leadership-uk-live-updates-politics-cabinet-latest-news",
+               "date": "2026-02-10 18:12:59",
+               "source": "The Guardian"
+          },
+          {
+               "title": "There is a lot of convenient amnesia about Peter Mandelson’s New Labour days. Let’s jog some memories | George Monbiot",
+               "image": "https://i.guim.co.uk/img/media/27ac808df088145e0b92a9d3663e520f08577603/389_36_2356_1884/master/2356.jpg?width=140&amp;quality=85&amp;auto=format&amp;fit=max&amp;s=8ffe5c76083eb46dc1ce2d2acb498693",
+               "link": "https://www.theguardian.com/commentisfree/2026/feb/10/peter-mandelson-new-labour-jeffrey-epstein-corporate-power",
+               "date": "2026-02-10 18:07:02",
+               "source": "The Guardian"
+          },
+          {
+               "title": "Kenya to confront Russia over 'unacceptable' use of its nationals in combat",
+               "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/2768/live/498e0670-000f-11f1-9972-d3f265c101c6.jpg",
+               "link": "https://www.bbc.com/news/articles/c0k1jzvrykro?at_medium=RSS&at_campaign=rss",
+               "date": "2026-02-10 17:39:33",
+               "source": "BBC World"
+          },
+          {
+               "title": "Steady Ed conjours up a Keir in his own image – complete with fake steering wheel | John Crace",
+               "image": "https://i.guim.co.uk/img/media/cf5e6276da6e0fda0d6e8d5f674c71f4518c77cd/675_4_1848_1478/master/1848.jpg?width=140&amp;quality=85&amp;auto=format&amp;fit=max&amp;s=26dda775bbbc115de392a3ca62a4300b",
+               "link": "https://www.theguardian.com/politics/2026/feb/10/steady-ed-conjours-up-a-keir-in-his-own-image-complete-with-fake-steering-wheel",
+               "date": "2026-02-10 17:25:25",
+               "source": "The Guardian"
+          },
+          {
+               "title": "Laegreid wins bronze then confesses to affair on TV",
+               "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/0586/live/84f26820-06a7-11f1-b7e1-afb6d0884c18.jpg",
+               "link": "https://www.bbc.com/sport/articles/ckglnm521kko?at_medium=RSS&at_campaign=rss",
+               "date": "2026-02-10 17:19:20",
+               "source": "BBC World"
+          },
+          {
+               "title": "French former teacher charged with abusing 89 teens dating back to 1960s",
+               "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/d48e/live/d09aa9d0-0685-11f1-b5e2-dd58fc65f0f6.jpg",
+               "link": "https://www.bbc.com/news/articles/czx4dnky0dzo?at_medium=RSS&at_campaign=rss",
+               "date": "2026-02-10 17:16:52",
+               "source": "BBC World"
+          },
+          {
+               "title": "EU Parliament reaches deal on US trade pact",
+               "image": "",
+               "link": "https://www.politico.eu/article/eu-parliament-reaches-deal-on-eu-us-trade-pact/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+               "date": "2026-02-10 17:00:52",
+               "source": "Politico"
+          },
+          {
+               "title": "EU must urgently bring down energy prices, says Austrian chancellor",
+               "image": "",
+               "link": "https://www.politico.eu/article/eu-must-urgently-bring-down-energy-prices-says-austria-chancellor-christian-stocker/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+               "date": "2026-02-10 16:50:29",
+               "source": "Politico"
+          },
+          {
+               "title": "Is Starmer out of the woods? – The Latest",
+               "image": "https://i.guim.co.uk/img/media/e0765bf874532ad03d979fdf8cb97b0a38110379/1407_1276_3405_2724/master/3405.jpg?width=140&amp;quality=85&amp;auto=format&amp;fit=max&amp;s=cbe696907434e6f8ac81f29420b4ca29",
+               "link": "https://www.theguardian.com/news/audio/2026/feb/10/can-starmer-revive-labour-after-turmoil-the-latest",
+               "date": "2026-02-10 16:45:43",
+               "source": "The Guardian"
+          },
+          {
+               "title": "Update-Spezial: Freundschaft zu den USA – wo stehen wir vor der MSC? Mit Wolfgang Ischinger",
+               "image": "",
+               "link": "https://www.politico.eu/podcast/berlin-playbook-podcast/update-spezial-freundschaft-zu-den-usa-wo-stehen-wir-vor-der-msc-mit-wolfgang-ischinger/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+               "date": "2026-02-10 16:33:36",
+               "source": "Politico"
+          },
+          {
+               "title": "UK sleepwalking into joblessness epidemic, Tesco boss warns",
+               "image": "https://i.guim.co.uk/img/media/6d0cbb47998a9eaedb4528a4eb8240eb19384aa4/1118_0_5600_4480/master/5600.jpg?width=140&amp;quality=85&amp;auto=format&amp;fit=max&amp;s=24ebf7e39aa2ae7d442f22c0d8416b7a",
+               "link": "https://www.theguardian.com/business/2026/feb/10/uk-sleepwalking-into-joblessness-epidemic-tesco-boss-unemployment",
+               "date": "2026-02-10 16:21:04",
+               "source": "The Guardian"
+          },
+          {
+               "title": "Pilot praised after crash-landing faulty Somali passenger plane on seashore",
+               "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/6057/live/a1375200-069f-11f1-b5e2-dd58fc65f0f6.jpg",
+               "link": "https://www.bbc.com/news/articles/c2d1pz3pxewo?at_medium=RSS&at_campaign=rss",
+               "date": "2026-02-10 16:16:30",
+               "source": "BBC World"
+          },
+          {
+               "title": "Trump threatens to block opening of US-Canada bridge",
+               "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/cc88/live/535a3030-0617-11f1-b653-2f014e2e8e4d.jpg",
+               "link": "https://www.bbc.com/news/articles/cpw052pkvl0o?at_medium=RSS&at_campaign=rss",
+               "date": "2026-02-10 16:03:47",
+               "source": "BBC World"
+          },
+          {
+               "title": "Andy Burnham backs Starmer but urges him to be bolder and more inclusive",
+               "image": "https://i.guim.co.uk/img/media/288bab9fcf402728b5b6354b2dababfba47304bf/90_0_4661_3726/master/4661.jpg?width=140&amp;quality=85&amp;auto=format&amp;fit=max&amp;s=29bed6ce990af2a0db397e24fb524265",
+               "link": "https://www.theguardian.com/politics/2026/feb/10/keir-starmer-lead-moment-change-labour-turmoil-ed-miliband",
+               "date": "2026-02-10 14:31:18",
+               "source": "The Guardian"
+          },
+          {
+               "title": "Sarwar allies seeking to justify Starmer attack say he could still face leadership challenge",
+               "image": "https://i.guim.co.uk/img/media/2e33da56ea6ac9c09f843fc215975b42dce33e4d/292_0_4560_3648/master/4560.jpg?width=140&amp;quality=85&amp;auto=format&amp;fit=max&amp;s=d3d129b1872dc5b6a928cd98e6826509",
+               "link": "https://www.theguardian.com/politics/2026/feb/10/anas-sarwar-allies-keir-starmer-leadership-challenge",
+               "date": "2026-02-10 14:28:01",
+               "source": "The Guardian"
+          },
+          {
+               "title": "Wrongfully jailed men call for change to England and Wales compensation law",
+               "image": "https://i.guim.co.uk/img/media/cecce8f78067a99ed67233e34b95a462aba0d15a/352_0_4800_3840/master/4800.jpg?width=140&amp;quality=85&amp;auto=format&amp;fit=max&amp;s=c7e1467cbee8f8252c39ec05c34964a6",
+               "link": "https://www.theguardian.com/law/2026/feb/10/wrongfully-jailed-men-england-and-wales-compensation-law",
+               "date": "2026-02-10 14:23:11",
+               "source": "The Guardian"
+          },
+          {
+               "title": "It’s nothing short of TV gold: mix horror with wild comedy and call it Starmer’s last stand | Marina Hyde",
+               "image": "https://i.guim.co.uk/img/media/5c58a7dcc86ed2805641c29c35f5462603ae1aa5/652_0_4394_3515/master/4394.jpg?width=140&amp;quality=85&amp;auto=format&amp;fit=max&amp;s=1e71a6be2f5559cd321c2198402657ad",
+               "link": "https://www.theguardian.com/commentisfree/2026/feb/10/keir-starmer-wes-streeting-rayner-sarwar-political-drama-labour",
+               "date": "2026-02-10 13:27:31",
+               "source": "The Guardian"
+          },
+          {
+               "title": "European far-right parties push for ICE-style police",
+               "image": "",
+               "link": "https://www.politico.eu/article/europe-far-right-pushes-for-ice-style-police-amid-migration-crackdown/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+               "date": "2026-02-10 13:25:37",
+               "source": "Politico"
+          },
+          {
+               "title": "Germany shoots down Macron’s Eurobonds proposal",
+               "image": "",
+               "link": "https://www.politico.eu/article/germany-emmanuel-macron-eurobond-proposal/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+               "date": "2026-02-10 13:13:45",
+               "source": "Politico"
+          },
+          {
+               "title": "US lawmakers accuse justice department of 'inappropriately' redacting Epstein files",
+               "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/4540/live/fe1dd650-0673-11f1-b5e2-dd58fc65f0f6.jpg",
+               "link": "https://www.bbc.com/news/articles/cn5gzepnw4lo?at_medium=RSS&at_campaign=rss",
+               "date": "2026-02-10 12:07:35",
+               "source": "BBC World"
+          },
+          {
+               "title": "Tell us: do you live in a Reform run council or mayoral authority?",
+               "image": "https://i.guim.co.uk/img/media/b1090749128e0ec8f85e286b59026513afe69e70/389_0_4998_4000/master/4998.jpg?width=140&amp;quality=85&amp;auto=format&amp;fit=max&amp;s=fd1f30dbf90a6dd7b793b025f728e316",
+               "link": "https://www.theguardian.com/politics/2026/feb/10/tell-us-do-you-live-in-a-reform-run-council-or-mayoral-authority",
+               "date": "2026-02-10 11:38:39",
+               "source": "The Guardian"
+          },
+          {
+               "title": "EU must implement competitiveness reforms by end-2026, says Berlin",
+               "image": "",
+               "link": "https://www.politico.eu/article/eu-must-implement-competitiveness-reforms-by-end-2026-says-berlin/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+               "date": "2026-02-10 11:19:06",
+               "source": "Politico"
+          },
+          {
+               "title": "Macron urges Europe to start acting like world power",
+               "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/4846/live/9de81f70-067d-11f1-b7e1-afb6d0884c18.jpg",
+               "link": "https://www.bbc.com/news/articles/ce8n1zdnpd3o?at_medium=RSS&at_campaign=rss",
+               "date": "2026-02-10 11:12:08",
+               "source": "BBC World"
+          },
+          {
+               "title": "Rubio to visit Hungary as it speeds toward closely fought election",
+               "image": "",
+               "link": "https://www.politico.eu/article/marco-rubio-us-visit-hungary-as-country-nears-towards-election/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+               "date": "2026-02-10 11:07:53",
+               "source": "Politico"
+          },
+          {
+               "title": "Macron’s pick to audit the French budget is the person who wrote it",
+               "image": "",
+               "link": "https://www.politico.eu/article/emmanuel-macron-audit-france-budget-amelie-de-montchalin/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+               "date": "2026-02-10 10:56:26",
+               "source": "Politico"
+          },
+          {
+               "title": "A thousand cuts: Trump administration keeps poking Europe in the eye",
+               "image": "",
+               "link": "https://www.politico.com/news/2026/02/10/after-greenland-its-the-micro-agressions-00772114?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+               "date": "2026-02-10 10:52:35",
+               "source": "Politico"
+          },
+          {
+               "title": "Inside AfD trailer",
+               "image": "",
+               "link": "https://www.politico.eu/podcast/inside-afd/inside-afd-trailer/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+               "date": "2026-02-10 10:30:46",
+               "source": "Politico"
+          },
+          {
+               "title": "Instagram and YouTube owners built 'addiction machines', trial hears",
+               "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/d3df/live/62944060-05f7-11f1-b5e2-dd58fc65f0f6.jpg",
+               "link": "https://www.bbc.com/news/articles/c3wlpqpe2z4o?at_medium=RSS&at_campaign=rss",
+               "date": "2026-02-10 07:25:42",
+               "source": "BBC World"
+          },
+          {
+               "title": "Chappell Roan leaves talent agency led by Casey Wasserman after Epstein fallout",
+               "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/e697/live/9d4f8590-0654-11f1-b7e1-afb6d0884c18.jpg",
+               "link": "https://www.bbc.com/news/articles/cewz1keql5no?at_medium=RSS&at_campaign=rss",
+               "date": "2026-02-10 07:12:36",
+               "source": "BBC World"
+          }
+     ]
+}
