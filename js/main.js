@@ -1,64 +1,135 @@
+/**
+ * CaptainNews.gr - Main News Loader
+ */
+
+const categoryDisplayNames = {
+    "politics_greece": "ΠΟΛΙΤΙΚΑ ΕΛΛΑΔΑ",
+    "world_politics": "ΠΑΓΚΟΣΜΙΑ ΠΟΛΙΤΙΚΗ",
+    "sports": "ΑΘΛΗΤΙΚΑ",
+    "technology": "ΤΕΧΝΟΛΟΓΙΑ",
+    "music": "ΜΟΥΣΙΚΗ"
+};
+
 async function loadNews() {
     try {
-        // Φόρτωση του αρχείου news.json
         const response = await fetch('news.json');
-        const data = await response.json();
+        if (!response.ok) throw new Error('Failed to load news');
         
-        const container = document.getElementById('news-app');
-        container.innerHTML = ''; // Καθαρισμός αν υπάρχει κάτι
+        const data = await response.json();
+        const mainWrapper = document.getElementById('main-content-wrapper');
+        mainWrapper.innerHTML = '';
 
-        // Loop σε κάθε κατηγορία (sports, technology, κλπ)
-        for (const [categoryName, articles] of Object.entries(data)) {
+        const categories = Object.entries(data);
+
+        categories.forEach(([categoryKey, articles], catIndex) => {
             
-            // 1. Δημιουργία Τίτλου Κατηγορίας
-            const sectionHeader = `
-                <div class="title gg-container flex items-center gap-[5px] mt-10">
-                    <div class="bg-white w-1 h-6 mb-4"></div>
-                    <h2 class="text-white text-2xl font-bold mb-4 uppercase">${categoryName.replace('_', ' ')}</h2>
+            const readableTitle = categoryDisplayNames[categoryKey] || categoryKey.toUpperCase();
+            const marginTopClass = catIndex === 0 ? '' : 'mt-[40px]';
+
+            const categorySection = document.createElement('section');
+            categorySection.className = `category-group mb-10`;
+
+            let categoryHTML = `
+                <div class="gg-container ${marginTopClass}">
+                    <div class="title flex items-center gap-[5px] w-full border-b border-zinc-800 pb-[5px]">
+                        <h2 class="text-[24px] leading-[28px] font-bold text-red-500 font-condensed uppercase">${readableTitle}</h2>
+                    </div>
                 </div>
+                <div class="gg-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[20px] pt-[10px]">
             `;
-            
-            // 2. Δημιουργία Grid για τα άρθρα
-            const gridStart = `<div class="gg-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[20px]">`;
-            const gridEnd = `</div>`;
-            
-            // 3. Δημιουργία των Cards των άρθρων
-            let articlesHTML = '';
-            articles.forEach(article => {
-                // Υπολογισμός ώρας (απλοποιημένο)
-                const articleDate = new Date(article.date).toLocaleDateString('el-GR');
-                
-                // Αν δεν υπάρχει εικόνα, βάζουμε ένα placeholder
-                const imgUrl = article.image || 'https://via.placeholder.com/400x230?text=CaptainNews';
 
-                articlesHTML += `
-                    <div class="item bg-zinc-900 p-4 rounded-lg">
-                        <div class="image">
-                            <img class="w-full h-[230px] object-cover rounded shadow-md" src="${imgUrl}" alt="${article.title}">
+            // Προσθέτουμε το index εδώ (artIndex)
+            articles.forEach((article, artIndex) => {
+                const imgUrl = article.image || '/icons/test.avif';
+                const timeStr = timeAgo(article.date);
+
+                // --- ΛΟΓΙΚΗ ΓΙΑ ΤΟ ΠΡΩΤΟ ΑΡΘΡΟ ---
+                const isFeatured = artIndex === 0;
+
+                // Κλάσεις για το Wrapper του άρθρου
+                // Αν είναι featured: πιάνει 3 στήλες και γίνεται row (οριζόντιο) σε μεγάλες οθόνες
+                // Αν όχι: πιάνει 1 στήλη και είναι col (κάθετο)
+                const wrapperClasses = isFeatured 
+                    ? "col-span-1 md:col-span-2 lg:col-span-3 flex flex-col md:flex-row" 
+                    : "flex flex-col";
+
+                // Κλάσεις για την εικόνα
+                // Στο featured δίνουμε πλάτος 5/12 (περίπου 40%)
+                const imageWrapperClasses = isFeatured
+                    ? "w-full md:w-6/12 h-[250px] md:h-auto relative shrink-0"
+                    : "w-full h-[230px]";
+
+                // Κλάσεις για το κείμενο (Info)
+                const infoWrapperClasses = isFeatured
+                    ? "p-[20px] flex flex-col justify-center w-full md:w-7/12"
+                    : "p-[20px] flex flex-col flex-grow";
+
+                // Όριο χαρακτήρων (δείχνουμε περισσότερο κείμενο στο μεγάλο άρθρο)
+                const charLimit = isFeatured ? 350 : 110;
+
+                categoryHTML += `
+                    <div class="item bg-main-grey rounded-[12px] overflow-hidden ${wrapperClasses}">
+                        
+                        <div class="${imageWrapperClasses}">
+                            <img class="w-full h-full object-cover" src="${imgUrl}" alt="${article.title}" onerror="this.src='/icons/test.avif'">
                         </div>
-                        <div class="source text-blue-400 text-xs font-bold mt-3 uppercase">${article.source}</div>
-                        <div class="title text-white font-bold text-lg leading-tight mt-2 mb-4 h-[60px] overflow-hidden">
-                            ${article.title}
-                        </div>
-                        <div class="card-footer flex justify-between items-center border-t border-zinc-800 pt-3">
-                            <div class="time text-zinc-400 text-sm">${articleDate}</div>
-                            <a href="${article.link}" target="_blank" class="read-more bg-white text-black px-4 py-1 rounded text-sm font-bold hover:bg-gray-200 transition">
-                                Διαβάστε
-                            </a>
+
+                        <div class="${infoWrapperClasses}">
+                            <div class="title text-[16px] leading-[20px] text-white font-bold font-condensed pb-[10px] ${isFeatured ? 'text-[22px] leading-[26px]' : 'min-h-[50px]'}">
+                                ${article.title}
+                            </div>
+                            <div class="description text-[14px] leading-[20px] text-white font-normal font-roboto pb-[20px] opacity-80 flex-grow">
+                                ${article.description ? stripHtml(article.description).substring(0, charLimit) + '...' : 'Διαβάστε περισσότερα για το θέμα στην πηγή.'}
+                            </div>
+                            
+                            <div class="source text-[16px] leading-[14px] text-white font-bold font-condensed pb-[20px] border-b border-zinc-800">
+                                Πηγή: <span class="text-red-500">${article.source}</span>
+                            </div>
+                            
+                            <div class="card-footer flex items-center justify-between pt-[20px]">
+                                <div class="time text-[14px] leading-[16px] text-white font-bold font-condensed">${timeStr}</div>
+                                <a href="${article.link}" target="_blank" class="read-more text-[12px] leading-[14px] font-bold font-condensed text-red-500 hover:text-white transition-all">
+                                    Διαβάστε ->
+                                </a>
+                            </div>
                         </div>
                     </div>
                 `;
             });
 
-            // Προσθήκη όλων στο κύριο container
-            container.innerHTML += sectionHeader + gridStart + articlesHTML + gridEnd;
-        }
+            categoryHTML += `</div>`;
+            categorySection.innerHTML = categoryHTML;
+            mainWrapper.appendChild(categorySection);
+        });
 
     } catch (error) {
-        console.error("Σφάλμα κατά τη φόρτωση των ειδήσεων:", error);
-        document.getElementById('news-app').innerHTML = `<p class="text-white text-center">Αποτυχία φόρτωσης ειδήσεων.</p>`;
+        console.error("Error:", error);
+        document.getElementById('main-content-wrapper').innerHTML = `<div class="gg-container text-white text-center pt-10">Σφάλμα φόρτωσης.</div>`;
     }
 }
 
-// Εκτέλεση της συνάρτησης μόλις φορτώσει η σελίδα
+function stripHtml(html) {
+   let tmp = document.createElement("DIV");
+   tmp.innerHTML = html;
+   return tmp.textContent || tmp.innerText || "";
+}
+
+function timeAgo(dateString) {
+    const date = new Date(dateString);
+    const now = new Date();
+    const seconds = Math.floor((now - date) / 1000);
+
+    let interval = Math.floor(seconds / 31536000);
+    if (interval >= 1) return "Πριν από " + interval + (interval === 1 ? " χρόνο" : " χρόνια");
+    interval = Math.floor(seconds / 2592000);
+    if (interval >= 1) return "Πριν από " + interval + (interval === 1 ? " μήνα" : " μήνες");
+    interval = Math.floor(seconds / 86400);
+    if (interval >= 1) return "Πριν από " + interval + (interval === 1 ? " μέρα" : " μέρες");
+    interval = Math.floor(seconds / 3600);
+    if (interval >= 1) return "Πριν από " + interval + (interval === 1 ? " ώρα" : " ώρες");
+    interval = Math.floor(seconds / 60);
+    if (interval >= 1) return "Πριν από " + interval + (interval === 1 ? " λεπτό" : " λεπτά");
+    return "Μόλις τώρα";
+}
+
 document.addEventListener('DOMContentLoaded', loadNews);

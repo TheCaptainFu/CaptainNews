@@ -2,56 +2,31 @@
 <html lang="el">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/output.css">
     <link rel="stylesheet" href="src/main.css">
     <title>CaptainNews.gr</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="bg-main-black">
 
-    <!-- HEADER -->
-    <header class="bg-main-black">
+    <header class="bg-main-grey-2/80 backdrop-blur-xl fixed top-0 w-full z-50 border-b border-zinc-800">
         <nav class="gg-container flex items-center justify-between">
             <div class="logo [&_img]:max-h-[40px] py-[10px]">
-                <img src="/icons/logo.png" alt="">
+                <img src="/icons/logo.png" alt="CaptainNews Logo">
             </div>
             <div class="burger-menu">
-
-            </div>
+                </div>
         </nav>
     </header>
-   
-    <!-- MAIN SECTION -->
-     <div class="title gg-container flex items-center gap-[5px]">
-        <div class="bg-white w-1 h-6 mb-4"></div>
-        <h2 class="text-white text-2xl font-bold mb-4 ">ΠΟΛΙΤΙΚΑ ΕΛΛΑΔΑ</h2>
-    </div>
-    <div id="main-section" class="gg-container grid grid-cols-3 gap-[20px]">
-        <div class="item">
-            <div class="image">
-                <img class="w-full h-[230px] object-cover" src="/icons/test.avif" alt="">
-            </div>
-            <div class="title"></div>
-            <div class="description"></div>
-            <div class="source"></div>
-            <div class="card-footer flex">
-                <div class="time">10 Λεπτά πριν</div><span></span>
-                <div class="read-more">Διαβάστε</div>
-            </div>
+    
+    <main id="main-content-wrapper" class="pt-[80px] pb-10">
+        <div class="gg-container text-white font-condensed pt-10 text-center">
+            Φόρτωση ειδήσεων...
         </div>
-        <div class="item">
-            <div class="image">
-                <img class="w-full h-auto max-h-[230px] object-cover" src="/icons/test2.jpg" alt="">
-            </div>
-            <div class="title"></div>
-            <div class="description"></div>
-            <div class="source"></div>
-            <div class="card-footer flex">
-                <div class="time">10 Λεπτά πριν</div><span></span>
-                <div class="read-more">Διαβάστε</div>
-            </div>
-        </div>
-    </div>
-
+    </main>
 
     <script src="js/main.js"></script>
 </body>

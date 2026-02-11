@@ -1,6 +1,20 @@
 const fs = require('fs');
+const Parser = require('rss-parser');
 
-// Οργάνωση πηγών ανά κατηγορία
+// Ρυθμίσεις του Parser για να τραβάει όλα τα πεδία
+const parser = new Parser({
+    customFields: {
+        item: [
+            ['content:encoded', 'contentEncoded'],
+            ['content', 'content'],
+            ['description', 'description'],
+            ['media:content', 'mediaContent'],
+            ['enclosure', 'enclosure']
+        ],
+    },
+});
+
+// Οι πηγές σου
 const categories = {
     "politics_greece": [
         { name: 'Newsit', url: 'https://www.newsit.gr/category/politikh/feed/' },
@@ -34,71 +48,95 @@ const categories = {
     ]
 };
 
+// Συνάρτηση καθαρισμού κειμένου (αφαιρεί HTML tags & links τύπου "Διαβάστε...")
+function cleanText(html) {
+    if (!html) return "";
+    // Αφαίρεση εικόνων
+    let text = html.replace(/<img[^>]*>/g, ""); 
+    // Αφαίρεση tags
+    text = text.replace(/<[^>]+>/g, ""); 
+    // Αφαίρεση "Διαβάστε περισσότερα" και συναφών
+    text = text.replace(/Διαβάστε περισσότερα.*/gi, "");
+    text = text.replace(/Read more.*/gi, "");
+    // Αφαίρεση πολλαπλών κενών/νέων γραμμών
+    return text.trim().replace(/\s\s+/g, ' ');
+}
+
+// Συνάρτηση εύρεσης εικόνας
+function findImage(item) {
+    // 1. Έλεγχος στο enclosure (τυπικό RSS image)
+    if (item.enclosure && item.enclosure.url) return item.enclosure.url;
+    
+    // 2. Έλεγχος στο media:content
+    if (item.mediaContent && item.mediaContent.$ && item.mediaContent.$.url) return item.mediaContent.$.url;
+    
+    // 3. Regex στο content για img tag
+    const htmlContent = item.contentEncoded || item.content || item.description || "";
+    const imgMatch = htmlContent.match(/<img[^>]+src="([^">]+)"/);
+    if (imgMatch && imgMatch[1]) return imgMatch[1];
+
+    return ""; // Αν δεν βρει τίποτα
+}
+
 async function updateDatabase() {
     let finalData = {};
     const seenTitles = new Set();
 
-    // Loop σε κάθε κατηγορία
     for (const [categoryName, sources] of Object.entries(categories)) {
-        console.log(`--- Επεξεργασία κατηγορίας: ${categoryName} ---`);
+        console.log(`\n--- Επεξεργασία: ${categoryName} ---`);
         let categoryArticles = [];
 
         for (const source of sources) {
             try {
-                console.log(`Λήψη δεδομένων από: ${source.name}...`);
-                const apiUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(source.url)}`;
-                const response = await fetch(apiUrl);
-                const data = await response.json();
+                console.log(`Λήψη από: ${source.name}...`);
+                
+                // Εδώ γίνεται η απευθείας λήψη του XML
+                const feed = await parser.parseURL(source.url);
 
-                if (data.status === 'ok') {
-                    data.items.forEach(item => {
-                        const normalizedTitle = item.title.trim().toLowerCase();
+                feed.items.forEach(item => {
+                    const normalizedTitle = item.title.trim().toLowerCase();
+                    
+                    if (!seenTitles.has(normalizedTitle)) {
+                        seenTitles.add(normalizedTitle);
+
+                        // Βρες την καλύτερη περιγραφή
+                        const rawDesc = item.contentEncoded || item.content || item.description || "";
+                        const cleanDesc = cleanText(rawDesc);
                         
-                        // Check for duplicates globally or per category (εδώ είναι ανά εκτέλεση)
-                        if (!seenTitles.has(normalizedTitle)) {
-                            seenTitles.add(normalizedTitle);
+                        // Βρες την καλύτερη εικόνα
+                        const finalImage = findImage(item);
 
-                            // --- ΕΞΥΠΝΗ ΑΝΙΧΝΕΥΣΗ ΕΙΚΟΝΑΣ ---
-                            let finalImage = "";
-                            if (item.thumbnail) {
-                                finalImage = item.thumbnail;
-                            } else if (item.enclosure && item.enclosure.link) {
-                                finalImage = item.enclosure.link;
-                            } else {
-                                const searchIn = (item.description || "") + (item.content || "");
-                                const imgMatch = searchIn.match(/<img[^>]+src="([^">]+)"/);
-                                if (imgMatch && imgMatch[1]) {
-                                    finalImage = imgMatch[1];
-                                }
-                            }
+                        // Ημερομηνία
+                        const pubDate = item.pubDate ? new Date(item.pubDate) : new Date();
 
-                            categoryArticles.push({
-                                title: item.title.trim(),
-                                image: finalImage,
-                                link: item.link,
-                                date: item.pubDate,
-                                source: source.name
-                            });
-                        }
-                    });
-                }
+                        categoryArticles.push({
+                            title: item.title.trim(),
+                            description: cleanDesc,
+                            image: finalImage,
+                            link: item.link,
+                            date: pubDate,
+                            source: source.name
+                        });
+                    }
+                });
+
             } catch (error) {
-                console.error(`Σφάλμα στο ${source.name}:`, error.message);
+                console.error(`❌ Σφάλμα στο ${source.name}: ${error.message}`);
             }
         }
 
-        // Ταξινόμηση ανά ημερομηνία για τη συγκεκριμένη κατηγορία
+        // Ταξινόμηση: Πιο πρόσφατα πρώτα
         categoryArticles.sort((a, b) => new Date(b.date) - new Date(a.date));
-        finalData[categoryName] = categoryArticles;
+        
+        // Κράτα μόνο τα 12 πιο πρόσφατα ανά κατηγορία (για να μη βαρύνει το JSON)
+        finalData[categoryName] = categoryArticles.slice(0, 12);
     }
 
-    // Εγγραφή στο news.json
     try {
-        fs.writeFileSync('news.json', JSON.stringify(finalData, null, 5), 'utf8');
-        console.log('-----------------------------------');
-        console.log(`ΕΠΙΤΥΧΙΑ: Το news.json ενημερώθηκε με όλες τις κατηγορίες!`);
+        fs.writeFileSync('news.json', JSON.stringify(finalData, null, 2), 'utf8');
+        console.log('\n✅ ΕΠΙΤΥΧΙΑ: Το news.json ενημερώθηκε!');
     } catch (err) {
-        console.error('Σφάλμα κατά την εγγραφή:', err);
+        console.error('Σφάλμα εγγραφής:', err);
     }
 }
 

@@ -1,9 +1,12 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 .gg-container {
     width: 1230px;
-    padding:  0 15px;
-    margin: 0 auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 body {
@@ -12,8 +15,19 @@ body {
 }
 
 @theme {
-    --color-main-black: #010409;
-    --color-main-grey: #0d1117;
-    --color-main-grey-2: #151b23;
-    --color-main-grey-3: #0d1117;
+
+    /* COLORS */
+    --color-main-black: #0a0a0a;
+    --color-main-black-2:#090909;
+    
+    --color-main-grey: #1a1a1a;
+    --color-main-grey-2: #121212;
+
+    /* FONTS */
+    --font-roboto: "Roboto", sans-serif;
+    --font-condensed: "Roboto Condensed", sans-serif;
+
+    /* SPACINGS */
+    --spacing-10: "10px",
+
 }

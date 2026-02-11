@@ -1,782 +1,492 @@
 {
-     "politics_greece": [
-          {
-               "title": "Κίμπερλι Γκιλφόιλ μετά τη συνάντηση με Χρίστο Δήμα: Οι μεταφορές είναι η ραχοκοκαλιά μίας ισχυρής οικονομίας",
-               "image": "https://www.newsit.gr/wp-content/uploads/2026/02/kimberly-guilfoylle-10022025.jpg",
-               "link": "https://www.newsit.gr/politikh/kimperli-gkilfoil-meta-ti-synantisi-me-xristo-dima-oi-metafores-einai-i-raxokokalia-mias-isxyris-oikonomias/4597485/",
-               "date": "2026-02-10 18:38:00",
-               "source": "Newsit"
-          },
-          {
-               "title": "Η Νίκη Κεραμέως για το σκάνδαλο Παναγόπουλου: Άπλετο φως στη συγκεκριμένη υπόθεση που αφορά το φυσικό πρόσωπο",
-               "image": "https://www.newsit.gr/wp-content/uploads/2026/02/niki-kerameos-10022026.jpg",
-               "link": "https://www.newsit.gr/politikh/i-niki-kerameos-gia-to-skandalo-panagopoulou-apleto-fos-sti-sygkekrimeni-ypothesi-pou-afora-to-fysiko-prosopo/4597420/",
-               "date": "2026-02-10 17:32:19",
-               "source": "Newsit"
-          },
-          {
-               "title": "Παύλος Πολάκης: Χυδαία και προκλητική η αίτηση άρσης ασυλίας μου, έχω καταρρίψει το ρεκόρ Γκίνες",
-               "image": "https://www.newsit.gr/wp-content/uploads/2025/12/pavlos-polakis-27102025.jpg",
-               "link": "https://www.newsit.gr/politikh/paylos-polakis-xydaia-kai-proklitiki-i-aitisi-arsis-asylias-mou-exo-katarripsei-to-rekor-gkines/4597441/",
-               "date": "2026-02-10 17:28:05",
-               "source": "Newsit"
-          },
-          {
-               "title": "Συνάντηση Μητσοτάκη και Ερντογάν: Στις 15.15 την Τετάρτη το τετ α τετ των δύο ηγετών στην Άγκυρα",
-               "image": "https://www.newsit.gr/wp-content/uploads/2026/02/mitsotakis-erdogan1-1200x800.jpg",
-               "link": "https://www.newsit.gr/politikh/synantisi-mitsotaki-kai-erntogan-stis-15-15-tin-tetarti-to-tet-a-tet-ton-dyo-igeton-stin-agkyra/4597359/",
-               "date": "2026-02-10 15:48:06",
-               "source": "Newsit"
-          },
-          {
-               "title": "Μνημείο Αγνώστου Στρατιώτη: Συγκροτείται Μικτή Συμβουλευτική Επιτροπή για την ανάδειξη και τη συντήρησή του",
-               "image": "https://www.newsit.gr/wp-content/uploads/2026/02/agnostos-stratiotis-eurokinissi-1200x800.jpg",
-               "link": "https://www.newsit.gr/politikh/mnimeio-agnostou-stratioti-sygkroteitai-mikti-symvouleytiki-epitropi-gia-tin-anadeiksi-kai-ti-syntirisi-tou/4597336/",
-               "date": "2026-02-10 15:46:19",
-               "source": "Newsit"
-          },
-          {
-               "title": "Οι προκλητικές NAVTEX της Τουρκίας για το Αιγαίο ενώπιον του Διεθνούς Οργανισμού Ναυτιλίας με ελληνικό διάβημα",
-               "image": "https://www.newsit.gr/wp-content/uploads/2026/02/fregata-adrias-polemiko-nautiko-eurokinissi-1200x800.jpg",
-               "link": "https://www.newsit.gr/politikh/oi-proklitikes-navtex-tis-tourkias-gia-to-aigaio-enopion-tou-diethnous-organismou-naytilias-me-elliniko-diavima/4597316/",
-               "date": "2026-02-10 15:23:24",
-               "source": "Newsit"
-          },
-          {
-               "title": "Κώστας Τσιάρας: Έγινε μια πολύ παραγωγική συζήτηση με τους κτηνοτρόφους",
-               "image": "https://www.newsit.gr/wp-content/uploads/2026/02/tsiaras-1200x800.jpg",
-               "link": "https://www.newsit.gr/politikh/kostas-tsiaras-egine-mia-poly-paragogiki-syzitisi-me-tous-ktinotrofous/4597320/",
-               "date": "2026-02-10 15:13:15",
-               "source": "Newsit"
-          },
-          {
-               "title": "Η ΠΑΣΚΕ απειλεί τον Νίκο Ανδρουλάκη με αποχώρηση από το ΠΑΣΟΚ λόγω Παναγόπουλου, κάνουν λόγο για «λιντσάρισμα»",
-               "image": "https://www.newsit.gr/wp-content/uploads/2026/02/panagopoulos-1200x800.jpg",
-               "link": "https://www.newsit.gr/politikh/i-paske-apeilei-ton-niko-androulaki-me-apoxorisi-apo-to-pasok-logo-panagopoulou-kanoun-logo-gia-lintsarisma/4597267/",
-               "date": "2026-02-10 14:43:43",
-               "source": "Newsit"
-          },
-          {
-               "title": "Μαρία Καρυστιανού: Δεν έχουμε ταμπέλα, δεν έπρεπε να γίνει η συνάντηση Μητσοτάκη με Ερντογάν",
-               "image": "https://www.newsit.gr/wp-content/uploads/2026/01/karistianou-eurok-1-1200x825.jpg",
-               "link": "https://www.newsit.gr/politikh/maria-karystianou-den-exoume-tampela-den-eprepe-na-ginei-i-synantisi-mitsotaki-me-erntogan/4597201/",
-               "date": "2026-02-10 14:21:50",
-               "source": "Newsit"
-          },
-          {
-               "title": "Παύλος Πολάκης: Άρση της ασυλίας του βουλευτή του ΣΥΡΙΖΑ εισηγείται η επιτροπή δεοντολογίας της Βουλής",
-               "image": "https://www.newsit.gr/wp-content/uploads/2026/01/pavlos-polakis-06012026.jpg",
-               "link": "https://www.newsit.gr/politikh/paylos-polakis-arsi-tis-asylias-tou-vouleyti-tou-syriza-eisigeitai-i-epitropi-deontologias-tis-voulis/4597240/",
-               "date": "2026-02-10 13:51:12",
-               "source": "Newsit"
-          }
-     ],
-     "sports": [
-          {
-               "title": "Πώς τα πάει η Ελλάδα στην καταπολέμηση της διαφθοράς",
-               "image": "https://www.gazzetta.gr/sites/default/files/styles/article_main_image/public/2026-02/ellada-greece-shutterstock.jpg?itok=-GlO1fXD",
-               "link": "https://www.gazzetta.gr/2436947/boyliazoyn-10-ipeirotikoi-proorismoi-gia-pasha",
-               "date": "2026-02-10 17:06:00",
-               "source": "Gazzetta"
-          },
-          {
-               "title": "Τσιτσιπάς: Μεσημέρι Τετάρτης (11/2) η πρεμιέρα του στο Ρότερνταμ",
-               "image": "https://www.gazzetta.gr/sites/default/files/styles/article_main_image/public/2026-02/tsitsipas_davis_cup.jpg?itok=kE1hIlUe",
-               "link": "https://www.gazzetta.gr/tennis/atp/2514921/tsitsipas-mesimeri-tetartis-112-i-premiera-toy-sto-roterntam",
-               "date": "2026-02-10 17:02:00",
-               "source": "Gazzetta"
-          },
-          {
-               "title": "Άρης: Ο ανταγωνισμός γεννήθηκε μέσα από τις επιδόσεις του Μορόν",
-               "image": "https://www.gazzetta.gr/sites/default/files/styles/article_main_image/public/2026-02/6810976_1.jpg?itok=GHI9B7j_",
-               "link": "https://www.gazzetta.gr/football/superleague/2514909/aris-o-antagonismos-gennithike-mesa-apo-tis-epidoseis-toy-moron",
-               "date": "2026-02-10 16:58:19",
-               "source": "Gazzetta"
-          },
-          {
-               "title": "Παναθηναϊκός: Οι τέσσερις σωματοφύλακες!",
-               "image": "https://www.gazzetta.gr/sites/default/files/styles/article_main_image/public/2026-02/themas.jpg?itok=EI1AFSbO",
-               "link": "https://www.gazzetta.gr/football/superleague/2514915/panathinaikos-oi-tesseris-somatofylakes",
-               "date": "2026-02-10 16:55:01",
-               "source": "Gazzetta"
-          },
-          {
-               "title": "Παιδόφιλος ταξίδεψε σε όλο τον κόσμο, βίασε περίπου 100 ανήλικους και δολοφόνησε τη μητέρα και τη θεία του",
-               "image": "https://www.gazzetta.gr/sites/default/files/styles/article_main_image/public/2026-02/paidofilos-gallia.jpg?itok=oW1hU9r0",
-               "link": "https://www.gazzetta.gr/plus/2514907/paidofilos-taxidepse-se-olo-ton-kosmo-biase-peripoy-100-anilikoys-kai-dolofonise-ti",
-               "date": "2026-02-10 16:55:00",
-               "source": "Gazzetta"
-          },
-          {
-               "title": "Ολυμπιακός: Η ΔΕΑΒ τιμώρησε με πρόστιμο ομάδα και Ποντένσε",
-               "image": "https://www.gazzetta.gr/sites/default/files/styles/article_main_image/public/2026-02/podence_oly_1_4.jpg?itok=Wc3-4c-Y",
-               "link": "https://www.gazzetta.gr/football/superleague/2514920/olympiakos-i-deab-timorise-me-prostima-omada-kai-pontense",
-               "date": "2026-02-10 16:54:56",
-               "source": "Gazzetta"
-          },
-          {
-               "title": "Ο πρόεδρος της Χάποελ για τον Χέιζ-Ντέιβις: «Δεν έχει υπογράψει, ελπίζουμε να αποδεχτεί την πρότασή μας»",
-               "image": "https://www.gazzetta.gr/sites/default/files/styles/article_main_image/public/2026-02/heyz-davis.jpg?itok=gc91zleW",
-               "link": "https://www.gazzetta.gr/basketball/euroleague/2514919/o-proedros-tis-hapoel-gia-ton-heiz-nteibis-den-ehei-ypograpsei",
-               "date": "2026-02-10 16:47:49",
-               "source": "Gazzetta"
-          },
-          {
-               "title": "Μπαρτσελόνα: Αμφίβολος ο Ραφίνια στον ημιτελικό του Copa del Rey κόντρα στην Ατλέτικο",
-               "image": "https://www.gazzetta.gr/sites/default/files/styles/article_main_image/public/2025-10/raphinha_0.jpg?itok=epBW48Jj",
-               "link": "https://www.gazzetta.gr/football/copa-del-rey/2514918/mpartselona-amfibolos-o-rafinia-ston-imiteliko-toy-copa-del-rey",
-               "date": "2026-02-10 16:45:46",
-               "source": "Gazzetta"
-          },
-          {
-               "title": "ΑΕΚ: Η 12άδα κόντρα στην Καρδίτσα",
-               "image": "https://www.gazzetta.gr/sites/default/files/styles/article_main_image/public/2026-01/brown2121.jpg?itok=H05e7Bcy",
-               "link": "https://www.gazzetta.gr/basketball/basketball-champions-league/2514917/aek-i-12ada-kontra-stin-karditsa",
-               "date": "2026-02-10 16:41:27",
-               "source": "Gazzetta"
-          },
-          {
-               "title": "Μουντιάλ 2026: Το Μεξικό επιστρατεύει σκύλους-ρομπότ για θέματα ασφαλείας",
-               "image": "https://www.gazzetta.gr/sites/default/files/styles/article_main_image/public/2026-02/robot_dogs_mexico.png?itok=p1ujdg28",
-               "link": "https://www.gazzetta.gr/football/mundial/2514914/moyntial-2026-mexiko-epistrateyei-skyloys-rompot-gia-themata-asfaleias",
-               "date": "2026-02-10 16:32:42",
-               "source": "Gazzetta"
-          }
-     ],
-     "technology": [
-          {
-               "title": "FBI releases recovered footage from Nancy Guthrie’s Nest cam",
-               "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/02/nancy-guthrie-poster.jpg?quality=90&strip=all&crop=0,0,100,100",
-               "link": "https://www.theverge.com/tech/876542/fbi-nancy-guthrie-nest-cam-video",
-               "date": "2026-02-10 19:43:46",
-               "source": "The Verge"
-          },
-          {
-               "title": "Here’s how Rivian changed the rear door manual release on the R2",
-               "image": "",
-               "link": "https://techcrunch.com/2026/02/10/heres-how-rivian-changed-the-rear-door-manual-release-on-the-r2/",
-               "date": "2026-02-10 19:38:54",
-               "source": "TechCrunch"
-          },
-          {
-               "title": "Facebook adds new AI features, animated profile photos, and backgrounds for text posts",
-               "image": "",
-               "link": "https://techcrunch.com/2026/02/10/facebook-adds-new-ai-features-animated-profile-photos-and-backgrounds-for-text-posts/",
-               "date": "2026-02-10 19:34:51",
-               "source": "TechCrunch"
-          },
-          {
-               "title": "Sharge’s new power bank can charge two laptops while putting on a light show",
-               "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/02/shargeek300_1.jpg?quality=90&strip=all&crop=0,0,100,100",
-               "link": "https://www.theverge.com/tech/876432/sharge-shargeek-300w-power-bank-rgb-lighting-kickstarter",
-               "date": "2026-02-10 18:43:16",
-               "source": "The Verge"
-          },
-          {
-               "title": "This GoPro and Lens Bundle Is $200 Off",
-               "image": "https://media.wired.com/photos/698b75a2dbf6cd0017b8e44e/master/pass/This%20GoPro%20and%20Lens%20Bundle%20Is%20$200%20Off.png",
-               "link": "https://www.wired.com/story/gopro-hero-lens-bundle-deal-226/",
-               "date": "2026-02-10 18:21:44",
-               "source": "Wired"
-          },
-          {
-               "title": "Facebook can animate your profile pic with AI",
-               "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/04/STK040_VRG_Illo_N_Barclay_2_facebook.jpg?quality=90&strip=all&crop=0,0,100,100",
-               "link": "https://www.theverge.com/tech/876480/meta-facebook-animate-profile-picture-restyle-ai",
-               "date": "2026-02-10 18:14:21",
-               "source": "The Verge"
-          },
-          {
-               "title": "An Ark showed me augmented reality’s true artistic potential",
-               "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/02/anarccast.jpg?quality=90&strip=all&crop=3.6418731689453,0,96.358126831055,100",
-               "link": "https://www.theverge.com/gadgets/875869/an-ark-mixed-reality-simon-stephens-sarah-frankcom-todd-eckert",
-               "date": "2026-02-10 17:20:00",
-               "source": "The Verge"
-          },
-          {
-               "title": "The Shokz OpenFit Air earbuds are matching their all-time low price",
-               "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/02/vergedealswildrobot-1.png?quality=90&strip=all&crop=0,0,100,100",
-               "link": "https://www.theverge.com/gadgets/876392/shokz-openfit-air-earbuds-kobo-clara-colour-deal-sale",
-               "date": "2026-02-10 17:05:02",
-               "source": "The Verge"
-          },
-          {
-               "title": "Microsoft is keeping Secure Boot alive with Windows updates",
-               "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/02/STK109_WINDOWS_C.jpg?quality=90&strip=all&crop=0,0,100,100",
-               "link": "https://www.theverge.com/tech/876336/microsoft-windows-secure-boot-certificate-renewal",
-               "date": "2026-02-10 17:00:00",
-               "source": "The Verge"
-          },
-          {
-               "title": "Google can now help you find and remove your ID from search results",
-               "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/02/STK093_GOOGLE_B.jpg?quality=90&strip=all&crop=0,0,100,100",
-               "link": "https://www.theverge.com/tech/876352/google-search-remove-sensitive-information-nonconsensual-images",
-               "date": "2026-02-10 16:45:56",
-               "source": "The Verge"
-          },
-          {
-               "title": "Razer’s resurrected 25-year-old gaming mouse will cost you $1,337",
-               "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/02/razer_boomslang1.jpg?quality=90&strip=all&crop=0,0,100,100",
-               "link": "https://www.theverge.com/gadgets/876333/razer-boomslang-20th-anniversary-edition-wireless-mouse-preorder-price",
-               "date": "2026-02-10 16:41:54",
-               "source": "The Verge"
-          },
-          {
-               "title": "Telegram is reportedly being slowed down and restricted in Russia",
-               "image": "https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/24008017/acastro_STK085_Telegram_02.jpg?quality=90&strip=all&crop=0,0,100,100",
-               "link": "https://www.theverge.com/tech/876351/telegram-russia-restrictions",
-               "date": "2026-02-10 16:39:16",
-               "source": "The Verge"
-          },
-          {
-               "title": "Former Tesla product manager wants to make luxury goods impossible to fake, starting with a chip",
-               "image": "",
-               "link": "https://techcrunch.com/2026/02/10/former-tesla-product-manager-wants-to-make-luxury-goods-impossible-to-fake-starting-with-a-chip/",
-               "date": "2026-02-10 16:30:00",
-               "source": "TechCrunch"
-          },
-          {
-               "title": "Singapore says China-backed hackers targeted its four largest phone companies",
-               "image": "",
-               "link": "https://techcrunch.com/2026/02/10/singapore-china-backed-hackers-targeted-largest-phone-companies-salt-typhoon/",
-               "date": "2026-02-10 16:19:39",
-               "source": "TechCrunch"
-          },
-          {
-               "title": "ICE Is Expanding Across the US at Breakneck Speed. Here’s Where It’s Going Next",
-               "image": "https://media.wired.com/photos/6986655d619933b7c3265278/master/pass/politics_ice_offices_sprawl.jpg",
-               "link": "https://www.wired.com/story/ice-expansion-across-us-at-heres-where-its-going-next/",
-               "date": "2026-02-10 16:05:43",
-               "source": "Wired"
-          },
-          {
-               "title": "Microsoft wants to rewire data centers to save space",
-               "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/02/gettyimages-2243425240.jpg?quality=90&strip=all&crop=0,0,100,100",
-               "link": "https://www.theverge.com/science/876083/microsoft-ai-data-center-superconductor",
-               "date": "2026-02-10 16:01:40",
-               "source": "The Verge"
-          },
-          {
-               "title": "Vega raises $120M Series B to rethink how enterprises detect cyber threats",
-               "image": "",
-               "link": "https://techcrunch.com/2026/02/10/vega-raises-120m-series-b-to-rethink-how-enterprises-detect-cyber-threats/",
-               "date": "2026-02-10 16:00:00",
-               "source": "TechCrunch"
-          },
-          {
-               "title": "What to know about Netflix’s landmark acquisition of Warner Bros.",
-               "image": "",
-               "link": "https://techcrunch.com/2026/02/10/what-to-know-about-netflixs-landmark-acquisition-of-warner-bros/",
-               "date": "2026-02-10 15:56:21",
-               "source": "TechCrunch"
-          },
-          {
-               "title": "Google expands tools to let users remove sensitive data about themselves from Search",
-               "image": "",
-               "link": "https://techcrunch.com/2026/02/10/google-remove-sensitive-personal-data-from-search/",
-               "date": "2026-02-10 15:54:48",
-               "source": "TechCrunch"
-          },
-          {
-               "title": "Trump EPA reportedly seeks to revoke landmark air pollution rule",
-               "image": "",
-               "link": "https://techcrunch.com/2026/02/10/trump-epa-reportedly-seeks-to-revoke-landmark-air-pollution-rule/",
-               "date": "2026-02-10 15:47:13",
-               "source": "TechCrunch"
-          },
-          {
-               "title": "YouTubers aren’t relying on ad revenue anymore — here’s how some are diversifying",
-               "image": "",
-               "link": "https://techcrunch.com/2026/02/10/youtubers-arent-relying-on-ad-revenue-anymore-heres-how-some-are-diversifying/",
-               "date": "2026-02-10 15:06:26",
-               "source": "TechCrunch"
-          },
-          {
-               "title": "Hauler Hero collects $16M for its AI waste management software",
-               "image": "",
-               "link": "https://techcrunch.com/2026/02/10/hauler-hero-collects-16m-for-its-ai-waste-management-software/",
-               "date": "2026-02-10 15:00:00",
-               "source": "TechCrunch"
-          },
-          {
-               "title": "The Best TVs We’ve Reviewed in 2026: Sony, Samsung, LG, and More",
-               "image": "https://media.wired.com/photos/683104b3e6043309df61481d/master/pass/The%20Best%20TVs%20(and%20Helpful%20Buying%20Tips).png",
-               "link": "https://www.wired.com/gallery/best-tvs/",
-               "date": "2026-02-10 14:00:00",
-               "source": "Wired"
-          },
-          {
-               "title": "6 Best Gaming Laptops (2026): Tested and Reviewed",
-               "image": "https://media.wired.com/photos/6843d25f93d1ae9631e55a37/master/pass/Best%20gaming%20laptops%202025%20update_.png",
-               "link": "https://www.wired.com/gallery/best-gaming-laptops/",
-               "date": "2026-02-10 13:00:00",
-               "source": "Wired"
-          },
-          {
-               "title": "4 Best Résumé Builders (2026), Tested and Reviewed",
-               "image": "https://media.wired.com/photos/68eeae717c200f52288c73c6/master/pass/W1102806-Credit-Jacob-Roach.JPG",
-               "link": "https://www.wired.com/gallery/best-resume-builders/",
-               "date": "2026-02-10 12:30:00",
-               "source": "Wired"
-          },
-          {
-               "title": "Even Realities G2 Review: Smarter Glasses",
-               "image": "https://media.wired.com/photos/698a6e3b972bf41b68e7f15d/master/pass/Review-%20Even%20Realities%20G2.png",
-               "link": "https://www.wired.com/review/even-realities-g2/",
-               "date": "2026-02-10 12:00:00",
-               "source": "Wired"
-          },
-          {
-               "title": "Bidets Are Confusing Visitors at the 2026 Winter Olympics",
-               "image": "https://media.wired.com/photos/6989f3d4c2e94008de6beca9/master/pass/1255140768",
-               "link": "https://www.wired.com/story/2026-winter-olympics-bidets/",
-               "date": "2026-02-10 12:00:00",
-               "source": "Wired"
-          },
-          {
-               "title": "8 Best Space Heaters (2026): Tested, Measured, and Mistreated",
-               "image": "https://media.wired.com/photos/68e1fd1eb7a56a189ed91b44/master/pass/The%208%20Best%20Space%20Heaters%20of%202025.%20I%20Tested%20Dozens%20to%20Find%20Them.png",
-               "link": "https://www.wired.com/gallery/the-best-space-heaters/",
-               "date": "2026-02-10 11:34:00",
-               "source": "Wired"
-          },
-          {
-               "title": "Samsung Galaxy A17 5G Review: Crippling Performance",
-               "image": "https://media.wired.com/photos/698a7a42c46327732f7f76fd/master/pass/Samsung%20Galaxy%20A17%205G%20SOURCE%20Julian%20Chokkattu.jpg",
-               "link": "https://www.wired.com/review/samsung-galaxy-a17-5g/",
-               "date": "2026-02-10 11:30:00",
-               "source": "Wired"
-          },
-          {
-               "title": "The Best Streaming Bundles and Streaming Deals of February 2026",
-               "image": "https://media.wired.com/photos/698a214a5d41364caf4502cc/master/pass/The%20Best%20Deals%20on%20Peacock,%20HBO,%20Apple%20TV,%20and%20Disney%20Streaming%20for%20February%202026.png",
-               "link": "https://www.wired.com/story/best-streaming-deals-and-streaming-bundles/",
-               "date": "2026-02-10 11:01:00",
-               "source": "Wired"
-          }
-     ],
-     "music": [
-          {
-               "title": "Don Toliver Scores His First No. 1 Hit on Hot Rap Songs Chart",
-               "image": "https://www.billboard.com/",
-               "link": "https://www.billboard.com/music/chart-beat/don-toliver-body-number-1-hot-rap-songs-chart-1236177416/",
-               "date": "2026-02-10 19:52:18",
-               "source": "Billboard"
-          },
-          {
-               "title": "Baby Keem Announces ‘Ca$ino’ Album Release Date &amp; Previews Kendrick Lamar Collaboration",
-               "image": "https://www.billboard.com/",
-               "link": "https://www.billboard.com/music/rb-hip-hop/baby-keem-new-album-casino-release-date-1236177373/",
-               "date": "2026-02-10 19:44:37",
-               "source": "Billboard"
-          },
-          {
-               "title": "Mike Easterlin to Oversee ONErpm Nashville Office",
-               "image": "https://www.billboard.com/",
-               "link": "https://www.billboard.com/pro/mike-easterlin-lead-onerpm-nashville-office/",
-               "date": "2026-02-10 19:01:25",
-               "source": "Billboard"
-          },
-          {
-               "title": "Megan Thee Stallion Surprises Klay Thompson With Bone Thugs-N-Harmony Performance at His Birthday Party",
-               "image": "https://i.imgur.com/2HpFicp.png",
-               "link": "https://www.billboard.com/music/rb-hip-hop/megan-thee-stallion-klay-thompson-bone-thugs-n-harmony-1236177309/",
-               "date": "2026-02-10 18:56:26",
-               "source": "Billboard"
-          },
-          {
-               "title": "Kid Rock Confirms His Turning Point USA Halftime Show Wasn’t Live, But Denies Lip-Synching",
-               "image": "https://www.billboard.com/",
-               "link": "https://www.billboard.com/music/music-news/kid-rock-denies-lip-synching-turning-point-halftime-show-1236177353/",
-               "date": "2026-02-10 18:44:56",
-               "source": "Billboard"
-          },
-          {
-               "title": "Billboard’s Music Industry Events Calendar",
-               "image": "https://www.billboard.com/",
-               "link": "https://www.billboard.com/pro/music-industry-events-calendar-festivals-awards-conferences/",
-               "date": "2026-02-10 18:38:00",
-               "source": "Billboard"
-          },
-          {
-               "title": "Wednesday Leave Wasserman Over CEO’s Ties to Jeffrey Epstein",
-               "image": "https://media.pitchfork.com/photos/698a47970f5a90a95509c62d/master/pass/GettyImages-2259112568.jpg",
-               "link": "https://pitchfork.com/news/wednesday-leaves-wasserman-over-ceos-ties-to-jeffrey-epstein/",
-               "date": "2026-02-10 18:22:26",
-               "source": "Pitchfork"
-          },
-          {
-               "title": "October London Has Magic ‘Touch’ With Third Adult R&amp;B Airplay No. 1",
-               "image": "https://www.billboard.com/",
-               "link": "https://www.billboard.com/music/chart-beat/october-london-touch-on-me-number-1-adult-rb-airplay-chart-1236177336/",
-               "date": "2026-02-10 18:14:57",
-               "source": "Billboard"
-          },
-          {
-               "title": "Nick Jonas Is Hollywood’s Next Action Star After Landing a Lead Role in ‘Bodyman’ Thriller",
-               "image": "https://www.billboard.com/",
-               "link": "https://www.billboard.com/culture/tv-film/nick-jonas-star-movie-bodyman-action-thriller-1236177322/",
-               "date": "2026-02-10 17:57:51",
-               "source": "Billboard"
-          },
-          {
-               "title": "Bad Bunny Reveals the Special Meaning Behind the ’64’ on His Super Bowl Halftime Show Jersey",
-               "image": "https://www.billboard.com/",
-               "link": "https://www.billboard.com/music/latin/bad-bunny-super-bowl-jersey-64-meaning-1236177290/",
-               "date": "2026-02-10 17:54:26",
-               "source": "Billboard"
-          },
-          {
-               "title": "Dictators/Manowar Guitarist Ross ‘The Boss’ Friedman Reveals ALS Diagnosis: ‘Crushes Me Not To Be Able To Play Guitar’",
-               "image": "https://i.imgur.com/2HpFicp.png",
-               "link": "https://www.billboard.com/music/rock/dictators-manowar-guitarist-ross-boss-friedman-als-diagnosis-1236177298/",
-               "date": "2026-02-10 17:38:12",
-               "source": "Billboard"
-          },
-          {
-               "title": "Knocked Loose and Denzel Curry Warn You Against Joining the ‘Hive Mind’ on New Collab",
-               "image": "",
-               "link": "https://www.rollingstone.com/music/music-news/knocked-loose-denzel-curry-hive-mind-video-1235514120/",
-               "date": "2026-02-10 17:30:00",
-               "source": "Rolling Stone"
-          },
-          {
-               "title": "Lip Critic Announce New Album and Tour, Share Video for New Song",
-               "image": "https://media.pitchfork.com/photos/698b5053bece0f8a29b0806b/master/pass/LIPCRITIC_02_352.jpg",
-               "link": "https://pitchfork.com/news/lip-critic-announce-new-album-and-tour-share-video-for-new-song/",
-               "date": "2026-02-10 17:23:31",
-               "source": "Pitchfork"
-          },
-          {
-               "title": "Muna Announce First Album in Four Years, Share Song",
-               "image": "https://media.pitchfork.com/photos/698abd264a5bc1c84125ffd3/master/pass/Photo%20Credit%20Dean%20Bradshaw.jpeg",
-               "link": "https://pitchfork.com/news/muna-announce-first-album-in-four-years-share-song/",
-               "date": "2026-02-10 17:05:30",
-               "source": "Pitchfork"
-          },
-          {
-               "title": "The Black Keys Line Up Massive 2026 Tour",
-               "image": "https://media.pitchfork.com/photos/698b5a251dded9037f1a8e23/master/pass/the-black-keys-2026-tour.jpg",
-               "link": "https://pitchfork.com/news/the-black-keys-line-up-massive-2026-tour/",
-               "date": "2026-02-10 16:22:48",
-               "source": "Pitchfork"
-          },
-          {
-               "title": "Demi Lovato Cancels Five Shows Ahead of ‘It’s Not That Deep’ Tour to Protect Health",
-               "image": "",
-               "link": "https://www.rollingstone.com/music/music-news/demi-lovato-cancels-five-shows-its-not-that-deep-tour-1235514042/",
-               "date": "2026-02-10 16:22:41",
-               "source": "Rolling Stone"
-          },
-          {
-               "title": "Devo Add Yet More Tours to Their 2026 Slate",
-               "image": "https://media.pitchfork.com/photos/693883a86ff982558515b656/master/pass/GettyImages-2241641359.jpg",
-               "link": "https://pitchfork.com/news/devo-add-yet-more-tours-to-their-2026-slate/",
-               "date": "2026-02-10 15:40:05",
-               "source": "Pitchfork"
-          },
-          {
-               "title": "Jimmy Eat World Plot Bleed American Anniversary Tour",
-               "image": "https://media.pitchfork.com/photos/698b3b361dded9037f1a8c75/master/pass/jimmy-eat-world-tour-2026%5D.jpg",
-               "link": "https://pitchfork.com/news/jimmy-eat-world-plot-bleed-american-anniversary-tour/",
-               "date": "2026-02-10 14:30:26",
-               "source": "Pitchfork"
-          },
-          {
-               "title": "Los Thuthanaka’s Chuquimamani-Condori Releases New EP, Luzmila Edits",
-               "image": "https://media.pitchfork.com/photos/6986264ced11b0ed3c83f871/master/pass/chuquimamanu-condori%20.jpg",
-               "link": "https://pitchfork.com/news/los-thuthanakas-chuquimamani-condori-releases-new-ep-luzmila-edits/",
-               "date": "2026-02-10 12:09:13",
-               "source": "Pitchfork"
-          },
-          {
-               "title": "Judge Bans Some Lil Durk Lyrics as Evidence in Murder-for-Hire Trial, Still Weighing Others",
-               "image": "",
-               "link": "https://www.rollingstone.com/music/music-news/lil-durk-lyrics-evidence-murder-for-hire-trial-1235513769/",
-               "date": "2026-02-10 04:14:07",
-               "source": "Rolling Stone"
-          },
-          {
-               "title": "Chappell Roan Exits Wasserman Agency Following Epstein Fallout: ‘I Refuse to Passively Stand By’",
-               "image": "",
-               "link": "https://www.rollingstone.com/music/music-news/chappell-roan-exits-wasserman-agency-epstein-fallout-1235513841/",
-               "date": "2026-02-10 02:32:26",
-               "source": "Rolling Stone"
-          },
-          {
-               "title": "Chappell Roan Exits Wasserman Music Agency Due to CEO’s Epstein Emails",
-               "image": "https://media.pitchfork.com/photos/698a9531b5319edde94cd631/master/pass/GettyImages-2255735636.jpg",
-               "link": "https://pitchfork.com/news/chappell-roan-exits-wasserman-music-agency-due-to-ceos-epstein-emails/",
-               "date": "2026-02-10 02:24:34",
-               "source": "Pitchfork"
-          },
-          {
-               "title": "From Lenny Kravitz to the Spice Girls, Nineties Music Takes Over Olympic Figure Skating Ice Dance Event",
-               "image": "",
-               "link": "https://www.rollingstone.com/music/music-news/olympic-figure-skating-rhythm-ice-dance-music-choices-watch-1235513778/",
-               "date": "2026-02-10 01:51:20",
-               "source": "Rolling Stone"
-          },
-          {
-               "title": "Savannah Guthrie Calls on Public for Help Finding Missing Mom: ‘We Are in an Hour of Desperation’",
-               "image": "",
-               "link": "https://www.rollingstone.com/music/music-news/savannah-guthrie-calls-on-public-for-help-finding-mom-1235513662/",
-               "date": "2026-02-09 22:26:32",
-               "source": "Rolling Stone"
-          },
-          {
-               "title": "Feng Announces Debut Album Weekend Rockstar",
-               "image": "https://media.pitchfork.com/photos/698a4eb9161df22e0c640ab6/master/pass/Feng.jpeg",
-               "link": "https://pitchfork.com/news/feng-announces-debut-album-weekend-rockstar/",
-               "date": "2026-02-09 22:16:23",
-               "source": "Pitchfork"
-          },
-          {
-               "title": "Ross ‘the Boss’ Friedman, of Manowar and the Dictators, Diagnosed With ALS",
-               "image": "",
-               "link": "https://www.rollingstone.com/music/music-news/manowar-ross-the-boss-friedman-diagnosed-als-1235513622/",
-               "date": "2026-02-09 20:57:52",
-               "source": "Rolling Stone"
-          },
-          {
-               "title": "New Music Releases and Upcoming Albums in 2026",
-               "image": "https://media.pitchfork.com/photos/695c3b7ccbe218402ba3e885/master/pass/1.png",
-               "link": "https://pitchfork.com/news/new-album-releases/",
-               "date": "2026-02-09 20:42:23",
-               "source": "Pitchfork"
-          },
-          {
-               "title": "AOC Knows Why Jake Paul Didn’t Want to Watch Bad Bunny’s Super Bowl Set: ‘He Makes You Look Small’",
-               "image": "",
-               "link": "https://www.rollingstone.com/music/music-news/aoc-jake-paul-bad-bunny-fake-american-citizen-1235513476/",
-               "date": "2026-02-09 18:02:37",
-               "source": "Rolling Stone"
-          },
-          {
-               "title": "Drake Is Down $1 Million Over Super Bowl Loss After Warning ‘Bet Against Me if You Dare’",
-               "image": "",
-               "link": "https://www.rollingstone.com/music/music-news/drake-loses-super-bowl-bet-favoring-patriots-win-1235513418/",
-               "date": "2026-02-09 17:35:09",
-               "source": "Rolling Stone"
-          },
-          {
-               "title": "Jonny Greenwood, Paul Thomas Anderson Want the ‘Phantom Thread’ Score Axed From ‘Melania’",
-               "image": "",
-               "link": "https://www.rollingstone.com/music/music-news/jonny-greenwood-melania-doc-phantom-thread-score-removed-1235513362/",
-               "date": "2026-02-09 16:28:07",
-               "source": "Rolling Stone"
-          }
-     ],
-     "world_politics": [
-          {
-               "title": "FBI releases images of masked person in hunt for Savannah Guthrie's mother",
-               "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/6def/live/a79545d0-06ae-11f1-b7e1-afb6d0884c18.jpg",
-               "link": "https://www.bbc.com/news/articles/cy4wdgxr081o?at_medium=RSS&at_campaign=rss",
-               "date": "2026-02-10 19:04:23",
-               "source": "BBC World"
-          },
-          {
-               "title": "Starmer says he ‘will never walk away’ as Burnham joins Labour figures backing PM – as it happened",
-               "image": "https://i.guim.co.uk/img/media/ce57bb91e2f453d683530d99e2abb7e688623636/771_407_4406_3525/master/4406.jpg?width=140&amp;quality=85&amp;auto=format&amp;fit=max&amp;s=6eea3a079ae7b837838c6de6d99aa99c",
-               "link": "https://www.theguardian.com/politics/live/2026/feb/10/keir-starmer-labour-leadership-uk-live-updates-politics-cabinet-latest-news",
-               "date": "2026-02-10 18:12:59",
-               "source": "The Guardian"
-          },
-          {
-               "title": "There is a lot of convenient amnesia about Peter Mandelson’s New Labour days. Let’s jog some memories | George Monbiot",
-               "image": "https://i.guim.co.uk/img/media/27ac808df088145e0b92a9d3663e520f08577603/389_36_2356_1884/master/2356.jpg?width=140&amp;quality=85&amp;auto=format&amp;fit=max&amp;s=8ffe5c76083eb46dc1ce2d2acb498693",
-               "link": "https://www.theguardian.com/commentisfree/2026/feb/10/peter-mandelson-new-labour-jeffrey-epstein-corporate-power",
-               "date": "2026-02-10 18:07:02",
-               "source": "The Guardian"
-          },
-          {
-               "title": "Kenya to confront Russia over 'unacceptable' use of its nationals in combat",
-               "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/2768/live/498e0670-000f-11f1-9972-d3f265c101c6.jpg",
-               "link": "https://www.bbc.com/news/articles/c0k1jzvrykro?at_medium=RSS&at_campaign=rss",
-               "date": "2026-02-10 17:39:33",
-               "source": "BBC World"
-          },
-          {
-               "title": "Steady Ed conjours up a Keir in his own image – complete with fake steering wheel | John Crace",
-               "image": "https://i.guim.co.uk/img/media/cf5e6276da6e0fda0d6e8d5f674c71f4518c77cd/675_4_1848_1478/master/1848.jpg?width=140&amp;quality=85&amp;auto=format&amp;fit=max&amp;s=26dda775bbbc115de392a3ca62a4300b",
-               "link": "https://www.theguardian.com/politics/2026/feb/10/steady-ed-conjours-up-a-keir-in-his-own-image-complete-with-fake-steering-wheel",
-               "date": "2026-02-10 17:25:25",
-               "source": "The Guardian"
-          },
-          {
-               "title": "Laegreid wins bronze then confesses to affair on TV",
-               "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/0586/live/84f26820-06a7-11f1-b7e1-afb6d0884c18.jpg",
-               "link": "https://www.bbc.com/sport/articles/ckglnm521kko?at_medium=RSS&at_campaign=rss",
-               "date": "2026-02-10 17:19:20",
-               "source": "BBC World"
-          },
-          {
-               "title": "French former teacher charged with abusing 89 teens dating back to 1960s",
-               "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/d48e/live/d09aa9d0-0685-11f1-b5e2-dd58fc65f0f6.jpg",
-               "link": "https://www.bbc.com/news/articles/czx4dnky0dzo?at_medium=RSS&at_campaign=rss",
-               "date": "2026-02-10 17:16:52",
-               "source": "BBC World"
-          },
-          {
-               "title": "EU Parliament reaches deal on US trade pact",
-               "image": "",
-               "link": "https://www.politico.eu/article/eu-parliament-reaches-deal-on-eu-us-trade-pact/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
-               "date": "2026-02-10 17:00:52",
-               "source": "Politico"
-          },
-          {
-               "title": "EU must urgently bring down energy prices, says Austrian chancellor",
-               "image": "",
-               "link": "https://www.politico.eu/article/eu-must-urgently-bring-down-energy-prices-says-austria-chancellor-christian-stocker/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
-               "date": "2026-02-10 16:50:29",
-               "source": "Politico"
-          },
-          {
-               "title": "Is Starmer out of the woods? – The Latest",
-               "image": "https://i.guim.co.uk/img/media/e0765bf874532ad03d979fdf8cb97b0a38110379/1407_1276_3405_2724/master/3405.jpg?width=140&amp;quality=85&amp;auto=format&amp;fit=max&amp;s=cbe696907434e6f8ac81f29420b4ca29",
-               "link": "https://www.theguardian.com/news/audio/2026/feb/10/can-starmer-revive-labour-after-turmoil-the-latest",
-               "date": "2026-02-10 16:45:43",
-               "source": "The Guardian"
-          },
-          {
-               "title": "Update-Spezial: Freundschaft zu den USA – wo stehen wir vor der MSC? Mit Wolfgang Ischinger",
-               "image": "",
-               "link": "https://www.politico.eu/podcast/berlin-playbook-podcast/update-spezial-freundschaft-zu-den-usa-wo-stehen-wir-vor-der-msc-mit-wolfgang-ischinger/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
-               "date": "2026-02-10 16:33:36",
-               "source": "Politico"
-          },
-          {
-               "title": "UK sleepwalking into joblessness epidemic, Tesco boss warns",
-               "image": "https://i.guim.co.uk/img/media/6d0cbb47998a9eaedb4528a4eb8240eb19384aa4/1118_0_5600_4480/master/5600.jpg?width=140&amp;quality=85&amp;auto=format&amp;fit=max&amp;s=24ebf7e39aa2ae7d442f22c0d8416b7a",
-               "link": "https://www.theguardian.com/business/2026/feb/10/uk-sleepwalking-into-joblessness-epidemic-tesco-boss-unemployment",
-               "date": "2026-02-10 16:21:04",
-               "source": "The Guardian"
-          },
-          {
-               "title": "Pilot praised after crash-landing faulty Somali passenger plane on seashore",
-               "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/6057/live/a1375200-069f-11f1-b5e2-dd58fc65f0f6.jpg",
-               "link": "https://www.bbc.com/news/articles/c2d1pz3pxewo?at_medium=RSS&at_campaign=rss",
-               "date": "2026-02-10 16:16:30",
-               "source": "BBC World"
-          },
-          {
-               "title": "Trump threatens to block opening of US-Canada bridge",
-               "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/cc88/live/535a3030-0617-11f1-b653-2f014e2e8e4d.jpg",
-               "link": "https://www.bbc.com/news/articles/cpw052pkvl0o?at_medium=RSS&at_campaign=rss",
-               "date": "2026-02-10 16:03:47",
-               "source": "BBC World"
-          },
-          {
-               "title": "Andy Burnham backs Starmer but urges him to be bolder and more inclusive",
-               "image": "https://i.guim.co.uk/img/media/288bab9fcf402728b5b6354b2dababfba47304bf/90_0_4661_3726/master/4661.jpg?width=140&amp;quality=85&amp;auto=format&amp;fit=max&amp;s=29bed6ce990af2a0db397e24fb524265",
-               "link": "https://www.theguardian.com/politics/2026/feb/10/keir-starmer-lead-moment-change-labour-turmoil-ed-miliband",
-               "date": "2026-02-10 14:31:18",
-               "source": "The Guardian"
-          },
-          {
-               "title": "Sarwar allies seeking to justify Starmer attack say he could still face leadership challenge",
-               "image": "https://i.guim.co.uk/img/media/2e33da56ea6ac9c09f843fc215975b42dce33e4d/292_0_4560_3648/master/4560.jpg?width=140&amp;quality=85&amp;auto=format&amp;fit=max&amp;s=d3d129b1872dc5b6a928cd98e6826509",
-               "link": "https://www.theguardian.com/politics/2026/feb/10/anas-sarwar-allies-keir-starmer-leadership-challenge",
-               "date": "2026-02-10 14:28:01",
-               "source": "The Guardian"
-          },
-          {
-               "title": "Wrongfully jailed men call for change to England and Wales compensation law",
-               "image": "https://i.guim.co.uk/img/media/cecce8f78067a99ed67233e34b95a462aba0d15a/352_0_4800_3840/master/4800.jpg?width=140&amp;quality=85&amp;auto=format&amp;fit=max&amp;s=c7e1467cbee8f8252c39ec05c34964a6",
-               "link": "https://www.theguardian.com/law/2026/feb/10/wrongfully-jailed-men-england-and-wales-compensation-law",
-               "date": "2026-02-10 14:23:11",
-               "source": "The Guardian"
-          },
-          {
-               "title": "It’s nothing short of TV gold: mix horror with wild comedy and call it Starmer’s last stand | Marina Hyde",
-               "image": "https://i.guim.co.uk/img/media/5c58a7dcc86ed2805641c29c35f5462603ae1aa5/652_0_4394_3515/master/4394.jpg?width=140&amp;quality=85&amp;auto=format&amp;fit=max&amp;s=1e71a6be2f5559cd321c2198402657ad",
-               "link": "https://www.theguardian.com/commentisfree/2026/feb/10/keir-starmer-wes-streeting-rayner-sarwar-political-drama-labour",
-               "date": "2026-02-10 13:27:31",
-               "source": "The Guardian"
-          },
-          {
-               "title": "European far-right parties push for ICE-style police",
-               "image": "",
-               "link": "https://www.politico.eu/article/europe-far-right-pushes-for-ice-style-police-amid-migration-crackdown/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
-               "date": "2026-02-10 13:25:37",
-               "source": "Politico"
-          },
-          {
-               "title": "Germany shoots down Macron’s Eurobonds proposal",
-               "image": "",
-               "link": "https://www.politico.eu/article/germany-emmanuel-macron-eurobond-proposal/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
-               "date": "2026-02-10 13:13:45",
-               "source": "Politico"
-          },
-          {
-               "title": "US lawmakers accuse justice department of 'inappropriately' redacting Epstein files",
-               "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/4540/live/fe1dd650-0673-11f1-b5e2-dd58fc65f0f6.jpg",
-               "link": "https://www.bbc.com/news/articles/cn5gzepnw4lo?at_medium=RSS&at_campaign=rss",
-               "date": "2026-02-10 12:07:35",
-               "source": "BBC World"
-          },
-          {
-               "title": "Tell us: do you live in a Reform run council or mayoral authority?",
-               "image": "https://i.guim.co.uk/img/media/b1090749128e0ec8f85e286b59026513afe69e70/389_0_4998_4000/master/4998.jpg?width=140&amp;quality=85&amp;auto=format&amp;fit=max&amp;s=fd1f30dbf90a6dd7b793b025f728e316",
-               "link": "https://www.theguardian.com/politics/2026/feb/10/tell-us-do-you-live-in-a-reform-run-council-or-mayoral-authority",
-               "date": "2026-02-10 11:38:39",
-               "source": "The Guardian"
-          },
-          {
-               "title": "EU must implement competitiveness reforms by end-2026, says Berlin",
-               "image": "",
-               "link": "https://www.politico.eu/article/eu-must-implement-competitiveness-reforms-by-end-2026-says-berlin/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
-               "date": "2026-02-10 11:19:06",
-               "source": "Politico"
-          },
-          {
-               "title": "Macron urges Europe to start acting like world power",
-               "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/4846/live/9de81f70-067d-11f1-b7e1-afb6d0884c18.jpg",
-               "link": "https://www.bbc.com/news/articles/ce8n1zdnpd3o?at_medium=RSS&at_campaign=rss",
-               "date": "2026-02-10 11:12:08",
-               "source": "BBC World"
-          },
-          {
-               "title": "Rubio to visit Hungary as it speeds toward closely fought election",
-               "image": "",
-               "link": "https://www.politico.eu/article/marco-rubio-us-visit-hungary-as-country-nears-towards-election/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
-               "date": "2026-02-10 11:07:53",
-               "source": "Politico"
-          },
-          {
-               "title": "Macron’s pick to audit the French budget is the person who wrote it",
-               "image": "",
-               "link": "https://www.politico.eu/article/emmanuel-macron-audit-france-budget-amelie-de-montchalin/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
-               "date": "2026-02-10 10:56:26",
-               "source": "Politico"
-          },
-          {
-               "title": "A thousand cuts: Trump administration keeps poking Europe in the eye",
-               "image": "",
-               "link": "https://www.politico.com/news/2026/02/10/after-greenland-its-the-micro-agressions-00772114?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
-               "date": "2026-02-10 10:52:35",
-               "source": "Politico"
-          },
-          {
-               "title": "Inside AfD trailer",
-               "image": "",
-               "link": "https://www.politico.eu/podcast/inside-afd/inside-afd-trailer/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
-               "date": "2026-02-10 10:30:46",
-               "source": "Politico"
-          },
-          {
-               "title": "Instagram and YouTube owners built 'addiction machines', trial hears",
-               "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/d3df/live/62944060-05f7-11f1-b5e2-dd58fc65f0f6.jpg",
-               "link": "https://www.bbc.com/news/articles/c3wlpqpe2z4o?at_medium=RSS&at_campaign=rss",
-               "date": "2026-02-10 07:25:42",
-               "source": "BBC World"
-          },
-          {
-               "title": "Chappell Roan leaves talent agency led by Casey Wasserman after Epstein fallout",
-               "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/e697/live/9d4f8590-0654-11f1-b7e1-afb6d0884c18.jpg",
-               "link": "https://www.bbc.com/news/articles/cewz1keql5no?at_medium=RSS&at_campaign=rss",
-               "date": "2026-02-10 07:12:36",
-               "source": "BBC World"
-          }
-     ]
+  "politics_greece": [
+    {
+      "title": "Συνάντηση Μητσοτάκη – Ερντογάν: Το casus belli, ο πολύτιμος φίλος και τα μηνύματα στο εσωτερικό Ελλάδας και Τουρκίας",
+      "description": "Η παραμονή του Κυριάκου Μητσοτάκη για λίγες ώρες στην Άγκυρα στο επιβλητικό Λευκό Παλάτι του Ρετζέπ Ταγίπ Ερντογάν απέδειξε για ακόμα μια φορά ότι Ελλάδα και Τουρκία έχουν περισσότερα κοινά από όσα θα μπορούσε να φανταστεί κανείς αλλά και πολλές και δυσεπίλυτες διαφορές.\nΚυριάκος Μητσοτάκης και Ρετζέπ Ταγίπ Ερντογάν φαίνεται να έχουν αποδεχθεί ότι ακόμα δεν είναι η ώρα να αγγίξουν τα «ακανθώδη» ζητήματα, όπως τα χαρακτήρισε ο Τούρκος πρόεδρος αλλά αυτό δεν σημαίνει ότι οι σχέσεις ανάμεσα στις δυο χώρες πρέπει να παραμένουν «στα κόκκινα».\nΤόσο η Ελλάδα όσο και η Τουρκία έχουν συνειδητοποιήσει στην πράξη ότι αυτό που αποκαλείται «ήρεμα νερά» ωφελεί και τις δυο πλευρές.\nΑπό την άλλη, όλοι όσοι παρακολουθούν διαχρονικά τις ελληνοτουρκικές σχέσεις δεν άκουσαν ποτέ άλλοτε Έλληνα πρωθυπουργό μέσα στην Άγκυρα να ζητάει από την Τουρκία την άρση της απειλής πολέμου.\nΓια τον Κυριάκο Μητσοτάκη η κίνηση αυτή ήταν μια ηχηρή απάντηση στους υπερπατριώτες επικριτές του στο εσωτερικό. Από την άλλη, ο Ταγίπ Ερντογάν μπορεί να μην ανέβασε τους τόνους αλλά η αναφορά του σε «τουρκική μειονότητα στη Δυτική Θράκη» και η φράση «ακανθώδη ζητήματα» κάλυψε όσους πιθανότατα στο εσωτερικό της Τουρκίας τον περίμεναν στη γωνία. Σε γενικές γραμμές, η ατμόσφαιρα, από την άφιξη του Έλληνα πρωθυπουργού στο Λευκό Παλάτι και τον σύντομο τυπικό διάλογο που είχε με τον Ερντογάν μπροστά στις κάμερες, η κατ΄ιδίαν συνάντηση που κράτησε μιάμιση ώρα, το «πολύτιμος φίλος» που ειπώθηκε δημόσια από τον Τούρκο Πρόεδρο για τον Κυριάκο Μητσοτάκη, οι επτά συμφωνίες που υπογράφηκαν, αλλά και το κλείσιμο της επίσκεψης με ένα πλούσιο δείπνο παρουσία και του Οικουμενικού Πατριάρχη Βαρθολομαίου δεν θα μπορούσε να αποτιμηθεί αρνητικά. Ο Κυριάκος Μητσοτάκης αναχωρώντας στο ηλιοβασίλεμα από το Λευκό Παλάτι μειδίασε κρυφά γιατί όλα τα παραπάνω διέψευσαν εκείνους που ακόμα και σήμερα το πρωί έβλεπαν μια εθνική ήττα και ένα ελληνικό Βατερλώ στην Άγκυρα και καλούσαν τον πρωθυπουργό να μην συναντηθεί με τον Ταγίπ Ερντογάν. Ναι, Ελλάδα και Τουρκία δεν μπορούν ακόμα να συζητήσουν εκείνα που τους χωρίζουν αλλά αυτό δεν σημαίνει ότι δεν μπορούν να μην αναδείξουν θέματα έστω και χαμηλής πολιτικής που τους ενώνουν.\nΑυτό που επίσης δεν πρέπει να παραβλέπει κανείς είναι ότι την ώρα μιας τόσο σημαντικής συνάντησης ανάμεσα στους ηγέτες της Ελλάδας και της Τουρκίας ο Ερντογάν γνώριζε ότι έπεφτε κανονικό ξύλο στην τουρκική εθνοσυνέλευση για μια από τις επιλογές του στον μίνι ανασχηματισμό που έκανε το προηγούμενο βράδυ&#8230;\nTo άρθρο Συνάντηση Μητσοτάκη &#8211; Ερντογάν: Το casus belli, ο πολύτιμος φίλος και τα μηνύματα στο εσωτερικό Ελλάδας και Τουρκίας δημοσιεύτηκε στο NewsIT .",
+      "image": "https://www.newsit.gr/wp-content/uploads/2026/02/mitsotakis-anaxorisi-1200x801.jpeg",
+      "link": "https://www.newsit.gr/politikh/synantisi-mitsotaki-erntogan-to-casus-belli-o-polytimos-filos-kai-ta-minymata-sto-esoteriko-elladas-kai-tourkias/4598499/",
+      "date": "2026-02-11T19:12:24.000Z",
+      "source": "Newsit"
+    },
+    {
+      "title": "Νέα Αριστερά για συνάντηση Μητσοτάκη-Ερντογάν: Επικίνδυνες πρακτικές και δηλώσεις που αμφισβητούν το Διεθνές Δίκαιο",
+      "description": "Η Νέα Αριστερά ζητά άρση του casus belli ως προϋπόθεση αποκλιμάκωσης και υπογραμμίζει την ανάγκη σεβασμού των ανθρωπίνων δικαιωμάτων",
+      "image": "https://www.in.gr/wp-content/uploads/2026/02/63650146-1-768x512.jpg",
+      "link": "https://www.in.gr/2026/02/11/politics/politiki-grammateia/nea-aristera-gia-synantisi-mitsotaki-erntogan-epikindynes-praktikes-kai-diloseis-pou-amfisvitoun-diethnes-dikaio/",
+      "date": "2026-02-11T18:58:52.000Z",
+      "source": "In.gr"
+    },
+    {
+      "title": "Το φλουρί του ΠΑΣΟΚ στην… αλλαγή",
+      "description": "Όταν ο πρόεδρος του ΠΑΣΟΚ κόβει την πρωτοχρονιάτικη πίτα του κόμματος.",
+      "image": "https://www.in.gr/wp-content/uploads/2026/02/androulakis-768x513.jpg",
+      "link": "https://www.in.gr/2026/02/11/politics/flouri-tou-pasok-stin-allagi/",
+      "date": "2026-02-11T18:56:05.000Z",
+      "source": "In.gr"
+    },
+    {
+      "title": "Κυριάκος Μητσοτάκης: Η πρώτη ανάρτηση μετά τις κοινές δηλώσεις με τον Ρετζέπ Ταγίπ Ερντογάν και το «ευχαριστώ»",
+      "description": "Ανάρτηση σχετικά με τη συνάντηση και τη συζήτηση που είχε με τον τούρκο πρόεδρο Ρετζέπ Ταγίπ Ερντογάν έκανε ο πρωθυπουργός, Κυριάκος Μητσοτάκης.\nΤο βράδυ της Τετάρτης 11.02.2026, ο Κυριάκος Μητσοτάκης έκανε μία ανάρτηση στα social media στην οποία συνοψίζει τα όσα ειπώθηκαν στη συνάντηση με τον Ρετζέπ Ταγίπ Ερντογάν.\n«Η Σύνοδος του Ανώτατου Συμβουλίου Συνεργασίας Ελλάδας-Τουρκίας επιβεβαιώνει την αξία που έχουν ο διάλογος αλλά και οι σχέσεις καλής γειτονίας, ιδίως σε ένα ρευστό και συνεχώς μεταβαλλόμενο διεθνές περιβάλλον», επισημαίνει σε ανάρτησή του στα μέσα κοινωνικής δικτύωσης ο πρωθυπουργός Κυριάκος Μητσοτάκης. Η Σύνοδος του Ανώτατου Συμβουλίου Συνεργασίας Ελλάδας-Τουρκίας επιβεβαιώνει την αξία που έχουν ο διάλογος αλλά και οι σχέσεις καλής γειτονίας, ιδίως σε ένα ρευστό και συνεχώς μεταβαλλόμενο διεθνές περιβάλλον. https://t.co/I4LeoOREeO pic.twitter.com/Gi9qQdOCHy\n— Prime Minister GR (@PrimeministerGR) February 11, 2026 Αναλυτικά η ανάρτησή του στο Facebook\nΕυχαριστώ τον Πρόεδρο της Τουρκίας Recep Tayyip Erdoğan για τη θερμή υποδοχή και τη φιλοξενία. Η Σύνοδος του Ανώτατου Συμβουλίου Συνεργασίας Ελλάδας-Τουρκίας επιβεβαιώνει την αξία που έχουν ο διάλογος αλλά και οι σχέσεις καλής γειτονίας, ιδίως σε ένα ρευστό και συνεχώς μεταβαλλόμενο διεθνές περιβάλλον.\nΕίχαμε την ευκαιρία να κάνουμε έναν αναλυτικό συνολικό απολογισμό των διμερών μας σχέσεων τα τελευταία δύο και κάτι χρόνια, καθώς το 2023 κάναμε μια στρατηγική επιλογή να εντάξουμε τις επαφές μας σε μια δομημένη προσέγγιση τριών πυλώνων: τον πολιτικό διάλογο, τη θετική ατζέντα και τα μέτρα οικοδόμησης εμπιστοσύνης.\nΜέσα από αυτή τη διαδικασία πράγματι αποκαταστήσαμε ένα σαφές πλέγμα συναντήσεων και ανοικτών διαύλων επικοινωνίας προς όφελος των δύο λαών. Σήμερα συμφωνήσαμε σε μία σειρά από νέες κοινές πρωτοβουλίες που διευρύνουν το πεδίο της διμερούς συνεργασίας. Νωρίτερα ο Κυριάκος Μητσοτάκης, αμέσως μετά την εφ’ όλης της ύλης κατ’ ιδίαν συνάντησή του με τον Ρετζέπ Ταγίπ Ερντογάν,είπε μεταξύ άλλων: «Θα ήθελα να σας ευχαριστήσω για τη θερμή υποδοχή και άψογη φιλοξενία. Η παρουσία μας σηματοδοτεί τη σημασία του γεγονός και επιβεβαιώνει την αξία που έχει ο διάλογος.\nΜε τον πρόεδρο Ερντογάν κάναμε αναλυτικό απολογισμό των διμερών σχέσεών μας τα τελευταία 2 χρόνια που κάναμε μια στρατηγική επιλογή. Να εντάξουμε τις επαφές μας σε μια δομημένη προσέγγιση τριών πυλώνων: Τον δομημένο διάλογο, τη θετική ατζέντα και τα μέτρα οικοδόμησης εμπιστοσύνης».\nTo άρθρο Κυριάκος Μητσοτάκης: Η πρώτη ανάρτηση μετά τις κοινές δηλώσεις με τον Ρετζέπ Ταγίπ Ερντογάν και το «ευχαριστώ» δημοσιεύτηκε στο NewsIT .",
+      "image": "https://www.newsit.gr/wp-content/uploads/2026/02/mitsotakis-erdogan-3.jpg",
+      "link": "https://www.newsit.gr/politikh/kyriakos-mitsotakis-i-proti-anartisi-meta-tis-koines-diloseis-me-ton-retzep-tagip-erntogan-kai-to-eyxaristo/4598479/",
+      "date": "2026-02-11T18:22:10.000Z",
+      "source": "Newsit"
+    },
+    {
+      "title": "Στις Ηνωμένες Πολιτείες ο Δουδωνής για ομιλίες σε Yale και ΟΗΕ",
+      "description": "Την Τετάρτη (12/02) θα μεταβεί στο New Haven του Connecticut για να πραγματοποιήσει ομιλία για την αναθεώρηση του Συντάγματος και την Πέμπτη (13/02), στον Οργανισμό Ηνωμένων Εθνών, στη Νέα Υόρκη.",
+      "image": "https://www.in.gr/wp-content/uploads/2026/02/photo_5791846914755071316_y-768x429.jpg",
+      "link": "https://www.in.gr/2026/02/11/politics/epikairotita/stis-inomenes-politeies-o-doudonis-gia-omilies-se-yale-kai-oie/",
+      "date": "2026-02-11T18:20:42.000Z",
+      "source": "In.gr"
+    },
+    {
+      "title": "ΣΥΡΙΖΑ για συνάντηση Μητσοτάκη-Ερντογάν: Αναδείχθηκε για άλλη μια φορά το έλλειμμα συγκροτημένης στρατηγικής της ελληνικής κυβέρνησης",
+      "description": "«Αρνητικό είναι και το γεγονός ότι φάνηκε εκ νέου η παντελής έλλειψη σχεδιασμού από την κυβέρνηση για επίλυση των ελληνοτουρκικών με μία στρατηγική για προσφυγή στη Χάγη», σημειώνει ο ΣΥΡΙΖΑ",
+      "image": "https://www.in.gr/wp-content/uploads/2026/02/NMTR3631-1-768x512.jpg",
+      "link": "https://www.in.gr/2026/02/11/politics/politiki-grammateia/syriza-gia-synantisi-mitsotaki-erntogan-anadeixthike-gia-alli-mia-fora-elleimma-sygkrotimenis-stratigikis-tis-ellinikis-kyvernisis/",
+      "date": "2026-02-11T18:16:59.000Z",
+      "source": "In.gr"
+    },
+    {
+      "title": "ΠΑΣΟΚ: Με έκπληξη παρατηρούμε ανακύκλωση τίτλων περί «εμφυλίου»",
+      "description": "Παρά τις ενστάσεις που διατυπώθηκαν στη συνεδρίαση της Οργανωτικής Γραμματείας, η Χαριλάου Τρικούπη πέρασε τελικά τη γραμμή της για τη διαδικασία προς το Συνέδριο του ΠΑΣΟΚ, επιχειρώντας ταυτόχρονα να κλείσει τη συζήτηση που άνοιξε γύρω από την κατανομή των συνέδρων και τους όρους της εσωκομματικής αντιπαράθεσης.\nΠηγές της αξιωματικής αντιπολίτευσης σχολίαζαν ότι «με έκπληξη παρατηρούμε ανακύκλωση τίτλων περί “εμφυλίου” στο ΠΑΣΟΚ», αποδίδοντας την ένταση σε υπερβολικές ή και παραπλανητικές αναγνώσεις. Στο ίδιο πλαίσιο, διέψευδαν κατηγορηματικά τη διακίνηση της –όπως τη χαρακτηρίζουν– «ψευδούς είδησης» ότι η κατανομή των συνέδρων σε κάθε δήμο θα γίνει μέσω «αλγορίθμου».\nΣύμφωνα με τις ίδιες πηγές, η Οργανωτική Επιτροπή Συνεδρίου έχει αποφασίσει η κατανομή να γίνει «με το πλέον αντικειμενικό κριτήριο», δηλαδή βάσει του απόλυτου αριθμού ψήφων που έλαβε το κόμμα σε κάθε δήμο στις πρόσφατες εκλογές. Η επιλογή αυτή, όπως υποστηρίζουν, συνιστά «απόλυτη ευθυγράμμιση με τις επιλογές της κοινωνίας», ώστε να μη δοθεί χώρος σε «παρωχημένες μηχανιστικές πρακτικές».\nΜε την ίδια ανακοίνωση, οι πηγές της Χαριλάου Τρικούπη σημειώνουν ότι το ΠΑΣΟΚ προχωρά σε ένα Συνέδριο «με το βλέμμα στραμμένο στο μέλλον», περιγράφοντάς το ως πολιτικό γεγονός που θα αποτελέσει αφετηρία της μάχης «στις επόμενες εκλογές για την πολιτική αλλαγή».\nΗ συνεδρίαση της Οργανωτικής Γραμματείας, το απόγευμα της Τετάρτης (11.02.2026) εξελίχθηκε σε πεδίο σύγκρουσης για τον τρόπο εκλογής και την κατανομή των συνέδρων. Σύμφωνα με πληροφορίες, στα μέλη του οργάνου παραδόθηκε κατά την έναρξη της συνεδρίασης τρισέλιδο κείμενο –παρότι υπήρχε δέσμευση να αποσταλεί νωρίτερα– στο οποίο αποτυπώνεται η επιλογή των συνεργατών του Νίκου Ανδρουλάκη να γίνει η κατανομή των συνέδρων όχι με βάση το μητρώο μελών, αλλά βάσει της εκλογικής επίδοσης του ΠΑΣΟΚ ανά εκλογική περιφέρεια, τόσο στις εθνικές κάλπες όσο και στις ευρωεκλογές. Η πρόταση της Χαριλάου Τρικούπη δεν έβρισκε σύμφωνη μερίδα στελεχών, που εκτιμά ότι μπορεί να οδηγήσει σε αναλογικά μεγαλύτερη εκπροσώπηση περιφερειών στο Συνέδριο. Εφαρμόζοντας τη μέθοδο αυτή – για «αλγόριθμο», όπως είχε γράψει το newsit.gr, είχε κάνει λόγο ο δήμαρχος Αθηναίων Χάρης Δούκας– μπορεί να εκλεγούν περισσότεροι Σύνεδροι από το Ηράκλειο Κρήτης παρά από την Αθήνα. To άρθρο ΠΑΣΟΚ: Με έκπληξη παρατηρούμε ανακύκλωση τίτλων περί «εμφυλίου» δημοσιεύτηκε στο NewsIT .",
+      "image": "https://www.newsit.gr/wp-content/uploads/2026/02/pasok-3.jpg",
+      "link": "https://www.newsit.gr/politikh/pasok-me-ekpliksi-paratiroume-anakyklosi-titlon-peri-emfyliou/4598451/",
+      "date": "2026-02-11T18:06:27.000Z",
+      "source": "Newsit"
+    },
+    {
+      "title": "Μάντζος μετά τη συνάντηση Μητσοτάκη και Ερντογάν: Διάλογος με την Τουρκία «χωρίς αυταπάτες» και με επίγνωση των κόκκινων γραμμών",
+      "description": "Την ανάγκη συνέχισης του ελληνοτουρκικού διαλόγου «χωρίς αυταπάτες, με ρεαλισμό και απόλυτη επίγνωση των θέσεων της άλλης πλευράς» υπογραμμίζει ο Δημήτρης Μάντζος, υπεύθυνος Κ.Τ.Ε. Εξωτερικών του ΠΑΣΟΚ, σε δήλωσή του μετά τη συνάντηση του Κυριάκου Μητσοτάκη με τον Ρετζέπ Ταγίπ Ερντογάν στην Αγκυρα, στο πλαίσιο του 6ου Ανώτατου Συμβουλίου Συνεργασίας Ελλάδας – Τουρκίας.\nΟ Δημήτρης Μάντζος σημειώνει ότι οι δημόσιες τοποθετήσεις του πρωθυπουργού, Κυριάκου Μητσοτάκη, και του προέδρου της Τουρκίας, Ρετζέπ Ταγίπ Ερντογάν, «επιβεβαιώνουν τις προσδοκίες» που είχαν προηγηθεί της συνεδρίασης, ωστόσο θέτει ως καθοριστικό περιορισμό την επιμονή της Αγκυρας σε «αναθεωρητικές θέσεις και παράνομες διεκδικήσεις», κατά παράβαση –όπως αναφέρει– του διεθνούς δικαίου και του δικαίου της θάλασσας, καθώς και στη διατήρηση της απειλής πολέμου εις βάρος της Ελλάδας. Υπό αυτές τις συνθήκες, ο υπεύθυνος Εξωτερικών του ΠΑΣΟΚ εκτιμά ότι τα περιθώρια επίλυσης της «μοναδικής διαφοράς», δηλαδή της οριοθέτησης υφαλοκρηπίδας και ΑΟΖ στο Αιγαίο και την Ανατολική Μεσόγειο, παραμένουν «ισχνά».\nΕιδική αναφορά κάνει σε ενέργειες της Τουρκίας που χαρακτηρίζει προκλητικές, όπως η έκδοση NAVTEX «αορίστου διαρκείας» σε μεγάλη έκταση του Αιγαίου και η επαναφορά αναφορών σε «τουρκική μειονότητα», παρά –όπως σημειώνει– τις προβλέψεις της Συνθήκης της Λωζάννης. Κατά τον ίδιο, όσο τέτοιες κινήσεις συνεχίζονται, η ελληνοτουρκική προσέγγιση κινδυνεύει να περιοριστεί σε μια στενή «διαχείριση κρίσεων».\nΣτη δήλωσή του, ο υπεύθυνος Εξωτερικών του ΠΑΣΟΚ επιμένει ότι η Ελλάδα «οφείλει να βλέπει τον χάρτη από ψηλά», δίνοντας έμφαση στην έγκαιρη πληροφόρηση και ανάλυση των δεδομένων στην Ανατολική Μεσόγειο, καθώς και στην αποτίμηση του ρόλου της Τουρκίας σε ένα ευρύτερο γεωπολιτικό τόξο που εκτείνεται από την Αίγυπτο έως τη Συρία και τις κουρδικές περιοχές.\nΟ Δημήτρης Μάντζος τονίζει ότι, σε ένα διεθνές περιβάλλον αυξανόμενης αβεβαιότητας, είναι αναγκαία η «συναντίληψη στην εθνική υψηλή στρατηγική», όχι συγκυριακά αλλά με σταθερούς πυλώνες: προσήλωση στο διεθνές δίκαιο και το δίκαιο της θάλασσας, ενίσχυση και διατήρηση των διεθνών συμμαχιών και μεγιστοποίηση του ρόλου της χώρας στους διεθνείς οργανισμούς. «Μια πραγματική, ενεργητική πολιτική αρχών», καταλήγει, αποτελεί «ασφαλή οδηγό πλεύσης σε ταραγμένα νερά».\nΗ δήλωση του Δημήτρη Μάντζου\nΟι δηλώσεις του Έλληνα Πρωθυπουργού και του Τούρκου Προέδρου επιβεβαιώνουν τις προσδοκίες που προηγήθηκαν του 6ου Ανωτάτου Συμβουλίου Συνεργασίας στην Άγκυρα.\nΌσο η Τουρκία επιμένει στις αναθεωρητικές θέσεις και τις παράνομες διεκδικήσεις της, σε αντίθεση προς το διεθνές δίκαιο και το δίκαιο της θάλασσας, ακόμη και στην απειλή πολέμου εις βάρος της Ελλάδας, τα περιθώρια για την επίλυση της μοναδικής διαφοράς, της οριοθέτησης υφαλοκρηπίδας και ΑΟΖ σε Αιγαίο και Ανατολική Μεσόγειο, θα παραμένουν ισχνά.\nΌσο οι προκλητικές ενέργειες της Άγκυρας, με πλέον χαρακτηριστική την έκδοση NAVTEX «αορίστου διαρκείας» σε μεγάλη έκταση του Αιγαίου ή την επανάληψη των αναφορών σε «τουρκική μειονότητα» παρά τη Συνθήκη της Λωζάννης, θα συνεχίζονται, η ελληνοτουρκική προσέγγιση θα περιορίζεται απλώς σε διαχείριση κρίσεων.\nΟ διάλογος Ελλάδας-Τουρκίας οφείλει να συνεχιστεί, χωρίς αυταπάτες, με ρεαλισμό και απόλυτη επίγνωση των θέσεων της άλλης πλευράς.\nΗ χώρα μας οφείλει πάντα να βλέπει τον χάρτη από ψηλά. Με έγκαιρη πληροφόρηση και ανάλυση δεδομένων σε όλη την Ανατολική Μεσόγειο, ιδίως τον ρόλο της Τουρκίας, σε όλη την περιοχή της μέχης Ανατολής και Βόρειας Αφρικής, από την Αίγυπτο ως τη Συρία και τις περιοχές των Κούρδων.\nΣε έναν κόσμο ολοένα και πιο αβέβαιο, η συναντίληψη στην εθνική υψηλή στρατηγική είναι αναγκαία. Όχι εφήμερα αλλά σταθερά. Με πυλώνες την προσήλωση στο διεθνές δίκαιο και το δίκαιο της θάλασσας, την ενίσχυση διατήρηση διεθνών συμμαχιών και τη μεγιστοποίηση του ρόλου της χώρας μας εντός των διεθνών οργανισμών.\nΜια πραγματική, ενεργητική πολιτική αρχών, ασφαλής οδηγός πλεύσης σε ταραγμένα νερά.\nTo άρθρο Μάντζος μετά τη συνάντηση Μητσοτάκη και Ερντογάν: Διάλογος με την Τουρκία «χωρίς αυταπάτες» και με επίγνωση των κόκκινων γραμμών δημοσιεύτηκε στο NewsIT .",
+      "image": "https://www.newsit.gr/wp-content/uploads/2026/02/mitsotakis-erdogan1-2.jpg",
+      "link": "https://www.newsit.gr/politikh/mantzos-meta-ti-synantisi-mitsotaki-kai-erntogan-dialogos-me-tin-tourkia-xoris-aytapates-kai-me-epignosi-ton-kokkinon-grammon/4598434/",
+      "date": "2026-02-11T17:36:56.000Z",
+      "source": "Newsit"
+    },
+    {
+      "title": "ΚΚΕ για συνάντηση Μητσοτάκη-Ερντογάν: Επικίνδυνος εφησυχασμός σε περίοδο που προωθούνται «διευθετήσεις» σε βάρος των λαών",
+      "description": "«Τα κρίσιμα προβλήματα στις ελληνοτουρκικές σχέσεις (το casus belli, η 'γαλάζια πατρίδα', οι γκρίζες ζώνες, τα περί 'τουρκικής μειονότητας' στη Θράκη) σε βάρος της κυριαρχίας και των κυριαρχικών δικαιωμάτων της χώρας, όχι απλά παραμένουν, αλλά και οξύνονται», τονίζει το ΚΚΕ",
+      "image": "https://www.in.gr/wp-content/uploads/2026/02/EV_SD_KKE2-1-768x512.jpg",
+      "link": "https://www.in.gr/2026/02/11/politics/politiki-grammateia/kke-gia-synantisi-mitsotaki-erntogan-epikindynos-efisyxasmos-se-periodo-pou-proothountai-dieythetiseis-se-varos-ton-laon/",
+      "date": "2026-02-11T17:25:35.000Z",
+      "source": "In.gr"
+    },
+    {
+      "title": "Κοινή δήλωση Μητσοτάκη και Ερντογάν: Στόχος τα 10 δισ. δολάρια σε διμερή εμπορικό όγκο έως το τέλος της δεκαετίας",
+      "description": "Στην ενίσχυση των οικονομικών και εμπορικών σχέσεων Ελλάδας και Τουρκίας, με σαφή στόχο την αύξηση του διμερούς εμπορικού όγκου στα 10 δισ. δολάρια έως το τέλος της δεκαετίας, έδωσαν ιδιαίτερη έμφαση ο Κυριάκος Μητσοτάκης και ο Ρετζέπ Ταγίπ Ερντογάν, κατά τη συνάντηση που είχαν την Τετάρτη (11.02.2026) στην Άγκυρα, στο πλαίσιο της 6ης συνεδρίασης του 6ου Ανώτατου Συμβουλίου Συνεργασίας.\nΣτην Κοινή Δήλωση που εξέδωσαν οι Κυριάκος Μητσοτάκης και Ρετζέπ Ταγίπ Ερντογάν, καταγράφεται η πρόθεση Ελλάδας και Τουρκίας να ενισχύσουν περαιτέρω τους εμπορικούς δεσμούς, να ενεργοποιήσουν δυναμικότερα τις επιχειρηματικές τους κοινότητες και να διευρύνουν τα πεδία διμερούς συνεργασίας, στο πλαίσιο μιας συνολικότερης προσπάθειας σταθεροποίησης και εμβάθυνσης των σχέσεων μεταξύ των δύο χωρών.\nΟι δύο αρμόδιοι υπουργοί Οικονομικών, δε, Κυριάκος Πιερρακάκης και Μεχμέτ Σιμσέκ, συμφώνησαν να γίνουν δύο επιχειρηματικά fora -ένα στην Κωνσταντινούπολη και ένα στην Αθήνα&#8211; προκειμένου να προχωρήσει η εμπορική συνεργασία.\nΠαράλληλα, Ελλάδα και Τουρκία συμφώνησαν να στηρίζουν η μία πλευρά την άλλη στους διεθνείς οργανισμούς, με εκατέρωθεν υποστήριξη ενδεχόμενων υποψηφιοτήτων τους σε διεθνείς πλατφόρμες, αλλά και να εμβαθύνουν τη συνεργασία τους για τη βιώσιμη διαχείριση των υδάτων στη λεκάνη απορροής του ποταμού Meriç/Έβρου.\nΗ Κοινή Δήλωση μεταξύ της κυβέρνησης της Δημοκρατίας της Τουρκίας και της κυβέρνησης της Ελληνικής Δημοκρατίας\nΟ Πρόεδρος της Δημοκρατίας της Τουρκίας, Α.Ε. κ. Ρετζέπ Ταγίπ Ερντογάν, και ο Πρωθυπουργός της Ελληνικής Δημοκρατίας, Α.Ε. κ. Κυριάκος Μητσοτάκης, συναντήθηκαν στην Άγκυρα στις 11 Φεβρουαρίου 2026 στο πλαίσιο της 6ης συνεδρίασης του Ανώτατου Συμβουλίου Συνεργασίας μεταξύ Τουρκίας και Ελλάδας. Οι δύο Ηγέτες συμπροήδρευσαν της συνεδρίασης της έκτης συνάντησης του Ανώτατου Συμβουλίου Συνεργασίας, με τη συμμετοχή των Υπουργών Εξωτερικών ως συντονιστών και των Υπουργών αρμόδιων για Θησαυροφυλάκιο και Οικονομικά/Οικονομία και Οικονομικά· Εσωτερικών/Μετανάστευσης και Ασύλου, Προστασίας του Πολίτη, Κλιματικής Κρίσης και Πολιτικής Προστασίας· Πολιτισμού και Τουρισμού/Πολιτισμού· Εθνικής Παιδείας/Παιδείας, Θρησκευμάτων και Αθλητισμού· Βιομηχανίας και Τεχνολογίας/Ανάπτυξης, Υποδομών και Μεταφορών· και Εμπορίου.\nΟι δύο Ηγέτες σημείωσαν τα ακόλουθα:\n&#8211; Η Τουρκία και η Ελλάδα τόνισαν εκ νέου ότι είναι αποφασισμένες να καλλιεργήσουν φιλικές σχέσεις και καλή γειτονία, αμοιβαίο σεβασμό, ειρηνική συνύπαρξη και κατανόηση, σύμφωνα με τη «Διακήρυξη των Αθηνών για τις Φιλικές Σχέσεις και την Καλή Γειτονία», η οποία υπογράφηκε στις 7 Δεκεμβρίου 2023 στην Αθήνα, κατά την 5η συνεδρίαση του Ανώτατου Συμβουλίου Συνεργασίας. Οι δύο χώρες δεσμεύονται να προωθήσουν περαιτέρω τις διμερείς σχέσεις και να διευρύνουν τους τομείς συνεργασίας.\n&#8211; Η Τουρκία και η Ελλάδα επανεπιβεβαίωσαν τη δέσμευσή τους για τη βελτίωση των αποτελεσματικών διαύλων και μηχανισμών επικοινωνίας σε όλα τα επίπεδα, καθώς και για την εξάλειψη αδικαιολόγητων πηγών έντασης, προκειμένου να αποφεύγεται ενδεχόμενη κλιμάκωση και οι κίνδυνοι για την επιτυχή διαχείριση των διμερών τους σχέσεων.\n&#8211; Και οι δύο πλευρές επανέλαβαν ότι η διευρυμένη διμερής συνεργασία, με πλήρη σεβασμό στο διεθνές δίκαιο, συμπεριλαμβανομένου του Χάρτη των Ηνωμένων Εθνών, θα ενισχύσει περαιτέρω την περιφερειακή ειρήνη, σταθερότητα και ευημερία και θα τονώσει την οικονομική ανάπτυξη της περιοχής.\n– Υπό το πρίσμα της αύξησης του διμερούς εμπορικού τους όγκου και της οικονομικής συνεργασίας, οι δύο χώρες συμφώνησαν να ενισχύσουν περαιτέρω τους εμπορικούς τους δεσμούς και να επιτύχουν τον στόχο των 10 δισεκατομμυρίων δολαρίων ΗΠΑ σε διμερή εμπορικό όγκο έως το τέλος της δεκαετίας. Προς τον σκοπό αυτό δεσμεύθηκαν να εντείνουν την αλληλεπίδραση μεταξύ των αντίστοιχων επιχειρηματικών τους κοινοτήτων, με ιδιαίτερη έμφαση στις δραστηριότητες του Ελληνοτουρκικού Κοινού Επιχειρηματικού Συμβουλίου, καθώς και άλλων συναφών επιχειρηματικών ενώσεων και των οργανισμών προώθησης επενδύσεων των δύο χωρών.\n&#8211; Η Τουρκία και η Ελλάδα χαιρέτισαν τη συνέχιση του προσωρινού καθεστώτος θεωρήσεων Σένγκεν βραχείας διαμονής, με στόχο τη διευκόλυνση των τουριστικών επισκέψεων Τούρκων υπηκόων σε δώδεκα ελληνικά νησιά του Αιγαίου.\n&#8211; Η Τουρκία και η Ελλάδα επιβεβαίωσαν ότι, πέραν της υφιστάμενης διμερούς συνεργασίας για την καταπολέμηση της παράτυπης μετανάστευσης, ο τριμερής μηχανισμός συνεργασίας, ο οποίος περιλαμβάνει και τη Βουλγαρία, έχει αποδώσει θετικά αποτελέσματα. Οι δύο χώρες υπογράμμισαν τη σημασία της συνέχισης και περαιτέρω ενίσχυσης της συνεργασίας σε αυτόν τον τομέα.\n&#8211; Και οι δύο πλευρές υπογράμμισαν τη σημασία και την αναγκαιότητα ανάπτυξης της διεθνούς συνεργασίας για την καταπολέμηση της τρομοκρατίας και του οργανωμένου εγκλήματος.\n&#8211; Αμφότερες οι χώρες εξέφρασαν την αποφασιστικότητά τους να αξιολογήσουν τις υφιστάμενες δυνατότητες συνεργασίας στον τομέα της ενέργειας -ιδίως στη διασύνδεση ηλεκτρικής ενέργειας και στις ανανεώσιμες πηγές ενέργειας- με στόχο την ενίσχυση της περιφερειακής σταθερότητας.\n&#8211; Οι δύο πλευρές συμφώνησαν να συνεχίσουν τη συνεργασία τους για τον εκσυγχρονισμό κρίσιμων διασυνοριακών οδικών και σιδηροδρομικών διαδρόμων. Τα έργα αυτά ενισχύουν ουσιαστικά την ασφάλεια, την αξιοπιστία και τη χωρητικότητα τόσο των επιβατικών όσο και των εμπορευματικών μεταφορών, δημιουργώντας ταυτόχρονα τις τεχνικές και επιχειρησιακές προϋποθέσεις για ισχυρότερη διασυνδεσιμότητα μεταξύ Τουρκίας και Ελλάδας, καθώς και με την ευρύτερη περιοχή των Βαλκανίων και της Νοτιοανατολικής Ευρώπης, και για την ενίσχυση της ανθεκτικότητας των περιφερειακών εφοδιαστικών αλυσίδων. Στο πλαίσιο αυτό, οι δύο πλευρές εξέτασαν την πρόοδο του έργου κατασκευής δεύτερης διασυνοριακής γέφυρας στους Κήπους–Ύψαλα, κατόπιν της Συμφωνίας του 2006. Η συνολική και αποτελεσματική διασύνδεση του Διευρωπαϊκού Δικτύου Μεταφορών με το οδικό και σιδηροδρομικό δίκτυο μεταφορών της Τουρκίας αναγνωρίζεται ως κρίσιμη για τη διασφάλιση ομαλής ροής της κυκλοφορίας, διαλειτουργικότητας των συστημάτων και περαιτέρω ενίσχυσης της διασυνοριακής συνεργασίας.\n&#8211; Η Τουρκία και η Ελλάδα επανέλαβαν τη διαρκώς αυξανόμενη σημασία των αναδυόμενων τεχνολογιών, συμπεριλαμβανομένης της τεχνητής νοημοσύνης και της ψηφιοποίησης, στον οικονομικό και στρατηγικό τομέα. Και οι δύο πλευρές επανεπιβεβαίωσαν τη δέσμευσή τους για ενίσχυση της συνεργασίας στην επιστήμη, την τεχνολογία, την έρευνα και την καινοτομία, μέσω της υλοποίησης διμερούς προγράμματος συνεργασίας στην επιστήμη και την τεχνολογία.\n&#8211; Η Τουρκία και η Ελλάδα συμφώνησαν να εμβαθύνουν τη συνεργασία τους για τη βιώσιμη διαχείριση των υδάτων στη λεκάνη απορροής του ποταμού Meriç/Έβρου, ενισχύοντας την ανθεκτικότητα απέναντι στις επιπτώσεις της κλιματικής αλλαγής. Στο πλαίσιο αυτό, οι δύο χώρες αποφάσισαν να επανενεργοποιήσουν την ad hoc Κοινή Επιτροπή που συστάθηκε βάσει της Κοινής Δήλωσης του Υπουργού Περιβάλλοντος, Ενέργειας και Κλιματικής Αλλαγής της Ελληνικής Δημοκρατίας και του Υπουργού Περιβάλλοντος και Δασών της Δημοκρατίας της Τουρκίας, η οποία υπογράφηκε στην Αθήνα στις 14 Μαΐου 2010, με στόχο τη διασφάλιση της προστασίας και της βιώσιμης χρήσης του ποταμού Meriç/Έβρου. Οι δύο πλευρές εξέφρασαν επίσης την κοινή τους δέσμευση για την αντιμετώπιση των επιπτώσεων των πλημμυρών στη λεκάνη απορροής του ποταμού Meriç/Έβρου, σε συνεργασία και με το άλλο παρόχθιο κράτος.\n&#8211; Η Τουρκία και η Ελλάδα επανέλαβαν τη δέσμευσή τους να εργαστούν εποικοδομητικά στο πλαίσιο του ΝΑΤΟ ως δύο Σύμμαχοι, μεταξύ άλλων ενόψει της Συνόδου Κορυφής της Άγκυρας που θα πραγματοποιηθεί στις 7-8 Ιουλίου 2026 στην Τουρκία.\n&#8211; Οι δύο πλευρές αντάλλαξαν απόψεις σχετικά με τις σχέσεις Τουρκίας–ΕΕ.\n&#8211; Οι δύο χώρες συμφώνησαν να επεκτείνουν τη συνεργασία τους σε διεθνείς οργανισμούς και, στον βαθμό του δυνατού, να υποστηρίζουν αμοιβαία τις υποψηφιότητές τους σε διεθνείς πλατφόρμες.\n&#8211; Οι δύο Ηγέτες είχαν επίσης εκτενή ανταλλαγή απόψεων για διμερή ζητήματα, καθώς και για περιφερειακές και διεθνείς εξελίξεις. Συμφώνησαν να διατηρήσουν τη δυναμική στον Πολιτικό τους Διάλογο, στη Θετική Ατζέντα/Κοινό Σχέδιο Δράσης και στις συζητήσεις για τα Μέτρα Οικοδόμησης Εμπιστοσύνης.\nTo άρθρο Κοινή δήλωση Μητσοτάκη και Ερντογάν: Στόχος τα 10 δισ. δολάρια σε διμερή εμπορικό όγκο έως το τέλος της δεκαετίας δημοσιεύτηκε στο NewsIT .",
+      "image": "https://www.newsit.gr/wp-content/uploads/2026/02/mitsotakis-erntogan-agkira-1200x800.jpg",
+      "link": "https://www.newsit.gr/politikh/koini-dilosi-mitsotaki-kai-erntogan-stoxos-ta-10-dis-dolaria-se-dimeri-emporiko-ogko-eos-to-telos-tis-dekaetias/4598415/",
+      "date": "2026-02-11T17:21:37.000Z",
+      "source": "Newsit"
+    },
+    {
+      "title": "Ερώτηση ΠΑΣΟΚ σε Κεραμέως, Πιερρακάκη και Παπαθανάση στον απόηχο των αποκαλύψεων για την υπόθεση Παναγόπουλου",
+      "description": "«Η αδιαφάνεια, η αναξιοκρατία, οι πελατειακές σχέσεις αποτελούν βασικά χαρακτηριστικά της διακυβέρνησης της χώρας από τη ΝΔ κατά τα τελευταία χρόνια. Ωστόσο, όταν οι πρακτικές αυτές επεκτείνονται και στους ανέργους, τότε μπορούμε να μιλάμε για εκμαυλισμό και φαυλοκρατία», τονίζουν οι βουλευτές του ΠΑΣΟΚ",
+      "image": "https://www.in.gr/wp-content/uploads/2026/02/pasok_2-2-768x432.jpg",
+      "link": "https://www.in.gr/2026/02/11/politics/politiki-grammateia/erotisi-pasok-se-kerameos-pierrakaki-kai-papathanasi-ston-apoixo-ton-apokalypseon-gia-tin-ypothesi-panagopoulou/",
+      "date": "2026-02-11T17:07:32.000Z",
+      "source": "In.gr"
+    },
+    {
+      "title": "Μητσοτάκης – Ερντογάν: Αυτό είναι το μενού του δείπνου – Ζηλευτά εδέσματα",
+      "description": "Πλούσιο είναι το μενού του δείπνου που παραθέτει ο Τούρκος Πρόεδρος Ρετζέπ Ταγίπ Ερντογάν στον Κυριάκο Μητσοτάκη και την ελληνική αντιπροσωπεία παρουσία του Οικουμενικού Πατριάρχη Βαρθολομαίου. Όπως θα δείτε παρακάτω, το μενού του δείπνου στο Προεδρικό Μέγαρο είναι κυριολεκτικά αυτοκρατορικό με εδέσματα της πολίτικης κουζίνας δείγμα της καλής φιλοξενίας στην οποία αναφέρθηκε στις κοινές δηλώσεις που έκανε με τον Ρετζέπ Ταγίπ Ερντογάν ο Κυριάκος Μητσοτάκης. Το μενού έχει τα εξής: Ορεκτικά\nΑγκινάρες με σάλτσα κάρυ, Τσι Κιοφτέ, τουλουμίσιο τυρί, βούτυρο\nΜελιτζάνες μπαϊλντί, λαχανοντολμάδες με κάστανα\nΠιρουχί με βούτυρο, τυρί Kes, καρύδια και χόρτα του Αιγαίου\nΣαλάτα του Κήπου με γλιστρίδα με ντρέσινγκ σορμπέ λεμόνι\nΚυρίως\nΜοσχαρίσια στηθοπλευρά συνοδευόμενη από πιλάφι με σαφράν και αμύγδαλα και σπαράγγια στη σχάρα\nΟύρφα κεμπάπ και αρνίσια παϊδάκια\nΠαρφέ με πικραμύγδαλα και ανανά συνοδευόμενο από φρούτα εποχής Ποικιλία τουρκικών γλυκών\nΜπακλαβάς με καρύδια, φυστικοσαρμάδες, μουχαλεμπί Τσεσμέ με μαστίχα\nΤσάι και καφές To άρθρο Μητσοτάκης &#8211; Ερντογάν: Αυτό είναι το μενού του δείπνου &#8211; Ζηλευτά εδέσματα δημοσιεύτηκε στο NewsIT .",
+      "image": "https://www.newsit.gr/wp-content/uploads/2026/02/mits-erd-oikou-1200x801.jpeg",
+      "link": "https://www.newsit.gr/politikh/mitsotakis-erntogan-ayto-einai-to-menou-tou-deipnou-zileyta-edesmata/4598386/",
+      "date": "2026-02-11T16:51:02.000Z",
+      "source": "Newsit"
+    }
+  ],
+  "sports": [
+    {
+      "title": "ΠΑΟΚ – Παναθηναϊκός: Τραγικό λάθος οι «πράσινοι» για το 2-0 των «ασπρόμαυρων» με Χατσίδη (vid)",
+      "description": "Παιδικό λάθος από Παναθηναϊκό για το 2-0 του ΠΑΟΚ με Χατσίδη",
+      "image": "https://www.gazzetta.gr/sites/default/files/styles/article_main_image/public/2026-02/6848273_1.jpg?itok=tqiDfuz9",
+      "link": "https://www.gazzetta.gr/football/kypello-elladas/2515290/paok-panathinaikos-tragiko-lathos-oi-prasinoi-gia-2-0-ton",
+      "date": "2026-02-11T20:27:49.000Z",
+      "source": "Gazzetta"
+    },
+    {
+      "title": "ΠΑΟΚ - ΟΦΗ: Η ημέρα και το γήπεδο του τελικού του Κυπέλλου",
+      "description": "ΟΦΗ και ΠΑΟΚ θα «μονομαχήσουν» στις 25 Απριλίου στον Βόλο, στον τελικό του Κυπέλλου Ελλάδας.",
+      "image": "https://www.gazzetta.gr/sites/default/files/styles/article_main_image/public/2026-02/ofi-paok.jpg?itok=8n6x7yzk",
+      "link": "https://www.gazzetta.gr/football/kypello-elladas/2515289/paok-ofi-i-imera-kai-gipedo-toy-telikoy-toy-kypelloy",
+      "date": "2026-02-11T20:27:24.000Z",
+      "source": "Gazzetta"
+    },
+    {
+      "title": "ΠΑΟΚ - Παναθηναϊκός: Χατσίδης «σέρβιρε» και Γιακουμάκης εκτέλεσε για το 1-0",
+      "description": "Ο ΠΑΟΚ προηγήθηκε στο 71ο λεπτό της ρεβάνς με τον Παναθηναϊκό, με τον Γιώργο Γιακουμάκη να δίνει ξανά τη λύση.",
+      "image": "https://www.gazzetta.gr/sites/default/files/styles/article_main_image/public/2026-02/giakouma-paok.jpg?itok=xVabwInm",
+      "link": "https://www.gazzetta.gr/football/kypello-elladas/2515287/paok-panathinaikos-hatsidis-serbire-kai-giakoymakis-ektelese-gia-1",
+      "date": "2026-02-11T20:15:04.000Z",
+      "source": "Gazzetta"
+    },
+    {
+      "title": "Eurovision 2026 – Sing for Greece: Το Χ αποθέωσε τον Akyla: «Πάρτο και Φέρτο στην Ελλάδα» (vid)",
+      "description": "Εκρηκτική εμφάνιση στον Α' ημιτελικό του Sing for Greece, με ένταση, ρυθμό και δυναμική σκηνική παρουσία από τον Akyla και το Ferto. Υποκλίθηκε το X.",
+      "image": "https://www.gazzetta.gr/sites/default/files/styles/article_main_image/public/2026-02/akylas-eurovision.jpg?itok=dFNicJ-M",
+      "link": "https://www.gazzetta.gr/plus/2515281/eurovision-2026-sing-greece-h-apotheose-ton-akyla-parto-kai-ferto-stin-ellada-vid",
+      "date": "2026-02-11T20:13:00.000Z",
+      "source": "Gazzetta"
+    },
+    {
+      "title": "ΠΑΟΚ – Παναθηναϊκός: Συγκίνηση σε Τούμπα η μάνα ενός εκ των 7 αετόπουλων χτύπησε το τύμπανο",
+      "description": "Απίστευτη συγκίνηση στη Τούμπα με την μάνα ενός από τα 7 αετόπουλα που έχασαν την ζωή τους στο δυστύχημα στη Ρουμανία να χτυπάει το τύμπανο πριν την έναρξη του ΠΑΟΚ – Παναθηναϊκός.",
+      "image": "https://www.gazzetta.gr/sites/default/files/styles/article_main_image/public/2026-02/5032220_1.jpg?itok=ZDWQE6I-",
+      "link": "https://www.gazzetta.gr/football/kypello-elladas/2515285/paok-panathinaikos-sygkinisi-se-toympa-i-mana-enos-ek-ton-7",
+      "date": "2026-02-11T20:11:08.000Z",
+      "source": "Gazzetta"
+    },
+    {
+      "title": "Ο τρομερός λόγος φίλου του Λεβαδειακού προς τους παίκτες: «Είμαστε πάντα εδώ, για μας είστε νικητές»",
+      "description": "Οπαδοί του Λεβαδειακού συγκεντρώθηκαν μετά τη λήξη του αγώνα με τον ΟΦΗ και τον αποκλεισμό της ομάδας τους για να δείξουν τη στήριξη και την υπερηφάνεια τους.",
+      "image": "https://www.gazzetta.gr/sites/default/files/styles/article_main_image/public/2026-02/ofi_levadeiakos_intime_1.jpg?itok=DqEypF2F",
+      "link": "https://www.gazzetta.gr/football/superleague/2515284/o-tromeros-logos-filoy-toy-lebadeiakoy-pros-toys-paiktes-eimaste-panta",
+      "date": "2026-02-11T20:10:35.000Z",
+      "source": "Gazzetta"
+    },
+    {
+      "title": "ΟΦΗ: Την Πέμπτη το πρωί η επιστροφή των θριαμβευτών",
+      "description": "Οι παίκτες του ΟΦΗ θα αναχωρήσουν το πρωί της Πέμπτης (12/2) για να επιστρέψουν στη «βάση» τους.",
+      "image": "https://www.gazzetta.gr/sites/default/files/styles/article_main_image/public/2026-02/ofi-pam.jpg?itok=50sSswBk",
+      "link": "https://www.gazzetta.gr/football/kypello-elladas/2515283/ofi-tin-pempti-proi-i-epistrofi-ton-thriambeyton",
+      "date": "2026-02-11T20:09:47.000Z",
+      "source": "Gazzetta"
+    },
+    {
+      "title": "Χέιζ-Ντέιβις: «Απέρριψε την πρόταση της Φενέρ, αύξησαν την προσφορά τους Παναθηναϊκός και Χάποελ»",
+      "description": "O Toύρκος δημοσιογράφος, Γιαγκίζ Σαμπουντσουογλού αποκάλυψε πως ο Χέιζ-Ντέιβις απέρριψε την πρόταση της Φενέρμπαχτσε, ενώ ο Παναθηναϊκός και η Χάποελ ανέβασαν τις προτάσεις τους.",
+      "image": "https://www.gazzetta.gr/sites/default/files/styles/article_main_image/public/2025-05/hayes_davies.jpg?itok=r7qt3HV0",
+      "link": "https://www.gazzetta.gr/basketball/euroleague/2515282/heiz-nteibis-aperripse-tin-protasi-tis-fener-ayxisan-tin-prosfora",
+      "date": "2026-02-11T20:06:23.000Z",
+      "source": "Gazzetta"
+    },
+    {
+      "title": "Άρης: Το «ευχαριστώ» της ΚΑΕ στους οπαδούς της",
+      "description": "Με ανακοίνωσή της η ΚΑΕ Άρης ευχαρίστησε τους εκατοντάδες οπαδούς του Άρη που ταξίδεψαν στη Ρουμανία για να συμπαρασταθούν στην ομάδα.",
+      "image": "https://www.gazzetta.gr/sites/default/files/styles/article_main_image/public/2026-02/632819973_1535586798570642_8439460121977982870_n.jpg?itok=NvvlxFzZ",
+      "link": "https://www.gazzetta.gr/basketball/eurocup/2515280/aris-eyharisto-tis-kae-stoys-opadoys-tis",
+      "date": "2026-02-11T20:02:05.000Z",
+      "source": "Gazzetta"
+    },
+    {
+      "title": "Λεβερκούζεν: Παίρνει... δίμετρο ταλεντάκι από τη Σερβία",
+      "description": "Όπως αναφέρουν διεθνή ΜΜΕ, η Λεβερκούζεν έχει έρθει σε συμφωνία με τον Ερυθρό Αστέρα για την απόκτηση του Αλέξα Νταμιάνοβιτς.",
+      "image": "https://www.gazzetta.gr/sites/default/files/styles/article_main_image/public/2026-02/aleksa.jpg?itok=E5WPSgC6",
+      "link": "https://www.gazzetta.gr/football/bundesliga/2515279/leberkoyzen-pairnei-dimetro-talentaki-apo-ti-serbia",
+      "date": "2026-02-11T20:00:30.000Z",
+      "source": "Gazzetta"
+    },
+    {
+      "title": "F1 - O Αλόνσο θα περιμένει πριν αποφασίσει για το μέλλον του",
+      "description": "Ο Φερνάντο Αλόνσο εξηγεί γιατί θέλει να περιμένει έως τον Σεπτέμβριο πριν αποφασίσει για το μέλλον του στη Formula 1 και πώς επηρεάζουν οι εξελίξεις του 2026.",
+      "image": "https://www.gazzetta.gr/sites/default/files/styles/article_main_image/public/2026-02/z91_8173-edit-edit.jpg?itok=w_LUYb0K",
+      "link": "https://www.gazzetta.gr/gmotion/2514880/f1-o-alonso-tha-perimenei-prin-apofasisei-gia-mellon-toy",
+      "date": "2026-02-11T20:00:00.000Z",
+      "source": "Gazzetta"
+    },
+    {
+      "title": "Ξανθόπουλος: «Μεγάλη νίκη για τον Οργανισμό του Περιστερίου»",
+      "description": "Ο προπονητής του Περιστερίου Βασίλης Ξανθόπουλος απένειμε τα εύσημα σε όλους στον Σύλλογο για τη μεγάλη εκτός έδρας νίκη επί της Πετκίμ.",
+      "image": "https://www.gazzetta.gr/sites/default/files/styles/article_main_image/public/2026-02/xanthopoulos_intime.jpg?itok=XE977O0d",
+      "link": "https://www.gazzetta.gr/basketball/fiba-europe-cup/2515278/xanthopoylos-megali-niki-gia-ton-organismo-toy-peristerioy",
+      "date": "2026-02-11T19:46:51.000Z",
+      "source": "Gazzetta"
+    }
+  ],
+  "technology": [
+    {
+      "title": "How to get into a16z’s super-competitive Speedrun startup accelerator program",
+      "description": "TechCrunch spoke to a16z partner Joshua Lu for some tips on standing out for the Speedrun program.",
+      "image": "",
+      "link": "https://techcrunch.com/2026/02/11/how-to-get-into-a16zs-super-competitive-speedrun-startup-accelerator-program/",
+      "date": "2026-02-11T19:58:01.000Z",
+      "source": "TechCrunch"
+    },
+    {
+      "title": "Cash App adds payment links so you can get paid in a DM",
+      "description": "The new feature allows users to share payment requests in a variety of digital settings.",
+      "image": "",
+      "link": "https://techcrunch.com/2026/02/11/cash-app-adds-payment-links-so-you-can-get-paid-in-a-dm/",
+      "date": "2026-02-11T19:50:41.000Z",
+      "source": "TechCrunch"
+    },
+    {
+      "title": "The ICE Expansion Won't Happen in the Dark",
+      "description": "People have a right to know who their neighbors are, especially when it's ICE.",
+      "image": "",
+      "link": "https://www.wired.com/story/ice-expansion-wont-happen-in-the-dark/",
+      "date": "2026-02-11T19:30:42.000Z",
+      "source": "Wired"
+    },
+    {
+      "title": "Amazon’s new eero Signal keeps you connected to the internet when outages occur",
+      "description": "A new device from eero will keep you online even if your ISP goes down.",
+      "image": "",
+      "link": "https://techcrunch.com/2026/02/11/amazons-new-eero-signal-keeps-you-connected-to-the-internet-when-outages-occur/",
+      "date": "2026-02-11T19:30:14.000Z",
+      "source": "TechCrunch"
+    },
+    {
+      "title": "The search is on: 2026 Joseph C. Belden Innovation Award nominations are open",
+      "description": "Nominations for the 2026 Joseph C. Belden Innovation Award are open, inviting SMBs with groundbreaking innovation a chance to win scaling opportunities. Last day to apply is February 13.",
+      "image": "",
+      "link": "https://techcrunch.com/2026/02/11/the-search-is-on-2026-joseph-c-belden-innovation-award-nominations-are-open/",
+      "date": "2026-02-11T19:30:00.000Z",
+      "source": "TechCrunch"
+    },
+    {
+      "title": "Activist investor Ancora publicly opposes the WBD-Netflix deal",
+      "description": "An investment group is trying to sway Netflix shareholders to reject the WBD deal in favor of Paramount.",
+      "image": "",
+      "link": "https://techcrunch.com/2026/02/11/activist-investor-ancora-publicly-opposes-the-wbd-netflix-deal/",
+      "date": "2026-02-11T19:20:50.000Z",
+      "source": "TechCrunch"
+    },
+    {
+      "title": "I Loved My OpenClaw AI Agent—Until It Turned on Me",
+      "description": "I used the viral AI helper to order groceries, sort emails, and negotiate deals. Then it decided to scam me.",
+      "image": "",
+      "link": "https://www.wired.com/story/malevolent-ai-agent-openclaw-clawdbot/",
+      "date": "2026-02-11T19:00:00.000Z",
+      "source": "Wired"
+    },
+    {
+      "title": "Samsung’s offering up to $900 of trade-in credit toward its new phones",
+      "description": "Samsung’s next Unpacked event is happening on February 25th, and we anticipate the company will announce the Galaxy S26 lineup of phones. There may be some new wearables and earbuds announced, too. In addition to the showing off the new hardware, Galaxy AI software is likely to be a big part of the show, since that’s the focus of the Unpacked sizzle reel. If you’re hyped for the new devices — enough to consider trading in your phone — Samsung is hosting some special trade-in perks, but only if you register interest in a preorder ahead of the event and follow through with a purchase after the unveiling later this month. Registering through Samsung’s site or its Shop Samsung app now will unlock a $30 use-it-or-lose-it credit that can be applied toward accessories at preorder. However, it can’t be used to reduce the cost of the new device. The company is also offering up to $900 in trade-in value for your phone if you preorder one of its new phones in the same transaction. This amount is higher than its current values, which go up to $700 if you have an S24 Ultra to trade. Regardless of the make or model, your old phone needs to meet some eligibility requirements, including (but not limited to) that it can’t have damage beyond normal wear-and-tear. The anticipated trade-in value will be applied at checkout. Whether you’re set on trading your phone in or not, it might be worth checking out Samsung’s site once preorders launch just to entertain the company’s trade-in offer.",
+      "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/02/galaxyai.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+      "link": "https://www.theverge.com/gadgets/877258/samsung-unpacked-preorder-galaxy-s26-plus-ultra-ai",
+      "date": "2026-02-11T18:55:36.000Z",
+      "source": "The Verge"
+    },
+    {
+      "title": "DOJ says Trenchant boss sold exploits to Russian broker capable of accessing ‘millions of computers and devices’",
+      "description": "The former boss of the L3Harris-owned hacking and surveillance tools maker Trenchant faces nine years in prison for selling several exploits to a Russian broker, which counts the Russian government among its customers.",
+      "image": "",
+      "link": "https://techcrunch.com/2026/02/11/doj-says-trenchant-boss-sold-exploits-to-russian-broker-capable-of-accessing-millions-of-computers-and-devices/",
+      "date": "2026-02-11T18:41:41.000Z",
+      "source": "TechCrunch"
+    },
+    {
+      "title": "Why the economics of orbital AI are so brutal",
+      "description": "A 1 Gw orbital data center would cost roughly $42.4B—almost three times its ground-bound equivalent.",
+      "image": "",
+      "link": "https://techcrunch.com/2026/02/11/why-the-economics-of-orbital-ai-are-so-brutal/",
+      "date": "2026-02-11T18:15:21.000Z",
+      "source": "TechCrunch"
+    },
+    {
+      "title": "Jeffrey Epstein Advised an Elon Musk Associate on Taking Tesla Private",
+      "description": "The financier recommended adding Margaret Thatcher to Tesla’s board, even though she had been dead for five years.",
+      "image": "",
+      "link": "https://www.wired.com/story/jeffrey-epstein-advised-an-elon-musk-associate-on-taking-tesla-private/",
+      "date": "2026-02-11T18:11:45.000Z",
+      "source": "Wired"
+    },
+    {
+      "title": "Microsoft fixes Notepad flaw that could trick users into clicking malicious Markdown links",
+      "description": "Microsoft has fixed a serious security vulnerability affecting Markdown files in Notepad. In the company's Tuesday patch notes, Microsoft says a bad actor could carry out a remote code execution attack by tricking users \"into clicking a malicious link inside a Markdown file opened in Notepad,\" as reported earlier by The Register.\nClicking the link would \"launch unverified protocols,\" allowing attackers to remotely load and execute malicious files on a victim's computer, according to the patch notes. Microsoft says there isn't any evidence of attackers exploiting the Notepad vulnerability (CVE-2026-20841) in the wild, but it issued a fix for …\nRead the full story at The Verge.",
+      "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/02/STK109_WINDOWS_C.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+      "link": "https://www.theverge.com/tech/877295/microsoft-notepad-markdown-security-vulnerability-remote-code-execution",
+      "date": "2026-02-11T18:06:36.000Z",
+      "source": "The Verge"
+    }
+  ],
+  "music": [
+    {
+      "title": "Here Are Some Great Celeb Collab Headphones, From BLACKPINK’s JENNIE to Kim Kardashian",
+      "description": "All products and services featured are independently chosen by editors. However, Billboard may receive a commission on orders placed through its retail links, and the retailer may receive certain auditable data for accounting purposes. There are so many headphones to choose from that fit specific needs, and the market is only growing. With so much to choose from, hailing from big brand names such as Bose, Beats, Sony, Skullcandy and Apple, it&rsquo;s hard to make an informed decision. With a quick search on Google, prospective buyers are overwhelmed with models in vibrant candy-colored hues boasting a number of facets &mdash; some with wires, some without, Bluetooth compatibility, ANC or Active Noise Cancellation, comfort tech and so much more. It&rsquo;s enough to make a shopper&rsquo;s head hurt. People are searching for quality sound that they can rely on. They want crisp and clear audio that immerses, letting you tune out the world for a while. ShopBillboard&rsquo;s rule of thumb? Go where the musicians are. Chances are, they&rsquo;ve collaborated with a brand that they actively use, which bodes well for the product&rsquo;s abilities. There are many celebrity collaborations out there that have come out within the last few years, with products toting a stamp of approval from big names such as BLACKPINK&rsquo;s LISA and JENNIE, Olivia Rodrigo, Kim Kardashian, Maluma, ENHYPEN and more, but which ones are right for you? Our goal is to make shopping for these collaborations as easy as possible. Below, we&rsquo;ve compiled some of our favorites, offering our honest perspective on each. This will hopefully give you the tools to make the right decision before buying expensive tech that is made exponentially more expensive when a celebrity&rsquo;s name is attached. Before we begin, some words that you might see often throughout this article include &ldquo;drivers,&rdquo; which are essentially tech that converts digital audio data into analog signals for speakers and vice versa for microphones; &ldquo;ANC,&rdquo; which is active noise cancellation that filters out unwanted noise; and &ldquo;Personalized Spatial Audio&rdquo; that creates a unique audio profile based on how you listen to music. You&rsquo;ll also be hearing about &ldquo;EQ&rdquo; a lot, which is equalization, a process of adjusting the volume of specific frequency ranges. Beats Studio Pro x Kim Kardashian &ndash; Premium Wireless Over-Ear Headphones $349.95 Buy Now On Amazon Perks: Powerful ANC, Transparency Mode, up to 40 hours of battery life with&nbsp;Fast Fuel&nbsp;charging, lossless audio via USB-C, Personalized Spatial Audio, seamless Apple and Android compatibility, foldable design Kardashian first partnered with Beats back in 2022 with the launch of Beats Fit Pro earbuds. Most recently, the reality TV star dropped over-the-ear Beats Studio Pro headphones in 2024, renewing her collaboration with the brand full-force. Much like her first collaboration, her 2024 iteration is centered in neutral hues of brown, tan and nude, mirroring the signature way she dresses. The neutral offerings are an all-around banger for $349.95 and can be purchased on Amazon. We&rsquo;d recommend this style to those who crave control over their audio-listening experience. You&rsquo;ve got plenty of ways to adjust the audio to fit your specific needs, whether that&rsquo;s through intense noise cancellation or through Beats&rsquo; Transparency Mode, which lets some noise filter through, keeping you aware of your surroundings. Our favorite aspect of these headphones is the compact design that folds in on itself, making it a breeze to pack away. These headphones have a 40 hour battery life for non-stop tunes and seamless Apple and Android compatibility. Bose Ultra Open Earbuds $229 $299 23% off Buy Now at bose Perks: Open-ear design, Immersive Audio&nbsp;with head tracking for spatial sound, private listening via&nbsp;OpenAudio technology&nbsp;with minimal leakage, extended battery life, IPX4 water resistance and customization via the&nbsp;Bose app. Bose has lent its Ultra Open Earbuds model to a slew of ambassador musicians, including BLACKPINK&rsquo;s LISA in her now sold-out collaboration in 2025, Griff in her 2024 music video for her track &ldquo;Miss Me Too&rdquo; and to Maluma, when he wore a custom pair worth $20,000 encrusted with diamonds at the 2024 Grammys. Unlike your normal earbuds, these Bose buds are an open concept, meaning they sit on the ear like a cuff for a more comfortable and intuitive fit. While you can&rsquo;t get your hands on any of the collaborative models as of 2026, the base model is practically the same. For $229 on Bose&rsquo;s website, these earbuds feature what the company calls immersive audio, which uses digital signal processing and head tracking to create a spatial soundstage that makes the audio feel larger and more powerful by anchoring sounds in place even as you move. Another unique feature is the OpenAudio technology that plays on the same perks of the open design. This facet essentially gives you awareness while you&rsquo;re listening to your music, opening up your ear to outside noise instead of closing it off. If you still don&rsquo;t like the way music is sounding after all that, you can further customize via Bose&rsquo;s app. These earbuds are also water-resistant and boast up to 7.5 hours of battery life in stereo mode, or 4.5 hours with Immersive Audio. The case they are nestled in acts as a charging port, adding around 20 hours of extra battery life when fully charged. LinkBuds Fit Truly Wireless Noise Canceling Earbuds $229.99 Buy Now at sony Perks: Lightweight, comfortable design for all-day wear, impressive Active Noise Cancellation, ultra-clear calls, IPX4 water resistance, smart controls like Wide Area Tap and head gestures Olivia Rodrigo dropped her very own LinkBuds with Sony back in 2023 in a Guts purple hue. The limited-edition model was a major success, especially among Rodrigo&rsquo;s fans. The buds featured two custom equalizers tuned by Rodrigo and her producer, Daniel Nigro, for a Rodrigo-approved sound, letting fans experience the star&rsquo;s music the way she sees fit. While you can&rsquo;t buy her purple LinkBuds anymore, beyond places such as eBay, the OG model is pretty much the same, save for the funky colorway. You can buy the original LinkBuds model for $229.99 on Sony&rsquo;s website. The buds come in a slew of colorways and are super lightweight and comfortable to wear even for hours on end. Some of our favorite features are its impressive active noise cancellation that creates immersive sound, along with its water resistance for durability. The most high-tech facet of these buds is the smart controls, namely, Wide Area Tap. This innovative control uses built-in sensors to detect vibrations from tapping the skin around your ears, not just on the earbuds themselves, allowing users to play, pause and skip music or calls by tapping your actual skin. This gives you more control of your sound with less effort. Samsung Galaxy Buds 3 Pro $179.99 Buy Now On Amazon Perks: Ergonomic blade design for comfort, excellent Active Noise Cancellation,&nbsp;AI-powered features&nbsp;(translation, sound optimization), IP57 water/dust resistance for fitness, improved voice controls, and seamless Galaxy device connectivity ENHYPEN teamed up with Samsung back in 2024 to promote Samsung Galaxy Buds 3 Pro, a sleek and sophisticated design that the members endorsed while making music or via usage in their daily lives. The Samsung campaign the K-pop group was featured in was aptly branded with the tagline &ldquo;Recommended by the Pros.&rdquo; You can still purchase the earbuds via Amazon for $179.99. These buds are nestled in a compact charging case, making sure your tech is charged and ready to go even on the go. The silhouette is a traditional earbud style with an acoustic outlet covered by ear tips for comfort and a long base that is essentially an antenna. You&rsquo;ve got your standard earbud fair with noise-cancelling and water/dust resistance that make the model comparable to must, but the most impressive feature is the use of AI for &ldquo;smart&rdquo; controls. With this feature, you can translate conversations in real time, optimizing sound based on your ear fit and surroundings for personalized audio and noise control for better ambient awareness. It&rsquo;s a futuristic aspect that Samsung has really focused on to give their users the most streamlined experience possible. We&rsquo;d recommend these Samsung buds if you want more out of your earbuds than just listening to music. Bowers &amp; Wilkins Px8 S2 $799 Buy Now at bowers and wilkins Perks: High-res audio, premium Nappa leather design, excellent Active Noise Cancellation with an 8-mic array, long battery life (30 hrs), fast charging, smart features like multipoint/fast pairing, physical controls, detailed music app for EQ customization Bowers &amp; Wilkins&rsquo; Px8 S2 is endorsed by the likes of English songwriter and producer James Blake and soccer star David Beckham. The marketing targets two types of demographics with help from these famous folk, proving that these headphones are meant for everyone, regardless of whether you&rsquo;re a music pro or an athlete. The over-the-ear style is available for $799, boasting one of the more hefty price tags on our list. It&rsquo;s an investment piece, meant to last users a lifetime of listening. The design is stripped down and simplistic, made of Nappa leather, which explains the price tag. It&rsquo;s an understated piece of tech when compared to some of the other, more colorful collaborative models featured on this list. As for the technical features, there are a bunch. On the more standard front, you&rsquo;ve got 30 hours of battery life, noise-cancelling functions, fast charging, fast pairing to devices and high-resolution audio thanks to aptX Lossless, which is a Bluetooth technology that allows you to listen to music wirelessly at the exact same quality as a standard CD with no data removed from the original recording. That means you can listen to your music wirelessly without fear of the quality of your audio dropping. Physical controls can be seen throughout the headphones on the sides, allowing you to intuitively control your audio as you see fit. If that wasn&rsquo;t enough, you can also control and customize your EQ with Bowers &amp; Wilkins&rsquo; dedicated music app. If you&rsquo;re looking to shell out on audio equipment that will last you a lifetime and come with all the bells and whistles of headphones, but refined, these headphones are for you. AIAIAI TMA-2 Move Blood Orange Wireless Headphones $249 Buy Now AT END. Perks: Excellent wireless audio via Bluetooth 5.0/5.3, 40+ hours of battery life, superior comfort with memory foam/vegan leather pads, intuitive joystick controls, dual mics for calls, and AIAIAI&rsquo;s signature bio-diaphragm drivers for detailed sound Blood Orange&rsquo;s collaboration with AIAIAI is a rather niche one that we don&rsquo;t think got enough love. This one&rsquo;s for our music listeners who want more style and flair out of their tech, because these collaborative babies have tons of it. The TMA-2 Move headphones are basically a tech fashion statement, coming in this retro-inspired design with a gray color scheme with pops of bright orange for a vibrant twist. Beyond the cosmetics of these headphones, the style is a long-lasting, ultra-comfortable model with memory foam/vegan leather pads that cradle the ears for a comfortable experience for hours of listening. 40+ hours of battery lets you listen to music at length while Bluetooth compatibility is at its best, connecting to your device in a blink without issue. You&rsquo;ve got dual mics for making phone calls and AIAIAI&rsquo;s signature bio-diaphragm drivers, which have excellent acoustic properties, that deliver detailed sound every time. For those seeking out stylish headphones with the most comfort, these are the headphones for you. Beats Solo 4 $149.99 Buy Now at best buy Perks: Affordable, fast charging, up to 50 hours of battery life, lossless audio via USB-C/3.5mm, Personalized Spatial Audio with dynamic head tracking (Apple), dual iOS/Android compatibility with one-touch pairing, improved sound quality with custom drivers, and an ultralight design for comfort Beats Solo 4 is the most affordable option on our list as far as collaborations go for just $149.99. BLACKPINK&rsquo;s Jennie collaborated with Beats to take the brand&rsquo;s Solo 4 model to the next level, adorned with sleek little bows and turned a vibrant bright red that is just as head-turning as JENNIE is. The collaborative headphones sold out early on after their release, so you unfortunately can&rsquo;t get your hands on them now unless you want to pay extra on eBay. The OG Beats Solo 4 model is pretty much the same, just without all that JENNIE flair. This over-the-ear style has up to 50 hours of battery life, the most we&rsquo;ve seen, along with your standard personalized spatial audio that utilizes AI to change your audio experience in real time based on your surroundings. As you may have surmised, a bunch of these headphones utilize AI tech to tailor your listening experience. It&rsquo;s a smart perk, especially when you take into consideration that everyone listens to music and audio differently. It&rsquo;s hard to provide for everyone, but AI tech helps bridge that gap. Custom drivers improve sound quality, while the design is ultra-light for comfort. If you&rsquo;re looking for affordable headphones that still deliver quality audio, the Beats Solo 4 is for you. Sony &ndash; ULT WEAR Wireless Noise Canceling Headphones $248 Buy Now at best buy Perks: Clear calls with beamforming mics, customizable EQ via the Sony Connect app, Adaptive Sound Control, and a comfortable, foldable design with a case for travel Post Malone partnered with Sony in 2025 to promote the brand&rsquo;s ULT WEAR Wireless Noise Canceling Headphones, currently retailing for $248 on the brand&rsquo;s website. He also promoted Sony&rsquo;s 1000X Series headphone model. The singer was tapped as part of their &ldquo;For the Music&rdquo; campaign, seen wearing the headphones while making music in the studio, showcasing the headphone&rsquo;s capabilities when it came to music and tech innovation. While you&rsquo;ve got things like custom EQ and a 30 hour battery life, our favorite perk is the beamforming mics, which use an array of microphones and digital signal processing to create a focused &ldquo;beam&rdquo; of audio. This allows an isolated sound that focuses on a specific speaker&rsquo;s voice while filtering out background noise, which is great for taking calls or streaming. We also love how these headphones can fold over, making them compact and easy to carry for travel when stored in the accompanying carrying case. If you&rsquo;re a sucker for mic quality, these headphones should be at the top of your list. Bose QuietComfort Ultra Headphones Buy Now at bose $279 $279 Perks: World-class adaptive noise cancellation, immersive spatial audio with Still &amp; Motion modes, plush comfort, long battery life (up to 24-30 hrs), CustomTune personalized sound, multi-device Bluetooth, clear calls, and customization via the Bose app, with 2nd Gen models adding lossless USB-C audio, Cinema Mode, and extended battery DJ John Summit, producer of hits such as &ldquo;Where You Are&rdquo; (with HAYLA) and &ldquo;Shiver,&rdquo; endorsed Bose QuietComfort Ultra Headphones back in 2024 in conjunction with his new track&rdquo;Go Back&rdquo; featuring Julia Church. The collaboration showcased how Bose&rsquo;s tech performed in the hands of a music producer, showing off its capabilities along with other Bose products like the SoundLink Max speaker. These headphones come in a unique cranberry hue with a soft and sleek design and subtle Bose branding. Breaking down the most basic capabilities you&rsquo;ve got a 24 hour, up to 30 hour battery life, excellent Bluetooth compatibility with multiple devices, a comfortable fit thanks to the cushions over the audio output and a CustomTune feature that lets users customize the sound they get to fit their specific needs. As mentioned in the name, the QuietComfort model is hallowed for its noise-cancelling abilities, the best out there according to Bose. This world-class noise canceling is all thanks to the headphone&rsquo;s Still &amp; Motion modes. Still mode anchors the sound in one spot for stationary listening, while Motion mode allows the audio to follow your head movements for consistent immersion on the go. Essentially, both modes adapt to your surroundings to give users quality audio no matter the circumstances. If you&rsquo;re looking for the best noise-cancelling capabilities that money can buy, these headphones are our pick. LinkBuds Fit Truly Wireless Noise Canceling Earbuds | Green x Hatsune Miku $249.99 Buy Now at sony Perks: Limited-edition color, lightweight, comfortable design for all-day wear, impressive Active Noise Cancellation (ANC), Natural Ambient Sound, immersive sound with High-Res Audio support (LDAC), ultra-clear calls, IPX4 water resistance, smart controls like Wide Area Tap and head gestures We&rsquo;ve mentioned Sony&rsquo;s LinkBuds when touching on Olivia Rodrigo&rsquo;s collaboration with the brand. In 2026, Sony broke new grounds by collaborating with holographic artist Hatsune Miku, a Vocaloid voice synthesizer software created by the Japanese company Crypton Future Media. Not much is different about this collaboration from Rodrigo&rsquo;s model, except for the color, which is a seafoam green to match Miku&rsquo;s hair. You&rsquo;re still getting all the same perks of the OG LinkBuds, but in a limited-edition colorway. In short, these buds are a niche model made for the music nerds.",
+      "image": "https://www.billboard.com/wp-content/uploads/2026/01/billboard-beats-kim-kardashian.jpg?w=679&amp;h=623&amp;crop=1",
+      "link": "https://www.billboard.com/culture/product-recommendations/best-celebrity-endorsed-headphones-2026-1236154276/",
+      "date": "2026-02-11T20:25:29.000Z",
+      "source": "Billboard"
+    },
+    {
+      "title": "Deadmau5 Responds to Gen-AI Deepfake: ‘Just the Beginning for Talentless F–ks to Abuse This Tech’",
+      "description": "Deadmau5 has posted a characteristically forthright statement in response to another artist&#8217;s use of a generative AI video of him. In it, a fake version of the legendary artist apparently appeared to endorse the work of the DJ who posted it. &#8220;Woke up to some idiot DJs Instagram story (who&#8217;s name I&#8217;ll redact because I don&#8217;t care to promote him) that fully depicted me standing there promoting him and his music,&#8221; deadmau5 wrote in a statement posted to social media on Wednesday (Feb. 11). &#8220;FULLY AI generated, voice wasn&#8217;t quite 100% but pretty damn convincing. F&#8211;cking scary as f&#8211;k. And I&#8217;m sure this is just the beginning for talentless f&#8211;ks to abuse this tech to further themselves while violating others rights in one of the worst ways possible. Related deadmau5 on How His Cats Have Helped Him — Even If One Also Destroyed His Rare Art: &#8216;That&#8217;s the Price of a&nbsp;Cat&#8217; Just in Time For Valentine&#039;s Day, Spotify Shares Which Love-Themed Lyrics From Taylor Swift, Djo and HUNTR/X Are Most Shared Live Nation Launches &#039;Next On&#039; Program for Emerging Artists in Australia and New Zealand &#8220;I&#8217;m sure we&#8217;re all going to be seeing much more of this,&#8221; the artist continued. &#8220;AI is f&#8211;king great, generative AI not so much; but we need to stop idiots from abusing it.&#8221; As of press time, the deepfake video was not immediately available, nor is it clear which artist posted it. Along with his statement, deadmau5 shared an image of his face from the video, which looks remarkably like the Canadian producer born Joel Zimmerman. In a statement to Billboard, deadmau5 says, “People should be in control of their own faces and voices — it’s that simple. My lawyer, Dina [LaPolt] has been working on the NO FAKES Act in the U.S. to create real protections against deepfakes that use our images and voices and fool fans into thinking it’s actually us… when it’s not.” The NO FAKES Act is in front of Congress now. The bill aims to protect artists from AI deepfakes via legislation that would, according to recent reporting by Billboard, &#8220;turn a person’s digital likeness into a form of intellectual property, allowing artists to license out these rights and sue those that publish deepfakes without their consent.&#8221;",
+      "image": "https://www.billboard.com/wp-content/uploads/2025/06/deadmau5-meowingtons-cr-leah-sems-06242025-billboard-1548.jpg?w=237&#038;h=147&#038;crop=1",
+      "link": "https://www.billboard.com/pro/deadmau5-responds-ai-deepfake-video-dj-instagram/",
+      "date": "2026-02-11T20:07:19.000Z",
+      "source": "Billboard"
+    },
+    {
+      "title": "‘Dawson’s Creek’ Star James Van Der Beek Dead at 48 After Cancer Battle",
+      "description": "James Van Der Beek, who was known for portraying Dawson Leery in 1990s teen drama Dawson&#8217;s Creek, died at 48 on Wednesday (Feb. 11) after a battle with cancer, his family announced. Related Gone But Not Forgotten: Musicians We Lost in&nbsp;2026 Ke$ha Kills James Van Der Beek in &#8216;Blow&#8217; Music&nbsp;Video Tame Impala Teases Australia Tour &#8220;Our beloved James David Van Der Beek passed peacefully this morning. He met his final days with courage, faith, and grace,&#8221; the statement, posted to Instgram, read. &#8220;There is much to share regarding his wishes, love for humanity and the sacredness of time. Those days will come. For now we ask for peaceful privacy as we grieve our loving husband, father, son, brother, and friend.&#8221; The actor revealed in an exclusive interview with People in November 2024, that he had stage 3 colorectal cancer; he was 46 at the time. Van Der Beek told the magazine that his family had no history of cancer, and that he was careful to take good care of his health. &#8220;I’d always associated cancer with age and with unhealthy, sedentary lifestyles,&#8221; he told People. &#8220;But I was in amazing cardiovascular shape. I tried to eat healthy — or as far as I knew it at the time.&#8221; He said that he first noticed changes with his bowel movements in 2023, but assumed it was diet related, but decided to be safe and get a colonoscopy. That&#8217;s when he learned he had colorectal cancer. Despite the diagnosis, Van Der Beek said he was &#8220;cautiously optimistic at the time,&#8221; telling People, &#8220;I have a lot to live for.&#8221; Throughout his treatment, the actor shared his story, repeating in interviews that he hoped his tale would encourage others to talk to their doctors and get tested. In addition to Dawson&#8217;s Creek, the actor also starred in films such as Varsity Blues and The Rules of Attraction, and also had memorable guest roles on shows including Law &amp; Order: Special Victims Unit, One Tree Hill and Ugly Betty. Van Der Beek also had a memorable starring role in Kesha&#8217;s 2011 video for &#8220;Blow.&#8221; In the visual, the actor and musician eye each other across a dance floor, then bust out laser guns and start shooting (taking out a few unicorns in the process), before Kesha reigns victorious. James Van Der Beek is survived by his wife, Kimberly, and their kids Olivia, Joshua, Annabel, Emilia, Gwen and Jeremiah. See the family&#8217;s announcement of his passing below: View this post on Instagram",
+      "image": "https://www.billboard.com/wp-content/uploads/2026/01/P10X44S-e1769465037374.jpg?w=237&#038;h=147&#038;crop=1",
+      "link": "https://www.billboard.com/music/music-news/james-van-der-beek-death-dawsons-creek-star-dead-obituary-1236178230/",
+      "date": "2026-02-11T20:03:24.000Z",
+      "source": "Billboard"
+    },
+    {
+      "title": "European Commission Set to Approve UMG’s Downtown Deal This Week: Report",
+      "description": "The European Union is expected to approve Universal Music Group’s $775 million acquisition of Downtown Music Holdings as soon as this week, following a remedy UMG submitted in December that it says addresses regulators&#8217; concerns over its access to commercially sensitive data. The European Commission’s probe, launched last year, centered on concerns that the deal would reduce competition by giving UMG access to sensitive data from rival labels through Downtown’s Curve royalty accounting and rights management business, as well as its artist and label services. Related UMG Addresses European Commission&#8217;s &#8216;Only Remaining Concern&#8217; Over Downtown&nbsp;Deal Just in Time For Valentine&#039;s Day, Spotify Shares Which Love-Themed Lyrics From Taylor Swift, Djo and HUNTR/X Are Most Shared Live Nation Launches &#039;Next On&#039; Program for Emerging Artists in Australia and New Zealand The Financial Times first reported on Wednesday (Feb. 11) that the European Commission (EC) is planning to approve the deal this week, and sources say the plan UMG submitted in December included conditional commitments to spin off these divisions of Downtown. UMG and Virgin Music Group, which would oversee the acquired entity, declined to comment. Representatives from the European Commission did not immediately respond to a request for comment. Trade groups representing the independent side of the music industry in Europe say that, regardless of the outcome, they see a win in the European Commission&#8217;s lengthy two-phase investigation of the acquisition and the remedies it was able to secure from UMG. “Entities planning consolidation need to expect full scrutiny and regulator appetite to make full use of what they have in their toolkit,&#8221; Martin Mills, founder and chair of Beggars Group, said through a statement provided by IMPALA. &#8220;The unprecedented speaking out we have seen in the independent sector sends a clear message that the concerns are real. A level playing field is in the interests of all.&#8221; Related Indie Music Leaders Organize Against UMG-Downtown Deal With New Campaign: &#8216;A Serious&nbsp;Threat&#8217; Founded as a music publisher in 2007, Downtown has grown into a major provider of distribution, royalty accounting and rights-management services to record labels and artists. In addition to Curve, it owns the distribution services FUGA and CD Baby and the publishing administration provider Songtrust. UMG, the world’s largest music company, announced in December 2024 that its Virgin Music Group would buy Downtown to position Virgin to provide labels and artists with a “global end-to-end solution” for client services and technology. The move sparked fears of UMG dominance over one of the few remaining large distribution companies for independents. In July, a group of more than 200 executives and others from the independent music industry said the deal would give UMG too much power over the basic logistics of the modern music business. “A concentration of this magnitude would narrow the range of voices, styles and cultures that reach the public,” the letter read. “It would give UMG further power to shape digital services, influence monetization thresholds and extract more, at the expense of the independent sector.” Related Downtown Music CEO Blasts ‘Misinformation’ Around Virgin Acquisition: ‘It’s Disappointing’ UMG and Virgin have said that acquiring Downtown’s suite of companies does not dramatically reduce the options in independent services. The market remains so fragmented, they say, that even with Downtown, Virgin would rank behind Sony’s The Orchard and Believe in terms of market share. Virgin’s executives have called concerns over proprietary data of competing companies overblown. “Virgin already handles — with the care and confidentiality they deserve — the sensitive client data of hundreds of partners,” Virgin’s co-CEOs Nat Pastor and JT Meyers wrote in an internal memo reported by Billboard last year. “Betraying the trust our clients have bestowed on us would be self-destructive: they would quickly, and quite rightly, end the relationship.”",
+      "image": "https://www.billboard.com/wp-content/uploads/2025/07/umg-santa-monica-office-2020-billboard-1800.jpg?w=237&#038;h=147&#038;crop=1",
+      "link": "https://www.billboard.com/pro/european-union-approve-universal-music-downtown-deal/",
+      "date": "2026-02-11T19:36:29.000Z",
+      "source": "Billboard"
+    },
+    {
+      "title": "Bleachers Reveal New Album, Drop Song “You and Forever”",
+      "description": "Jack Antonoff and co.’s fifth studio full-length, Everyone for Ten Minutes, arrives May 22",
+      "image": "",
+      "link": "https://pitchfork.com/news/bleachers-reveal-new-album-drop-song-you-and-forever/",
+      "date": "2026-02-11T19:33:56.000Z",
+      "source": "Pitchfork"
+    },
+    {
+      "title": "Sonic Editions Just Dropped a Set of Gift-Worthy Tupac Shakur Prints That Capture Hip-Hop History",
+      "description": "All products and services featured are independently chosen by editors. However, Billboard may receive a commission on orders placed through its retail links, and the retailer may receive certain auditable data for accounting purposes. Tupac Shakur, to many, is synonymous with the words &#8220;rap excellence,&#8221; no more, no less. Sonic Editions is aiming to capture that excellence in a print set launched in celebration of the rapper&#8217;s 1996 album, All Eyez on Me, his last album before passing in a drive-by shooting in Las Vegas. The photo set dropped by Sonic Editions captures important moments and figures in hip-hop history from the 1990s. Viewers are treated to appearances from big names like Nas, Redman, and Chuck D snapped alongside Shakur while in New York or Chicago. Our chosen prints were captured by the likes of Al Pereira and Raymond Boyd, the two main contributors for photos in this drop. Every print is available on Sonic Editions&#8217; website. Prints of each scene can be found in black and white or in color, and begin at $99. Sizing and framing of your chosen print determine pricing. Sizing goes up to XXL. Every framed print is glazed with crystal-clear, gallery-grade shatterproof plexiglass for premium protection and printed on archival-grade Fuji Crystal Archive paper for depth and color accuracy. These prints are also mounted with acid-free, conservation-grade materials that ensure longevity. Nas, Tupac &amp; Redman 1993 by Al Pereira $299 Buy Now at sonic edition This photo depicts rappers Nas, Shakur and Redman dated July 23, 1993, at Club Amazon in New York. Not pictured was fellow rapper The Notorious B.I.G., who famously beefed with Shakur. This image captures a moment of peace and unity among the rappers before their East Coast-West Coast rivalry began. 2 Pac in Chicago by Raymond Boyd $175 Buy Now at sonic editions This print is a photo taken at the Regal Theatre in Chicago in 1994. This performance photo was taken while Shakur was still a part of the group consisting of Big Syke, Mopreme, Macadoshis and The Rated R. Shakur would leave the group around 1995. This print captured a moment of the rapper&#8217;s iconic and short-lived career. One of the unique sets of photos in this print set is those taken at Club Amazon in New York on July 23, 1993. The set features appearances from rappers mentioned above along with The Notorious B.I.G., who wasn&#8217;t in these prints. This freeze-frame captures peace, a point in time before Shakur and B.I.G.&#8217;s infamous East Coast-West Coast rivalry began. This 1990s rivalry was birthed from a battle of cultural dominance and a hunger for success, primarily between Bad Boy Records, owned by Sean &#8220;Puffy&#8221; Combs, a New York-based label, and Death Row Records, a Los Angeles-based label. Shakur was signed to Death Row in 1995, while Biggie was signed with Bad Boy in 1993, cultivating a natural beef that was often violent and ugly. Shakur has more than five No. 1 albums on the Billboard 200 and eight No. 1 albums on the Top R&amp;B/Hip-Hop Albums chart. All Eyez on Me landed on the Billboard 200 and included hits such as &#8220;California Love&#8221; and &#8220;How Do U Want It.&#8221; Shakur died in a drive-by shooting shortly after the launch of All Eyez on Me in 1996. Skaur&#8217;s death was a direct consequence of the violent East Coast-West Coast feud. The Notorious B.I.G. would also fall victim to the beef, dying a year later in 1997. Tupac Shakur &amp; Chuck D by Al Pereira $399 Buy Now at sonice editions Rapper Chuck D served as a mentor to Shakur throughout his life and is seen here in a July 23, 1993, print of the pair in New York backstage at one of Shakur&#8217;s shows. After Shakur&#8217;s death, Chuck D participated in a 2015 Grammy Museum exhibit nodding to Shakur&#8217;s 1996 album with a title &#8220;All Eyez on Me: The Writings of Tupac Shakur.&#8221; Tupac at Club Amazon by by Al Pereira $699 Buy Now at sonic editions Shakur graced Club Amazon on July 23, 1993, in New York. His appearance at the club was a pivotal moment in hip-hop history, capturing a snapshot of the era before the notorious East Coast-West Coast beef.",
+      "image": "https://www.billboard.com/wp-content/uploads/2026/02/billboard-sonic-editions-nas-tupac-redman-print.jpg?w=942&#038;h=623&#038;crop=1",
+      "link": "https://www.billboard.com/culture/product-recommendations/sonic-editions-tupac-shakur-prints-shop-online-1236178011/",
+      "date": "2026-02-11T19:20:36.000Z",
+      "source": "Billboard"
+    },
+    {
+      "title": "Could a Combined BMG & Concord Create a Fourth ‘Quiet’ Major Label? And More Questions Answered",
+      "description": "With BMG’s parent company Bertelsmann in talks to acquire Concord in a deal that could be worth more than $6.6 billion, two of the largest indie music companies are primed to create what many are already calling the “fourth major” record label group, joining Universal Music Group (UMG), Sony Music Group (SMG) and Warner Music Group (WMG) at the table. While any BMG-Concord merger would absolutely create a new, massive player in the industry, it wouldn’t necessarily stack up alongside UMG, SMG and WMG in the ways industry observers may expect. So, would BMG-Concord be a fourth major? What would being a “quiet” major actually mean? And how are we supposed to measure all these things, anyway? Related Bertelsmann in Talks to Buy&nbsp;Concord Just in Time For Valentine&#039;s Day, Spotify Shares Which Love-Themed Lyrics From Taylor Swift, Djo and HUNTR/X Are Most Shared Live Nation Launches &#039;Next On&#039; Program for Emerging Artists in Australia and New Zealand Here&#8217;s an FAQ for those wondering what the ramifications of the BMG-Concord merger could be. (In a statement sent to Billboard for this story, a BMG spokesperson said, &#8220;We’re aware of recent media speculation. As a policy, we do not comment on market rumors or unconfirmed reports.” Concord declined to comment.) What Is A Major Label, Anyway? Often, when discussing majors vs. indies, the definition hinges on market share: The majors have a lot of it; the indies, dispersed as they are, have a little of it individually. That’s often why indies band together via trade organizations like Merlin to negotiate deals with digital service providers — by operating collectively, indie labels have enough combined market share to have a seat at the table alongside the three existing behemoths and can negotiate on a similar playing field, at least theoretically. Consider that at the end of 2025, the U.S. overall market was divided up by Universal’s 38.96%, Sony’s 27.48% and Warner’s 18.87%; the indies, by distribution ownership, totaled 14.69%. (By label ownership, the indies traditionally hover around a collective 35%, though many indie labels use major-owned distribution — and distribution of bigger indie labels has become one of the characteristics that qualifies the majors as majors.) So, Would BMG Be a Major? BMG purchasing Concord would not, in a market share sense, materially change the above dynamic. BMG finished 2025 with an overall U.S. market share of 0.85%, while Concord came in at 1.81%. Combined, the two would make up just 2.66% overall market share in the U.S. — about the size of Sony’s fifth-largest division, Epic Records. Related BMG CEO Thomas Coesfeld to Take Over Bertelsmann in Dual&nbsp;Role So, If Not Market Share, Then What? But market share isn&#8217;t what this potential merger is about — nor is it what would define the combined companies’ place in the industry. Instead, the two could become a sort of “quiet major” — one that is exceptionally strong in publishing and catalog rights, with an estimated $2 billion in combined annual revenue, giving it the financial power to both compete on any catalog acquisition deal and beef up a frontline business that, for both, has shown potential in recent years. BMG generated 963 million euros ($1 billion) in 2024, up from 663 million euros ($784.13 million) in 2021, which makes it among the fastest-growing independent music companies. (BMG is slated to report full-year 2025 revenues on March 26.) Concord is expected to generate less than BMG;&nbsp;though, with its recent acquisitions of STEM and the Broadway Licensing Group, as well as continued trajectory growth, it could also reach the $1 billion mark, if not in 2025 then by 2026, according to industry observers. That would put the two companies’ combined revenue in the neighborhood of $2 billion. For comparison’s sake, for the full fiscal year of 2024 — the most recent year for which every company’s figures are available — WMG made $6.4 billion in revenue; Sony Music made 1.8 billion yen, or around $12 billion at the time; and UMG&#8217;s revenue was 11.8 billion euros, or around $12.8 billion at the time. What About in Publishing? BMG’s revenue in the past has been split, with about two-thirds coming from publishing and one-third from recorded masters. These days, however, thanks in part to its Broken Bow imprint, that percentage split is closer to 60%-40%, financial observers estimate. Meanwhile, Concord’s revenue was weighted in the opposite direction in the past, with its record labels generating about 55%-60% of its revenue, leaving publishing with 40%-45%. Calculating BMG’s and Concord’s percentages against their respective $1 billion estimated revenue numbers likely results in publishing coming in at 50%, or $1 billion. That would put them in the same ballpark as Warner Chappell, which had $1.3 billion in publishing revenue in its most recent fiscal year. Related Concord Raises Another $1.7 Billion Through Asset-Backed&nbsp;Security Wait, You Said “Quiet Major”? What Does That Mean? On the record label side of things, the $2 billion in revenue may qualify a combined BMG and Concord as a major — but that’s where the term “quiet major” kicks in. Both companies were initially built as catalog operations. The re-animated BMG launched with publishing acquisitions in 2008. And, beginning in 2005, when Steve Smith took over Bicycle Music — one of Concord’s predecessor companies — that organization also initially focused on publishing acquisitions, though it also acquired Wind-Up Records before merging with Concord in 2015. Before that merger, Concord focused on acquiring catalogs, but it also liked the record labels side of the business, acquiring such well-known indie labels as Fantasy Records and Rounder Records. For years, both companies were content to work catalog records, which bring in predictable revenue and steady profits, eschewing the riskier and costlier hit music marathon of front-line record labels. But in recent years that has changed, thanks to BMG’s ownership of Broken Bow Music — home to artists like Lainey Wilson and Jason Aldean, among others — and other frontline investments, while Concord has been the beneficiary of PULSE Records, which has produced hit music for both its publishing and record label side, most notably Tommy Richman’s Billboard Hot 100 No. 2 hit “Million Dollar Baby” two years ago. Which is to say, the two companies have largely, and successfully, operated mostly in the background businesses of the music industry for the past two decades, quietly generating revenue and working closely with artists and songwriters in the trenches without really going toe to toe with the giants of the industry on the charts and in the mainstream hit-making conversation. But that doesn’t mean they wouldn’t have formidable clout to move more assertively into those areas in the future with their combined resources. Still, if the merger happens, BMG and Concord will have an uphill battle if they want to compete on the frontline hit segment of the record label marketplace. On a unit basis, the combined BMG-Concord entity had 25.3 million consumption units in the U.S. in 2025, but its current unit count — releases within the past 18 months — only totaled 3.435 million units, meaning its current unit count is only 13.57% of the combined entity’s total. In the U.S. market, the three existing majors have current units at 20% or above, with WMG the lowest at 20.6% of its 179.34 million in total consumption units in 2025; Sony’s at 22.33% of its 261.13 million album consumption units; and UMG’s at 22.77% of its 370.27 million album consumption units last year in the U.S. (All Billboard calculations are based on Luminate data.) Related Concord Acquires Stem Distribution to Boost Indie Artist&nbsp;Services How many artists do the companies have? Concord supports more than 125,000 artists as of July 2025, according to a report published in July 2025 by rating agency KBRA for Concord’s most recent securitization. That information is not readily available for BMG. How many songs would the companies have if they combined their portfolios of music catalogs? And how much might that be worth?&nbsp; BMG owns more than 3 million musical compositions and around half a million sound recordings, according to a press release the company put out in 2024, while Concord has a catalog of some 1.3 million songs, according to the KBRA report. Combined, the two companies would have at least 4.3 million songs in their catalogs, which is significant but still trails the majors. Sony holds more than 6.3 million songs in its catalog, for example, according to its most recent quarterly filing.&nbsp; Concord has used more than 1 million of its roughly 1.3 million music assets as collateral for asset-backed securities, and, in the rating report for its most recent issuance, that catalog of over 1 million music assets was estimated to be worth $5.117 billion, making the full value of its catalog higher than that total. Billboard was not able to determine the value of BMG’s catalog. What Other Metrics Should I Know About? Beyond revenue, the combined entity would have its fair share of hits, as the publishing side of the company would have 8.68% in Hot 100 market share for 2025, according to Billboard’s calculation based on Harry Fox-supplied publisher quarterly data. If nothing else, based on their track record —&nbsp;with BMG typically placing fifth and either Concord or its Pulse operation often placing in the second half of the top 10 publishing rankings for the Hot 100 —&nbsp;a combined BMG and Concord could consistently vie with Kobalt for the number four spot. Related BMG Enters Faith-Based Music Market With By Design&nbsp;Partnership Who Are the Investors That BMG is Negotiating With? How Does That Compare to BMG’s Ownership? Concord’s majority investor is the State of Michigan’s Retirement System, with Connecticut-based asset manager Great Mountain Partners as a minority investor. BMG’s majority owner is Bertelsmann, one of the oldest media companies in the world, which is still privately held by the founding Bertelsmann and Mohn families. Thomas Coesfeld, the BMG CEO who will become Bertelsmann’s CEO in 2027, is the grandson of Reinhard Mohn, who led the company from 1947. The Mohn family still owns 19% of Bertelsmann, while 80% of shares are controlled by foundations (Bertelsmann Stiftung, Reinhard Mohn Stiftung, BVG-Familienstiftung, BVG-Stiftung). Sources say that even with the merger, the Michigan Retirement System is not planning to fully cash out all of its holdings. What About Distribution? One other aspect of the combined entity&#8217;s status would be its distribution pipeline. Currently, Concord is distributed by UMG. BMG, meanwhile, recently unwound itself from its longstanding association with Warner Music’s ADA and struck direct deals with the digital service providers while partnering with UMG for physical distribution. If the two were to properly become a fourth major, that association with UMG would presumably have to be severed. If the combined entity decides to go down that path, Concord may already have the building blocks in its back pocket thanks to its 2025 acquisition of Stem Distribution. Does the combined entity need its own distribution arm to be considered a major? Some would say yes. But distribution these days is more about systems than it is people in the field or on the phones. Keeping track of the billions of transactions and mining them for opportunity is one of the main attributes offered by the majors. As it is, BMG is going direct with the big digital service providers like Spotify, Apple and Amazon, while leaving the smaller DSPs to be handled by UMG, although, if Luminate market share is any indicator, some DSPs are still handled by BMG. What Other Dominos Could Fall? Sources suggest that the current talks represent the second or third time in the last 10 years that BMG and Concord have considered merging, although this time the talks are much further along and appear more likely to happen. That means more things could happen in the marketplace that could shore up any combined entity and make it more able to compete with giant competitors. Could that mean purchasing another distribution company? It’s possible — over the past half-decade, dozens of distribution companies have cropped up as entrepreneurs, and label veterans have raced to offer services companies to cater to the growing middle class of creators enabled by digital music. That has also led to consolidation: UMG has a major pending deal to buy Downtown Music and recently acquired [PIAS], while Sony purchased AWAL and Warner has long been rumored to be seeking distribution acquisition targets. A combined BMG and Concord could also look to that sector to bolster its offerings and its own distribution pipeline. There are also other acquisition targets on the market, including tech companies, publishers, and digital solutions and marketing firms. However, one rumor that has been making the rounds — that Kobalt is in their sights — seems far-fetched, as Kobalt sold off all of its catalog and distribution arm and is now mainly a publishing administration platform, albeit a very successful one. The merger would, however, be brutal on the combined entity’s headcount. Sources suggest that BMG has about 900 employees and Concord has about 800 —&nbsp;and industry observers speculate that if the two companies strike a deal, massive layoffs are likely to follow. As one financial source puts it, “The more they slash, the more profitable it will become.”",
+      "image": "https://www.billboard.com/wp-content/uploads/2024/10/Concord-logo-2024-updated-billboard-pro-1260.jpg?w=237&#038;h=147&#038;crop=1",
+      "link": "https://www.billboard.com/pro/bmg-concord-merger-faq-fourth-major-label/",
+      "date": "2026-02-11T19:07:32.000Z",
+      "source": "Billboard"
+    },
+    {
+      "title": "Opry Entertainment Group to Manage South Carolina’s CCNB Amphitheatre at Heritage Park",
+      "description": "The Simpsonville City Council in South Carolina has approved an 11-year management agreement for Nashville-based Opry Entertainment Group to manage and operate the CCNB Amphitheatre at Heritage Park in Simpsonville. The city of Simpsonville retains ownership of the venue. Opry Entertainment Group, a subsidiary of Ryman Hospitality Properties, owns and/or operates a diverse portfolio of indoor and outdoor venues, including Nashville&#8217;s Grand Ole Opry House, Ascend Federal Credit Union Amphitheater in Nashville, ACL Live at The Moody Theater in Austin, Texas, and Southern Entertainment, a festival and live event production company, which also has a strong presence in the Carolinas. CCNB Amphitheatre at Heritage Park, located nearly two hours from Atlanta and Charlotte, N.C. in Simpsonville, is a 14,000-capacity open-air venue. As part of the agreement, OEG will invest at least $6 million in capital over the course of the initial five years. Planned investments include guest amenities, infrastructure enhancements, improved parking and traffic management, and expanded food and beverage offerings. &#8220;CCNB Amphitheatre is an extraordinary community asset with the potential to become a nationally recognized, must-visit entertainment destination,&#8221; Patrick Moore, CEO of OEG, said in a statement. &#8220;Working closely with the city, we look forward to elevating CCNB Amphitheatre as an even stronger foundational center for the community, artists and fans for many years to come.&#8221; &#8220;The City of Simpsonville is thrilled to welcome Opry Entertainment Group as its partner for the CCNB Amphitheatre at Heritage Park,” Simpsonville Mayor Paul Shewmaker said in a statement. “Their legacy goes back more than 100 years through WSM Radio and the Grand Ole Opry. OEG will bring a new level of excitement and fan experience to the stage with a great mix of music genres, artists and events. I&#8217;ve seen the culture of commitment in Nashville to world-class entertainment after having worked in the renowned city, so I know what these folks can and will deliver. This partnership and agreement are fantastic for the Simpsonville community.&#8221; Starting with the 2026 season, CCNB Amphitheatre will adopt an open-room programming approach, aimed at offering a diverse mix of concerts and events. In addition to concerts, OEG also plans to activate the venue and its adjacent Heritage Park to offer family-friendly community events and civic events.",
+      "image": "",
+      "link": "https://www.billboard.com/pro/opry-entertainment-manage-south-carolina-ccnb-amphitheatre/",
+      "date": "2026-02-11T19:00:37.000Z",
+      "source": "Billboard"
+    },
+    {
+      "title": "Raj Kapoor, Veteran Producer of Grammy & Oscar Telecasts, to Coproduce 2026 Tony Awards",
+      "description": "Raj Kapoor, whose credits include the nine most recent Academy Awards and the 12 most recent Grammy Awards, is set to produce the Tony Awards for the first time, in tandem with Sarah Levine Hall and Jack Sussman. Kapoor and Levine Hall will serve as co-showrunners. Kapoor is joining the Tony team for the first time, while Levine Hall and Sussman have a long history with Broadway’s Biggest Night. Related Raj Kapoor Returns as Showrunner of 2025&nbsp;Oscars Raj Kapoor and Patrick Menton on Producing 2024 ACM Awards: &#8216;This Is Such a Global Genre&nbsp;Now&#8217; Here&#8217;s the Date of the 2026 Tony&nbsp;Awards Kapoor served as both showrunner and executive producer for the 68th Grammy Awards on Feb. 1 and is serving in those same capacities for the 98th Academy Awards on March 15 and the 61st Academy of Country Music Awards on May 17.&nbsp; Kapoor’s resume includes several other awards shows, including the Emmys, iHeart Radio Music Awards, Latin Grammys, People’s Choice Awards and Radio Disney Music Awards. The Tony Awards will return to Radio City Music Hall in New York City on Sunday, June 7. The three-hour show will broadcast live to both coasts on CBS and will stream on Paramount+ (8-11 p.m. ET/5-8 p.m. PT). “As former theater kids, stepping into the role of executive producers for the 79th Tony Awards is a tremendous honor,” Kapoor, Levine Hall and Sussman said in a joint statement. “There’s nothing quite like capturing the magic of live theater on a global stage. Our team is committed to bringing audiences closer to the creativity, innovation and heart that define Broadway.” Kapoor and Levine Hall are both Primetime Emmy winners. They both won for their work on The 96th Oscars: Kapoor as executive producer and Levine Hall as producer, which was voted outstanding variety special (live) in 2024. Sussman also won as executive producer of Adele: One Night Only, which was voted outstanding variety special (pre-recorded) in 2022. Levine Hall’s notable credits include the past three Academy Awards, 19 Tony Awards, six Kennedy Center Honors, the Emmy Awards and Disney Legends Awards. Sussman is an independent executive producer with a history of live events for television, music specials, award show productions as well as alternative and reality television series. Sussman was evp of specials, music and live events at CBS Entertainment for more than two decades serving as the network’s chief liaison to the music industry. Sussman oversaw the network’s events and specials, such as the Grammy Awards, the Tony Awards and the Kennedy Center Honors, as well as CBS’ presentations of the CMA Awards and The Academy of Country Music Awards. In 2022, while at CBS, Sussman received a Primetime Emmy nod as executive producer of One Last Time: An Evening With Tony Bennett and Lady Gaga, which was nominated for outstanding variety special (pre-recorded). The Tony Awards eligibility cutoff date for the 2025-26 season is Sunday, April 26, for all Broadway productions that meet all other eligibility requirements. Nominations for the 2026 Tony Awards will be announced on Tuesday, May 5. The Tony Awards are produced in collaboration with Tony Award Productions, a joint venture of the American Theatre Wing and The Broadway League.&nbsp;",
+      "image": "https://www.billboard.com/wp-content/uploads/2024/02/Raj-Kapoor-oscars-2020-billboard-1548.jpg?w=237&#038;h=147&#038;crop=1",
+      "link": "https://www.billboard.com/music/awards/raj-kapoor-2026-tony-awards-coproduce-1236178143/",
+      "date": "2026-02-11T19:00:13.000Z",
+      "source": "Billboard"
+    },
+    {
+      "title": "Here’s the Date of the 2026 BET Awards",
+      "description": "The 2026 BET Awards are set for Sunday June 28, which puts the premier Black music awards show back in its customary spot in the last week of June after it went a few weeks early (June 9) last year. The show will again be held at The&nbsp;Peacock Theater in Los Angeles, which has been its home base since 2013. Kevin Hart hosted last year’s 25th anniversary show, where Kendrick Lamar won five awards, including album of the year for GNX. Mariah Carey, Jamie Foxx, Snoop Dogg and Kirk Franklin received ultimate icon awards. Taraji P. Henson hosted three other post-pandemic shows. Related Here Are the 2025 BET Awards Winners: Full&nbsp;List Best Performances From the 2025 BET Awards,&nbsp;Ranked Kendrick Lamar, SZA &amp; Chris Brown Set Records at 2025 BET&nbsp;Awards Connie Orlando, evp of specials, music programming &amp; music strategy at BET, serves as executive producer for the BET Awards. Jesse Collins Entertainment is the production company for the broadcast, with Jesse Collins, Dionne Harmon, Jeannae Rouzan-Clay and Eric Cook also serving as executive producers. BET Experience (BETX), an immersive, live fan experience, is set for June 25-27 in L.A. It will be co-produced by Live Nation Urban. BETX encompasses performances, celebrity panels, and interactive activations. It will include: “BETX 2026 FanFest,” taking place Friday, June 26 and Saturday, June 27 at The Beehive. “A Roots Picnic Experience: A Great Night in Hip Hop with The Roots and Nas” on Saturday June, 27 at the Hollywood Bowl. Celebrity basketball game. “BETX represents BET’s ongoing commitment to investing in Black culture beyond the screen,” said Brian Rikuda, evp of enterprise growth strategy, business operations, and programming strategy, BET Media Group. “By bringing artists, creators, and communities together across multiple days in Los Angeles, BETX creates space for meaningful experiences centered on the voices shaping this moment.” Additional details for the BET Awards, including host, nominees, performers and special guests, and BETX ticket information, programming, and talent, will be announced in the coming weeks.",
+      "image": "https://www.billboard.com/wp-content/uploads/2025/06/bet-awards-kendrick-lamar-2025-billboard-1548.jpg?w=237&#038;h=147&#038;crop=1",
+      "link": "https://www.billboard.com/music/awards/2026-bet-awards-date-announced-1236177822/",
+      "date": "2026-02-11T19:00:00.000Z",
+      "source": "Billboard"
+    },
+    {
+      "title": "Margaret Qualley Stars In ‘You And Forever’ Music Video as Bleachers Announce 5th Album ‘Everyone For Ten Minutes’",
+      "description": "Bleachers are back. Jack Antonoff’s indie rock outfit preps its fifth studio, everyone for ten minutes, due out Friday May 22 via Dirty Hit. Everyone for ten minutes is the followup to Bleachers’ self-titled fourth LP from March 2024, and is led by the new single “you and forever” and its accompanying music video starring Margaret Qualley (The Substance, How to Make a Killing). Longtime collaborator Alex Lockett returns to direct the clip, an upstairs/downstairs concept which follows Antonoff on struggle street, stumbling into randoms and flapping about in the rain. Upstairs, meanwhile, Walley is looking fabulous, dancing and getting herself ready for a big night out (or in), playing with her fur baby and collection of feather boas. With Lockett and Qualley on board, it’s like getting the old band back together. The pair also teamed up for “Tiny Moves” from Bleachers, which gave the band their first top 10 appearance on the Official U.K. Albums Chart, where it peaked at No. 5. Everyone for ten minutes, reads a statement announcing the fresh project, is the “inevitable culmination of a lifetime of devotion to bands for the six members of Bleachers and, ultimately, finds each one at their creative peak.” The collection is said to have “moments where it briefly peers into darkness,” but is “essentially an optimistic record that feels lovestruck and hopeful, leaping from harmony-laden folk rock to shimmering pop soul to the sax-assisted New Jersey sound that Bleachers have become synonymous for.” The six-strong group is now five albums deep into a recording career that began with 2014 debut Strange Desire. Aside from Bleachers, Antonoff has chiseled out a glorious career with Fun and as a producer. All told, he has netted 13 Grammy Awards and collaborated extensively with the likes of Lana Del Rey, Lorde, Sia, and, of course, Taylor Swift. At the 2026 Grammy Awards, he became just the fourth person to win all four major categories &#8212; album, record, song of the year and best new artist &#8212; which he completed with record of the year, which he won for producing “Luther” from Kendrick Lamar and SZA. Watch the music video for “you and forever” below.",
+      "image": "",
+      "link": "https://www.billboard.com/music/rock/margaret-qualley-bleachers-album-everyone-for-ten-minutes-1236177890/",
+      "date": "2026-02-11T19:00:00.000Z",
+      "source": "Billboard"
+    },
+    {
+      "title": "Pogues Drummer Andrew “The Clobberer” Ranken Dies at 72",
+      "description": "Ranken was a founding member of the Irish punk outfit",
+      "image": "",
+      "link": "https://pitchfork.com/news/pogues-drummer-andrew-the-clobberer-ranken-dies-at-72/",
+      "date": "2026-02-11T18:54:17.000Z",
+      "source": "Pitchfork"
+    }
+  ],
+  "world_politics": [
+    {
+      "title": "Aide linked to sex offender ‘did not give full account’ before he was given peerage, PM says",
+      "description": "Keir Starmer defends his actions as Kemi Badenoch asks why Matthew Doyle was given ‘a job for life’UK politics live – latest updatesKeir Starmer’s former communications chief Matthew Doyle “did not give a full account of his actions” before being nominated for a peerage, the prime minister has told the Commons after it emerged Doyle had campaigned for a friend charged with possessing indecent images of children.Doyle, a longstanding Starmer aide who stepped down as the No 10 head of communications last March, was suspended on Monday from the Labour whip in his new role in the Lords after reports about his actions. Continue reading...",
+      "image": "https://i.guim.co.uk/img/media/d4bdb4b8d6da4f751f0ba92879a9c6e37f860e2b/148_0_3385_2708/master/3385.jpg?width=140&quality=85&auto=format&fit=max&s=987e55dc2d77f5652d47227b4d287787",
+      "link": "https://www.theguardian.com/politics/2026/feb/11/downing-street-unaware-aide-matthew-doyle-links-to-paedophile-when-given-peerage",
+      "date": "2026-02-11T20:00:52.000Z",
+      "source": "The Guardian"
+    },
+    {
+      "title": "Police hold discussions with CPS over investigation into Andrew Mountbatten-Windsor",
+      "description": "Thames Valley police lead assessment of allegations concerning former duke’s links to Jeffrey Epstein Police have held discussions with specialist prosecutors over investigations into Andrew Mountbatten-Windsor’s links with Jeffrey Epstein while the former duke was acting as the UK’s trade envoy.Oliver Wright, assistant chief constable of Thames Valley police, said on Wednesday that the force was leading the assessment of allegations against Mountbatten-Windsor of misconduct in public office, specifically relating to documents within the Epstein files released by the US justice department. Continue reading...",
+      "image": "https://i.guim.co.uk/img/media/6f9944a423aecb0c0360e8a37e748fc0c7616ce9/844_80_4398_3518/master/4398.jpg?width=140&quality=85&auto=format&fit=max&s=2a6edca3b3088693c75b671cb7dd1205",
+      "link": "https://www.theguardian.com/uk-news/2026/feb/11/prosecutors-police-andrew-mountbatten-windsor-peter-mandelson-links-jeffrey-epstein",
+      "date": "2026-02-11T19:55:49.000Z",
+      "source": "The Guardian"
+    },
+    {
+      "title": "Furious female Labour MPs urge Starmer to make a woman his de facto deputy",
+      "description": "Harriet Harman leads calls for an appointment that would ‘turbocharge’ a ‘complete culture change’ at No 10Female Labour MPs have demanded that Keir Starmer appoint a senior woman as his de facto deputy to oversee a “complete culture change” in Downing Street after a series of scandals that they say have exposed a No 10 “boy’s club”.Harriet Harman, one of the party’s most senior figures, urged Starmer to revive the role of first secretary of state on Wednesday, a post occupied by Peter Mandelson under Gordon Brown. Continue reading...",
+      "image": "https://i.guim.co.uk/img/media/1e0faa870c0ec9dbbef436930de340c028a9ce0a/0_0_11811_9449/master/11811.jpg?width=140&quality=85&auto=format&fit=max&s=39ac18d9d99c9478e9f091b24b406dc7",
+      "link": "https://www.theguardian.com/politics/2026/feb/11/furious-female-labour-mps-urge-starmer-to-make-a-woman-his-de-facto-deputy",
+      "date": "2026-02-11T19:50:25.000Z",
+      "source": "The Guardian"
+    },
+    {
+      "title": "Manchester United owner praises Farage during anti-migration diatribe",
+      "description": "Jim Ratcliffe, co-owner of Manchester United Football Club, has praised Reform UK leader Nigel Farage and claimed the U.K. is being &#8220;colonized by immigrants.&#8221; During an interview with Sky News, Ratcliffe — a British billionaire who backed Brexit then changed his tax residency to Monaco in 2020 — lamented the state of the U.K. economy and pinned the blame on people on benefits and migrants. “If you really want to deal with the major issues of immigration, of people who take benefits rather than working for a living, you’re going to have to do things which are unpopular, and show some courage,” he said. Ratcliffe, who made most of his estimated €17 billion fortune in the chemicals industry with his company INEOS, told Sky he had recently met Farage, but stopped short of endorsing him to become prime minister over incumbent Keir Starmer. “I think Nigel is an intelligent man and I think he&#8217;s got good intentions,” said Ratcliffe. “But in a way, you could say exactly the same about Keir, when Keir came in. I think it needs somebody who&#8217;s prepared to be unpopular for a period of time to get the big issues sorted out.” Earlier in the interview, Ratcliffe asserted that Britain is being “colonized by immigrants,” citing numbers that are not accurate. &#8220;You can&#8217;t have an economy with nine million people on benefits and huge levels of immigrants coming in,&#8221; he said. &#8220;I mean, the U.K. has been colonized. It&#8217;s costing too much money.&#8221; &#8220;The U.K. has been colonized by immigrants, really, hasn&#8217;t it? I mean, the population of the UK was 58 million in 2020, now it&#8217;s 70 million. That&#8217;s 12 million people.&#8221; While there has been a large increase in net migration since Britain left the EU, the numbers are not as notable as 12 million in four years. As pointed out by Sky in its article, the population of the U.K. was, in fact, 67 million in 2020. It hasn’t been as low as 58 million since the year 2000. Manchester United is one of the most-supported clubs in the U.K., but has failed to win a Premier League title since the departure of legendary manager Alex Ferguson in 2013. Ratcliffe said he has been “very unpopular” at the club because of changes he has made, but that in his view the tweaks have been for the better. Those changes include severe cost-cutting, making hundreds of staff redundant and removing Ferguson from a lucrative ambassadorial role.",
+      "image": "",
+      "link": "https://www.politico.eu/article/manchester-united-jim-ratcliffe-praise-nigel-farage-reform-uk-migration/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+      "date": "2026-02-11T19:41:12.000Z",
+      "source": "Politico"
+    },
+    {
+      "title": "Trump tells Netanyahu Iran nuclear talks must continue",
+      "description": "The US President said \"nothing definitive\" was agreed during the meeting between the two leaders at the White House on Wednesday as nuclear talks intensify.",
+      "image": "",
+      "link": "https://www.bbc.com/news/articles/c0k1j2j4607o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-02-11T19:32:55.000Z",
+      "source": "BBC World"
+    },
+    {
+      "title": "US reopens airspace over Texas border town after 'cartel drone incursion'",
+      "description": "The FAA had closed the airspace around El Paso for more than a week citing security measures, but then quickly said flights could resume.",
+      "image": "",
+      "link": "https://www.bbc.com/news/articles/cqxdwjn578do?at_medium=RSS&at_campaign=rss",
+      "date": "2026-02-11T19:12:28.000Z",
+      "source": "BBC World"
+    },
+    {
+      "title": "Labour can win political argument for closer EU ties, says Rachel Reeves",
+      "description": "Chancellor says stronger alignment with Europe is ‘biggest prize’ for trade and economic growthRachel Reeves has insisted Labour can win the political argument for a closer relationship with the EU, calling it the “biggest prize” for UK economic growth.Some Labour strategists have been wary of making the case for stronger alignment with the EU, believing it could alienate pro-Brexit voters. Continue reading...",
+      "image": "https://i.guim.co.uk/img/media/67ec76b9f1939375e15ab2bbffa8c6d4807dce0a/569_0_4792_3834/master/4792.jpg?width=140&quality=85&auto=format&fit=max&s=4f10c8dc22d629367899aee895c00dab",
+      "link": "https://www.theguardian.com/politics/2026/feb/11/labour-political-argument-closer-eu-ties-rachel-reeves",
+      "date": "2026-02-11T18:51:23.000Z",
+      "source": "The Guardian"
+    },
+    {
+      "title": "Powerful cyclone kills at least 31 as it tears through Madagascar port",
+      "description": "Madagascar's disaster management says roads are inaccessible with trees uprooted, power poles down and ninety percent of roofs ripped off.",
+      "image": "",
+      "link": "https://www.bbc.com/news/articles/c931zzzep0eo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-02-11T18:48:49.000Z",
+      "source": "BBC World"
+    },
+    {
+      "title": "The Guardian view on Keir Starmer and rotten peers: go back to the reforming spirit of the Labour manifesto | Editorial",
+      "description": "The prime minister would be in a stronger position now if he had moved harder and faster with plans to reform and ultimately abolish the LordsThe archaism of Britain’s upper parliamentary chamber is not the cause of Sir Keir Starmer’s current political woes, but it is a feature. Peter Mandelson’s peerage was not directly related to his appointment as ambassador to Washington, but nor was it irrelevant. He enjoyed the status bestowed by a seat in the Lords during many years of friendship with Jeffrey Epstein. Although he has voluntarily resigned from active membership of parliament, Lord Mandelson’s title can only be rescinded by special statute. That is a reminder of the absurdity in a system that empowers party leaders to dole out places in the legislature to friends and supporters, with no obligation ever to face judgment by the electorate.Sir Keir is now under yet more pressure related to a peer. Earlier this week, Labour suspended the Lords whip from Matthew Doyle, a former Downing Street director of communications, who campaigned in council elections on behalf of a friend who had been charged with possessing indecent images of children. Lord Doyle says he had believed his friend was innocent. No 10 says he did not give a full account of the facts when the peerage was awarded.Do you have an opinion on the issues raised in this article? If you would like to submit a response of up to 300 words by email to be considered for publication in our letters section, please click here. Continue reading...",
+      "image": "https://i.guim.co.uk/img/media/b93b52fda4ebac61c18ad14917618413e7baccdd/353_85_1158_926/master/1158.jpg?width=140&quality=85&auto=format&fit=max&s=f185a8eb2adb0d631436c86a7d88e278",
+      "link": "https://www.theguardian.com/commentisfree/2026/feb/11/the-guardian-view-on-keir-starmer-and-rotten-peers-go-back-to-the-reforming-spirit-of-the-labour-manifesto",
+      "date": "2026-02-11T18:44:28.000Z",
+      "source": "The Guardian"
+    },
+    {
+      "title": "'It was terrifying': Tumbler Ridge's tight-knit community in shock after shooting",
+      "description": "Members of the remote community have spoken of their fear and uncertainty after nine people were killed.",
+      "image": "",
+      "link": "https://www.bbc.com/news/articles/cddn078mnn5o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-02-11T18:39:23.000Z",
+      "source": "BBC World"
+    },
+    {
+      "title": "Police release man detained in connection to Nancy Guthrie disappearance",
+      "description": "Police had searched the home of the person, who was taken into custody at a traffic stop.",
+      "image": "",
+      "link": "https://www.bbc.com/news/articles/cr5l4yy3ezmo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-02-11T18:23:20.000Z",
+      "source": "BBC World"
+    },
+    {
+      "title": "German MEP joins liberal group, kicking off a year of EU Parliament horse-trading",
+      "description": "STRASBOURG —&nbsp;German lawmaker Lukas Sieper is joining the European Parliament’s liberal Renew Europe group, he told POLITICO. Since being elected to the Parliament in 2024, Sieper has not been attached to a political group. “If you look at the different groups of the European Parliament, Renew is the most pragmatic,” Sieper said, adding that the variety of views among the liberals — from left-wing green factions to right-wing neoliberal ones — is what had attracted him to Renew. “Joining a group that is not, at least from the outset, seen as one-on-one representing a certain political ideology is the best thing for us … we have always the potential to vote against group lines due to our pragmatic approach,” he said. The move still needs to be approved by Sieper’s Party of Progress — a German party with around 1,000 members and no presence in the German parliament — on March 22 and then ratified by Renew Europe’s lawmakers. The Party of Progress describes itself as not having a specific ideology but instead voting on a case-by-case basis after consulting with voters. Another MEP, Italy&#8217;s Elisabetta Gualmini, is also on the move and is leaving the Socialists and Democrats group, three Parliament officials told POLITICO. All were granted anonymity to speak freely. Two of the officials said she might join Renew Europe. The moves kick off a year of internal horse-trading through January 2027, when the Parliament’s top jobs come up for renewal and political groups scramble to poach members and shore up their influence. “Groups are reaching out to every single MEP that could flip; the MEP shopping is all over the place,” said a Greens parliamentary assistant who said they know of lawmakers who have been contacted to shift groups. The assistant was granted anonymity to speak freely. Renew is currently the fifth-largest group in the Parliament and is looking to leapfrog the European Conservatives and Reformists group, which is fourth. With the addition of Sieper, Renew is three seats away from this objective (or two, if Gualmini ultimately joins). Tough being unattached Sieper joined the Parliament after the 2024 EU election after securing 0.6 percent of votes cast (Germany does not have a minimum threshold that must be reached in order to be elected as an MEP). He remained in the non-attached faction — comprising all MEPs without political group affiliation — as he had promised during his campaign, but the party leadership has since changed course to try to gain influence in the Parliament. &#8220;During the last one-and-a-half years we achieved everything a non-attached [MEP] can,” Sieper said, noting that unaffiliated lawmakers have less access to speaking time, legislative files and decision-making. “I could keep on doing it like this, I could go on until the end and live a happy life, but I would leave [unused] a lot of political potential for my voters and the people that I represent.” He said Renew has offered him a seat on a working group on the future of the Parliament, which is tasked with drafting reform proposals, a move he said aligns with his mission to overhaul democracy and strengthen citizen participation. The German lawmaker complained that the system in the Parliament &#8220;is built to circumvent&#8221; MEPs who are non-attached, which he said is &#8220;deeply undemocratic and also unconstitutional.&#8221;",
+      "image": "",
+      "link": "https://www.politico.eu/article/german-mep-joins-liberal-group-kicking-off-year-parliament-horse-trading/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+      "date": "2026-02-11T18:04:22.000Z",
+      "source": "Politico"
+    }
+  ]
 }
