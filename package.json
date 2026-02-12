@@ -5,20 +5,11 @@
   "main": "update-news.js",
   "scripts": {
     "start": "node update-news.js",
-    "test": "echo \"No tests specified\""
+    "test": "echo \"No tests specified\"",
+    "dev": "npx @tailwindcss/cli -i ./src/main.css -o ./src/output.css --watch"
   },
-  "keywords": [
-    "rss",
-    "news",
-    "aggregator",
-    "github-actions"
-  ],
-  "author": "CaptainFu",
-  "license": "MIT",
   "dependencies": {
+    "cheerio": "^1.2.0",
     "rss-parser": "^3.13.0"
-  },
-  "engines": {
-    "node": ">=18.0.0"
   }
 }
