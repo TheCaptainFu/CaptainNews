@@ -3,77 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/output.css">
+    <link rel="stylesheet" href="src/main.css">
     <title>Επικοινωνία | CaptainNews.gr</title>
-
-    <!-- Cookie Consent (orestbida v2.9.2) – CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v2.9.2/dist/cookieconsent.css">
-    <style>.c_darkmode { --cc-bg: #1a1a1a; --cc-text: #e5e5e5; --cc-btn-primary-bg: #80b059; --cc-btn-primary-text: #0a0a0a; --cc-btn-primary-hover-bg: #6b9a4a; --cc-btn-secondary-bg: #27272a; --cc-btn-secondary-text: #e5e5e5; --cc-btn-secondary-hover-bg: #3f3f46; --cc-font-family: 'Roboto', -apple-system, sans-serif; }</style>
-
-    <!-- Google Analytics – only after "Αποδοχή όλων" -->
-    <script type="text/plain" data-cookiecategory="analytics" async src="https://www.googletagmanager.com/gtag/js?id=G-GQHCNKSVSC"></script>
+    <script type="text/plain" data-cookiecategory="analytics" async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <script type="text/plain" data-cookiecategory="analytics">
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-GQHCNKSVSC');
+      gtag('config', 'G-TRLBX4N99L');
     </script>
-    
-    <meta name="description" content="Επικοινωνήστε με το CaptainNews.gr">
-    <meta name="theme-color" content="#121212">
-    <link rel="manifest" href="manifest.json?v=2">
-    <link rel="icon" type="image/png" href="icons/favicon.png">
-    <link rel="apple-touch-icon" href="icons/favicon.png">
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="src/output.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
-    
-    <style>
-        h1, h2, h3, h4, h5, h6, .heading-font { font-family: 'Roboto Condensed', sans-serif; }
-        body, p, span, div, .body-font { font-family: 'Roboto', sans-serif; }
-    </style>
 </head>
-<body class="bg-[#0a0a0a] text-white min-h-screen">
+<body class="bg-main-black flex flex-col min-h-screen">
 
-    <header class="sticky top-0 z-50 bg-[#121212]/95 backdrop-blur-lg border-b border-zinc-800 shadow-2xl">
-        <div class="max-w-[1200px] mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="flex items-center cursor-pointer group">
-                <img 
-                    src="icons/logo.png" 
-                    alt="CaptainNews.gr" 
-                    class="h-12 md:h-14 w-auto group-hover:scale-105 transition-transform"
-                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-                />
-                <div class="hidden items-center gap-3">
-                    <div class="bg-gradient-to-br from-blue-600 to-cyan-600 p-2.5 rounded-xl shadow-lg">
-                        <i class="fa-solid fa-newspaper text-xl"></i>
-                    </div>
-                    <h1 class="text-2xl md:text-3xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                        CaptainNews.gr
-                    </h1>
-                </div>
-            </a>
-            <div class="relative ml-auto">
-                <button id="burgerBtn" type="button" class="p-3 rounded-lg text-zinc-400 hover:text-white hover:bg-zinc-800 transition-colors" aria-label="Μενού">
-                    <i class="fa-solid fa-bars text-xl"></i>
+    <header class="bg-zinc-900/95 backdrop-blur-xl fixed top-0 w-full z-50 border-b border-zinc-800 h-[70px]">
+        <nav class="gg-container flex items-center justify-between h-full">
+            <div class="logo [&_img]:max-h-[40px] py-[10px]">
+                <a href="/">
+                    <img src="/icons/logo.png" alt="CaptainNews Logo">
+                </a>
+            </div>
+
+            <div class="burger-menu relative">
+                <button id="burger-btn" class="text-white hover:text-[#f2d06f] cursor-pointer focus:outline-none transition-colors p-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
                 </button>
-                <div id="burgerMenu" class="hidden absolute right-0 top-full mt-2 w-48 py-2 bg-[#1a1a1a] border border-zinc-800 rounded-xl shadow-2xl z-50">
-                    <a href="index.html" class="flex items-center gap-3 px-4 py-3 text-zinc-300 hover:bg-zinc-800 hover:text-white transition-colors">
-                        <i class="fa-solid fa-home w-5 text-center"></i>
-                        <span>Αρχική</span>
+
+                <div id="dropdown-menu" class="hidden absolute right-0 top-[60px] w-48 bg-zinc-900 border border-zinc-700 rounded-lg shadow-2xl overflow-hidden transform origin-top-right transition-all z-50">
+                    <a href="/" class="block px-6 py-3 text-white font-condensed font-bold hover:bg-[#3749bd] hover:text-white transition-colors border-b border-zinc-800">
+                        ΑΡΧΙΚΗ
                     </a>
-                    <a href="contact.html" class="flex items-center gap-3 px-4 py-3 text-zinc-300 hover:bg-zinc-800 hover:text-white transition-colors">
-                        <i class="fa-solid fa-envelope w-5 text-center"></i>
-                        <span>Επικοινωνία</span>
+                    <a href="/contact.html" class="block px-6 py-3 text-white font-condensed font-bold hover:bg-[#3749bd] hover:text-white transition-colors">
+                        ΕΠΙΚΟΙΝΩΝΙΑ
                     </a>
                 </div>
             </div>
-        </div>
+        </nav>
     </header>
+    <!-- <div class="fixed top-[70px] w-full bg-[#111] z-40 border-b border-zinc-800 shadow-md h-[50px] flex items-center">
+        <div class="gg-container flex items-center justify-between">
+            <span class="text-zinc-400 font-condensed text-sm uppercase tracking-wide">ΦΙΛΤΡΑΡΙΣΜΑ ΕΙΔΗΣΕΩΝ:</span>
+            
+            <div class="relative">
+                <select id="category-filter" class="appearance-none bg-zinc-800 text-white font-condensed font-bold py-1 px-4 pr-8 rounded border border-zinc-700 hover:border-[#3749bd] focus:outline-none focus:border-[#3749bd] cursor-pointer text-sm">
+                    <option value="all">ΟΛΕΣ ΟΙ ΚΑΤΗΓΟΡΙΕΣ</option>
+                    <option value="politics_greece">ΠΟΛΙΤΙΚΑ ΕΛΛΑΔΑ</option>
+                    <option value="world_politics">ΠΑΓΚΟΣΜΙΑ ΠΟΛΙΤΙΚΗ</option>
+                    <option value="sports">ΑΘΛΗΤΙΚΑ</option>
+                    <option value="technology">ΤΕΧΝΟΛΟΓΙΑ</option>
+                    <option value="music">ΜΟΥΣΙΚΗ</option>
+                </select>
+                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-white">
+                    <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                </div>
+            </div>
+        </div>
+    </div> -->
     <script>
         (function() {
             var btn = document.getElementById('burgerBtn');
@@ -93,10 +84,12 @@
         })();
     </script>
 
-    <main class="max-w-[1200px] mx-auto p-6 md:p-8 min-h-[calc(100vh-278px)]">
+    <main class="gg-container pt-[90px]">
         <div class="pb-12 md:pb-20">
-            <h1 class="text-3xl font-bold text-[#80b059] border-b border-zinc-800 pb-3 mb-6 flex items-center gap-2">ΕΠΙΚΟΙΝΩΝΙΑ</h1>
-            <p class="text-zinc-400 mb-12">Επικοινωνήστε μαζί μας για ερωτήσεις, προτάσεις ή συνεργασία.</p>
+            <div class="title flex items-center justify-between w-full border-b border-zinc-800 pb-[5px]">
+                <h1 class="text-[24px] leading-[28px] font-bold text-[#3749bd] font-condensed uppercase">ΕΠΙΚΟΙΝΩΝΙΑ</h1>
+            </div>
+            <p class="text-main-yellow mt-[5px] mb-12">Επικοινωνήστε μαζί μας για ερωτήσεις, προτάσεις ή συνεργασία.</p>
 
             <div class="grid md:grid-cols-3 gap-8">
                 <a href="mailto:g.gsmks@gmail.com" class="block p-6 bg-[#1a1a1a] rounded-xl border border-zinc-800 hover:border-blue-500/50 transition-colors group">
@@ -146,15 +139,13 @@
 
     <footer class="border-t border-zinc-900 mt-12 py-6">
         <div class="max-w-[1200px] mx-auto px-6 text-center text-zinc-600 text-sm">
-            <p class="font-semibold text-zinc-500 mb-2">⚓ CaptainNews.gr</p>
-            <p><a href="policy.html" class="text-zinc-400 hover:text-white">Πολιτική Απορρήτου</a> · <a href="contact.html" class="text-zinc-400 hover:text-white">Επικοινωνία</a></p>
-            <p class="mt-2">📰 Πηγές: Newsit, Πρώτο Θέμα, In.gr, Ethnos, Τα Νέα, Ναυτεμπορική, Το Βήμα, Euronews, DW, BBC, Reuters, Gazzetta, Sport24, SDNA, Όλα Πράσινα, Trifilara, Panathinaikos24, Insomnia, Techgear, Digitallife, PC Magazine</p>
+            <p class="font-semibold text-main-blue mb-2">⚓ CaptainNews.gr</p>
+            <p><a href="policy.html" class="text-zinc-400 hover:text-main-yellow">Πολιτική Απορρήτου</a> · <a href="contact.html" class="text-zinc-400 hover:text-main-yellow">Επικοινωνία</a></p>
+            <p class="mt-2">📰 Πηγές: Newsit, Kathimerini, In.gr, Macropolis, Gazzetta, Sport24, Contra, SDNA, Insomnia, The Verge, TechCrunch, Wired, Pitchfork, Rolling Stone, Billboard, Resident Advisor, Reuters, BBC World, The Guardian, Politico</p>
             <p class="mt-2 text-xs text-zinc-700">Ενημέρωση σε πραγματικό χρόνο μέσω RSS Feeds</p>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v2.9.2/dist/cookieconsent.js"></script>
-    <script src="js/cookieconsent-init.js"></script>
-
+     <script src="js/main.js"></script>
 </body>
 </html>

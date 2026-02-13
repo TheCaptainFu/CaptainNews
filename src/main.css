@@ -17,6 +17,9 @@ body {
 @theme {
 
     /* COLORS */
+    --color-main-blue: #3749bd;
+    --color-main-yellow: #f2d06f;
+
     --color-main-black: #0a0a0a;
     --color-main-black-2:#090909;
     
@@ -31,3 +34,16 @@ body {
     --spacing-10: "10px",
 
 }
+
+.c_darkmode { 
+            --cc-bg: #1a1a1a; 
+            --cc-text: #e5e5e5; 
+            --cc-btn-primary-bg: #3749bd;         /* Main Blue */
+            --cc-btn-primary-text: #ffffff; 
+            --cc-btn-primary-hover-bg: #2c3a99; 
+            --cc-btn-secondary-bg: #27272a; 
+            --cc-btn-secondary-text: #e5e5e5; 
+            --cc-btn-secondary-hover-bg: #3f3f46; 
+            --cc-toggle-on-bg: #3749bd;           /* Main Blue Toggle */
+            --cc-font-family: 'Roboto Condensed', sans-serif; 
+        }

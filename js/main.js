@@ -10,9 +10,34 @@ const categoryDisplayNames = {
     "music": "ΜΟΥΣΙΚΗ"
 };
 
+const sourceUrls = {
+    "Newsit": "https://www.newsit.gr",
+    "Kathimerini": "https://www.kathimerini.gr",
+    "In.gr": "https://www.in.gr",
+    "Macropolis": "https://www.macropolis.gr",
+    "Gazzetta": "https://www.gazzetta.gr",
+    "Sport24": "https://www.sport24.gr",
+    "Contra": "https://www.contra.gr",
+    "SDNA": "https://www.sdna.gr",
+    "Insomnia": "https://www.insomnia.gr",
+    "The Verge": "https://www.theverge.com",
+    "TechCrunch": "https://techcrunch.com",
+    "Wired": "https://www.wired.com",
+    "Pitchfork": "https://pitchfork.com",
+    "Rolling Stone": "https://www.rollingstone.com",
+    "Billboard": "https://www.billboard.com",
+    "Resident Advisor": "https://ra.co",
+    "Reuters": "https://www.reuters.com",
+    "BBC World": "https://www.bbc.com/news/world",
+    "The Guardian": "https://www.theguardian.com",
+    "Politico": "https://www.politico.eu"
+};
+
+const INITIAL_VISIBLE_COUNT = 7;
+
 async function loadNews() {
     try {
-        const response = await fetch('news.json');
+        const response = await fetch('news.json?t=' + new Date().getTime()); 
         if (!response.ok) throw new Error('Failed to load news');
         
         const data = await response.json();
@@ -24,71 +49,79 @@ async function loadNews() {
         categories.forEach(([categoryKey, articles], catIndex) => {
             
             const readableTitle = categoryDisplayNames[categoryKey] || categoryKey.toUpperCase();
-            const marginTopClass = catIndex === 0 ? '' : 'mt-[40px]';
+            // Default margin logic (we handle filtering margin via CSS/JS later)
+            const marginTopClass = 'mt-[40px]'; 
+            const totalArticles = articles.length;
 
+            // Added ID to section for filtering
             const categorySection = document.createElement('section');
+            categorySection.id = `section-${categoryKey}`; 
             categorySection.className = `category-group mb-10`;
+            // Add custom attribute to identify category
+            categorySection.setAttribute('data-category', categoryKey);
 
             let categoryHTML = `
-                <div class="gg-container ${marginTopClass}">
-                    <div class="title flex items-center gap-[5px] w-full border-b border-zinc-800 pb-[5px]">
-                        <h2 class="text-[24px] leading-[28px] font-bold text-red-500 font-condensed uppercase">${readableTitle}</h2>
+                <div class="gg-container ${marginTopClass} section-header">
+                    <div class="title flex items-center justify-between w-full border-b border-zinc-800 pb-[5px]">
+                        <div class="flex items-center gap-[5px]">
+                            <h2 class="text-[24px] leading-[28px] font-bold text-[#3749bd] font-condensed uppercase">${readableTitle}</h2>
+                        </div>
+                        <div class="count text-[14px] font-bold text-zinc-500 font-condensed">
+                            ${totalArticles} ΑΡΘΡΑ
+                        </div>
                     </div>
                 </div>
                 <div class="gg-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[20px] pt-[10px]">
             `;
 
-            // Προσθέτουμε το index εδώ (artIndex)
             articles.forEach((article, artIndex) => {
                 const imgUrl = article.image || '/icons/test.avif';
                 const timeStr = timeAgo(article.date);
-
-                // --- ΛΟΓΙΚΗ ΓΙΑ ΤΟ ΠΡΩΤΟ ΑΡΘΡΟ ---
+                const sourceHomepage = sourceUrls[article.source] || "#";
                 const isFeatured = artIndex === 0;
 
-                // Κλάσεις για το Wrapper του άρθρου
-                // Αν είναι featured: πιάνει 3 στήλες και γίνεται row (οριζόντιο) σε μεγάλες οθόνες
-                // Αν όχι: πιάνει 1 στήλη και είναι col (κάθετο)
+                const isHidden = artIndex >= INITIAL_VISIBLE_COUNT;
+                const hiddenClass = isHidden ? `hidden hidden-item-${categoryKey}` : '';
+
                 const wrapperClasses = isFeatured 
-                    ? "col-span-1 md:col-span-2 lg:col-span-3 flex flex-col md:flex-row" 
-                    : "flex flex-col";
+                    ? `col-span-1 md:col-span-2 lg:col-span-3 flex flex-col md:flex-row group border border-transparent transition-all duration-300 hover:border-[#3749bd] hover:shadow-[0_0_20px_rgba(55,73,189,0.3)] ${hiddenClass}`
+                    : `flex flex-col group border border-transparent transition-all duration-300 hover:border-[#3749bd] hover:shadow-[0_0_20px_rgba(55,73,189,0.3)] ${hiddenClass}`;
 
-                // Κλάσεις για την εικόνα
-                // Στο featured δίνουμε πλάτος 5/12 (περίπου 40%)
                 const imageWrapperClasses = isFeatured
-                    ? "w-full md:w-6/12 h-[250px] md:h-auto relative shrink-0"
-                    : "w-full h-[230px]";
+                    ? "w-full md:w-6/12 aspect-[1.7] max-h-[500px] relative shrink-0 overflow-hidden"
+                    : "w-full aspect-[1.7] overflow-hidden";
 
-                // Κλάσεις για το κείμενο (Info)
                 const infoWrapperClasses = isFeatured
-                    ? "p-[20px] flex flex-col justify-center w-full md:w-7/12"
+                    ? "p-[20px] flex flex-col justify-center w-full md:w-6/12"
                     : "p-[20px] flex flex-col flex-grow";
 
-                // Όριο χαρακτήρων (δείχνουμε περισσότερο κείμενο στο μεγάλο άρθρο)
                 const charLimit = isFeatured ? 350 : 110;
 
                 categoryHTML += `
                     <div class="item bg-main-grey rounded-[12px] overflow-hidden ${wrapperClasses}">
-                        
                         <div class="${imageWrapperClasses}">
-                            <img class="w-full h-full object-cover" src="${imgUrl}" alt="${article.title}" onerror="this.src='/icons/test.avif'">
+                            <a href="${article.link}" target="_blank" class="block w-full h-full cursor-pointer">
+                                <img class="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110" 
+                                     src="${imgUrl}" 
+                                     alt="${article.title}" 
+                                     onerror="this.src='/icons/test.avif'">
+                            </a>
                         </div>
-
                         <div class="${infoWrapperClasses}">
                             <div class="title text-[16px] leading-[20px] text-white font-bold font-condensed pb-[10px] ${isFeatured ? 'text-[22px] leading-[26px]' : 'min-h-[50px]'}">
-                                ${article.title}
+                                <a href="${article.link}" target="_blank" class="hover:text-[#f2d06f] transition-colors duration-300">
+                                    ${article.title}
+                                </a>
                             </div>
                             <div class="description text-[14px] leading-[20px] text-white font-normal font-roboto pb-[20px] opacity-80 flex-grow">
                                 ${article.description ? stripHtml(article.description).substring(0, charLimit) + '...' : 'Διαβάστε περισσότερα για το θέμα στην πηγή.'}
                             </div>
-                            
                             <div class="source text-[16px] leading-[14px] text-white font-bold font-condensed pb-[20px] border-b border-zinc-800">
-                                Πηγή: <span class="text-red-500">${article.source}</span>
+                                Πηγή: <a href="${sourceHomepage}" target="_blank" class="text-[#3749bd] hover:text-[#f2d06f] hover:underline transition-colors">${article.source}</a>
                             </div>
-                            
                             <div class="card-footer flex items-center justify-between pt-[20px]">
                                 <div class="time text-[14px] leading-[16px] text-white font-bold font-condensed">${timeStr}</div>
-                                <a href="${article.link}" target="_blank" class="read-more text-[12px] leading-[14px] font-bold font-condensed text-red-500 hover:text-white transition-all">
+                                <a href="${article.link}" target="_blank" class="read-more text-[12px] leading-[14px] font-bold font-condensed text-[#3749bd] hover:text-[#f2d06f] transition-all">
                                     Διαβάστε ->
                                 </a>
                             </div>
@@ -98,15 +131,93 @@ async function loadNews() {
             });
 
             categoryHTML += `</div>`;
+
+            if (totalArticles > INITIAL_VISIBLE_COUNT) {
+                categoryHTML += `
+                    <div class="gg-container flex justify-center mt-6">
+                        <button id="btn-${categoryKey}" onclick="loadAllArticles('${categoryKey}')" class="bg-zinc-800 cursor-pointer text-white font-condensed font-bold py-2 px-6 rounded hover:bg-[#3749bd] transition-colors border border-zinc-700 hover:border-[#3749bd]">
+                            ΠΡΟΒΟΛΗ ΟΛΩΝ (${totalArticles})
+                        </button>
+                    </div>
+                `;
+            }
+
             categorySection.innerHTML = categoryHTML;
             mainWrapper.appendChild(categorySection);
         });
+
+        // Initialize Filter Logic (After content is loaded)
+        setupFilterLogic();
 
     } catch (error) {
         console.error("Error:", error);
         document.getElementById('main-content-wrapper').innerHTML = `<div class="gg-container text-white text-center pt-10">Σφάλμα φόρτωσης.</div>`;
     }
 }
+
+// --- FILTER LOGIC ---
+function setupFilterLogic() {
+    const filterSelect = document.getElementById('category-filter');
+    if (!filterSelect) return;
+
+    filterSelect.addEventListener('change', (e) => {
+        const selected = e.target.value;
+        const allSections = document.querySelectorAll('.category-group');
+
+        allSections.forEach(section => {
+            const category = section.getAttribute('data-category');
+            
+            if (selected === 'all' || category === selected) {
+                section.style.display = 'block';
+                // Reset margin top for the first visible element
+                const header = section.querySelector('.section-header');
+                if (header) header.classList.add('mt-[40px]');
+            } else {
+                section.style.display = 'none';
+            }
+        });
+
+        // Remove margin from the very first visible section to look nice
+        const visibleSections = Array.from(allSections).filter(s => s.style.display !== 'none');
+        if (visibleSections.length > 0) {
+            const firstHeader = visibleSections[0].querySelector('.section-header');
+            if (firstHeader) firstHeader.classList.remove('mt-[40px]');
+        }
+
+        // Scroll to top smoothly
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+    
+    // Trigger once to fix initial margins
+    const event = new Event('change');
+    filterSelect.dispatchEvent(event);
+}
+
+
+// --- BURGER MENU LOGIC ---
+const burgerBtn = document.getElementById('burger-btn');
+const dropdownMenu = document.getElementById('dropdown-menu');
+
+if (burgerBtn && dropdownMenu) {
+    burgerBtn.addEventListener('click', (e) => {
+        e.stopPropagation(); 
+        dropdownMenu.classList.toggle('hidden');
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!burgerBtn.contains(e.target) && !dropdownMenu.contains(e.target)) {
+            dropdownMenu.classList.add('hidden');
+        }
+    });
+}
+
+// --- HELPER FUNCTIONS ---
+window.loadAllArticles = function(categoryKey) {
+    const hiddenItems = document.querySelectorAll(`.hidden-item-${categoryKey}`);
+    hiddenItems.forEach(item => item.classList.remove('hidden'));
+    const btn = document.getElementById(`btn-${categoryKey}`);
+    if (btn) btn.remove();
+};
 
 function stripHtml(html) {
    let tmp = document.createElement("DIV");
