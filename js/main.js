@@ -35,7 +35,7 @@ const sourceUrls = {
 
 const INITIAL_VISIBLE_COUNT = 7;
 // ΑΝΤΙΚΑΤΑΣΤΗΣΕ ΤΟ ΠΑΡΑΚΑΤΩ ΜΕ ΤΟ URL ΠΟΥ ΣΟΥ ΕΔΩΣΕ ΤΟ CLOUDFLARE
-const WORKER_URL = 'https://captainnews-worker.ΤΟ-ΔΙΚΟ-ΣΟΥ-SUBDOMAIN.workers.dev/';
+const WORKER_URL = 'https://captainnews-worker.g-gsmks.workers.dev/';
 
 async function loadNews() {
     try {
