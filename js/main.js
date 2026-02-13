@@ -1,5 +1,5 @@
 /**
- * CaptainNews.gr - Main News Loader
+ * CaptainNews.gr - Main News Loader (Cloudflare Worker Version)
  */
 
 const categoryDisplayNames = {
@@ -34,30 +34,31 @@ const sourceUrls = {
 };
 
 const INITIAL_VISIBLE_COUNT = 7;
+// ΑΝΤΙΚΑΤΑΣΤΗΣΕ ΤΟ ΠΑΡΑΚΑΤΩ ΜΕ ΤΟ URL ΠΟΥ ΣΟΥ ΕΔΩΣΕ ΤΟ CLOUDFLARE
+const WORKER_URL = 'https://captainnews-worker.ΤΟ-ΔΙΚΟ-ΣΟΥ-SUBDOMAIN.workers.dev/';
 
 async function loadNews() {
     try {
-        const response = await fetch('news.json?t=' + new Date().getTime()); 
-        if (!response.ok) throw new Error('Failed to load news');
+        // Φόρτωση από τον Worker αντί για το news.json
+        const response = await fetch(WORKER_URL + '?t=' + new Date().getTime()); 
+        if (!response.ok) throw new Error('Failed to load news from Worker');
         
         const data = await response.json();
         const mainWrapper = document.getElementById('main-content-wrapper');
+        
+        if (!mainWrapper) return;
         mainWrapper.innerHTML = '';
 
         const categories = Object.entries(data);
 
         categories.forEach(([categoryKey, articles], catIndex) => {
-            
             const readableTitle = categoryDisplayNames[categoryKey] || categoryKey.toUpperCase();
-            // Default margin logic (we handle filtering margin via CSS/JS later)
             const marginTopClass = 'mt-[40px]'; 
             const totalArticles = articles.length;
 
-            // Added ID to section for filtering
             const categorySection = document.createElement('section');
             categorySection.id = `section-${categoryKey}`; 
             categorySection.className = `category-group mb-10`;
-            // Add custom attribute to identify category
             categorySection.setAttribute('data-category', categoryKey);
 
             let categoryHTML = `
@@ -146,53 +147,75 @@ async function loadNews() {
             mainWrapper.appendChild(categorySection);
         });
 
-        // Initialize Filter Logic (After content is loaded)
+        // Αρχικοποίηση του φίλτρου
         setupFilterLogic();
 
     } catch (error) {
         console.error("Error:", error);
-        document.getElementById('main-content-wrapper').innerHTML = `<div class="gg-container text-white text-center pt-10">Σφάλμα φόρτωσης.</div>`;
+        const mainWrapper = document.getElementById('main-content-wrapper');
+        if (mainWrapper) {
+            mainWrapper.innerHTML = `<div class="gg-container text-white text-center pt-10 font-condensed uppercase">Σφάλμα φόρτωσης ειδήσεων από τον διακομιστή.</div>`;
+        }
     }
 }
 
-// --- FILTER LOGIC ---
+// --- CUSTOM FILTER LOGIC (With Hover & Hand Cursor Support) ---
 function setupFilterLogic() {
-    const filterSelect = document.getElementById('category-filter');
-    if (!filterSelect) return;
+    const filterBtn = document.getElementById('filter-btn');
+    const filterOptionsContainer = document.getElementById('filter-options');
+    const filterOptions = document.querySelectorAll('.filter-option');
+    const currentText = document.getElementById('filter-current-text');
+    const dropdownContainer = document.getElementById('custom-filter-dropdown');
 
-    filterSelect.addEventListener('change', (e) => {
-        const selected = e.target.value;
-        const allSections = document.querySelectorAll('.category-group');
+    if (!filterBtn || !filterOptionsContainer) return;
 
-        allSections.forEach(section => {
-            const category = section.getAttribute('data-category');
-            
-            if (selected === 'all' || category === selected) {
-                section.style.display = 'block';
-                // Reset margin top for the first visible element
-                const header = section.querySelector('.section-header');
-                if (header) header.classList.add('mt-[40px]');
-            } else {
-                section.style.display = 'none';
-            }
-        });
+    // Toggle Menu
+    filterBtn.onclick = (e) => {
+        e.stopPropagation();
+        filterOptionsContainer.classList.toggle('hidden');
+        const icon = filterBtn.querySelector('i');
+        if (icon) icon.classList.toggle('rotate-180');
+    };
 
-        // Remove margin from the very first visible section to look nice
-        const visibleSections = Array.from(allSections).filter(s => s.style.display !== 'none');
-        if (visibleSections.length > 0) {
-            const firstHeader = visibleSections[0].querySelector('.section-header');
-            if (firstHeader) firstHeader.classList.remove('mt-[40px]');
+    // Close on outside click
+    document.addEventListener('click', (e) => {
+        if (dropdownContainer && !dropdownContainer.contains(e.target)) {
+            filterOptionsContainer.classList.add('hidden');
+            const icon = filterBtn.querySelector('i');
+            if (icon) icon.classList.remove('rotate-180');
         }
-
-        // Scroll to top smoothly
-        window.scrollTo({ top: 0, behavior: 'smooth' });
     });
-    
-    // Trigger once to fix initial margins
-    const event = new Event('change');
-    filterSelect.dispatchEvent(event);
-}
 
+    // Handle Option Click
+    filterOptions.forEach(option => {
+        option.onclick = () => {
+            const selectedValue = option.getAttribute('data-value');
+            if (currentText) currentText.innerText = option.innerText;
+            filterOptionsContainer.classList.add('hidden');
+
+            const allSections = document.querySelectorAll('.category-group');
+            allSections.forEach(section => {
+                const category = section.getAttribute('data-category');
+                if (selectedValue === 'all' || category === selectedValue) {
+                    section.style.display = 'block';
+                    const header = section.querySelector('.section-header');
+                    if (header) header.classList.add('mt-[40px]');
+                } else {
+                    section.style.display = 'none';
+                }
+            });
+
+            // Clean up margins for first item
+            const visibleSections = Array.from(allSections).filter(s => s.style.display !== 'none');
+            if (visibleSections.length > 0) {
+                const firstHeader = visibleSections[0].querySelector('.section-header');
+                if (firstHeader) firstHeader.classList.remove('mt-[40px]');
+            }
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
+    });
+}
 
 // --- BURGER MENU LOGIC ---
 const burgerBtn = document.getElementById('burger-btn');
