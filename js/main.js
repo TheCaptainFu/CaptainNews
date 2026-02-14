@@ -33,6 +33,8 @@ const sourceUrls = {
     "Politico": "https://www.politico.eu"
 };
 
+const WORKER_URL = 'https://captainnews-worker.g-gsmks.workers.dev';
+const IS_LOCAL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
 const INITIAL_VISIBLE_COUNT = 7;
 // ΑΝΤΙΚΑΤΑΣΤΗΣΕ ΤΟ ΠΑΡΑΚΑΤΩ ΜΕ ΤΟ URL ΠΟΥ ΣΟΥ ΕΔΩΣΕ ΤΟ CLOUDFLARE
 const WORKER_URL = 'https://captainnews-worker.g-gsmks.workers.dev/';
@@ -43,7 +45,8 @@ async function loadNews() {
     if (!mainWrapper) return;
 
     try {
-        const response = await fetch('news.json?t=' + new Date().getTime());
+        const url = IS_LOCAL ? 'news.json?t=' + new Date().getTime() : WORKER_URL;
+        const response = await fetch(url);
         if (!response.ok) throw new Error('Failed to load news');
         
         const data = await response.json();
