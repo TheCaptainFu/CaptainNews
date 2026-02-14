@@ -2,7 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 .gg-container {
-    width: 1230px;
+    max-width: 1230px;
+    width: 100%;
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
@@ -35,15 +36,62 @@ body {
 
 }
 
+/* ─── Responsive: tablet & below ─── */
+@media (max-width: 1024px) {
+    .gg-container {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .gg-container {
+        padding-right: 16px;
+        padding-left: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gg-container {
+        padding-right: 12px;
+        padding-left: 12px;
+    }
+}
+
+/* ─── Cookie consent dark mode ─── */
+/* ─── Category filter pills ─── */
+.filter-pill {
+    color: #a1a1aa;
+    background-color: transparent;
+    border-color: #3f3f46;
+}
+
+.filter-pill:hover {
+    color: #fff;
+    border-color: #3749bd;
+    background-color: rgba(55, 73, 189, 0.12);
+}
+
+.filter-pill.active {
+    color: #fff;
+    background-color: #3749bd;
+    border-color: #3749bd;
+}
+
+/* Hide scrollbar on the filter bar wrapper */
+.gg-container::-webkit-scrollbar {
+    display: none;
+}
+
 .c_darkmode { 
-            --cc-bg: #1a1a1a; 
-            --cc-text: #e5e5e5; 
-            --cc-btn-primary-bg: #3749bd;         /* Main Blue */
-            --cc-btn-primary-text: #ffffff; 
-            --cc-btn-primary-hover-bg: #2c3a99; 
-            --cc-btn-secondary-bg: #27272a; 
-            --cc-btn-secondary-text: #e5e5e5; 
-            --cc-btn-secondary-hover-bg: #3f3f46; 
-            --cc-toggle-on-bg: #3749bd;           /* Main Blue Toggle */
-            --cc-font-family: 'Roboto Condensed', sans-serif; 
-        }
+    --cc-bg: #1a1a1a; 
+    --cc-text: #e5e5e5; 
+    --cc-btn-primary-bg: #3749bd;
+    --cc-btn-primary-text: #ffffff; 
+    --cc-btn-primary-hover-bg: #2c3a99; 
+    --cc-btn-secondary-bg: #27272a; 
+    --cc-btn-secondary-text: #e5e5e5; 
+    --cc-btn-secondary-hover-bg: #3f3f46; 
+    --cc-toggle-on-bg: #3749bd;
+    --cc-font-family: 'Roboto Condensed', sans-serif; 
+}

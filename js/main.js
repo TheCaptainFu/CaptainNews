@@ -36,28 +36,28 @@ const sourceUrls = {
 const INITIAL_VISIBLE_COUNT = 7;
 
 async function loadNews() {
+    // Guard: only run on pages that have the news wrapper
+    const mainWrapper = document.getElementById('main-content-wrapper');
+    if (!mainWrapper) return;
+
     try {
-        const response = await fetch('news.json?t=' + new Date().getTime()); 
+        const response = await fetch('news.json?t=' + new Date().getTime());
         if (!response.ok) throw new Error('Failed to load news');
         
         const data = await response.json();
-        const mainWrapper = document.getElementById('main-content-wrapper');
         mainWrapper.innerHTML = '';
 
         const categories = Object.entries(data);
 
-        categories.forEach(([categoryKey, articles], catIndex) => {
+        categories.forEach(([categoryKey, articles]) => {
             
             const readableTitle = categoryDisplayNames[categoryKey] || categoryKey.toUpperCase();
-            // Default margin logic (we handle filtering margin via CSS/JS later)
-            const marginTopClass = 'mt-[40px]'; 
+            const marginTopClass = 'mt-[40px]';
             const totalArticles = articles.length;
 
-            // Added ID to section for filtering
             const categorySection = document.createElement('section');
-            categorySection.id = `section-${categoryKey}`; 
+            categorySection.id = `section-${categoryKey}`;
             categorySection.className = `category-group mb-10`;
-            // Add custom attribute to identify category
             categorySection.setAttribute('data-category', categoryKey);
 
             let categoryHTML = `
@@ -83,12 +83,13 @@ async function loadNews() {
                 const isHidden = artIndex >= INITIAL_VISIBLE_COUNT;
                 const hiddenClass = isHidden ? `hidden hidden-item-${categoryKey}` : '';
 
-                const wrapperClasses = isFeatured 
+                const wrapperClasses = isFeatured
                     ? `col-span-1 md:col-span-2 lg:col-span-3 flex flex-col md:flex-row group border border-transparent transition-all duration-300 hover:border-[#3749bd] hover:shadow-[0_0_20px_rgba(55,73,189,0.3)] ${hiddenClass}`
                     : `flex flex-col group border border-transparent transition-all duration-300 hover:border-[#3749bd] hover:shadow-[0_0_20px_rgba(55,73,189,0.3)] ${hiddenClass}`;
 
+                // Mobile-friendly max-height for featured image
                 const imageWrapperClasses = isFeatured
-                    ? "w-full md:w-6/12 aspect-[1.7] max-h-[500px] relative shrink-0 overflow-hidden"
+                    ? "w-full md:w-6/12 aspect-[1.7] max-h-[280px] md:max-h-[500px] relative shrink-0 overflow-hidden"
                     : "w-full aspect-[1.7] overflow-hidden";
 
                 const infoWrapperClasses = isFeatured
@@ -100,16 +101,17 @@ async function loadNews() {
                 categoryHTML += `
                     <div class="item bg-main-grey rounded-[12px] overflow-hidden ${wrapperClasses}">
                         <div class="${imageWrapperClasses}">
-                            <a href="${article.link}" target="_blank" class="block w-full h-full cursor-pointer">
-                                <img class="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110" 
-                                     src="${imgUrl}" 
-                                     alt="${article.title}" 
+                            <a href="${article.link}" target="_blank" rel="noopener noreferrer" class="block w-full h-full cursor-pointer">
+                                <img class="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
+                                     src="${imgUrl}"
+                                     alt="${article.title}"
+                                     loading="lazy"
                                      onerror="this.src='/icons/test.avif'">
                             </a>
                         </div>
                         <div class="${infoWrapperClasses}">
                             <div class="title text-[16px] leading-[20px] text-white font-bold font-condensed pb-[10px] ${isFeatured ? 'text-[22px] leading-[26px]' : 'min-h-[50px]'}">
-                                <a href="${article.link}" target="_blank" class="hover:text-[#f2d06f] transition-colors duration-300">
+                                <a href="${article.link}" target="_blank" rel="noopener noreferrer" class="hover:text-[#f2d06f] transition-colors duration-300">
                                     ${article.title}
                                 </a>
                             </div>
@@ -117,13 +119,22 @@ async function loadNews() {
                                 ${article.description ? stripHtml(article.description).substring(0, charLimit) + '...' : 'Διαβάστε περισσότερα για το θέμα στην πηγή.'}
                             </div>
                             <div class="source text-[16px] leading-[14px] text-white font-bold font-condensed pb-[20px] border-b border-zinc-800">
-                                Πηγή: <a href="${sourceHomepage}" target="_blank" class="text-[#3749bd] hover:text-[#f2d06f] hover:underline transition-colors">${article.source}</a>
+                                Πηγή: <a href="${sourceHomepage}" target="_blank" rel="noopener noreferrer" class="text-[#3749bd] hover:text-[#f2d06f] hover:underline transition-colors">${article.source}</a>
                             </div>
                             <div class="card-footer flex items-center justify-between pt-[20px]">
                                 <div class="time text-[14px] leading-[16px] text-white font-bold font-condensed">${timeStr}</div>
-                                <a href="${article.link}" target="_blank" class="read-more text-[12px] leading-[14px] font-bold font-condensed text-[#3749bd] hover:text-[#f2d06f] transition-all">
-                                    Διαβάστε ->
-                                </a>
+                                <div class="flex items-center gap-3">
+                                    <button onclick="copyArticleLink(this, '${article.link}')" title="Αντιγραφή συνδέσμου" class="copy-btn flex items-center gap-1 text-[12px] leading-[14px] font-bold font-condensed text-zinc-500 hover:text-[#f2d06f] transition-all cursor-pointer">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="copy-icon w-[13px] h-[13px]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                        </svg>
+                                        <span class="copy-label">COPY</span>
+                                    </button>
+                                    <a href="${article.link}" target="_blank" rel="noopener noreferrer" class="read-more text-[12px] leading-[14px] font-bold font-condensed text-[#3749bd] hover:text-[#f2d06f] transition-all">
+                                        Διαβάστε ->
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -146,30 +157,37 @@ async function loadNews() {
             mainWrapper.appendChild(categorySection);
         });
 
-        // Initialize Filter Logic (After content is loaded)
         setupFilterLogic();
 
     } catch (error) {
         console.error("Error:", error);
-        document.getElementById('main-content-wrapper').innerHTML = `<div class="gg-container text-white text-center pt-10">Σφάλμα φόρτωσης.</div>`;
+        mainWrapper.innerHTML = `<div class="gg-container text-white text-center pt-10">Σφάλμα φόρτωσης.</div>`;
     }
 }
 
 // --- FILTER LOGIC ---
 function setupFilterLogic() {
-    const filterSelect = document.getElementById('category-filter');
-    if (!filterSelect) return;
+    const filterContainer = document.getElementById('category-filter');
+    if (!filterContainer) return;
 
-    filterSelect.addEventListener('change', (e) => {
-        const selected = e.target.value;
+    const pills = filterContainer.querySelectorAll('.filter-pill');
+
+    function applyFilter(selected) {
+        // Update active pill
+        pills.forEach(p => {
+            if (p.getAttribute('data-category') === selected) {
+                p.classList.add('active');
+            } else {
+                p.classList.remove('active');
+            }
+        });
+
+        // Show/hide sections
         const allSections = document.querySelectorAll('.category-group');
-
         allSections.forEach(section => {
             const category = section.getAttribute('data-category');
-            
             if (selected === 'all' || category === selected) {
                 section.style.display = 'block';
-                // Reset margin top for the first visible element
                 const header = section.querySelector('.section-header');
                 if (header) header.classList.add('mt-[40px]');
             } else {
@@ -177,22 +195,25 @@ function setupFilterLogic() {
             }
         });
 
-        // Remove margin from the very first visible section to look nice
+        // Remove top margin from first visible section
         const visibleSections = Array.from(allSections).filter(s => s.style.display !== 'none');
         if (visibleSections.length > 0) {
             const firstHeader = visibleSections[0].querySelector('.section-header');
             if (firstHeader) firstHeader.classList.remove('mt-[40px]');
         }
 
-        // Scroll to top smoothly
         window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-    
-    // Trigger once to fix initial margins
-    const event = new Event('change');
-    filterSelect.dispatchEvent(event);
-}
+    }
 
+    pills.forEach(pill => {
+        pill.addEventListener('click', () => {
+            applyFilter(pill.getAttribute('data-category'));
+        });
+    });
+
+    // Apply default on load
+    applyFilter('all');
+}
 
 // --- BURGER MENU LOGIC ---
 const burgerBtn = document.getElementById('burger-btn');
@@ -200,7 +221,7 @@ const dropdownMenu = document.getElementById('dropdown-menu');
 
 if (burgerBtn && dropdownMenu) {
     burgerBtn.addEventListener('click', (e) => {
-        e.stopPropagation(); 
+        e.stopPropagation();
         dropdownMenu.classList.toggle('hidden');
     });
 
@@ -212,6 +233,26 @@ if (burgerBtn && dropdownMenu) {
 }
 
 // --- HELPER FUNCTIONS ---
+window.copyArticleLink = function(btn, url) {
+    navigator.clipboard.writeText(url).then(() => {
+        const label = btn.querySelector('.copy-label');
+        const icon = btn.querySelector('.copy-icon');
+
+        // Switch to checkmark icon
+        icon.innerHTML = '<polyline points="20 6 9 17 4 12"></polyline>';
+        label.textContent = 'COPIED!';
+        btn.classList.add('text-[#f2d06f]');
+        btn.classList.remove('text-zinc-500');
+
+        setTimeout(() => {
+            icon.innerHTML = '<rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>';
+            label.textContent = 'COPY';
+            btn.classList.remove('text-[#f2d06f]');
+            btn.classList.add('text-zinc-500');
+        }, 2000);
+    });
+};
+
 window.loadAllArticles = function(categoryKey) {
     const hiddenItems = document.querySelectorAll(`.hidden-item-${categoryKey}`);
     hiddenItems.forEach(item => item.classList.remove('hidden'));
@@ -220,13 +261,16 @@ window.loadAllArticles = function(categoryKey) {
 };
 
 function stripHtml(html) {
-   let tmp = document.createElement("DIV");
-   tmp.innerHTML = html;
-   return tmp.textContent || tmp.innerText || "";
+    let tmp = document.createElement("DIV");
+    tmp.innerHTML = html;
+    return tmp.textContent || tmp.innerText || "";
 }
 
 function timeAgo(dateString) {
+    if (!dateString) return "Άγνωστη ημερομηνία";
     const date = new Date(dateString);
+    if (isNaN(date.getTime())) return "Άγνωστη ημερομηνία";
+
     const now = new Date();
     const seconds = Math.floor((now - date) / 1000);
 
