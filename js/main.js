@@ -1,5 +1,5 @@
 /**
- * CaptainNews.gr - Main News Loader
+ * CaptainNews.gr - Main News Loader (Cloudflare Worker Version)
  */
 
 const categoryDisplayNames = {
@@ -34,6 +34,8 @@ const sourceUrls = {
 };
 
 const INITIAL_VISIBLE_COUNT = 7;
+// ΑΝΤΙΚΑΤΑΣΤΗΣΕ ΤΟ ΠΑΡΑΚΑΤΩ ΜΕ ΤΟ URL ΠΟΥ ΣΟΥ ΕΔΩΣΕ ΤΟ CLOUDFLARE
+const WORKER_URL = 'https://captainnews-worker.g-gsmks.workers.dev/';
 
 async function loadNews() {
     // Guard: only run on pages that have the news wrapper
@@ -165,7 +167,7 @@ async function loadNews() {
     }
 }
 
-// --- FILTER LOGIC ---
+// --- CUSTOM FILTER LOGIC (With Hover & Hand Cursor Support) ---
 function setupFilterLogic() {
     const filterContainer = document.getElementById('category-filter');
     if (!filterContainer) return;
@@ -201,6 +203,26 @@ function setupFilterLogic() {
             const firstHeader = visibleSections[0].querySelector('.section-header');
             if (firstHeader) firstHeader.classList.remove('mt-[40px]');
         }
+    });
+
+    // Handle Option Click
+    filterOptions.forEach(option => {
+        option.onclick = () => {
+            const selectedValue = option.getAttribute('data-value');
+            if (currentText) currentText.innerText = option.innerText;
+            filterOptionsContainer.classList.add('hidden');
+
+            const allSections = document.querySelectorAll('.category-group');
+            allSections.forEach(section => {
+                const category = section.getAttribute('data-category');
+                if (selectedValue === 'all' || category === selectedValue) {
+                    section.style.display = 'block';
+                    const header = section.querySelector('.section-header');
+                    if (header) header.classList.add('mt-[40px]');
+                } else {
+                    section.style.display = 'none';
+                }
+            });
 
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }
