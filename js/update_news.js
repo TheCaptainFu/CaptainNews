@@ -129,7 +129,7 @@ async function updateDatabase() {
         categoryArticles.sort((a, b) => new Date(b.date) - new Date(a.date));
         
         // Κράτα μόνο τα 12 πιο πρόσφατα ανά κατηγορία (για να μη βαρύνει το JSON)
-        finalData[categoryName] = categoryArticles.slice(0, 12);
+        finalData[categoryName] = categoryArticles.slice(0, 30);
     }
 
     try {

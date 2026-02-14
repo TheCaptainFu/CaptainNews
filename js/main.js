@@ -1,5 +1,5 @@
 /**
- * CaptainNews.gr - Main News Loader (Cloudflare Worker Version)
+ * CaptainNews.gr - Main News Loader
  */
 
 const categoryDisplayNames = {
@@ -33,9 +33,9 @@ const sourceUrls = {
     "Politico": "https://www.politico.eu"
 };
 
+const WORKER_URL = 'https://captainnews-worker.g-gsmks.workers.dev';
+const IS_LOCAL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
 const INITIAL_VISIBLE_COUNT = 7;
-// ΑΝΤΙΚΑΤΑΣΤΗΣΕ ΤΟ ΠΑΡΑΚΑΤΩ ΜΕ ΤΟ URL ΠΟΥ ΣΟΥ ΕΔΩΣΕ ΤΟ CLOUDFLARE
-const WORKER_URL = 'https://captainnews-worker.g-gsmks.workers.dev/';
 
 async function loadNews() {
     // Guard: only run on pages that have the news wrapper
@@ -43,7 +43,8 @@ async function loadNews() {
     if (!mainWrapper) return;
 
     try {
-        const response = await fetch('news.json?t=' + new Date().getTime());
+        const url = IS_LOCAL ? 'news.json?t=' + new Date().getTime() : WORKER_URL;
+        const response = await fetch(url);
         if (!response.ok) throw new Error('Failed to load news');
         
         const data = await response.json();
@@ -167,7 +168,7 @@ async function loadNews() {
     }
 }
 
-// --- CUSTOM FILTER LOGIC (With Hover & Hand Cursor Support) ---
+// --- FILTER LOGIC ---
 function setupFilterLogic() {
     const filterContainer = document.getElementById('category-filter');
     if (!filterContainer) return;
@@ -203,26 +204,6 @@ function setupFilterLogic() {
             const firstHeader = visibleSections[0].querySelector('.section-header');
             if (firstHeader) firstHeader.classList.remove('mt-[40px]');
         }
-    });
-
-    // Handle Option Click
-    filterOptions.forEach(option => {
-        option.onclick = () => {
-            const selectedValue = option.getAttribute('data-value');
-            if (currentText) currentText.innerText = option.innerText;
-            filterOptionsContainer.classList.add('hidden');
-
-            const allSections = document.querySelectorAll('.category-group');
-            allSections.forEach(section => {
-                const category = section.getAttribute('data-category');
-                if (selectedValue === 'all' || category === selectedValue) {
-                    section.style.display = 'block';
-                    const header = section.querySelector('.section-header');
-                    if (header) header.classList.add('mt-[40px]');
-                } else {
-                    section.style.display = 'none';
-                }
-            });
 
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }
