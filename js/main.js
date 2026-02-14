@@ -3,6 +3,7 @@
  */
 
 const categoryDisplayNames = {
+    "greece_news": "ΕΛΛΑΔΑ ΕΠΙΚΑΙΡΟΤΗΤΑ",
     "politics_greece": "ΠΟΛΙΤΙΚΑ ΕΛΛΑΔΑ",
     "world_politics": "ΠΑΓΚΟΣΜΙΑ ΠΟΛΙΤΙΚΗ",
     "sports": "ΑΘΛΗΤΙΚΑ",
