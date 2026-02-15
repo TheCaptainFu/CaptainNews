@@ -12,26 +12,20 @@ const categoryDisplayNames = {
 };
 
 const sourceUrls = {
+    "Protothema": "https://www.protothema.gr",
+    "Newsbeast": "https://www.newsbeast.gr",
     "Newsit": "https://www.newsit.gr",
-    "Kathimerini": "https://www.kathimerini.gr",
     "In.gr": "https://www.in.gr",
-    "Macropolis": "https://www.macropolis.gr",
-    "Gazzetta": "https://www.gazzetta.gr",
-    "Sport24": "https://www.sport24.gr",
-    "Contra": "https://www.contra.gr",
-    "SDNA": "https://www.sdna.gr",
-    "Insomnia": "https://www.insomnia.gr",
-    "The Verge": "https://www.theverge.com",
-    "TechCrunch": "https://techcrunch.com",
-    "Wired": "https://www.wired.com",
-    "Pitchfork": "https://pitchfork.com",
-    "Rolling Stone": "https://www.rollingstone.com",
-    "Billboard": "https://www.billboard.com",
-    "Resident Advisor": "https://ra.co",
-    "Reuters": "https://www.reuters.com",
     "BBC World": "https://www.bbc.com/news/world",
-    "The Guardian": "https://www.theguardian.com",
-    "Politico": "https://www.politico.eu"
+    "ABC Intl": "https://abcnews.go.com",
+    "The Hill": "https://thehill.com",
+    "In.gr World": "https://www.in.gr",
+    "Techgear": "https://www.techgear.gr",
+    "Techblog": "https://techblog.gr",
+    "Techmaniacs": "https://techmaniacs.gr",
+    "IGuru": "https://iguru.gr",
+    "Mad TV": "https://mad.tv",
+    "Tralala": "https://www.tralala.gr",
 };
 
 const WORKER_URL = 'https://captainnews-worker.g-gsmks.workers.dev';
