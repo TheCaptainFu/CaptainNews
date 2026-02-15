@@ -57,14 +57,24 @@
             <p class="text-main-yellow mt-[5px] mb-12">Επικοινωνήστε μαζί μας για ερωτήσεις, προτάσεις ή συνεργασία.</p>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <a href="/cdn-cgi/l/email-protection#63044d04100e081023040e020a0f4d000c0e" class="block p-6 bg-[#1a1a1a] rounded-xl border border-zinc-800 hover:border-blue-500/50 transition-colors group">
+                <a id="email-card" href="#" class="block p-6 bg-[#1a1a1a] rounded-xl border border-zinc-800 hover:border-blue-500/50 transition-colors group">
                     <div class="w-14 h-14 rounded-xl bg-zinc-800 flex items-center justify-center mb-4 group-hover:bg-blue-600/20 transition-colors">
                         <i class="fa-solid fa-envelope text-2xl text-blue-400"></i>
                     </div>
                     <h2 class="text-xl font-bold text-zinc-100 mb-2">Email</h2>
                     <p class="text-zinc-400 text-sm mb-2">Στείλτε μας email για οποιαδήποτε ερώτηση.</p>
-                    <span class="text-blue-400 font-medium break-all"><span class="__cf_email__" data-cfemail="c3a4eda4b0aea8b083a4aea2aaafeda0acae">[email&#160;protected]</span></span>
+                    <span id="email-display" class="text-blue-400 font-medium break-all"></span>
                 </a>
+                <script>
+                    (function() {
+                        var u = "g.gsmks", d = "gmail.com";
+                        var el = document.getElementById("email-display");
+                        var card = document.getElementById("email-card");
+                        var email = u + "@" + d;
+                        el.textContent = email;
+                        card.href = "mailto:" + email;
+                    })();
+                </script>
 
                 <a href="https://www.linkedin.com/in/george-giasemakis-7101b0209/" target="_blank" rel="noopener noreferrer" class="block p-6 bg-[#1a1a1a] rounded-xl border border-zinc-800 hover:border-[#80b059] transition-colors group">
                     <div class="w-14 h-14 rounded-xl bg-zinc-800 flex items-center justify-center mb-4 group-hover:bg-[#80b059]/10 transition-colors">
@@ -111,4 +121,6 @@
         </div>
     </footer>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min
+    <script src="src/main.js"></script>
+</body>
+</html>
