@@ -30,24 +30,50 @@
                 </a>
             </div>
 
-            <div class="burger-menu relative">
-                <button id="burger-btn" class="text-white hover:text-[#f2d06f] cursor-pointer focus:outline-none transition-colors p-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                    </svg>
-                </button>
-
-                <div id="dropdown-menu" class="hidden absolute right-0 top-[60px] w-48 bg-zinc-900 border border-zinc-700 rounded-lg shadow-2xl overflow-hidden transform origin-top-right transition-all z-50">
-                    <a href="/" class="block px-6 py-3 text-white font-condensed font-bold hover:bg-[#3749bd] hover:text-white transition-colors border-b border-zinc-800">
-                        ΑΡΧΙΚΗ
-                    </a>
-                    <a href="/contact.html" class="block px-6 py-3 text-white font-condensed font-bold hover:bg-[#3749bd] hover:text-white transition-colors">
-                        ΕΠΙΚΟΙΝΩΝΙΑ
-                    </a>
-                </div>
-            </div>
+            <button id="burger-btn" class="text-white hover:text-[#f2d06f] cursor-pointer focus:outline-none transition-colors p-2 z-[60]">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
         </nav>
     </header>
+
+    <!-- Overlay -->
+    <div id="menu-overlay" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[55] opacity-0 pointer-events-none transition-opacity duration-300"></div>
+
+    <!-- Slide-in Sidebar -->
+    <div id="sidebar-menu" class="fixed top-0 right-0 h-full w-80 bg-zinc-900 shadow-2xl z-[60] transform translate-x-full transition-transform duration-300 ease-in-out">
+        <div class="flex flex-col h-full">
+            <!-- Header -->
+            <div class="flex items-center justify-between p-6 border-b border-zinc-800">
+                <h2 class="text-xl font-bold text-white font-condensed">ΜΕΝΟΥ</h2>
+                <button id="close-sidebar" class="text-zinc-400 hover:text-white transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Menu Items -->
+            <nav class="flex-1 px-4 py-6 space-y-2">
+                <a href="/" class="block px-4 py-3 text-white font-condensed font-bold rounded-lg hover:bg-[#3749bd] transition-all">
+                    <i class="fa-solid fa-house mr-3"></i>ΑΡΧΙΚΗ
+                </a>
+                <a href="/contact.html" class="block px-4 py-3 text-white font-condensed font-bold rounded-lg hover:bg-[#3749bd] transition-all">
+                    <i class="fa-solid fa-envelope mr-3"></i>ΕΠΙΚΟΙΝΩΝΙΑ
+                </a>
+                <a href="/policy.html" class="block px-4 py-3 text-white font-condensed font-bold rounded-lg hover:bg-[#3749bd] transition-all">
+                    <i class="fa-solid fa-shield-halved mr-3"></i>ΠΟΛΙΤΙΚΗ ΑΠΟΡΡΗΤΟΥ
+                </a>
+            </nav>
+
+            <!-- Footer -->
+            <div class="p-6 border-t border-zinc-800">
+                <p class="text-zinc-500 text-xs font-condensed">⚓ CaptainNews.gr</p>
+                <p class="text-zinc-600 text-xs mt-1">Ειδήσεις σε πραγματικό χρόνο</p>
+            </div>
+        </div>
+    </div>
 
     <main class="gg-container pt-[90px]">
         <div class="pb-12 md:pb-20">
@@ -116,11 +142,11 @@
         <div class="max-w-[1200px] mx-auto px-4 sm:px-6 text-center text-zinc-600 text-sm">
             <p class="font-semibold text-main-blue mb-2">⚓ CaptainNews.gr</p>
             <p><a href="policy.html" class="text-zinc-400 hover:text-main-yellow">Πολιτική Απορρήτου</a> · <a href="contact.html" class="text-zinc-400 hover:text-main-yellow">Επικοινωνία</a></p>
-            <p class="mt-2 text-xs sm:text-sm">📰 Πηγές: Newsit, Kathimerini, In.gr, Macropolis, Gazzetta, Sport24, Contra, SDNA, Insomnia, The Verge, TechCrunch, Wired, Pitchfork, Rolling Stone, Billboard, Resident Advisor, Reuters, BBC World, The Guardian, Politico</p>
+            <p class="mt-2 text-xs sm:text-sm">📰 Πηγές: Protothema, Newsbeast, Newsit, In.gr, BBC World, ABC Intl, The Hill, In.gr World, Techgear, Techblog, Techmaniacs, IGuru, Mad TV, Tralala</p>
             <p class="mt-2 text-xs text-zinc-700">Ενημέρωση σε πραγματικό χρόνο μέσω RSS Feeds</p>
         </div>
     </footer>
 
-    <script src="src/main.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

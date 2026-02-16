@@ -12,20 +12,49 @@ const categoryDisplayNames = {
 };
 
 const sourceUrls = {
+    "Newsit": "https://www.newsit.gr",
+    "Kathimerini": "https://www.kathimerini.gr",
+    "In.gr": "https://www.in.gr",
+    "Macropolis": "https://www.macropolis.gr",
+    "Gazzetta": "https://www.gazzetta.gr",
+    "Sport24": "https://www.sport24.gr",
+    "Contra": "https://www.contra.gr",
+    "SDNA": "https://www.sdna.gr",
+    "Insomnia": "https://www.insomnia.gr",
+    "The Verge": "https://www.theverge.com",
+    "TechCrunch": "https://techcrunch.com",
+    "Wired": "https://www.wired.com",
+    "Pitchfork": "https://pitchfork.com",
+    "Rolling Stone": "https://www.rollingstone.com",
+    "Billboard": "https://www.billboard.com",
+    "Resident Advisor": "https://ra.co",
+    "Reuters": "https://www.reuters.com",
+    "BBC World": "https://www.bbc.com/news/world",
+    "The Guardian": "https://www.theguardian.com",
+    "Politico": "https://www.politico.eu",
     "Protothema": "https://www.protothema.gr",
     "Newsbeast": "https://www.newsbeast.gr",
-    "Newsit": "https://www.newsit.gr",
-    "In.gr": "https://www.in.gr",
-    "BBC World": "https://www.bbc.com/news/world",
+    "Thetoc": "https://www.thetoc.gr",
+    "Iefimerida": "https://www.iefimerida.gr",
+    "Skai": "https://www.skai.gr",
+    "Ant1": "https://www.ant1news.gr",
     "ABC Intl": "https://abcnews.go.com",
     "The Hill": "https://thehill.com",
+    "VOA News": "https://www.voanews.com",
     "In.gr World": "https://www.in.gr",
+    "BBC Sport": "https://www.bbc.com/sport",
+    "BBC Tech": "https://www.bbc.com/news/technology",
+    "ESPN": "https://www.espn.com",
+    "Digitallife": "https://www.digitallife.gr",
+    "Pcsteps": "https://www.pcsteps.gr",
     "Techgear": "https://www.techgear.gr",
-    "Techblog": "https://techblog.gr",
-    "Techmaniacs": "https://techmaniacs.gr",
-    "IGuru": "https://iguru.gr",
-    "Mad TV": "https://mad.tv",
-    "Tralala": "https://www.tralala.gr",
+    "Youfly": "https://www.youfly.gr",
+    "In.gr Music": "https://www.in.gr",
+    "Skai Music": "https://www.skai.gr",
+    "Newsbomb Music": "https://www.newsbomb.gr",
+    "Musicfollow": "https://musicfollow.gr",
+    "Sky Sports": "https://www.skysports.com",
+    "Hacker News": "https://news.ycombinator.com"
 };
 
 const WORKER_URL = 'https://captainnews-worker.g-gsmks.workers.dev';
@@ -213,22 +242,47 @@ function setupFilterLogic() {
     applyFilter('all');
 }
 
-// --- BURGER MENU LOGIC ---
+// --- SIDEBAR MENU LOGIC ---
 const burgerBtn = document.getElementById('burger-btn');
-const dropdownMenu = document.getElementById('dropdown-menu');
+const sidebarMenu = document.getElementById('sidebar-menu');
+const menuOverlay = document.getElementById('menu-overlay');
+const closeSidebar = document.getElementById('close-sidebar');
 
-if (burgerBtn && dropdownMenu) {
+function openSidebar() {
+    if (sidebarMenu && menuOverlay) {
+        sidebarMenu.classList.remove('translate-x-full');
+        menuOverlay.classList.remove('opacity-0', 'pointer-events-none');
+        document.body.style.overflow = 'hidden';
+    }
+}
+
+function closeSidebarFn() {
+    if (sidebarMenu && menuOverlay) {
+        sidebarMenu.classList.add('translate-x-full');
+        menuOverlay.classList.add('opacity-0', 'pointer-events-none');
+        document.body.style.overflow = '';
+    }
+}
+
+if (burgerBtn) {
     burgerBtn.addEventListener('click', (e) => {
         e.stopPropagation();
-        dropdownMenu.classList.toggle('hidden');
-    });
-
-    document.addEventListener('click', (e) => {
-        if (!burgerBtn.contains(e.target) && !dropdownMenu.contains(e.target)) {
-            dropdownMenu.classList.add('hidden');
-        }
+        openSidebar();
     });
 }
+
+if (closeSidebar) {
+    closeSidebar.addEventListener('click', closeSidebarFn);
+}
+
+if (menuOverlay) {
+    menuOverlay.addEventListener('click', closeSidebarFn);
+}
+
+// Close on ESC key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeSidebarFn();
+});
 
 // --- HELPER FUNCTIONS ---
 window.copyArticleLink = function(btn, url) {
