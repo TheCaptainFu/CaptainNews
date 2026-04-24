@@ -1,0 +1,25 @@
+{
+  "name": "CaptainNews.gr",
+  "short_name": "CaptainNews",
+  "description": "Ειδήσεις σε πραγματικό χρόνο από τις κορυφαίες ελληνικές και διεθνείς πηγές",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#3749bd",
+  "lang": "el",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icons/pwa.png",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/pwa.png",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

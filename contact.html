@@ -27,8 +27,11 @@
     <meta name="twitter:description" content="Επικοινωνήστε με το CaptainNews.gr για ερωτήσεις, προτάσεις ή συνεργασία.">
     <meta name="twitter:image"       content="https://captainnews.gr/icons/logo.png">
 
-    <!-- Favicon -->
+    <!-- Favicon & PWA -->
     <link rel="icon" type="image/png" href="/icons/favicon.png">
+    <link rel="apple-touch-icon" href="/icons/pwa.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#3749bd">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
@@ -170,5 +173,10 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js');
+        }
+    </script>
 </body>
 </html>
