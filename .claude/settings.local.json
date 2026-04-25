@@ -3,7 +3,12 @@
     "allow": [
       "Bash(file \"\\\\\\\\wsl.localhost\\\\Ubuntu-22.04\\\\home\\\\captainfu\\\\job\\\\CaptainNews\\\\icons\\\\og-image.png\")",
       "Bash(wc -c \"\\\\\\\\wsl.localhost\\\\Ubuntu-22.04\\\\home\\\\captainfu\\\\job\\\\CaptainNews\\\\icons\\\\og-image.png\")",
-      "Bash(file \"\\\\\\\\wsl.localhost\\\\Ubuntu-22.04\\\\home\\\\captainfu\\\\job\\\\CaptainNews\\\\icons\\\\logo.png\")"
+      "Bash(file \"\\\\\\\\wsl.localhost\\\\Ubuntu-22.04\\\\home\\\\captainfu\\\\job\\\\CaptainNews\\\\icons\\\\logo.png\")",
+      "Bash(identify icons/og-image.png)",
+      "Bash(python3 -c \"from PIL import Image; img = Image.open\\('icons/og-image.png'\\); print\\(f'Size: {img.size}, Mode: {img.mode}'\\)\")",
+      "Read(//mnt/c/**)",
+      "Bash(wslpath \"\\\\\\\\wsl.localhost\\\\Ubuntu-22.04\\\\home\\\\captainfu\\\\job\\\\CaptainNews\")",
+      "Bash(python3 -c ' *)"
     ]
   }
 }
