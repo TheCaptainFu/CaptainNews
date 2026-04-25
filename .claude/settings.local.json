@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(file \"\\\\\\\\wsl.localhost\\\\Ubuntu-22.04\\\\home\\\\captainfu\\\\job\\\\CaptainNews\\\\icons\\\\og-image.png\")",
+      "Bash(wc -c \"\\\\\\\\wsl.localhost\\\\Ubuntu-22.04\\\\home\\\\captainfu\\\\job\\\\CaptainNews\\\\icons\\\\og-image.png\")",
+      "Bash(file \"\\\\\\\\wsl.localhost\\\\Ubuntu-22.04\\\\home\\\\captainfu\\\\job\\\\CaptainNews\\\\icons\\\\logo.png\")"
+    ]
+  }
+}
