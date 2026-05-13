@@ -29,10 +29,12 @@
     <meta name="twitter:description" content="Ειδήσεις σε πραγματικό χρόνο από τις κορυφαίες ελληνικές και διεθνείς πηγές. Πολιτικά, αθλητισμός, τεχνολογία, μουσική και πολλά άλλα.">
     <meta name="twitter:image"       content="https://captainnews.gr/icons/logo.png">
 
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+
     <!-- Favicon & PWA -->
-    <link rel="icon" type="image/png" href="/icons/favicon.png">
-    <link rel="apple-touch-icon" href="/icons/pwa.png">
-    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" type="image/png" href="icons/favicon.png">
+    <link rel="apple-touch-icon" href="icons/pwa.png">
+    <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#3749bd">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -52,7 +54,7 @@
         <nav class="gg-container flex items-center justify-between h-full">
             <div class="logo [&_img]:max-h-[30px] py-[10px]">
                 <a href="/">
-                    <img src="/icons/logo.png" alt="CaptainNews Logo">
+                    <img src="icons/logo.png" alt="CaptainNews Logo">
                 </a>
             </div>
 
@@ -85,10 +87,10 @@
                 <a href="/" class="block px-4 py-3 text-white font-condensed font-bold rounded-lg hover:bg-[#3749bd] transition-all">
                     <i class="fa-solid fa-house mr-3"></i>ΑΡΧΙΚΗ
                 </a>
-                <a href="/contact.html" class="block px-4 py-3 text-white font-condensed font-bold rounded-lg hover:bg-[#3749bd] transition-all">
+                <a href="contact" class="block px-4 py-3 text-white font-condensed font-bold rounded-lg hover:bg-[#3749bd] transition-all">
                     <i class="fa-solid fa-envelope mr-3"></i>ΕΠΙΚΟΙΝΩΝΙΑ
                 </a>
-                <a href="/policy.html" class="block px-4 py-3 text-white font-condensed font-bold rounded-lg hover:bg-[#3749bd] transition-all">
+                <a href="policy" class="block px-4 py-3 text-white font-condensed font-bold rounded-lg hover:bg-[#3749bd] transition-all">
                     <i class="fa-solid fa-shield-halved mr-3"></i>ΠΟΛΙΤΙΚΗ ΑΠΟΡΡΗΤΟΥ
                 </a>
             </nav>
@@ -140,7 +142,7 @@
     <footer class="border-t border-zinc-900 mt-12 py-6">
         <div class="max-w-[1200px] mx-auto px-4 sm:px-6 text-center text-zinc-600 text-sm">
             <p class="font-semibold text-main-blue mb-2">⚓ CaptainNews.gr</p>
-            <p><a href="policy.html" class="text-zinc-400 hover:text-main-yellow">Πολιτική Απορρήτου</a> · <a href="contact.html" class="text-zinc-400 hover:text-main-yellow">Επικοινωνία</a></p>
+            <p><a href="policy" class="text-zinc-400 hover:text-main-yellow">Πολιτική Απορρήτου</a> · <a href="contact" class="text-zinc-400 hover:text-main-yellow">Επικοινωνία</a></p>
             <p class="mt-2 text-xs sm:text-sm">📰 Πηγές: Protothema, Newsbeast, Newsit, In.gr, BBC World, ABC Intl, The Hill, In.gr World, Techgear, Techblog, Techmaniacs, IGuru, Mad TV, Tralala</p>
             <p class="mt-2 text-xs text-zinc-700">Ενημέρωση σε πραγματικό χρόνο μέσω RSS Feeds</p>
         </div>
@@ -149,7 +151,7 @@
     <script src="js/main.js"></script>
     <script>
         if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('/sw.js');
+            navigator.serviceWorker.register('sw.js');
         }
     </script>
     <script defer src="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v2.9.2/dist/cookieconsent.js"></script>

@@ -1,0 +1,7 @@
+Options -MultiViews
+RewriteEngine On
+
+# Clean URLs: /contact → /contact.html, /policy → /policy.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^/.]+)$ $1.html [L]

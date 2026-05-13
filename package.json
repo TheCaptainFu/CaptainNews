@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node update-news.js",
     "test": "echo \"No tests specified\"",
-    "dev": "npx @tailwindcss/cli -i ./src/main.css -o ./src/output.css --watch"
+    "dev": "npx @tailwindcss/cli -i ./src/main.css -o ./src/output.css --watch",
+    "serve": "npx wrangler pages dev . --port 3000"
   },
   "dependencies": {
     "cheerio": "^1.2.0",

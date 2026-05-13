@@ -76,10 +76,10 @@ async function loadNews() {
 
         const categories = Object.entries(data);
 
-        categories.forEach(([categoryKey, articles]) => {
-            
+        categories.forEach(([categoryKey, articles], index) => {
+
             const readableTitle = categoryDisplayNames[categoryKey] || categoryKey.toUpperCase();
-            const marginTopClass = 'mt-[40px]';
+            const marginTopClass = 'mt-[20px]';
             const totalArticles = articles.length;
 
             const categorySection = document.createElement('section');
@@ -89,11 +89,10 @@ async function loadNews() {
 
             let categoryHTML = `
                 <div class="gg-container ${marginTopClass} section-header">
-                    <div class="title flex items-center justify-between w-full border-b border-zinc-800 pb-[5px]">
-                        <div class="flex items-center gap-[5px]">
-                            <h2 class="text-[24px] leading-[28px] font-bold text-[#3749bd] font-condensed uppercase">${readableTitle}</h2>
-                        </div>
-                        <div class="count text-[14px] font-bold text-zinc-500 font-condensed">
+                    <div class="title flex items-end gap-4 w-full pb-[5px]">
+                        <h2 class="text-[36px] leading-[36px] font-bold text-[#3749bd] font-condensed uppercase whitespace-nowrap">${readableTitle}</h2>
+                        <div class="flex-1 h-[2px] bg-[#3749bd] mb-[6px]"></div>
+                        <div class="count text-[14px] font-bold text-zinc-500 font-condensed whitespace-nowrap">
                             ${totalArticles} ΑΡΘΡΑ
                         </div>
                     </div>
