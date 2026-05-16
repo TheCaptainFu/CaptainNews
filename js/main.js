@@ -377,4 +377,20 @@ function timeAgo(dateString) {
     return "Μόλις τώρα";
 }
 
+// --- TICKER SCROLL HIDE/SHOW ---
+(function () {
+    let lastY = 0;
+    window.addEventListener('scroll', () => {
+        const y = window.scrollY;
+        if (y <= 10) {
+            document.body.classList.remove('ticker-hidden');
+        } else if (y > lastY + 5) {
+            document.body.classList.add('ticker-hidden');
+        } else if (y < lastY - 5) {
+            document.body.classList.remove('ticker-hidden');
+        }
+        lastY = y;
+    }, { passive: true });
+})();
+
 document.addEventListener('DOMContentLoaded', loadNews);

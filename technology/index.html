@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/src/output.css?v=6">
-    <link rel="stylesheet" href="/src/main.css?v=6">
+    <link rel="stylesheet" href="/src/output.css?v=7">
+    <link rel="stylesheet" href="/src/main.css?v=7">
     <title>Τεχνολογία | CaptainNews.gr</title>
     <meta name="description" content="Τελευταίες ειδήσεις τεχνολογίας σε πραγματικό χρόνο. Gadgets, AI, software και τεχνολογικές εξελίξεις.">
     <meta property="og:type" content="website">
@@ -73,7 +73,7 @@
     </script>
 </head>
 <body class="bg-main-black flex flex-col min-h-screen" data-category="technology">
-    <header class="bg-zinc-900/95 backdrop-blur-xl fixed top-[38px] w-full z-50 border-b border-zinc-800 h-[70px]">
+    <header id="main-header" class="bg-zinc-900/95 backdrop-blur-xl fixed top-[38px] w-full z-50 border-b border-zinc-800 h-[70px]">
         <nav class="gg-container flex items-center justify-between h-full">
             <div class="logo [&_img]:max-h-[30px] py-[10px]">
                 <a href="/"><img src="/icons/logo.png" alt="CaptainNews Logo"></a>
@@ -118,7 +118,7 @@
             <div class="p-6 border-t border-zinc-800"><p class="text-zinc-500 text-xs font-condensed">⚓ CaptainNews.gr</p></div>
         </div>
     </div>
-    <div class="fixed top-[108px] w-full bg-[#111] z-40 border-b border-zinc-800 shadow-md h-[50px] flex items-center overflow-hidden">
+    <div id="category-bar" class="fixed top-[108px] w-full bg-[#111] z-40 border-b border-zinc-800 shadow-md h-[50px] flex items-center overflow-hidden">
         <div class="gg-container w-full overflow-x-auto" style="scrollbar-width:none; -ms-overflow-style:none;">
             <div id="category-filter" class="flex items-center gap-2 w-max min-w-full px-0">
                 <a href="/" data-category="all" class="filter-pill font-condensed font-bold text-xs px-4 py-1.5 rounded-full border transition-all duration-200 whitespace-nowrap cursor-pointer">ΟΛΕΣ ΟΙ ΚΑΤΗΓΟΡΙΕΣ</a>
@@ -140,7 +140,7 @@
             <p><a href="/policy" class="text-zinc-400 hover:text-main-yellow">Πολιτική Απορρήτου</a> · <a href="/contact" class="text-zinc-400 hover:text-main-yellow">Επικοινωνία</a></p>
         </div>
     </footer>
-    <script src="/js/main.js?v=14"></script>
+    <script src="/js/main.js?v=15"></script>
     <script>if ('serviceWorker' in navigator) navigator.serviceWorker.register('/sw.js');</script>
     <script defer src="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v2.9.2/dist/cookieconsent.js"></script>
     <script defer src="/js/cookieconsent-init.js"></script>

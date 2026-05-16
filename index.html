@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="src/output.css?v=6">
-    <link rel="stylesheet" href="src/main.css?v=6">
+    <link rel="stylesheet" href="src/output.css?v=7">
+    <link rel="stylesheet" href="src/main.css?v=7">
     <title>CaptainNews.gr | Αρχική</title>
     <meta name="description" content="Ειδήσεις σε πραγματικό χρόνο από τις κορυφαίες ελληνικές και διεθνείς πηγές. Πολιτικά, αθλητισμός, τεχνολογία, μουσική και πολλά άλλα.">
 
@@ -64,7 +64,7 @@
 </head>
 <body class="bg-main-black flex flex-col min-h-screen">
 
-    <header class="bg-zinc-900/95 backdrop-blur-xl fixed top-[38px] w-full z-50 border-b border-zinc-800 h-[70px]">
+    <header id="main-header" class="bg-zinc-900/95 backdrop-blur-xl fixed top-[38px] w-full z-50 border-b border-zinc-800 h-[70px]">
         <nav class="gg-container flex items-center justify-between h-full">
             <div class="logo [&_img]:max-h-[30px] py-[10px]">
                 <a href="/">
@@ -130,7 +130,7 @@
     </div>
 
     <!-- Category filter bar: fixed below header -->
-    <div class="fixed top-[108px] w-full bg-[#111] z-40 border-b border-zinc-800 shadow-md h-[50px] flex items-center overflow-hidden">
+    <div id="category-bar" class="fixed top-[108px] w-full bg-[#111] z-40 border-b border-zinc-800 shadow-md h-[50px] flex items-center overflow-hidden">
         <div class="gg-container w-full overflow-x-auto" style="scrollbar-width:none; -ms-overflow-style:none;">
             <div id="category-filter" class="flex items-center gap-2 w-max min-w-full px-0">
                 <a href="/" data-category="all" class="filter-pill active font-condensed font-bold text-xs px-4 py-1.5 rounded-full border transition-all duration-200 whitespace-nowrap cursor-pointer">
@@ -174,7 +174,7 @@
         </div>
     </footer>
 
-    <script src="js/main.js?v=14"></script>
+    <script src="js/main.js?v=15"></script>
     <script>
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.register('sw.js');

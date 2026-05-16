@@ -114,6 +114,16 @@ body {
     box-shadow: 0 0 20px rgba(124, 58, 237, 0.25) !important;
 }
 
+/* ─── Ticker scroll hide/show ─── */
+#news-ticker,
+#main-header,
+#category-bar {
+    transition: top 0.3s ease;
+}
+body.ticker-hidden #news-ticker { top: -38px; }
+body.ticker-hidden #main-header { top: 0px; }
+body.ticker-hidden #category-bar { top: 70px; }
+
 .c_darkmode {
     --cc-bg: #1a1a1a; 
     --cc-text: #e5e5e5; 
