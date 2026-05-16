@@ -90,7 +90,7 @@ async function loadNews() {
             let categoryHTML = `
                 <div class="gg-container ${marginTopClass} section-header">
                     <div class="title flex items-end gap-4 w-full pb-[5px]">
-                        <h2 class="text-[36px] leading-[36px] font-bold text-[#3749bd] font-condensed uppercase whitespace-nowrap">${readableTitle}</h2>
+                        <h2 class="text-[22px] leading-[22px] md:text-[28px] md:leading-[28px] lg:text-[36px] lg:leading-[36px] font-bold text-[#3749bd] font-condensed uppercase whitespace-nowrap">${readableTitle}</h2>
                         <div class="flex-1 h-[2px] bg-[#3749bd] mb-[6px]"></div>
                         <div class="count text-[14px] font-bold text-zinc-500 font-condensed whitespace-nowrap">
                             ${totalArticles} ΑΡΘΡΑ
