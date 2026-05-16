@@ -85,7 +85,7 @@ body {
 
 /* ─── News Ticker ─── */
 .ticker-track {
-    animation: ticker-scroll 55s linear infinite;
+    animation: ticker-scroll 90s linear infinite;
     will-change: transform;
 }
 .ticker-track:hover {
