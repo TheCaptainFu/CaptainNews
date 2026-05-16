@@ -21,3 +21,39 @@
 
 /manifest.json
   Cache-Control: public, max-age=86400
+
+/greece
+  Cache-Control: no-cache, must-revalidate
+
+/greece/
+  Cache-Control: no-cache, must-revalidate
+
+/politics
+  Cache-Control: no-cache, must-revalidate
+
+/politics/
+  Cache-Control: no-cache, must-revalidate
+
+/world
+  Cache-Control: no-cache, must-revalidate
+
+/world/
+  Cache-Control: no-cache, must-revalidate
+
+/sports
+  Cache-Control: no-cache, must-revalidate
+
+/sports/
+  Cache-Control: no-cache, must-revalidate
+
+/technology
+  Cache-Control: no-cache, must-revalidate
+
+/technology/
+  Cache-Control: no-cache, must-revalidate
+
+/music
+  Cache-Control: no-cache, must-revalidate
+
+/music/
+  Cache-Control: no-cache, must-revalidate

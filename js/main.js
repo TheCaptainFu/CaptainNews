@@ -233,7 +233,8 @@ function setupFilterLogic() {
     }
 
     pills.forEach(pill => {
-        pill.addEventListener('click', () => {
+        pill.addEventListener('click', (e) => {
+            e.preventDefault();
             applyFilter(pill.getAttribute('data-category'));
         });
     });

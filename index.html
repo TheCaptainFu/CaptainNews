@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="src/output.css?v=3">
-    <link rel="stylesheet" href="src/main.css?v=3">
+    <link rel="stylesheet" href="src/output.css?v=4">
+    <link rel="stylesheet" href="src/main.css?v=4">
     <title>CaptainNews.gr | Αρχική</title>
     <meta name="description" content="Ειδήσεις σε πραγματικό χρόνο από τις κορυφαίες ελληνικές και διεθνείς πηγές. Πολιτικά, αθλητισμός, τεχνολογία, μουσική και πολλά άλλα.">
 
@@ -29,6 +29,9 @@
     <meta name="twitter:description" content="Ειδήσεις σε πραγματικό χρόνο από τις κορυφαίες ελληνικές και διεθνείς πηγές. Πολιτικά, αθλητισμός, τεχνολογία, μουσική και πολλά άλλα.">
     <meta name="twitter:image"       content="https://captainnews.gr/icons/logo.png">
 
+    <link rel="canonical" href="https://captainnews.gr/">
+    <link rel="alternate" hreflang="el" href="https://captainnews.gr/">
+    <link rel="alternate" hreflang="x-default" href="https://captainnews.gr/">
     <link rel="sitemap" type="application/xml" href="/sitemap.xml">
 
     <!-- Favicon & PWA -->
@@ -47,6 +50,16 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-TRLBX4N99L');
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "CaptainNews.gr",
+  "url": "https://captainnews.gr/",
+  "description": "Ειδήσεις σε πραγματικό χρόνο από τις κορυφαίες ελληνικές και διεθνείς πηγές.",
+  "inLanguage": "el-GR"
+}
     </script>
 </head>
 <body class="bg-main-black flex flex-col min-h-screen">
@@ -80,7 +93,7 @@
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                     </svg>
-                </button>
+                </a>
             </div>
 
             <!-- Menu Items -->
@@ -110,27 +123,27 @@
     <div class="fixed top-[70px] w-full bg-[#111] z-40 border-b border-zinc-800 shadow-md h-[50px] flex items-center overflow-hidden">
         <div class="gg-container w-full overflow-x-auto" style="scrollbar-width:none; -ms-overflow-style:none;">
             <div id="category-filter" class="flex items-center gap-2 w-max min-w-full px-0">
-                <button data-category="all" class="filter-pill active font-condensed font-bold text-xs px-4 py-1.5 rounded-full border transition-all duration-200 whitespace-nowrap cursor-pointer">
+                <a href="/" data-category="all" class="filter-pill active font-condensed font-bold text-xs px-4 py-1.5 rounded-full border transition-all duration-200 whitespace-nowrap cursor-pointer">
                     ΟΛΕΣ ΟΙ ΚΑΤΗΓΟΡΙΕΣ
-                </button>
-                <button data-category="greece_news" class="filter-pill font-condensed font-bold text-xs px-4 py-1.5 rounded-full border transition-all duration-200 whitespace-nowrap cursor-pointer">
+                </a>
+                <a href="/greece/" data-category="greece_news" class="filter-pill font-condensed font-bold text-xs px-4 py-1.5 rounded-full border transition-all duration-200 whitespace-nowrap cursor-pointer">
                     ΕΛΛΑΔΑ ΕΠΙΚΑΙΡΟΤΗΤΑ
-                </button>
-                <button data-category="politics_greece" class="filter-pill font-condensed font-bold text-xs px-4 py-1.5 rounded-full border transition-all duration-200 whitespace-nowrap cursor-pointer">
+                </a>
+                <a href="/politics/" data-category="politics_greece" class="filter-pill font-condensed font-bold text-xs px-4 py-1.5 rounded-full border transition-all duration-200 whitespace-nowrap cursor-pointer">
                     ΠΟΛΙΤΙΚΑ ΕΛΛΑΔΑ
-                </button>
-                <button data-category="world_politics" class="filter-pill font-condensed font-bold text-xs px-4 py-1.5 rounded-full border transition-all duration-200 whitespace-nowrap cursor-pointer">
+                </a>
+                <a href="/world/" data-category="world_politics" class="filter-pill font-condensed font-bold text-xs px-4 py-1.5 rounded-full border transition-all duration-200 whitespace-nowrap cursor-pointer">
                     ΠΑΓΚΟΣΜΙΑ ΠΟΛΙΤΙΚΗ
-                </button>
-                <button data-category="sports" class="filter-pill font-condensed font-bold text-xs px-4 py-1.5 rounded-full border transition-all duration-200 whitespace-nowrap cursor-pointer">
+                </a>
+                <a href="/sports/" data-category="sports" class="filter-pill font-condensed font-bold text-xs px-4 py-1.5 rounded-full border transition-all duration-200 whitespace-nowrap cursor-pointer">
                     ΑΘΛΗΤΙΚΑ
-                </button>
-                <button data-category="technology" class="filter-pill font-condensed font-bold text-xs px-4 py-1.5 rounded-full border transition-all duration-200 whitespace-nowrap cursor-pointer">
+                </a>
+                <a href="/technology/" data-category="technology" class="filter-pill font-condensed font-bold text-xs px-4 py-1.5 rounded-full border transition-all duration-200 whitespace-nowrap cursor-pointer">
                     ΤΕΧΝΟΛΟΓΙΑ
-                </button>
-                <button data-category="music" class="filter-pill font-condensed font-bold text-xs px-4 py-1.5 rounded-full border transition-all duration-200 whitespace-nowrap cursor-pointer">
+                </a>
+                <a href="/music/" data-category="music" class="filter-pill font-condensed font-bold text-xs px-4 py-1.5 rounded-full border transition-all duration-200 whitespace-nowrap cursor-pointer">
                     ΜΟΥΣΙΚΗ
-                </button>
+                </a>
             </div>
         </div>
     </div>
@@ -151,7 +164,7 @@
         </div>
     </footer>
 
-    <script src="js/main.js?v=12"></script>
+    <script src="js/main.js?v=13"></script>
     <script>
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.register('sw.js');
