@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/src/output.css?v=4">
-    <link rel="stylesheet" href="/src/main.css?v=4">
+    <link rel="stylesheet" href="/src/output.css?v=5">
+    <link rel="stylesheet" href="/src/main.css?v=5">
     <title>Μουσική | CaptainNews.gr</title>
     <meta name="description" content="Τελευταίες μουσικές ειδήσεις σε πραγματικό χρόνο. Νέες κυκλοφορίες, συναυλίες και μουσικά νέα.">
     <meta property="og:type" content="website">
@@ -83,6 +83,16 @@
             </button>
         </nav>
     </header>
+    <div id="news-ticker" class="fixed top-[70px] w-full z-[45] h-[38px] flex items-center overflow-hidden bg-[#0a0f1e] border-b border-zinc-800/60">
+        <div class="shrink-0 bg-[#3749bd] text-white font-condensed font-bold text-[11px] px-3 h-full flex items-center gap-2 uppercase tracking-widest">
+            <span class="w-1.5 h-1.5 rounded-full bg-[#f2d06f] animate-pulse inline-block"></span>LIVE
+        </div>
+        <div class="flex-1 overflow-hidden h-full flex items-center">
+            <div id="ticker-content" class="ticker-track flex items-center gap-0 whitespace-nowrap px-4">
+                <span class="text-zinc-600 text-[11px] font-condensed">Φόρτωση...</span>
+            </div>
+        </div>
+    </div>
     <div id="menu-overlay" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[55] opacity-0 pointer-events-none transition-opacity duration-300"></div>
     <div id="sidebar-menu" class="fixed top-0 right-0 h-full w-80 bg-zinc-900 shadow-2xl z-[60] transform translate-x-full transition-transform duration-300 ease-in-out">
         <div class="flex flex-col h-full">
@@ -108,7 +118,7 @@
             <div class="p-6 border-t border-zinc-800"><p class="text-zinc-500 text-xs font-condensed">⚓ CaptainNews.gr</p></div>
         </div>
     </div>
-    <div class="fixed top-[70px] w-full bg-[#111] z-40 border-b border-zinc-800 shadow-md h-[50px] flex items-center overflow-hidden">
+    <div class="fixed top-[108px] w-full bg-[#111] z-40 border-b border-zinc-800 shadow-md h-[50px] flex items-center overflow-hidden">
         <div class="gg-container w-full overflow-x-auto" style="scrollbar-width:none; -ms-overflow-style:none;">
             <div id="category-filter" class="flex items-center gap-2 w-max min-w-full px-0">
                 <a href="/" data-category="all" class="filter-pill font-condensed font-bold text-xs px-4 py-1.5 rounded-full border transition-all duration-200 whitespace-nowrap cursor-pointer">ΟΛΕΣ ΟΙ ΚΑΤΗΓΟΡΙΕΣ</a>
@@ -121,7 +131,7 @@
             </div>
         </div>
     </div>
-    <main id="main-content-wrapper" class="pt-[140px] pb-20 flex-grow min-h-[60vh]">
+    <main id="main-content-wrapper" class="pt-[178px] pb-20 flex-grow min-h-[60vh]">
         <div class="gg-container text-white font-condensed pt-10 text-center animate-pulse">Φόρτωση ειδήσεων...</div>
     </main>
     <footer class="border-t border-zinc-900 mt-12 py-6">
@@ -130,7 +140,7 @@
             <p><a href="/policy" class="text-zinc-400 hover:text-main-yellow">Πολιτική Απορρήτου</a> · <a href="/contact" class="text-zinc-400 hover:text-main-yellow">Επικοινωνία</a></p>
         </div>
     </footer>
-    <script src="/js/main.js?v=13"></script>
+    <script src="/js/main.js?v=14"></script>
     <script>if ('serviceWorker' in navigator) navigator.serviceWorker.register('/sw.js');</script>
     <script defer src="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v2.9.2/dist/cookieconsent.js"></script>
     <script defer src="/js/cookieconsent-init.js"></script>

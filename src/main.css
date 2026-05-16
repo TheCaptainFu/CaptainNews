@@ -83,7 +83,38 @@ body {
     display: none;
 }
 
-.c_darkmode { 
+/* ─── News Ticker ─── */
+.ticker-track {
+    animation: ticker-scroll 55s linear infinite;
+    will-change: transform;
+}
+.ticker-track:hover {
+    animation-play-state: paused;
+}
+@keyframes ticker-scroll {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* ─── Sports card theme ─── */
+.card-sports {
+    background-color: #0d1a10;
+}
+.card-sports:hover {
+    border-color: #16a34a !important;
+    box-shadow: 0 0 20px rgba(22, 163, 74, 0.25) !important;
+}
+
+/* ─── Music card theme ─── */
+.card-music {
+    background-color: #120d1a;
+}
+.card-music:hover {
+    border-color: #7c3aed !important;
+    box-shadow: 0 0 20px rgba(124, 58, 237, 0.25) !important;
+}
+
+.c_darkmode {
     --cc-bg: #1a1a1a; 
     --cc-text: #e5e5e5; 
     --cc-btn-primary-bg: #3749bd;

@@ -61,6 +61,11 @@ const WORKER_URL = 'https://captainnews-worker.g-gsmks.workers.dev';
 const IS_LOCAL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
 const INITIAL_VISIBLE_COUNT = 7;
 
+const categoryAccents = {
+    sports: { color: '#16a34a', cardClass: 'card-sports' },
+    music:  { color: '#7c3aed', cardClass: 'card-music'  },
+};
+
 async function loadNews() {
     // Guard: only run on pages that have the news wrapper
     const mainWrapper = document.getElementById('main-content-wrapper');
@@ -88,14 +93,17 @@ async function loadNews() {
             categorySection.setAttribute('data-category', categoryKey);
 
 
+            const accent = categoryAccents[categoryKey];
+            const accentColor = accent ? accent.color : '#4f72ff';
+
             let categoryHTML = `
                 <div class="gg-container ${marginTopClass} section-header">
                     <div class="w-full">
                         <div class="flex items-baseline justify-between pb-[8px]">
-                            <h2 class="text-[22px] leading-[22px] md:text-[28px] md:leading-[28px] lg:text-[36px] lg:leading-[36px] font-bold text-[#4f72ff] font-condensed uppercase">${readableTitle}</h2>
-                            <span class="text-[13px] font-bold text-zinc-500 font-condensed whitespace-nowrap">${totalArticles} ΑΡΘΡΑ</span>
+                            <h2 class="text-[22px] leading-[22px] md:text-[28px] md:leading-[28px] lg:text-[36px] lg:leading-[36px] font-bold font-condensed uppercase" style="color:${accentColor}">${readableTitle}</h2>
+                            <span class="text-[13px] font-bold font-condensed whitespace-nowrap" style="color:${accentColor}aa">${totalArticles} ΑΡΘΡΑ</span>
                         </div>
-                        <div class="h-[3px] w-full rounded-full" style="background: linear-gradient(to right, #4f72ff, transparent)"></div>
+                        <div class="h-[3px] w-full rounded-full" style="background: linear-gradient(to right, ${accentColor}, transparent)"></div>
                     </div>
                 </div>
                 <div class="gg-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[20px] pt-[10px]">
@@ -110,9 +118,12 @@ async function loadNews() {
                 const isHidden = artIndex >= INITIAL_VISIBLE_COUNT;
                 const hiddenClass = isHidden ? `hidden hidden-item-${categoryKey}` : '';
 
+                const baseHover = accent
+                    ? ''
+                    : 'hover:border-[#3749bd] hover:shadow-[0_0_20px_rgba(55,73,189,0.3)]';
                 const wrapperClasses = isFeatured
-                    ? `col-span-1 md:col-span-2 lg:col-span-3 flex flex-col md:flex-row group border border-transparent transition-all duration-300 hover:border-[#3749bd] hover:shadow-[0_0_20px_rgba(55,73,189,0.3)] ${hiddenClass}`
-                    : `flex flex-col group border border-transparent transition-all duration-300 hover:border-[#3749bd] hover:shadow-[0_0_20px_rgba(55,73,189,0.3)] ${hiddenClass}`;
+                    ? `col-span-1 md:col-span-2 lg:col-span-3 flex flex-col md:flex-row group border border-transparent transition-all duration-300 ${baseHover} ${hiddenClass}`
+                    : `flex flex-col group border border-transparent transition-all duration-300 ${baseHover} ${hiddenClass}`;
 
                 // Mobile-friendly max-height for featured image
                 const imageWrapperClasses = isFeatured
@@ -126,7 +137,7 @@ async function loadNews() {
                 const charLimit = isFeatured ? 350 : 110;
 
                 categoryHTML += `
-                    <div class="item bg-main-grey rounded-[12px] overflow-hidden ${wrapperClasses}">
+                    <div class="item ${accent ? accent.cardClass : 'bg-main-grey'} rounded-[12px] overflow-hidden ${wrapperClasses}">
                         <div class="${imageWrapperClasses}">
                             <a href="${article.link}" target="_blank" rel="noopener noreferrer" class="block w-full h-full cursor-pointer">
                                 <img class="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
@@ -146,7 +157,7 @@ async function loadNews() {
                                 ${article.description ? stripHtml(article.description).substring(0, charLimit) + '...' : 'Διαβάστε περισσότερα για το θέμα στην πηγή.'}
                             </div>
                             <div class="source text-[16px] leading-[14px] text-white font-bold font-condensed pb-[20px] border-b border-zinc-800">
-                                Πηγή: <a href="${sourceHomepage}" target="_blank" rel="noopener noreferrer" class="text-[#3749bd] hover:text-[#f2d06f] hover:underline transition-colors">${article.source}</a>
+                                Πηγή: <a href="${sourceHomepage}" target="_blank" rel="noopener noreferrer" class="hover:text-[#f2d06f] hover:underline transition-colors" style="color:${accentColor}">${article.source}</a>
                             </div>
                             <div class="card-footer flex items-center justify-between pt-[20px]">
                                 <div class="time text-[14px] leading-[16px] text-white font-bold font-condensed">${timeStr}</div>
@@ -158,7 +169,7 @@ async function loadNews() {
                                         </svg>
                                         <span class="copy-label">COPY</span>
                                     </button>
-                                    <a href="${article.link}" target="_blank" rel="noopener noreferrer" class="read-more text-[12px] leading-[14px] font-bold font-condensed text-[#3749bd] hover:text-[#f2d06f] transition-all">
+                                    <a href="${article.link}" target="_blank" rel="noopener noreferrer" class="read-more text-[12px] leading-[14px] font-bold font-condensed hover:text-[#f2d06f] transition-all" style="color:${accentColor}">
                                         Διαβάστε ->
                                     </a>
                                 </div>
@@ -185,11 +196,36 @@ async function loadNews() {
         });
 
         setupFilterLogic();
+        populateTicker(data);
 
     } catch (error) {
         console.error("Error:", error);
         mainWrapper.innerHTML = `<div class="gg-container text-white text-center pt-10">Σφάλμα φόρτωσης.</div>`;
     }
+}
+
+// --- TICKER ---
+function populateTicker(data) {
+    const ticker = document.getElementById('ticker-content');
+    if (!ticker) return;
+
+    let headlines = [];
+    for (const articles of Object.values(data)) {
+        headlines = headlines.concat(articles.slice(0, 4));
+    }
+    headlines.sort((a, b) => new Date(b.date) - new Date(a.date));
+    headlines = headlines.slice(0, 24);
+
+    const sep = '<span class="text-zinc-700 mx-6 select-none">⚓</span>';
+    const items = headlines.map(a =>
+        `<a href="${a.link}" target="_blank" rel="noopener noreferrer"
+            class="text-zinc-300 hover:text-[#f2d06f] text-[11px] font-condensed font-bold uppercase tracking-wide transition-colors cursor-pointer whitespace-nowrap">
+            ${a.title}
+         </a>`
+    ).join(sep);
+
+    // Duplicate for seamless loop
+    ticker.innerHTML = items + sep + items;
 }
 
 // --- FILTER LOGIC ---
