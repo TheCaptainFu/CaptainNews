@@ -1,20 +1,15 @@
-const CACHE_NAME = 'captainnews-v2';
-const STATIC_ASSETS = [
+const CACHE_NAME = 'captainnews-v3';
+const PRECACHE = [
     '/',
-    '/index.html',
-    '/contact.html',
-    '/policy.html',
-    '/src/output.css',
-    '/src/main.css',
-    '/js/main.js',
-    '/js/cookieconsent-init.js',
+    '/contact/',
+    '/policy/',
+    '/manifest.json',
     '/icons/logo.png',
-    '/icons/favicon.png',
-    '/manifest.json'
+    '/icons/favicon.png'
 ];
 
 self.addEventListener('install', e => {
-    e.waitUntil(caches.open(CACHE_NAME).then(c => c.addAll(STATIC_ASSETS)));
+    e.waitUntil(caches.open(CACHE_NAME).then(c => c.addAll(PRECACHE)));
     self.skipWaiting();
 });
 
@@ -36,7 +31,27 @@ self.addEventListener('fetch', e => {
         return;
     }
 
-    // Images & fonts: cache first (they don't change)
+    // CSS και JS: network always (ώστε οι αλλαγές να φαίνονται αμέσως)
+    if (url.pathname.startsWith('/src/') || url.pathname.startsWith('/js/')) {
+        e.respondWith(fetch(e.request));
+        return;
+    }
+
+    // HTML: network first, fallback cache
+    if (e.request.destination === 'document') {
+        e.respondWith(
+            fetch(e.request)
+                .then(res => {
+                    const clone = res.clone();
+                    caches.open(CACHE_NAME).then(c => c.put(e.request, clone));
+                    return res;
+                })
+                .catch(() => caches.match(e.request))
+        );
+        return;
+    }
+
+    // Εικόνες/fonts: cache first
     if (e.request.destination === 'image' || e.request.destination === 'font') {
         e.respondWith(
             caches.match(e.request).then(cached => cached || fetch(e.request).then(res => {
@@ -48,7 +63,7 @@ self.addEventListener('fetch', e => {
         return;
     }
 
-    // HTML, CSS, JS: network first so updates are immediate
+    // Υπόλοιπα: network first
     e.respondWith(
         fetch(e.request)
             .then(res => {

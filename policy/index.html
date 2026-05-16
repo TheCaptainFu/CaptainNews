@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/output.css?v=2">
+    <link rel="stylesheet" href="/src/main.css?v=2">
+    <title>Πολιτική Απορρήτου | CaptainNews.gr</title>
+    <meta name="description" content="Πολιτική απορρήτου του CaptainNews.gr. Πληροφορίες για cookies, Google Analytics και RSS feeds.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type"        content="website">
+    <meta property="og:url"         content="https://captainnews.gr/policy">
+    <meta property="og:title"       content="Πολιτική Απορρήτου | CaptainNews.gr">
+    <meta property="og:description" content="Πολιτική απορρήτου του CaptainNews.gr. Πληροφορίες για cookies, Google Analytics και RSS feeds.">
+    <meta property="og:image"       content="https://captainnews.gr/icons/og-image.png">
+    <meta property="og:image:width"  content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale"      content="el_GR">
+    <meta property="og:site_name"   content="CaptainNews.gr">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card"        content="summary_large_image">
+    <meta name="twitter:url"         content="https://captainnews.gr/policy">
+    <meta name="twitter:title"       content="Πολιτική Απορρήτου | CaptainNews.gr">
+    <meta name="twitter:description" content="Πολιτική απορρήτου του CaptainNews.gr. Πληροφορίες για cookies, Google Analytics και RSS feeds.">
+    <meta name="twitter:image"       content="https://captainnews.gr/icons/og-image.png">
+
+    <!-- Favicon & PWA -->
+    <link rel="icon" type="image/png" href="/icons/favicon.png">
+    <link rel="apple-touch-icon" href="/icons/pwa.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#3749bd">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="bg-main-black flex flex-col min-h-screen">
+
+    <header class="bg-zinc-900/95 backdrop-blur-xl fixed top-0 w-full z-50 border-b border-zinc-800 h-[70px]">
+        <nav class="gg-container flex items-center justify-between h-full">
+            <div class="logo [&_img]:max-h-[30px] py-[10px]">
+                <a href="/">
+                    <img src="/icons/logo.png" alt="CaptainNews Logo">
+                </a>
+            </div>
+
+            <button id="burger-btn" class="text-white hover:text-[#f2d06f] cursor-pointer focus:outline-none transition-colors p-2 z-[60]">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Overlay -->
+    <div id="menu-overlay" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[55] opacity-0 pointer-events-none transition-opacity duration-300"></div>
+
+    <!-- Slide-in Sidebar -->
+    <div id="sidebar-menu" class="fixed top-0 right-0 h-full w-80 bg-zinc-900 shadow-2xl z-[60] transform translate-x-full transition-transform duration-300 ease-in-out">
+        <div class="flex flex-col h-full">
+            <div class="flex items-center justify-between p-6 border-b border-zinc-800">
+                <h2 class="text-xl font-bold text-white font-condensed">ΜΕΝΟΥ</h2>
+                <button id="close-sidebar" class="text-zinc-400 hover:text-white transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+
+            <nav class="flex-1 px-4 py-6 space-y-2">
+                <a href="/" class="block px-4 py-3 text-white font-condensed font-bold rounded-lg hover:bg-[#3749bd] transition-all">
+                    <i class="fa-solid fa-house mr-3"></i>ΑΡΧΙΚΗ
+                </a>
+                <a href="/contact" class="block px-4 py-3 text-white font-condensed font-bold rounded-lg hover:bg-[#3749bd] transition-all">
+                    <i class="fa-solid fa-envelope mr-3"></i>ΕΠΙΚΟΙΝΩΝΙΑ
+                </a>
+                <a href="/policy" class="block px-4 py-3 text-white font-condensed font-bold rounded-lg hover:bg-[#3749bd] transition-all">
+                    <i class="fa-solid fa-shield-halved mr-3"></i>ΠΟΛΙΤΙΚΗ ΑΠΟΡΡΗΤΟΥ
+                </a>
+            </nav>
+
+            <div class="p-6 border-t border-zinc-800">
+                <p class="text-zinc-500 text-xs font-condensed">⚓ CaptainNews.gr</p>
+                <p class="text-zinc-600 text-xs mt-1">Ειδήσεις σε πραγματικό χρόνο</p>
+            </div>
+        </div>
+    </div>
+
+    <main class="gg-container pt-[90px]">
+        <div class="pb-12 md:pb-20">
+            <div class="title flex items-end gap-4 w-full pb-[5px]">
+                <h1 class="text-[36px] leading-[36px] font-bold text-[#3749bd] font-condensed uppercase whitespace-nowrap">ΠΟΛΙΤΙΚΗ ΑΠΟΡΡΗΤΟΥ</h1>
+                <div class="flex-1 h-[2px] bg-[#3749bd] mb-[6px]"></div>
+            </div>
+            <p class="text-main-yellow mb-[20px] mt-[5px]">Τελευταία ενημέρωση: Ιανουάριος 2026</p>
+
+            <div class="space-y-[20px]">
+                <section class="p-6 bg-[#1a1a1a] rounded-xl border border-zinc-800">
+                    <h2 class="text-xl font-bold text-zinc-100 mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-chart-line text-blue-400"></i>
+                        Google Analytics
+                    </h2>
+                    <p class="text-zinc-400 leading-relaxed mb-4">
+                        Το CaptainNews.gr χρησιμοποιεί το <strong class="text-zinc-300">Google Analytics</strong> (gtag.js) για να κατανοήσει πώς οι επισκέπτες χρησιμοποιούν τον ιστότοπο. Αυτό μας βοηθά να βελτιώσουμε την εμπειρία σας και το περιεχόμενο που προσφέρουμε.
+                    </p>
+                    <h3 class="text-lg font-semibold text-zinc-200 mt-4 mb-2">Τι δεδομένα συλλέγονται</h3>
+                    <ul class="list-disc list-inside text-zinc-400 space-y-2 mb-4">
+                        <li>Πληροφορίες περιήγησης (σελίδες που επισκέπτεστε, χρόνος παραμονής)</li>
+                        <li>Τεχνικά στοιχεία (τύπος προγράμματος περιήγησης, λειτουργικό σύστημα, κατά προσέγγιση τοποθεσία)</li>
+                        <li>Πηγή επισκεπτών (πώς βρήκατε τον ιστότοπο)</li>
+                    </ul>
+                    <p class="text-zinc-400 leading-relaxed mb-4">
+                        Τα δεδομένα επεξεργάζονται από την Google σύμφωνα με την <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline">Πολιτική Απορρήτου της Google</a>. Δεν συλλέγουμε ονόματα, email ή άλλα προσωπικά στοιχεία ταυτοποίησης μέσω του Analytics.
+                    </p>
+                    <p class="text-zinc-400 leading-relaxed">
+                        Μπορείτε να απενεργοποιήσετε τα cookies του Analytics μέσω των ρυθμίσεων του προγράμματος περιήγησής σας ή χρησιμοποιώντας το <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline">Google Analytics Opt-out Browser Add-on</a>.
+                    </p>
+                </section>
+
+                <section class="p-6 bg-[#1a1a1a] rounded-xl border border-zinc-800">
+                    <h2 class="text-xl font-bold text-zinc-100 mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-rss text-[#80b059]"></i>
+                        RSS Feeds και Συγκέντρωση Ειδήσεων
+                    </h2>
+                    <p class="text-zinc-400 leading-relaxed mb-4">
+                        Το CaptainNews.gr <strong class="text-zinc-300">δεν δημιουργεί</strong> τα άρθρα που εμφανίζονται. Χρησιμοποιούμε <strong class="text-zinc-300">RSS Feeds</strong> από τρίτες πηγές για να συγκεντρώνουμε τίτλους, περιλήψεις και συνδέσμους σε πραγματικό χρόνο.
+                    </p>
+                    <h3 class="text-lg font-semibold text-zinc-200 mt-4 mb-2">Τι σημαίνει αυτό για εσάς</h3>
+                    <ul class="list-disc list-inside text-zinc-400 space-y-2 mb-4">
+                        <li>Το κείμενο και οι εικόνες ανήκουν στις αρχικές πηγές. Οι σύνδεσμοι «Διαβάστε περισσότερα» οδηγούν απευθείας στον αρχικό εκδότη.</li>
+                        <li>Δεν αποθηκεύουμε ούτε τροποποιούμε το περιεχόμενο των άρθρων· απλά εμφανίζουμε δείγματα και συνδέσμους.</li>
+                        <li>Οι πηγές έχουν τις δικές τους όροι χρήσης και πολιτικές απορρήτου.</li>
+                    </ul>
+                    <p class="text-zinc-400 leading-relaxed">
+                        Χρησιμοποιώντας το CaptainNews.gr συμφωνείτε ότι η συγκέντρωση ειδήσεων μέσω RSS γίνεται για ενημερωτικούς σκοπούς και ότι η πνευματική ιδιοκτησία παραμένει στους εκδότες κάθε πηγής.
+                    </p>
+                </section>
+
+                <section class="p-6 bg-[#1a1a1a]/50 rounded-xl border border-zinc-800">
+                    <h2 class="text-lg font-bold text-zinc-200 mb-3">Γενικές Δηλώσεις</h2>
+                    <p class="text-zinc-400 leading-relaxed">
+                        Δεν πουλάμε προσωπικά δεδομένα. Οποιαδήποτε αλλαγή σε αυτή την πολιτική θα αναρτάται σε αυτή τη σελίδα. Για ερωτήσεις, μπορείτε να μας <a href="/contact" class="text-blue-400 hover:underline">επικοινωνήσετε</a>.
+                    </p>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="border-t border-zinc-900 mt-12 py-6">
+        <div class="max-w-[1200px] mx-auto px-4 sm:px-6 text-center text-zinc-600 text-sm">
+            <p class="font-semibold text-main-blue mb-2">⚓ CaptainNews.gr</p>
+            <p><a href="/policy" class="text-zinc-400 hover:text-main-yellow">Πολιτική Απορρήτου</a> · <a href="/contact" class="text-zinc-400 hover:text-main-yellow">Επικοινωνία</a></p>
+            <p class="mt-2 text-xs sm:text-sm">📰 Πηγές: Protothema, Newsbeast, Newsit, In.gr, BBC World, ABC Intl, The Hill, In.gr World, Techgear, Techblog, Techmaniacs, IGuru, Mad TV, Tralala</p>
+            <p class="mt-2 text-xs text-zinc-700">Ενημέρωση σε πραγματικό χρόνο μέσω RSS Feeds</p>
+        </div>
+    </footer>
+
+    <script src="/js/main.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js');
+        }
+    </script>
+</body>
+</html>
