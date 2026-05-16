@@ -15,52 +15,36 @@ const parser = new Parser({
 
 const categories = {
     "greece_news": [
-        { name: 'Skai',       url: 'https://www.skai.gr/feed' },
-        { name: 'Ant1',       url: 'https://www.ant1news.gr/feed' },
         { name: 'Protothema', url: 'https://www.protothema.gr/rss/' },
-        { name: 'Thetoc',     url: 'https://www.thetoc.gr/rss' },
         { name: 'Newsbeast',  url: 'https://www.newsbeast.gr/feed' },
-        { name: 'Iefimerida', url: 'https://www.iefimerida.gr/rss.xml' }
+        { name: 'Newsit',     url: 'https://www.newsit.gr/feed/' },
+        { name: 'In.gr',      url: 'https://www.in.gr/feed/' },
     ],
     "politics_greece": [
-        { name: 'Newsit',      url: 'https://www.newsit.gr/category/politikh/feed/' },
-        { name: 'Kathimerini', url: 'https://www.kathimerini.gr/politics/feed/' },
-        { name: 'In.gr',       url: 'https://www.in.gr/politics/feed/' },
-        { name: 'Protothema',  url: 'https://www.protothema.gr/politics/rss/' },
-        { name: 'Thetoc',      url: 'https://www.thetoc.gr/politics/rss' },
-        { name: 'Iefimerida',  url: 'https://www.iefimerida.gr/politics/rss.xml' }
+        { name: 'Protothema', url: 'https://www.protothema.gr/politics/rss/' },
+        { name: 'Newsit',     url: 'https://www.newsit.gr/category/politikh/feed/' },
+        { name: 'In.gr',      url: 'https://www.in.gr/politics/feed/' },
     ],
     "world_politics": [
         { name: 'BBC World',   url: 'https://feeds.bbci.co.uk/news/world/rss.xml' },
         { name: 'ABC Intl',    url: 'https://abcnews.go.com/abcnews/internationalheadlines' },
         { name: 'The Hill',    url: 'https://thehill.com/homenews/feed/' },
-        { name: 'VOA News',    url: 'https://www.voanews.com/api/zmt_qeqpoe' },
-        { name: 'Kathimerini', url: 'https://www.kathimerini.gr/world/feed/' },
-        { name: 'In.gr World', url: 'https://www.in.gr/world/feed/' }
+        { name: 'In.gr World', url: 'https://www.in.gr/world/feed/' },
     ],
     "sports": [
-        { name: 'Gazzetta', url: 'https://www.gazzetta.gr/rss' },
-        { name: 'Sport24',  url: 'https://www.sport24.gr/?widget=rssfeed&view=feed&contentId=12' },
-        { name: 'Contra',   url: 'https://www.contra.gr/?widget=rssfeed&view=feed&contentId=12' },
-        { name: 'SDNA',     url: 'https://www.sdna.gr/rss/all' },
-        { name: 'BBC Sport',url: 'https://feeds.bbci.co.uk/sport/rss.xml' },
-        { name: 'ESPN',     url: 'https://www.espn.com/espn/rss/news' }
+        { name: 'Newsbeast', url: 'https://www.newsbeast.gr/sports/feed' },
+        { name: 'Newsit',    url: 'https://www.newsit.gr/category/athlitika/feed/' },
+        { name: 'In.gr',     url: 'https://www.in.gr/sports/feed/' },
     ],
     "technology": [
-        { name: 'Insomnia',    url: 'https://www.insomnia.gr/rss/news.xml/' },
         { name: 'Techgear',    url: 'https://www.techgear.gr/feed/' },
-        { name: 'Digitallife', url: 'https://www.digitallife.gr/feed/' },
-        { name: 'Pcsteps',     url: 'https://www.pcsteps.gr/feed/' },
-        { name: 'The Verge',   url: 'https://www.theverge.com/rss/index.xml' },
-        { name: 'TechCrunch',  url: 'https://techcrunch.com/feed/' }
+        { name: 'Techblog',    url: 'https://techblog.gr/feed/' },
+        { name: 'Techmaniacs', url: 'https://techmaniacs.gr/feed/' },
+        { name: 'IGuru',       url: 'https://iguru.gr/feed/' },
     ],
     "music": [
-        { name: 'In.gr Music',   url: 'https://www.in.gr/music/feed/' },
-        { name: 'Pitchfork',     url: 'https://pitchfork.com/rss/news/' },
-        { name: 'Rolling Stone', url: 'https://www.rollingstone.com/music/music-news/feed/' },
-        { name: 'Billboard',     url: 'https://www.billboard.com/feed/' },
-        { name: 'Musicfollow',   url: 'https://musicfollow.gr/feed/' },
-        { name: 'Resident Advisor', url: 'https://ra.co/xml/news.xml' }
+        { name: 'Mad TV',  url: 'https://mad.tv/feed/' },
+        { name: 'Tralala', url: 'https://www.tralala.gr/feed/' },
     ]
 };
 

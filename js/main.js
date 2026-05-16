@@ -67,7 +67,7 @@ async function loadNews() {
     if (!mainWrapper) return;
 
     try {
-        const url = IS_LOCAL ? 'news.json?t=' + new Date().getTime() : WORKER_URL;
+        const url = IS_LOCAL ? '/news.json?t=' + new Date().getTime() : WORKER_URL;
         const response = await fetch(url);
         if (!response.ok) throw new Error('Failed to load news');
         
@@ -87,21 +87,22 @@ async function loadNews() {
             categorySection.className = `category-group mb-10`;
             categorySection.setAttribute('data-category', categoryKey);
 
+
             let categoryHTML = `
                 <div class="gg-container ${marginTopClass} section-header">
-                    <div class="title flex items-end gap-4 w-full pb-[5px]">
-                        <h2 class="text-[22px] leading-[22px] md:text-[28px] md:leading-[28px] lg:text-[36px] lg:leading-[36px] font-bold text-[#3749bd] font-condensed uppercase whitespace-nowrap">${readableTitle}</h2>
-                        <div class="flex-1 h-[2px] bg-[#3749bd] mb-[6px]"></div>
-                        <div class="count text-[14px] font-bold text-zinc-500 font-condensed whitespace-nowrap">
-                            ${totalArticles} ΑΡΘΡΑ
+                    <div class="w-full">
+                        <div class="flex items-baseline justify-between pb-[8px]">
+                            <h2 class="text-[22px] leading-[22px] md:text-[28px] md:leading-[28px] lg:text-[36px] lg:leading-[36px] font-bold text-[#4f72ff] font-condensed uppercase">${readableTitle}</h2>
+                            <span class="text-[13px] font-bold text-zinc-500 font-condensed whitespace-nowrap">${totalArticles} ΑΡΘΡΑ</span>
                         </div>
+                        <div class="h-[3px] w-full rounded-full" style="background: linear-gradient(to right, #4f72ff, transparent)"></div>
                     </div>
                 </div>
                 <div class="gg-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[20px] pt-[10px]">
             `;
 
             articles.forEach((article, artIndex) => {
-                const imgUrl = article.image || '/icons/test.avif';
+                const imgUrl = article.image || '/icons/default-image.png';
                 const timeStr = timeAgo(article.date);
                 const sourceHomepage = sourceUrls[article.source] || "#";
                 const isFeatured = artIndex === 0;
@@ -132,7 +133,7 @@ async function loadNews() {
                                      src="${imgUrl}"
                                      alt="${article.title}"
                                      loading="lazy"
-                                     onerror="this.src='/icons/test.avif'">
+                                     onerror="this.src='/icons/default-image.png'">
                             </a>
                         </div>
                         <div class="${infoWrapperClasses}">
