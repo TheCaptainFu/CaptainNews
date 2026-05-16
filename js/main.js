@@ -237,8 +237,9 @@ function setupFilterLogic() {
         });
     });
 
-    // Apply default on load
-    applyFilter('all');
+    // Apply default on load — category pages set data-category on body
+    const defaultCategory = document.body.dataset.category || 'all';
+    applyFilter(defaultCategory);
 }
 
 // --- SIDEBAR MENU LOGIC ---
