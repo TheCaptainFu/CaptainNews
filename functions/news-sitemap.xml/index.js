@@ -28,20 +28,21 @@ export async function onRequest() {
             const pageUrl = categoryPages[category];
             if (!pageUrl || !articles.length) continue;
 
-            for (const article of articles.slice(0, 3)) {
-                const pubDate = article.date ? new Date(article.date).toISOString() : new Date().toISOString();
-                urls += `  <url>
-    <loc>${escapeXml(article.link)}</loc>
+            // Use the category page URL (must be on our domain)
+            // Title = latest article title, date = latest article date
+            const latest = articles[0];
+            const pubDate = latest.date ? new Date(latest.date).toISOString() : new Date().toISOString();
+            urls += `  <url>
+    <loc>${pageUrl}</loc>
     <news:news>
       <news:publication>
         <news:name>CaptainNews.gr</news:name>
         <news:language>el</news:language>
       </news:publication>
       <news:publication_date>${pubDate}</news:publication_date>
-      <news:title>${escapeXml(article.title)}</news:title>
+      <news:title>${escapeXml(latest.title)}</news:title>
     </news:news>
   </url>\n`;
-            }
         }
 
         const xml = `<?xml version="1.0" encoding="UTF-8"?>
