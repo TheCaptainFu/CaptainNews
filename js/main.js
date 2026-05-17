@@ -92,9 +92,16 @@ async function loadNews() {
             categorySection.className = `category-group mb-10`;
             categorySection.setAttribute('data-category', categoryKey);
 
-
             const accent = categoryAccents[categoryKey];
             const accentColor = accent ? accent.color : '#4f72ff';
+
+            if (accent) {
+                const hex = accent.color.replace('#', '');
+                const r = parseInt(hex.slice(0,2),16), g = parseInt(hex.slice(2,4),16), b = parseInt(hex.slice(4,6),16);
+                categorySection.style.background = `linear-gradient(to right, rgba(${r},${g},${b},0.07) 0%, transparent 55%)`;
+                categorySection.style.borderLeft = `3px solid rgba(${r},${g},${b},0.35)`;
+                categorySection.style.paddingLeft = '6px';
+            }
 
             let categoryHTML = `
                 <div class="gg-container ${marginTopClass} section-header">
