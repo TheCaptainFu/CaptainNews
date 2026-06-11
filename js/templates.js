@@ -13,7 +13,15 @@ export function buildSection(categoryKey, articles) {
     section.className = 'category-group mb-10';
     section.setAttribute('data-category', categoryKey);
 
-    if (accent?.sectionBg) {
+    if (accent?.sectionBgImage) {
+        section.style.backgroundImage    = `url('${accent.sectionBgImage}')`;
+        section.style.backgroundSize     = 'cover';
+        section.style.backgroundPosition = 'center';
+        section.style.backgroundRepeat   = 'no-repeat';
+        section.style.borderRadius       = '12px';
+        section.style.padding            = '12px 0 20px';
+        section.style.marginTop          = '32px';
+    } else if (accent?.sectionBg) {
         section.style.backgroundColor = accent.sectionBg;
         section.style.borderRadius    = '12px';
         section.style.padding         = '12px 0 20px';

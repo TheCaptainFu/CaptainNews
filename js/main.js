@@ -1,4 +1,4 @@
-import { WORKER_URL, IS_LOCAL } from './config.js';
+import { WORKER_URL, IS_LOCAL, categoryOrder } from './config.js';
 import { buildSection } from './templates.js';
 
 // ─── News loader ───────────────────────────────────────────────────────────────
@@ -15,8 +15,13 @@ async function loadNews() {
         const data = await response.json();
         mainWrapper.innerHTML = '';
 
-        for (const [categoryKey, articles] of Object.entries(data)) {
-            mainWrapper.appendChild(buildSection(categoryKey, articles));
+        const orderedKeys = [
+            ...categoryOrder.filter(k => k in data),
+            ...Object.keys(data).filter(k => !categoryOrder.includes(k)),
+        ];
+
+        for (const categoryKey of orderedKeys) {
+            mainWrapper.appendChild(buildSection(categoryKey, data[categoryKey]));
         }
 
         setupFilterLogic();

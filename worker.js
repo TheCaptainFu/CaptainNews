@@ -41,10 +41,10 @@ const categories = {
     ],
     "mundial": [
         { name: "BBC Sport",    url: "https://feeds.bbci.co.uk/sport/football/rss.xml" },
+        { name: "The Guardian", url: "https://www.theguardian.com/football/rss" },
         { name: "Sky Football", url: "https://www.skysports.com/rss/12040" },
-        { name: "Gazzetta",     url: "https://www.gazzetta.gr/feed/" },
-        { name: "Sport24",      url: "https://www.sport24.gr/feed/" },
-        { name: "ESPN",         url: "https://www.espn.com/espn/rss/soccer/news" },
+        { name: "Gazzetta",     url: "https://www.gazzetta.gr/rss.xml" },
+        { name: "SDNA",         url: "https://www.sdna.gr/rss/all" },
     ]
 };
 

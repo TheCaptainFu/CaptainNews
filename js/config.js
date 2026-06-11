@@ -4,6 +4,18 @@ export const WORKER_URL            = 'https://captainnews-worker.g-gsmks.workers
 export const IS_LOCAL              = ['localhost', '127.0.0.1'].includes(window.location.hostname);
 export const INITIAL_VISIBLE_COUNT = 7;
 
+// ─── Section display order ─────────────────────────────────────────────────────
+
+export const categoryOrder = [
+    'greece_news',
+    'politics_greece',
+    'world_politics',
+    'sports',
+    'mundial',
+    'technology',
+    'music',
+];
+
 // ─── Category display names ────────────────────────────────────────────────────
 
 export const categoryDisplayNames = {
@@ -22,13 +34,13 @@ export const categoryDisplayNames = {
 // sectionBg : full-section background (hex). Empty string = no background
 
 export const categoryAccents = {
-    greece_news:     { color: '#4f72ff', cardBg: '',        sectionBg: '' },
-    politics_greece: { color: '#ffffff', cardBg: '',        sectionBg: '#3749bd' },
-    world_politics:  { color: '#f97316', cardBg: '' },
-    sports:          { color: '', cardBg: '', sectionBg: '#3749bd' },
-    technology:      { color: '#0ea5e9', cardBg: '' },
-    music:           { color: '#7c3aed', cardBg: '#120d1a' },
-    mundial:         { color: '#f59e0b', cardBg: '#1a1200' },
+    greece_news:     { color: '#4f72ff', cardBg: '',        sectionBg: '',         sectionBgImage: '' },
+    politics_greece: { color: '#ffffff', cardBg: '',        sectionBg: '#3749bd',  sectionBgImage: '' },
+    world_politics:  { color: '#f97316', cardBg: '',        sectionBg: '',         sectionBgImage: '' },
+    sports:          { color: '',        cardBg: '',        sectionBg: '#3749bd',  sectionBgImage: '' },
+    mundial:         { color: '#f59e0b', cardBg: '#1a1200', sectionBg: '',         sectionBgImage: '' },
+    technology:      { color: '#0ea5e9', cardBg: '',        sectionBg: '',         sectionBgImage: '' },
+    music:           { color: '#7c3aed', cardBg: '#120d1a', sectionBg: '',         sectionBgImage: '' },
 };
 
 // ─── Source homepage URLs ──────────────────────────────────────────────────────
