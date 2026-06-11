@@ -5,20 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/src/output.css?v=7">
     <link rel="stylesheet" href="/src/main.css?v=7">
-    <title>Ελλάδα Επικαιρότητα | CaptainNews.gr</title>
-    <meta name="description" content="Τελευταίες ειδήσεις από την Ελλάδα σε πραγματικό χρόνο. Επικαιρότητα, κοινωνία και οικονομία.">
+    <title>Mundial | CaptainNews.gr</title>
+    <meta name="description" content="Τελευταία νέα ποδοσφαίρου από όλο τον κόσμο. Champions League, Premier League, La Liga και διεθνές ποδόσφαιρο σε πραγματικό χρόνο.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://captainnews.gr/greece/">
-    <meta property="og:title" content="Ελλάδα Επικαιρότητα | CaptainNews.gr">
-    <meta property="og:description" content="Τελευταίες ειδήσεις από την Ελλάδα σε πραγματικό χρόνο.">
+    <meta property="og:url" content="https://captainnews.gr/mundial/">
+    <meta property="og:title" content="Mundial | CaptainNews.gr">
+    <meta property="og:description" content="Τελευταία νέα ποδοσφαίρου από όλο τον κόσμο.">
     <meta property="og:image" content="https://captainnews.gr/icons/og-image.png">
     <meta property="og:locale" content="el_GR">
     <meta property="og:site_name" content="CaptainNews.gr">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Ελλάδα Επικαιρότητα | CaptainNews.gr">
+    <meta name="twitter:title" content="Mundial | CaptainNews.gr">
     <meta name="twitter:image" content="https://captainnews.gr/icons/og-image.png">
-    <link rel="canonical" href="https://captainnews.gr/greece/">
-    <link rel="alternate" hreflang="el" href="https://captainnews.gr/greece/">
+    <link rel="canonical" href="https://captainnews.gr/mundial/">
+    <link rel="alternate" hreflang="el" href="https://captainnews.gr/mundial/">
     <link rel="alternate" hreflang="x-default" href="https://captainnews.gr/">
     <link rel="sitemap" type="application/xml" href="/sitemap.xml">
     <link rel="icon" type="image/png" href="/icons/favicon.png">
@@ -43,46 +43,30 @@
   "@graph": [
     {
       "@type": "CollectionPage",
-      "name": "Ελλάδα Επικαιρότητα | CaptainNews.gr",
-      "url": "https://captainnews.gr/greece/",
+      "name": "Mundial | CaptainNews.gr",
+      "url": "https://captainnews.gr/mundial/",
       "inLanguage": "el-GR",
-      "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://captainnews.gr/"
-      }
+      "isPartOf": { "@type": "WebSite", "url": "https://captainnews.gr/" }
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Αρχική",
-          "item": "https://captainnews.gr/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Ελλάδα Επικαιρότητα",
-          "item": "https://captainnews.gr/greece/"
-        }
+        { "@type": "ListItem", "position": 1, "name": "Αρχική", "item": "https://captainnews.gr/" },
+        { "@type": "ListItem", "position": 2, "name": "Mundial", "item": "https://captainnews.gr/mundial/" }
       ]
     }
   ]
 }
     </script>
 </head>
-<body class="bg-main-black flex flex-col min-h-screen" data-category="greece_news">
-
+<body class="bg-main-black flex flex-col min-h-screen" data-category="mundial">
     <header id="main-header" class="bg-zinc-900/95 backdrop-blur-xl fixed top-[38px] w-full z-50 border-b border-zinc-800 h-[70px]">
         <nav class="gg-container flex items-center justify-between h-full">
             <div class="logo [&_img]:max-h-[30px] py-[10px]">
                 <a href="/"><img src="/icons/logo.png" alt="CaptainNews Logo"></a>
             </div>
             <button id="burger-btn" class="text-white hover:text-[#f2d06f] cursor-pointer focus:outline-none transition-colors p-2 z-[60]">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
             </button>
         </nav>
     </header>
@@ -96,68 +80,55 @@
             </div>
         </div>
     </div>
-
     <div id="menu-overlay" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[55] opacity-0 pointer-events-none transition-opacity duration-300"></div>
-
     <div id="sidebar-menu" class="fixed top-0 right-0 h-full w-80 bg-zinc-900 shadow-2xl z-[60] transform translate-x-full transition-transform duration-300 ease-in-out">
         <div class="flex flex-col h-full">
             <div class="flex items-center justify-between p-6 border-b border-zinc-800">
                 <h2 class="text-xl font-bold text-white font-condensed">ΜΕΝΟΥ</h2>
                 <button id="close-sidebar" class="text-zinc-400 hover:text-white transition-colors">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
                 </a>
             </div>
             <nav class="flex-1 px-4 py-6 space-y-2 overflow-y-auto">
                 <a href="/" class="block px-4 py-3 text-white font-condensed font-bold rounded-lg hover:bg-[#3749bd] transition-all"><i class="fa-solid fa-house mr-3"></i>ΑΡΧΙΚΗ</a>
                 <p class="px-4 pt-3 pb-1 text-zinc-600 text-xs font-condensed font-bold uppercase tracking-widest">Κατηγορίες</p>
-                <a href="/greece/" class="block px-4 py-3 text-white font-condensed font-bold rounded-lg bg-[#3749bd] transition-all"><i class="fa-solid fa-flag mr-3"></i>ΕΛΛΑΔΑ</a>
+                <a href="/greece/" class="block px-4 py-3 text-white font-condensed font-bold rounded-lg hover:bg-[#3749bd] transition-all"><i class="fa-solid fa-flag mr-3"></i>ΕΛΛΑΔΑ</a>
                 <a href="/politics/" class="block px-4 py-3 text-white font-condensed font-bold rounded-lg hover:bg-[#3749bd] transition-all"><i class="fa-solid fa-landmark mr-3"></i>ΠΟΛΙΤΙΚΑ</a>
                 <a href="/world/" class="block px-4 py-3 text-white font-condensed font-bold rounded-lg hover:bg-[#3749bd] transition-all"><i class="fa-solid fa-earth-europe mr-3"></i>ΠΑΓΚΟΣΜΙΑ</a>
                 <a href="/sports/" class="block px-4 py-3 text-white font-condensed font-bold rounded-lg hover:bg-[#3749bd] transition-all"><i class="fa-solid fa-futbol mr-3"></i>ΑΘΛΗΤΙΚΑ</a>
-                <a href="/mundial/" class="block px-4 py-3 text-white font-condensed font-bold rounded-lg hover:bg-[#3749bd] transition-all"><i class="fa-solid fa-trophy mr-3"></i>MUNDIAL</a>
+                <a href="/mundial/" class="block px-4 py-3 text-white font-condensed font-bold rounded-lg bg-[#3749bd] transition-all"><i class="fa-solid fa-trophy mr-3"></i>MUNDIAL</a>
                 <a href="/technology/" class="block px-4 py-3 text-white font-condensed font-bold rounded-lg hover:bg-[#3749bd] transition-all"><i class="fa-solid fa-microchip mr-3"></i>ΤΕΧΝΟΛΟΓΙΑ</a>
                 <a href="/music/" class="block px-4 py-3 text-white font-condensed font-bold rounded-lg hover:bg-[#3749bd] transition-all"><i class="fa-solid fa-music mr-3"></i>ΜΟΥΣΙΚΗ</a>
                 <p class="px-4 pt-3 pb-1 text-zinc-600 text-xs font-condensed font-bold uppercase tracking-widest">Άλλα</p>
                 <a href="/contact" class="block px-4 py-3 text-white font-condensed font-bold rounded-lg hover:bg-[#3749bd] transition-all"><i class="fa-solid fa-envelope mr-3"></i>ΕΠΙΚΟΙΝΩΝΙΑ</a>
                 <a href="/policy" class="block px-4 py-3 text-white font-condensed font-bold rounded-lg hover:bg-[#3749bd] transition-all"><i class="fa-solid fa-shield-halved mr-3"></i>ΠΟΛΙΤΙΚΗ ΑΠΟΡΡΗΤΟΥ</a>
             </nav>
-            <div class="p-6 border-t border-zinc-800">
-                <p class="text-zinc-500 text-xs font-condensed">⚓ CaptainNews.gr</p>
-                <p class="text-zinc-600 text-xs mt-1">Ειδήσεις σε πραγματικό χρόνο</p>
-            </div>
+            <div class="p-6 border-t border-zinc-800"><p class="text-zinc-500 text-xs font-condensed">⚓ CaptainNews.gr</p></div>
         </div>
     </div>
-
     <div id="category-bar" class="fixed top-[108px] w-full bg-[#111] z-40 border-b border-zinc-800 shadow-md h-[50px] flex items-center overflow-hidden">
         <div class="gg-container w-full overflow-x-auto" style="scrollbar-width:none; -ms-overflow-style:none;">
             <div id="category-filter" class="flex items-center gap-2 w-max min-w-full px-0">
                 <a href="/" data-category="all" class="filter-pill font-condensed font-bold text-xs px-4 py-1.5 rounded-full border transition-all duration-200 whitespace-nowrap cursor-pointer">ΟΛΕΣ ΟΙ ΚΑΤΗΓΟΡΙΕΣ</a>
-                <a href="/greece/" data-category="greece_news" class="filter-pill active font-condensed font-bold text-xs px-4 py-1.5 rounded-full border transition-all duration-200 whitespace-nowrap cursor-pointer">ΕΛΛΑΔΑ ΕΠΙΚΑΙΡΟΤΗΤΑ</a>
+                <a href="/greece/" data-category="greece_news" class="filter-pill font-condensed font-bold text-xs px-4 py-1.5 rounded-full border transition-all duration-200 whitespace-nowrap cursor-pointer">ΕΛΛΑΔΑ ΕΠΙΚΑΙΡΟΤΗΤΑ</a>
                 <a href="/politics/" data-category="politics_greece" class="filter-pill font-condensed font-bold text-xs px-4 py-1.5 rounded-full border transition-all duration-200 whitespace-nowrap cursor-pointer">ΠΟΛΙΤΙΚΑ ΕΛΛΑΔΑ</a>
                 <a href="/world/" data-category="world_politics" class="filter-pill font-condensed font-bold text-xs px-4 py-1.5 rounded-full border transition-all duration-200 whitespace-nowrap cursor-pointer">ΠΑΓΚΟΣΜΙΑ ΠΟΛΙΤΙΚΗ</a>
                 <a href="/sports/" data-category="sports" class="filter-pill font-condensed font-bold text-xs px-4 py-1.5 rounded-full border transition-all duration-200 whitespace-nowrap cursor-pointer">ΑΘΛΗΤΙΚΑ</a>
-                <a href="/mundial/" data-category="mundial" class="filter-pill font-condensed font-bold text-xs px-4 py-1.5 rounded-full border transition-all duration-200 whitespace-nowrap cursor-pointer">MUNDIAL</a>
+                <a href="/mundial/" data-category="mundial" class="filter-pill active font-condensed font-bold text-xs px-4 py-1.5 rounded-full border transition-all duration-200 whitespace-nowrap cursor-pointer">MUNDIAL</a>
                 <a href="/technology/" data-category="technology" class="filter-pill font-condensed font-bold text-xs px-4 py-1.5 rounded-full border transition-all duration-200 whitespace-nowrap cursor-pointer">ΤΕΧΝΟΛΟΓΙΑ</a>
                 <a href="/music/" data-category="music" class="filter-pill font-condensed font-bold text-xs px-4 py-1.5 rounded-full border transition-all duration-200 whitespace-nowrap cursor-pointer">ΜΟΥΣΙΚΗ</a>
             </div>
         </div>
     </div>
-
     <main id="main-content-wrapper" class="pt-[178px] pb-20 flex-grow min-h-[60vh]">
         <div class="gg-container text-white font-condensed pt-10 text-center animate-pulse">Φόρτωση ειδήσεων...</div>
     </main>
-
     <footer class="border-t border-zinc-900 mt-12 py-6">
         <div class="max-w-[1200px] mx-auto px-4 sm:px-6 text-center text-zinc-600 text-sm">
             <p class="font-semibold text-main-blue mb-2">⚓ CaptainNews.gr</p>
             <p><a href="/policy" class="text-zinc-400 hover:text-main-yellow">Πολιτική Απορρήτου</a> · <a href="/contact" class="text-zinc-400 hover:text-main-yellow">Επικοινωνία</a></p>
-            <p class="mt-2 text-xs sm:text-sm">📰 Πηγές: Protothema, Newsbeast, Newsit, In.gr, BBC World, ABC Intl, The Hill, In.gr World, Techgear, Techblog, Techmaniacs, IGuru, Mad TV, Tralala</p>
-            <p class="mt-2 text-xs text-zinc-700">Ενημέρωση σε πραγματικό χρόνο μέσω RSS Feeds</p>
         </div>
     </footer>
-
     <script type="module" src="/js/main.js?v=17"></script>
     <script>if ('serviceWorker' in navigator) navigator.serviceWorker.register('/sw.js');</script>
     <script defer src="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v2.9.2/dist/cookieconsent.js"></script>
