@@ -29,18 +29,87 @@ export const categoryDisplayNames = {
 };
 
 // ─── Per-category visual theme ─────────────────────────────────────────────────
-// color     : accent color for heading, gradient line, source link, read-more
-// cardBg    : card background (hex). Empty string = default dark grey
-// sectionBg : full-section background (hex). Empty string = no background
+// color          : accent color for heading, gradient line, source link, read-more
+// cardBg         : card background (hex/rgba). Empty = default dark grey
+// sectionBg      : full-section solid background. Empty = none
+// sectionBgImage : full-section background image URL. Empty = none
+// featuredReverse: true = image δεξιά στο featured άρθρο
+// isNew          : true = εμφανίζει "NEW" badge στον τίτλο και το pill
+// sectionLayout  : 'default' | 'magazine' | 'list' | 'bigrid'
+//   default  → 1 featured full-width + grid 3 στήλες
+//   magazine → 1 μεγάλο αριστερά + στοίβα μικρών δεξιά
+//   list     → οριζόντιες γραμμές με μικρή εικόνα (compact)
+//   bigrid   → grid 2 στήλες ίδιου μεγέθους, χωρίς featured
 
 export const categoryAccents = {
-    greece_news:     { color: '#4f72ff', cardBg: '',sectionBg: '',        sectionBgImage: '', featuredReverse: false },
-    politics_greece: { color: '#ffffff', cardBg: '',sectionBg: '#3749bd', sectionBgImage: '', featuredReverse: true  },
-    world_politics:  { color: '#4f72ff', cardBg: '',sectionBg: '',        sectionBgImage: '', featuredReverse: false },
-    sports:          { color: '#4f72ff',cardBg: '',sectionBg: '', sectionBgImage: '', featuredReverse: false },
-    mundial:         { color: '#ffffff', cardBg: 'rgba(26,18,0,0.82)', sectionBg: '',        sectionBgImage: '/icons/mundial-bg.webp', featuredReverse: true, isNew: true },
-    technology:      { color: '#4f72ff', cardBg: '',sectionBg: '',        sectionBgImage: '', featuredReverse: false },
-    music:           { color: '#4f72ff', cardBg: '#120d1a', sectionBg: '',        sectionBgImage: '', featuredReverse: false },
+    greece_news: { 
+        color: '#3749bd', 
+        cardBg: '',                    
+        sectionBg: '', 
+        sectionBgImage: '',                      
+        featuredReverse: false, 
+        isNew: false, 
+        sectionLayout: 'default'  
+    },
+
+    politics_greece: { 
+        color: '#ffffff', cardBg: '',                    
+        sectionBg: '#3749bd', 
+        sectionBgImage: '',                      
+        featuredReverse: true,  
+        isNew: false, 
+        sectionLayout: 'magazine'  
+    },
+
+    world_politics:  { 
+        color: '#4f72ff', 
+        cardBg: 'transparent',                    
+        sectionBg: '', 
+        sectionBgImage: '',                      
+        featuredReverse: false, 
+        isNew: false, 
+        sectionLayout: 'default'  
+    },
+
+    sports: {
+        color: '#ffffff', 
+        cardBg: 'transparent',                    
+        sectionBg: '#004d40 ', 
+        sectionBgImage: '',                      
+        featuredReverse: false, 
+        isNew: false, 
+        sectionLayout: 'default'  
+    },
+
+    mundial: {
+        color: '#ffffff',
+        cardBg: 'rgba(26,18,0,0.82)', 
+        sectionBg: '',        
+        sectionBgImage: '/icons/mundial-bg.webp', 
+        featuredReverse: true,  
+        isNew: true,  
+        sectionLayout: 'default'  
+    },
+
+    technology: { 
+        color: '#4f72ff', 
+        cardBg: '',                    
+        sectionBg: '', 
+        sectionBgImage: '',                      
+        featuredReverse: false, 
+        isNew: false, 
+        sectionLayout: 'default'  
+    },
+
+    music: { 
+        color: '#6100e9', 
+        cardBg: '',             
+        sectionBg: '#83b1ff', 
+        sectionBgImage: '',                      
+        featuredReverse: false, 
+        isNew: false, 
+        sectionLayout: 'default'  
+    },
 };
 
 // ─── Source homepage URLs ──────────────────────────────────────────────────────
