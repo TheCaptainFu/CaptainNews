@@ -1,5 +1,5 @@
-import { categoryDisplayNames, categoryAccents, sourceUrls, INITIAL_VISIBLE_COUNT } from './config.js';
-import { stripHtml, timeAgo } from './utils.js';
+import { categoryDisplayNames, categoryAccents, sourceUrls, INITIAL_VISIBLE_COUNT } from './config.js?v=18';
+import { stripHtml, timeAgo } from './utils.js?v=18';
 
 // ─── Public: builds a complete <section> DOM element for one category ──────────
 
