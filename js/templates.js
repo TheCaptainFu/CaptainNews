@@ -29,7 +29,7 @@ export function buildSection(categoryKey, articles) {
     }
 
     section.innerHTML =
-        sectionHeader(title, articles.length, accentColor) +
+        sectionHeader(title, articles.length, accentColor, accent) +
         `<div class="gg-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[20px] pt-[10px]">` +
         articles.map((article, i) => card(article, i, categoryKey, accent, accentColor)).join('') +
         `</div>` +
@@ -40,14 +40,20 @@ export function buildSection(categoryKey, articles) {
 
 // ─── Section heading + gradient line ──────────────────────────────────────────
 
-function sectionHeader(title, count, accentColor) {
+function sectionHeader(title, count, accentColor, accent) {
+    const newBadge = accent?.isNew
+        ? `<span class="shrink-0 self-center ml-1 bg-[#f59e0b] text-black text-[10px] font-bold px-2 py-[3px] rounded-full uppercase tracking-widest animate-pulse">NEW</span>`
+        : '';
     return `
         <div class="gg-container mt-[20px] section-header">
             <div class="w-full">
                 <div class="flex items-end gap-[20px] pb-[8px]">
-                    <h2 class="shrink-0 whitespace-nowrap text-[22px] leading-[22px] md:text-[28px] md:leading-[28px] lg:text-[36px] lg:leading-[36px] font-bold font-condensed uppercase"
-                        style="color:${accentColor}">${title}</h2>
-                    <div class="h-[3px] flex-1 rounded-full"
+                    <div class="shrink-0 flex items-center gap-2">
+                        <h2 class="whitespace-nowrap font-bold font-condensed uppercase text-[22px] leading-[24px] min-[420px]:text-[26px] min-[420px]:leading-[28px] min-[767px]:text-[36px] min-[767px]:leading-[38px] min-[1024px]:text-[44px] min-[1024px]:leading-[46px] min-[1420px]:text-[52px] min-[1420px]:leading-[54px]"
+                            style="color:${accentColor}">${title}</h2>
+                        ${newBadge}
+                    </div>
+                    <div class="h-[3px] flex-1 rounded-full mb-[5px]"
                          style="background: linear-gradient(to right, ${accentColor}, transparent)"></div>
                     <span class="shrink-0 whitespace-nowrap text-[13px] font-bold font-condensed"
                           style="color:${accentColor}88">${count} ΑΡΘΡΑ</span>
@@ -70,8 +76,9 @@ function card(article, artIndex, categoryKey, accent, accentColor) {
         ? ''
         : 'hover:border-[#3749bd] hover:shadow-[0_0_20px_rgba(55,73,189,0.3)]';
 
+    const featuredDirection = isFeatured && accent?.featuredReverse ? 'md:flex-row-reverse' : 'md:flex-row';
     const wrapperClasses = isFeatured
-        ? `col-span-1 md:col-span-2 lg:col-span-3 flex flex-col md:flex-row group border border-transparent transition-all duration-300 ${baseHover} ${hiddenClass}`
+        ? `col-span-1 md:col-span-2 lg:col-span-3 flex flex-col ${featuredDirection} group border border-transparent transition-all duration-300 ${baseHover} ${hiddenClass}`
         : `flex flex-col group border border-transparent transition-all duration-300 ${baseHover} ${hiddenClass}`;
 
     const imageWrapperClasses = isFeatured

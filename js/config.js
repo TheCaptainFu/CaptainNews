@@ -34,13 +34,13 @@ export const categoryDisplayNames = {
 // sectionBg : full-section background (hex). Empty string = no background
 
 export const categoryAccents = {
-    greece_news:     { color: '#4f72ff', cardBg: '',        sectionBg: '',         sectionBgImage: '' },
-    politics_greece: { color: '#ffffff', cardBg: '',        sectionBg: '#3749bd',  sectionBgImage: '' },
-    world_politics:  { color: '#f97316', cardBg: '',        sectionBg: '',         sectionBgImage: '' },
-    sports:          { color: '',        cardBg: '',        sectionBg: '#3749bd',  sectionBgImage: '' },
-    mundial:         { color: '#f59e0b', cardBg: '#1a1200', sectionBg: '',         sectionBgImage: '' },
-    technology:      { color: '#0ea5e9', cardBg: '',        sectionBg: '',         sectionBgImage: '' },
-    music:           { color: '#7c3aed', cardBg: '#120d1a', sectionBg: '',         sectionBgImage: '' },
+    greece_news:     { color: '#4f72ff', cardBg: '',sectionBg: '',        sectionBgImage: '', featuredReverse: false },
+    politics_greece: { color: '#ffffff', cardBg: '',sectionBg: '#3749bd', sectionBgImage: '', featuredReverse: true  },
+    world_politics:  { color: '#4f72ff', cardBg: '',sectionBg: '',        sectionBgImage: '', featuredReverse: false },
+    sports:          { color: '#4f72ff',cardBg: '',sectionBg: '', sectionBgImage: '', featuredReverse: false },
+    mundial:         { color: '#ffffff', cardBg: 'rgba(26,18,0,0.82)', sectionBg: '',        sectionBgImage: '/icons/mundial-bg.webp', featuredReverse: true, isNew: true },
+    technology:      { color: '#4f72ff', cardBg: '',sectionBg: '',        sectionBgImage: '', featuredReverse: false },
+    music:           { color: '#4f72ff', cardBg: '#120d1a', sectionBg: '',        sectionBgImage: '', featuredReverse: false },
 };
 
 // ─── Source homepage URLs ──────────────────────────────────────────────────────
