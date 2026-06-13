@@ -1,5 +1,7 @@
-import { WORKER_URL, IS_LOCAL, categoryOrder } from './config.js?v=20';
-import { buildSection } from './templates.js?v=20';
+﻿// ─── Imports ───────────────────────────────────────────────────────────────────
+
+import { WORKER_URL, IS_LOCAL, categoryOrder } from './config.js?v=21';
+import { buildSection } from './templates.js?v=21';
 
 // ─── News loader ───────────────────────────────────────────────────────────────
 

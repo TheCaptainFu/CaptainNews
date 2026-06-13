@@ -1,7 +1,9 @@
-import { categoryDisplayNames, categoryAccents, sourceUrls, INITIAL_VISIBLE_COUNT } from './config.js?v=20';
-import { stripHtml, timeAgo } from './utils.js?v=18';
+﻿// ─── Imports ───────────────────────────────────────────────────────────────────
 
-// ─── Public: builds a complete <section> DOM element for one category ──────────
+import { categoryDisplayNames, categoryAccents, sourceUrls, INITIAL_VISIBLE_COUNT } from './config.js?v=21';
+import { stripHtml, timeAgo } from './utils.js?v=21';
+
+// ─── Public API ────────────────────────────────────────────────────────────────
 
 export function buildSection(categoryKey, articles) {
     const accent      = categoryAccents[categoryKey];
@@ -35,8 +37,6 @@ export function buildSection(categoryKey, articles) {
 
     switch (layout) {
         case 'magazine': body = magazineLayout(articles, categoryKey, accent, accentColor); break;
-        case 'list':     body = listLayout(articles, categoryKey, accent, accentColor);     break;
-        case 'bigrid':   body = bigridLayout(articles, categoryKey, accent, accentColor);   break;
         default:         body = defaultLayout(articles, categoryKey, accent, accentColor);
     }
 
@@ -47,7 +47,7 @@ export function buildSection(categoryKey, articles) {
     return section;
 }
 
-// ─── Section heading + gradient line ──────────────────────────────────────────
+// ─── Section header ────────────────────────────────────────────────────────────
 
 function sectionHeader(title, count, accentColor, accent) {
     const newBadge = accent?.isNew
@@ -71,7 +71,7 @@ function sectionHeader(title, count, accentColor, accent) {
         </div>`;
 }
 
-// ─── Layout: default (1 featured full-width + 3-column grid) ──────────────────
+// ─── Layout: default ───────────────────────────────────────────────────────────
 
 function defaultLayout(articles, categoryKey, accent, accentColor) {
     return `<div class="gg-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[20px] pt-[10px]">` +
@@ -79,7 +79,7 @@ function defaultLayout(articles, categoryKey, accent, accentColor) {
         `</div>`;
 }
 
-// ─── Layout: magazine (col-span-2 featured | col-span-1 list-5 / then 3 below) ──
+// ─── Layout: magazine ──────────────────────────────────────────────────────────
 
 function magazineLayout(articles, categoryKey, accent, accentColor) {
     if (!articles.length) return '';
@@ -104,10 +104,13 @@ function magazineLayout(articles, categoryKey, accent, accentColor) {
           `</div>`
         : '';
 
+    const featuredDiv = `<div class="flex flex-col">${magazineFeatured(articles[0], 0, categoryKey, accent, accentColor)}</div>`;
+    const sideDiv     = `<div class="flex flex-col gap-[20px] h-full">${sideHtml}</div>`;
+    const topRow      = accent?.featuredReverse ? sideDiv + featuredDiv : featuredDiv + sideDiv;
+
     return `
         <div class="gg-container grid grid-cols-1 md:grid-cols-2 grid-rows-1 mb-[20px] gap-[20px] pt-[10px] md:items-stretch">
-            <div class="flex flex-col">${magazineFeatured(articles[0], 0, categoryKey, accent, accentColor)}</div>
-            <div class="flex flex-col gap-[20px] h-full">${sideHtml}</div>
+            ${topRow}
         </div>
         ${belowHtml}
         ${restHtml}`;
@@ -143,41 +146,6 @@ function magazineSideCard(article, artIndex, categoryKey, accent, accentColor) {
                        style="color:${accentColor}">${article.source}</a>
                     <span class="text-zinc-600 text-[11px]">·</span>
                     <span class="text-[11px] text-zinc-400 font-condensed shrink-0">${timeStr}</span>
-                </div>
-            </div>
-        </div>`;
-}
-
-function magazineSideRow(article, artIndex, categoryKey, accent, accentColor) {
-    const imgUrl      = article.image || '/icons/default-image.png';
-    const timeStr     = timeAgo(article.date);
-    const sourceUrl   = sourceUrls[article.source] || '#';
-    const isHidden    = artIndex >= INITIAL_VISIBLE_COUNT;
-    const hiddenClass = isHidden ? `hidden hidden-item-${categoryKey}` : '';
-    const cardBg      = accent?.cardBg || '';
-    const cardBgClass = cardBg ? '' : 'bg-main-grey';
-    const styleAttr   = cardBg ? `style="background-color:${cardBg}"` : '';
-
-    return `
-        <div class="item ${cardBgClass} rounded-[10px] overflow-hidden flex flex-row group h-[84px] ${hiddenClass}" ${styleAttr}>
-            <div class="w-[90px] shrink-0 overflow-hidden">
-                <a href="${article.link}" target="_blank" rel="noopener noreferrer" class="block w-full h-full">
-                    <img class="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
-                         src="${imgUrl}" alt="${article.title}" loading="lazy"
-                         onerror="this.src='/icons/default-image.png'">
-                </a>
-            </div>
-            <div class="flex flex-col justify-between flex-1 px-[10px] py-[8px] min-w-0">
-                <div class="text-[12px] leading-[16px] text-white font-bold font-condensed line-clamp-2">
-                    <a href="${article.link}" target="_blank" rel="noopener noreferrer"
-                       class="hover:text-[#f2d06f] transition-colors duration-300">${article.title}</a>
-                </div>
-                <div class="flex items-center gap-[6px]">
-                    <a href="${sourceUrl}" target="_blank" rel="noopener noreferrer"
-                       class="text-[10px] font-condensed font-bold hover:underline shrink-0"
-                       style="color:${accentColor}">${article.source}</a>
-                    <span class="text-zinc-600 text-[10px]">·</span>
-                    <span class="text-[10px] text-zinc-400 font-condensed shrink-0">${timeStr}</span>
                 </div>
             </div>
         </div>`;
@@ -223,104 +191,8 @@ function magazineFeatured(article, artIndex, categoryKey, accent, accentColor) {
         </div>`;
 }
 
-// ─── Layout: list (compact horizontal rows) ────────────────────────────────────
 
-function listLayout(articles, categoryKey, accent, accentColor) {
-    return `<div class="gg-container flex flex-col gap-[6px] pt-[10px]">` +
-        articles.map((a, i) => listRow(a, i, categoryKey, accent, accentColor)).join('') +
-        `</div>`;
-}
-
-function listRow(article, artIndex, categoryKey, accent, accentColor, height = '84px') {
-    const imgUrl      = article.image || '/icons/default-image.png';
-    const timeStr     = timeAgo(article.date);
-    const sourceUrl   = sourceUrls[article.source] || '#';
-    const isHidden    = artIndex >= INITIAL_VISIBLE_COUNT;
-    const hiddenClass = isHidden ? `hidden hidden-item-${categoryKey}` : '';
-    const cardBg      = accent?.cardBg || '';
-    const cardBgClass = cardBg ? '' : 'bg-main-grey';
-    const bgPart      = cardBg ? `;background-color:${cardBg}` : '';
-    const styleAttr   = `style="height:${height}${bgPart}"`;
-
-    return `
-        <div class="item ${cardBgClass} rounded-[10px] overflow-hidden flex flex-row group ${hiddenClass}" ${styleAttr}>
-            <div class="w-[120px] min-[420px]:w-[140px] shrink-0 overflow-hidden">
-                <a href="${article.link}" target="_blank" rel="noopener noreferrer" class="block w-full h-full">
-                    <img class="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
-                         src="${imgUrl}" alt="${article.title}" loading="lazy"
-                         onerror="this.src='/icons/default-image.png'">
-                </a>
-            </div>
-            <div class="flex flex-col justify-between flex-1 px-[14px] py-[10px] min-w-0">
-                <div class="text-[13px] min-[420px]:text-[14px] leading-[18px] text-white font-bold font-condensed line-clamp-2">
-                    <a href="${article.link}" target="_blank" rel="noopener noreferrer"
-                       class="hover:text-[#f2d06f] transition-colors duration-300">${article.title}</a>
-                </div>
-                <div class="flex items-center gap-[8px]">
-                    <a href="${sourceUrl}" target="_blank" rel="noopener noreferrer"
-                       class="text-[11px] font-condensed font-bold hover:underline shrink-0"
-                       style="color:${accentColor}">${article.source}</a>
-                    <span class="text-zinc-600 text-[11px]">·</span>
-                    <span class="text-[11px] text-zinc-400 font-condensed shrink-0">${timeStr}</span>
-                </div>
-            </div>
-        </div>`;
-}
-
-// ─── Layout: bigrid (equal 2-column grid, no featured) ────────────────────────
-
-function bigridLayout(articles, categoryKey, accent, accentColor) {
-    return `<div class="gg-container grid grid-cols-1 sm:grid-cols-2 gap-[20px] pt-[10px]">` +
-        articles.map((a, i) => bigridCard(a, i, categoryKey, accent, accentColor)).join('') +
-        `</div>`;
-}
-
-function bigridCard(article, artIndex, categoryKey, accent, accentColor) {
-    const imgUrl      = article.image || '/icons/default-image.png';
-    const timeStr     = timeAgo(article.date);
-    const sourceUrl   = sourceUrls[article.source] || '#';
-    const isHidden    = artIndex >= INITIAL_VISIBLE_COUNT;
-    const hiddenClass = isHidden ? `hidden hidden-item-${categoryKey}` : '';
-    const cardBg      = accent?.cardBg || '';
-    const cardBgClass = cardBg ? '' : 'bg-main-grey';
-    const styleAttr   = cardBg ? `style="background-color:${cardBg}"` : '';
-    const description = article.description
-        ? stripHtml(article.description).substring(0, 120) + '...'
-        : 'Διαβάστε περισσότερα για το θέμα στην πηγή.';
-
-    return `
-        <div class="item ${cardBgClass} rounded-[12px] overflow-hidden flex flex-col group ${hiddenClass}" ${styleAttr}>
-            <div class="w-full aspect-[1.7] overflow-hidden">
-                <a href="${article.link}" target="_blank" rel="noopener noreferrer" class="block w-full h-full">
-                    <img class="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
-                         src="${imgUrl}" alt="${article.title}" loading="lazy"
-                         onerror="this.src='/icons/default-image.png'">
-                </a>
-            </div>
-            <div class="p-[20px] flex flex-col flex-grow">
-                <div class="text-[16px] leading-[20px] text-white font-bold font-condensed pb-[10px] min-h-[50px]">
-                    <a href="${article.link}" target="_blank" rel="noopener noreferrer"
-                       class="hover:text-[#f2d06f] transition-colors duration-300">${article.title}</a>
-                </div>
-                <div class="text-[14px] leading-[20px] text-white font-normal font-roboto pb-[16px] opacity-80 flex-grow">
-                    ${description}
-                </div>
-                <div class="flex items-center justify-between pt-[14px] border-t border-zinc-800">
-                    <a href="${sourceUrl}" target="_blank" rel="noopener noreferrer"
-                       class="text-[13px] font-condensed font-bold hover:underline"
-                       style="color:${accentColor}">${article.source}</a>
-                    <div class="flex items-center gap-3">
-                        <span class="text-[12px] text-zinc-400 font-condensed">${timeStr}</span>
-                        <a href="${article.link}" target="_blank" rel="noopener noreferrer"
-                           class="text-[12px] font-bold font-condensed hover:text-[#f2d06f] transition-all"
-                           style="color:${accentColor}">Διαβάστε -></a>
-                    </div>
-                </div>
-            </div>
-        </div>`;
-}
-
-// ─── Single article card (used by default + magazine remaining) ────────────────
+// ─── Card ──────────────────────────────────────────────────────────────────────
 
 function card(article, artIndex, categoryKey, accent, accentColor) {
     const imgUrl     = article.image || '/icons/default-image.png';
@@ -399,7 +271,7 @@ function card(article, artIndex, categoryKey, accent, accentColor) {
         </div>`;
 }
 
-// ─── "Show all" button ─────────────────────────────────────────────────────────
+// ─── Load more button ──────────────────────────────────────────────────────────
 
 function loadMoreBtn(categoryKey, totalArticles) {
     if (totalArticles <= INITIAL_VISIBLE_COUNT) return '';

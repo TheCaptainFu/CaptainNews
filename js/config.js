@@ -35,11 +35,9 @@ export const categoryDisplayNames = {
 // sectionBgImage : full-section background image URL. Empty = none
 // featuredReverse: true = image δεξιά στο featured άρθρο
 // isNew          : true = εμφανίζει "NEW" badge στον τίτλο και το pill
-// sectionLayout  : 'default' | 'magazine' | 'list' | 'bigrid'
+// sectionLayout  : 'default' | 'magazine'
 //   default  → 1 featured full-width + grid 3 στήλες
 //   magazine → 1 μεγάλο αριστερά + στοίβα μικρών δεξιά
-//   list     → οριζόντιες γραμμές με μικρή εικόνα (compact)
-//   bigrid   → grid 2 στήλες ίδιου μεγέθους, χωρίς featured
 
 export const categoryAccents = {
     greece_news: { 
@@ -56,7 +54,7 @@ export const categoryAccents = {
         color: '#ffffff', cardBg: '',                    
         sectionBg: '#3749bd', 
         sectionBgImage: '',                      
-        featuredReverse: true,  
+        featuredReverse: false,  
         isNew: false, 
         sectionLayout: 'magazine'  
     },
@@ -98,7 +96,7 @@ export const categoryAccents = {
         sectionBgImage: '',                      
         featuredReverse: false, 
         isNew: false, 
-        sectionLayout: 'default'  
+        sectionLayout: 'magazine'  
     },
 
     music: { 

@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="el">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/src/output.css?v=9">
-    <link rel="stylesheet" href="/src/main.css?v=9">
+    <link rel="stylesheet" href="/src/output.css?v=10">
+    <link rel="stylesheet" href="/src/main.css?v=10">
     <title>Πολιτική Απορρήτου | CaptainNews.gr</title>
     <meta name="description" content="Πολιτική απορρήτου του CaptainNews.gr. Πληροφορίες για cookies, Google Analytics και RSS feeds.">
 
@@ -35,6 +35,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v2.9.2/dist/cookieconsent.css">
+    <script type="text/plain" data-cookiecategory="analytics" async src="https://www.googletagmanager.com/gtag/js?id=G-TRLBX4N99L"></script>
+    <script type="text/plain" data-cookiecategory="analytics">
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-TRLBX4N99L');
+    </script>
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -113,16 +121,19 @@
                 </a>
             </div>
 
-            <nav class="flex-1 px-4 py-6 space-y-2">
-                <a href="/" class="block px-4 py-3 text-white font-condensed font-bold rounded-lg hover:bg-[#3749bd] transition-all">
-                    <i class="fa-solid fa-house mr-3"></i>ΑΡΧΙΚΗ
-                </a>
-                <a href="/contact" class="block px-4 py-3 text-white font-condensed font-bold rounded-lg hover:bg-[#3749bd] transition-all">
-                    <i class="fa-solid fa-envelope mr-3"></i>ΕΠΙΚΟΙΝΩΝΙΑ
-                </a>
-                <a href="/policy" class="block px-4 py-3 text-white font-condensed font-bold rounded-lg hover:bg-[#3749bd] transition-all">
-                    <i class="fa-solid fa-shield-halved mr-3"></i>ΠΟΛΙΤΙΚΗ ΑΠΟΡΡΗΤΟΥ
-                </a>
+            <nav class="flex-1 px-4 py-6 space-y-2 overflow-y-auto">
+                <a href="/" class="block px-4 py-3 text-white font-condensed font-bold rounded-lg hover:bg-[#3749bd] transition-all"><i class="fa-solid fa-house mr-3"></i>ΑΡΧΙΚΗ</a>
+                <p class="px-4 pt-3 pb-1 text-zinc-600 text-xs font-condensed font-bold uppercase tracking-widest">Κατηγορίες</p>
+                <a href="/greece/" class="block px-4 py-3 text-white font-condensed font-bold rounded-lg hover:bg-[#3749bd] transition-all"><i class="fa-solid fa-flag mr-3"></i>ΕΛΛΑΔΑ</a>
+                <a href="/politics/" class="block px-4 py-3 text-white font-condensed font-bold rounded-lg hover:bg-[#3749bd] transition-all"><i class="fa-solid fa-landmark mr-3"></i>ΠΟΛΙΤΙΚΑ</a>
+                <a href="/world/" class="block px-4 py-3 text-white font-condensed font-bold rounded-lg hover:bg-[#3749bd] transition-all"><i class="fa-solid fa-earth-europe mr-3"></i>ΠΑΓΚΟΣΜΙΑ</a>
+                <a href="/sports/" class="block px-4 py-3 text-white font-condensed font-bold rounded-lg hover:bg-[#3749bd] transition-all"><i class="fa-solid fa-futbol mr-3"></i>ΑΘΛΗΤΙΚΑ</a>
+                <a href="/mundial/" class="block px-4 py-3 text-white font-condensed font-bold rounded-lg hover:bg-[#3749bd] transition-all"><i class="fa-solid fa-trophy mr-3"></i>MUNDIAL <span style="background:#f59e0b;color:#000;font-size:9px;font-weight:900;padding:1px 5px;border-radius:99px;letter-spacing:0.05em;vertical-align:middle;">NEW</span></a>
+                <a href="/technology/" class="block px-4 py-3 text-white font-condensed font-bold rounded-lg hover:bg-[#3749bd] transition-all"><i class="fa-solid fa-microchip mr-3"></i>ΤΕΧΝΟΛΟΓΙΑ</a>
+                <a href="/music/" class="block px-4 py-3 text-white font-condensed font-bold rounded-lg hover:bg-[#3749bd] transition-all"><i class="fa-solid fa-music mr-3"></i>ΜΟΥΣΙΚΗ</a>
+                <p class="px-4 pt-3 pb-1 text-zinc-600 text-xs font-condensed font-bold uppercase tracking-widest">Άλλα</p>
+                <a href="/contact" class="block px-4 py-3 text-white font-condensed font-bold rounded-lg hover:bg-[#3749bd] transition-all"><i class="fa-solid fa-envelope mr-3"></i>ΕΠΙΚΟΙΝΩΝΙΑ</a>
+                <a href="/policy" class="block px-4 py-3 text-white font-condensed font-bold rounded-lg bg-[#3749bd] transition-all"><i class="fa-solid fa-shield-halved mr-3"></i>ΠΟΛΙΤΙΚΗ ΑΠΟΡΡΗΤΟΥ</a>
             </nav>
 
             <div class="p-6 border-t border-zinc-800">
@@ -132,7 +143,24 @@
         </div>
     </div>
 
-    <main class="gg-container pt-[90px]">
+    <div id="category-bar" class="fixed top-[108px] w-full bg-[#111] z-40 border-b border-zinc-800 shadow-md h-[50px] flex items-center overflow-hidden">
+        <div class="gg-container w-full overflow-x-auto" style="scrollbar-width:none; -ms-overflow-style:none;">
+            <div class="flex items-center gap-2 w-max min-w-full px-0">
+                <a href="/" class="filter-pill font-condensed font-bold text-xs px-4 py-1.5 rounded-full border transition-all duration-200 whitespace-nowrap cursor-pointer">ΟΛΕΣ ΟΙ ΚΑΤΗΓΟΡΙΕΣ</a>
+                <a href="/greece/" class="filter-pill font-condensed font-bold text-xs px-4 py-1.5 rounded-full border transition-all duration-200 whitespace-nowrap cursor-pointer">ΕΛΛΑΔΑ ΕΠΙΚΑΙΡΟΤΗΤΑ</a>
+                <a href="/politics/" class="filter-pill font-condensed font-bold text-xs px-4 py-1.5 rounded-full border transition-all duration-200 whitespace-nowrap cursor-pointer">ΠΟΛΙΤΙΚΑ ΕΛΛΑΔΑ</a>
+                <a href="/world/" class="filter-pill font-condensed font-bold text-xs px-4 py-1.5 rounded-full border transition-all duration-200 whitespace-nowrap cursor-pointer">ΠΑΓΚΟΣΜΙΑ ΠΟΛΙΤΙΚΗ</a>
+                <a href="/sports/" class="filter-pill font-condensed font-bold text-xs px-4 py-1.5 rounded-full border transition-all duration-200 whitespace-nowrap cursor-pointer">ΑΘΛΗΤΙΚΑ</a>
+                <a href="/mundial/" class="filter-pill font-condensed font-bold text-xs px-4 py-1.5 rounded-full border transition-all duration-200 whitespace-nowrap cursor-pointer">MUNDIAL <span style="background:#f59e0b;color:#000;font-size:9px;font-weight:900;padding:1px 5px;border-radius:99px;letter-spacing:0.05em;vertical-align:middle;">NEW</span></a>
+                <a href="/technology/" class="filter-pill font-condensed font-bold text-xs px-4 py-1.5 rounded-full border transition-all duration-200 whitespace-nowrap cursor-pointer">ΤΕΧΝΟΛΟΓΙΑ</a>
+                <a href="/music/" class="filter-pill font-condensed font-bold text-xs px-4 py-1.5 rounded-full border transition-all duration-200 whitespace-nowrap cursor-pointer">ΜΟΥΣΙΚΗ</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="main-content-wrapper" style="display:none"></div>
+
+    <main class="gg-container pt-[178px] pb-20 flex-grow">
         <div class="pb-12 md:pb-20">
             <div class="title flex items-end gap-4 w-full pb-[5px]">
                 <h1 class="text-[36px] leading-[36px] font-bold text-[#3749bd] font-condensed uppercase whitespace-nowrap">ΠΟΛΙΤΙΚΗ ΑΠΟΡΡΗΤΟΥ</h1>
@@ -201,11 +229,9 @@
         </div>
     </footer>
 
-    <script type="module" src="/js/main.js?v=20"></script>
-    <script>
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('/sw.js');
-        }
-    </script>
+    <script type="module" src="/js/main.js?v=21"></script>
+    <script>if ('serviceWorker' in navigator) navigator.serviceWorker.register('/sw.js');</script>
+    <script defer src="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v2.9.2/dist/cookieconsent.js"></script>
+    <script defer src="/js/cookieconsent-init.js"></script>
 </body>
 </html>
