@@ -17,40 +17,12 @@ const parser = new Parser({
     }
 });
 
-const categories = {
-    "greece_news": [
-        { name: "Protothema", url: "https://www.protothema.gr/rss/" },
-        { name: "Newsbeast",  url: "https://www.newsbeast.gr/feed" },
-        { name: "Newsit",     url: "https://www.newsit.gr/feed/" },
-        { name: "In.gr",      url: "https://www.in.gr/feed/" },
-    ],
-    "politics_greece": [
-        { name: "Protothema", url: "https://www.protothema.gr/politics/rss/" },
-        { name: "Newsit",     url: "https://www.newsit.gr/category/politikh/feed/" },
-        { name: "In.gr",      url: "https://www.in.gr/politics/feed/" },
-    ],
-    "world_politics": [
-        { name: "BBC World",   url: "https://feeds.bbci.co.uk/news/world/rss.xml" },
-        { name: "ABC Intl",    url: "https://abcnews.go.com/abcnews/internationalheadlines" },
-        { name: "The Hill",    url: "https://thehill.com/homenews/feed/" },
-        { name: "In.gr World", url: "https://www.in.gr/world/feed/" },
-    ],
-    "sports": [
-        { name: "Newsbeast", url: "https://www.newsbeast.gr/sports/feed" },
-        { name: "Newsit",    url: "https://www.newsit.gr/category/athlitika/feed/" },
-        { name: "In.gr",     url: "https://www.in.gr/sports/feed/" },
-    ],
-    "technology": [
-        { name: "Techgear",    url: "https://www.techgear.gr/feed/" },
-        { name: "Techblog",    url: "https://techblog.gr/feed/" },
-        { name: "Techmaniacs", url: "https://techmaniacs.gr/feed/" },
-        { name: "IGuru",       url: "https://iguru.gr/feed/" },
-    ],
-    "music": [
-        { name: "Mad TV",  url: "https://mad.tv/feed/" },
-        { name: "Tralala", url: "https://www.tralala.gr/feed/" },
-    ],
-};
+// Single source of truth for categories + RSS feeds — edit categories.json,
+// not this object. worker.js reads the same file via `npm run build:worker`.
+const categoriesConfig = JSON.parse(fs.readFileSync(path.join(__dirname, 'categories.json'), 'utf8'));
+const categories = Object.fromEntries(
+    Object.entries(categoriesConfig).map(([key, cfg]) => [key, cfg.feeds])
+);
 
 const MAX_PER_CAT    = 30;
 const MAX_PER_SOURCE = 15;

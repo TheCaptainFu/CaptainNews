@@ -58,7 +58,7 @@ function sectionHeader(title, count, accentColor, accent) {
             <div class="w-full">
                 <div class="flex items-end gap-[20px] pb-[8px]">
                     <div class="shrink-0 flex items-center gap-2">
-                        <h2 class="whitespace-nowrap font-bold font-condensed uppercase text-[22px] leading-[24px] min-[420px]:text-[26px] min-[420px]:leading-[28px] min-[767px]:text-[36px] min-[767px]:leading-[38px] min-[1024px]:text-[44px] min-[1024px]:leading-[46px] min-[1420px]:text-[52px] min-[1420px]:leading-[54px]"
+                        <h2 class="whitespace-nowrap font-black font-condensed uppercase text-[22px] leading-[24px] min-[420px]:text-[26px] min-[420px]:leading-[28px] min-[767px]:text-[36px] min-[767px]:leading-[38px] min-[1024px]:text-[44px] min-[1024px]:leading-[46px] min-[1420px]:text-[52px] min-[1420px]:leading-[54px]"
                             style="color:${accentColor}">${title}</h2>
                         ${newBadge}
                     </div>

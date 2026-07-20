@@ -1,0 +1,81 @@
+{
+    "greece_news": {
+        "displayName": "ΕΛΛΑΔΑ ΕΠΙΚΑΙΡΟΤΗΤΑ",
+        "navLabel": "ΕΛΛΑΔΑ",
+        "navIcon": "fa-flag",
+        "path": "/greece/",
+        "feeds": [
+            { "name": "Protothema", "url": "https://www.protothema.gr/rss/", "homepage": "https://www.protothema.gr" },
+            { "name": "Newsbeast",  "url": "https://www.newsbeast.gr/feed", "homepage": "https://www.newsbeast.gr" },
+            { "name": "Newsit",     "url": "https://www.newsit.gr/feed/", "homepage": "https://www.newsit.gr" },
+            { "name": "In.gr",      "url": "https://www.in.gr/feed/", "homepage": "https://www.in.gr" }
+        ]
+    },
+    "politics_greece": {
+        "displayName": "ΠΟΛΙΤΙΚΑ ΕΛΛΑΔΑ",
+        "navLabel": "ΠΟΛΙΤΙΚΑ",
+        "navIcon": "fa-landmark",
+        "path": "/politics/",
+        "feeds": [
+            { "name": "Protothema", "url": "https://www.protothema.gr/politics/rss/", "homepage": "https://www.protothema.gr" },
+            { "name": "Newsit",     "url": "https://www.newsit.gr/category/politikh/feed/", "homepage": "https://www.newsit.gr" },
+            { "name": "In.gr",      "url": "https://www.in.gr/politics/feed/", "homepage": "https://www.in.gr" }
+        ]
+    },
+    "world_politics": {
+        "displayName": "ΠΑΓΚΟΣΜΙΑ ΠΟΛΙΤΙΚΗ",
+        "navLabel": "ΠΑΓΚΟΣΜΙΑ",
+        "navIcon": "fa-earth-europe",
+        "path": "/world/",
+        "feeds": [
+            { "name": "BBC World",   "url": "https://feeds.bbci.co.uk/news/world/rss.xml", "homepage": "https://www.bbc.com/news/world" },
+            { "name": "ABC Intl",    "url": "https://abcnews.go.com/abcnews/internationalheadlines", "homepage": "https://abcnews.go.com" },
+            { "name": "The Hill",    "url": "https://thehill.com/homenews/feed/", "homepage": "https://thehill.com" },
+            { "name": "In.gr World", "url": "https://www.in.gr/world/feed/", "homepage": "https://www.in.gr" }
+        ]
+    },
+    "sports": {
+        "displayName": "ΑΘΛΗΤΙΚΑ",
+        "navLabel": "ΑΘΛΗΤΙΚΑ",
+        "navIcon": "fa-futbol",
+        "path": "/sports/",
+        "feeds": [
+            { "name": "Newsbeast", "url": "https://www.newsbeast.gr/sports/feed", "homepage": "https://www.newsbeast.gr" },
+            { "name": "Newsit",    "url": "https://www.newsit.gr/category/athlitika/feed/", "homepage": "https://www.newsit.gr" },
+            { "name": "In.gr",     "url": "https://www.in.gr/sports/feed/", "homepage": "https://www.in.gr" }
+        ]
+    },
+    "technology": {
+        "displayName": "ΤΕΧΝΟΛΟΓΙΑ",
+        "navLabel": "ΤΕΧΝΟΛΟΓΙΑ",
+        "navIcon": "fa-microchip",
+        "path": "/technology/",
+        "feeds": [
+            { "name": "Techgear",    "url": "https://www.techgear.gr/feed/", "homepage": "https://www.techgear.gr" },
+            { "name": "Techblog",    "url": "https://techblog.gr/feed/", "homepage": "https://techblog.gr" },
+            { "name": "Techmaniacs", "url": "https://techmaniacs.gr/feed/", "homepage": "https://techmaniacs.gr" },
+            { "name": "IGuru",       "url": "https://iguru.gr/feed/", "homepage": "https://iguru.gr" }
+        ]
+    },
+    "music": {
+        "displayName": "ΜΟΥΣΙΚΗ",
+        "navLabel": "ΜΟΥΣΙΚΗ",
+        "navIcon": "fa-music",
+        "path": "/music/",
+        "feeds": [
+            { "name": "Mad TV",  "url": "https://mad.tv/feed/", "homepage": "https://mad.tv" },
+            { "name": "Tralala", "url": "https://www.tralala.gr/feed/", "homepage": "https://www.tralala.gr" }
+        ]
+    },
+    "skata": {
+        "displayName": "ΣΚΑΤΑ",
+        "navLabel": "ΣΚΑΤΑ",
+        "navIcon": "fa-futbol",
+        "path": "/skata/",
+        "feeds": [
+            { "name": "Newsbeast", "url": "https://www.newsbeast.gr/sports/feed", "homepage": "https://www.newsbeast.gr" },
+            { "name": "Newsit",    "url": "https://www.newsit.gr/category/athlitika/feed/", "homepage": "https://www.newsit.gr" },
+            { "name": "In.gr",     "url": "https://www.in.gr/sports/feed/", "homepage": "https://www.in.gr" }
+        ]
+    }
+}

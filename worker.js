@@ -7,26 +7,26 @@
 
 const categories = {
     "greece_news": [
-        { name: "Protothema",  url: "https://www.protothema.gr/rss/" },
-        { name: "Newsbeast",   url: "https://www.newsbeast.gr/feed" },
-        { name: "Newsit",      url: "https://www.newsit.gr/feed/" },
-        { name: "In.gr",       url: "https://www.in.gr/feed/" },
+        { name: "Protothema", url: "https://www.protothema.gr/rss/" },
+        { name: "Newsbeast",  url: "https://www.newsbeast.gr/feed" },
+        { name: "Newsit",     url: "https://www.newsit.gr/feed/" },
+        { name: "In.gr",      url: "https://www.in.gr/feed/" },
     ],
     "politics_greece": [
-        { name: "Protothema",  url: "https://www.protothema.gr/politics/rss/" },
-        { name: "Newsit",      url: "https://www.newsit.gr/category/politikh/feed/" },
-        { name: "In.gr",       url: "https://www.in.gr/politics/feed/" },
+        { name: "Protothema", url: "https://www.protothema.gr/politics/rss/" },
+        { name: "Newsit",     url: "https://www.newsit.gr/category/politikh/feed/" },
+        { name: "In.gr",      url: "https://www.in.gr/politics/feed/" },
     ],
     "world_politics": [
         { name: "BBC World",   url: "https://feeds.bbci.co.uk/news/world/rss.xml" },
         { name: "ABC Intl",    url: "https://abcnews.go.com/abcnews/internationalheadlines" },
         { name: "The Hill",    url: "https://thehill.com/homenews/feed/" },
-        { name: "In.gr World", url: "https://www.in.gr/world/feed/" }
+        { name: "In.gr World", url: "https://www.in.gr/world/feed/" },
     ],
     "sports": [
-        { name: "Newsbeast",   url: "https://www.newsbeast.gr/sports/feed" },
-        { name: "Newsit",      url: "https://www.newsit.gr/category/athlitika/feed/" },
-        { name: "In.gr",       url: "https://www.in.gr/sports/feed/" },
+        { name: "Newsbeast", url: "https://www.newsbeast.gr/sports/feed" },
+        { name: "Newsit",    url: "https://www.newsit.gr/category/athlitika/feed/" },
+        { name: "In.gr",     url: "https://www.in.gr/sports/feed/" },
     ],
     "technology": [
         { name: "Techgear",    url: "https://www.techgear.gr/feed/" },
@@ -35,8 +35,13 @@ const categories = {
         { name: "IGuru",       url: "https://iguru.gr/feed/" },
     ],
     "music": [
-        { name: "Mad TV",      url: "https://mad.tv/feed/" },
-        { name: "Tralala",     url: "https://www.tralala.gr/feed/" },
+        { name: "Mad TV",  url: "https://mad.tv/feed/" },
+        { name: "Tralala", url: "https://www.tralala.gr/feed/" },
+    ],
+    "skata": [
+        { name: "Newsbeast", url: "https://www.newsbeast.gr/sports/feed" },
+        { name: "Newsit",    url: "https://www.newsit.gr/category/athlitika/feed/" },
+        { name: "In.gr",     url: "https://www.in.gr/sports/feed/" },
     ]
 };
 

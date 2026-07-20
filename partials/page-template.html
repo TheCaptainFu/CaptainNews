@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/output.css?v=11">
+    <link rel="stylesheet" href="/src/main.css?v=11">
+    <title>{{DISPLAY_NAME}} | CaptainNews.gr</title>
+    <meta name="description" content="{{DESCRIPTION}}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://captainnews.gr{{PATH}}">
+    <meta property="og:title" content="{{DISPLAY_NAME}} | CaptainNews.gr">
+    <meta property="og:description" content="{{DESCRIPTION}}">
+    <meta property="og:image" content="https://captainnews.gr/icons/og-image.png">
+    <meta property="og:locale" content="el_GR">
+    <meta property="og:site_name" content="CaptainNews.gr">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{DISPLAY_NAME}} | CaptainNews.gr">
+    <meta name="twitter:image" content="https://captainnews.gr/icons/og-image.png">
+    <link rel="canonical" href="https://captainnews.gr{{PATH}}">
+    <link rel="alternate" hreflang="el" href="https://captainnews.gr{{PATH}}">
+    <link rel="alternate" hreflang="x-default" href="https://captainnews.gr/">
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+    <link rel="icon" type="image/png" href="/icons/favicon.png">
+    <link rel="apple-touch-icon" href="/icons/pwa.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#3749bd">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v2.9.2/dist/cookieconsent.css">
+    <script type="text/plain" data-cookiecategory="analytics" async src="https://www.googletagmanager.com/gtag/js?id=G-TRLBX4N99L"></script>
+    <script type="text/plain" data-cookiecategory="analytics">
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-TRLBX4N99L');
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "name": "{{DISPLAY_NAME}} | CaptainNews.gr",
+      "url": "https://captainnews.gr{{PATH}}",
+      "inLanguage": "el-GR",
+      "isPartOf": {
+        "@type": "WebSite",
+        "url": "https://captainnews.gr/"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Αρχική",
+          "item": "https://captainnews.gr/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "{{DISPLAY_NAME}}",
+          "item": "https://captainnews.gr{{PATH}}"
+        }
+      ]
+    }
+  ]
+}
+    </script>
+</head>
+<body class="bg-main-black flex flex-col min-h-screen">
+{{HEADER}}
+    <main id="main-content-wrapper" class="pt-[178px] pb-10 flex-grow">
+        <div class="gg-container text-white font-condensed pt-10 text-center animate-pulse">Φόρτωση ειδήσεων...</div>
+    </main>
+{{FOOTER}}
+    <script type="module" src="/js/main.js?v=22"></script>
+    <script>if ('serviceWorker' in navigator) navigator.serviceWorker.register('/sw.js');</script>
+    <script defer src="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v2.9.2/dist/cookieconsent.js"></script>
+    <script defer src="/js/cookieconsent-init.js"></script>
+</body>
+</html>
