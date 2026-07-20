@@ -37,11 +37,6 @@ const categories = {
     "music": [
         { name: "Mad TV",  url: "https://mad.tv/feed/" },
         { name: "Tralala", url: "https://www.tralala.gr/feed/" },
-    ],
-    "skata": [
-        { name: "Newsbeast", url: "https://www.newsbeast.gr/sports/feed" },
-        { name: "Newsit",    url: "https://www.newsit.gr/category/athlitika/feed/" },
-        { name: "In.gr",     url: "https://www.in.gr/sports/feed/" },
     ]
 };
 

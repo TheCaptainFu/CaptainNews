@@ -66,16 +66,5 @@
             { "name": "Mad TV",  "url": "https://mad.tv/feed/", "homepage": "https://mad.tv" },
             { "name": "Tralala", "url": "https://www.tralala.gr/feed/", "homepage": "https://www.tralala.gr" }
         ]
-    },
-    "skata": {
-        "displayName": "ΣΚΑΤΑ",
-        "navLabel": "ΣΚΑΤΑ",
-        "navIcon": "fa-futbol",
-        "path": "/skata/",
-        "feeds": [
-            { "name": "Newsbeast", "url": "https://www.newsbeast.gr/sports/feed", "homepage": "https://www.newsbeast.gr" },
-            { "name": "Newsit",    "url": "https://www.newsit.gr/category/athlitika/feed/", "homepage": "https://www.newsit.gr" },
-            { "name": "In.gr",     "url": "https://www.in.gr/sports/feed/", "homepage": "https://www.in.gr" }
-        ]
     }
 }

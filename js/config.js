@@ -12,8 +12,7 @@ export const categoryOrder = [
     'world_politics',
     'sports',
     'technology',
-    'music',
-    'skata'
+    'music'
 ];
 
 // ─── Category display names ────────────────────────────────────────────────────
@@ -114,19 +113,6 @@ export const categoryAccents = {
     },
 
     music: {
-        color: '#000000',
-        cardBg: 'none',
-        sectionBg: '#E6ECF2',
-        sectionBgImage: '',
-        featuredReverse: false,
-        isNew: false,
-        sectionLayout: 'default',
-        cardPadding: true,
-        titleColor: 'black',
-        descriptionColor: 'rgba(0,0,0,0.8)',
-        hoverColor: '#f2d06f'
-    },
-    skata: {
         color: '#000000',
         cardBg: 'none',
         sectionBg: '#E6ECF2',
