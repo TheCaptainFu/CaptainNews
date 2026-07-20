@@ -13,7 +13,7 @@ export function buildSection(categoryKey, articles) {
 
     const section = document.createElement('section');
     section.id        = `section-${categoryKey}`;
-    section.className = 'category-group mb-10';
+    section.className = 'category-group pb-10';
     section.setAttribute('data-category', categoryKey);
 
     if (accent?.sectionBgImage) {
@@ -23,13 +23,13 @@ export function buildSection(categoryKey, articles) {
         section.style.backgroundRepeat     = 'no-repeat';
         section.style.backgroundAttachment = 'fixed';
         section.style.borderRadius         = '12px';
-        section.style.padding              = '12px 0 20px';
-        section.style.marginTop            = '32px';
+        section.style.paddingTop           = '32px';
     } else if (accent?.sectionBg) {
         section.style.backgroundColor = accent.sectionBg;
-        section.style.borderRadius    = '12px';
-        section.style.padding         = '12px 0 20px';
-        section.style.marginTop       = '32px';
+        section.style.borderRadius    = '0px';
+        section.style.paddingTop      = '32px';
+        section.style.paddingBottom      = '20px';
+
     }
 
     const header  = sectionHeader(title, articles.length, accentColor, accent);
@@ -124,7 +124,9 @@ function magazineSideCard(article, artIndex, categoryKey, accent, accentColor) {
     const hiddenClass = isHidden ? `hidden hidden-item-${categoryKey}` : '';
     const cardBg      = accent?.cardBg || '';
     const cardBgClass = cardBg ? '' : 'bg-main-grey';
-    const styleAttr   = cardBg ? `style="background-color:${cardBg}"` : '';
+    const bgStyle     = cardBg ? `background-color:${cardBg};` : '';
+    const styleAttr   = `style="${bgStyle}--card-hover-color:${accent?.hoverColor || '#f2d06f'}"`;
+    const titleColor  = accent?.titleColor || '#ffffff';
 
     return `
         <div class="item ${cardBgClass} rounded-[12px] overflow-hidden flex flex-row group flex-1 min-h-0 ${hiddenClass}" ${styleAttr}>
@@ -136,16 +138,16 @@ function magazineSideCard(article, artIndex, categoryKey, accent, accentColor) {
                 </a>
             </div>
             <div class="flex flex-col justify-between flex-1 px-[14px] py-[14px] min-w-0">
-                <div class="text-[14px] leading-[18px] text-white font-bold font-condensed line-clamp-4 mb-[8px]">
+                <div class="text-[16px] leading-[20px] font-bold font-condensed line-clamp-4 mb-[8px]" style="color:${titleColor}">
                     <a href="${article.link}" target="_blank" rel="noopener noreferrer"
-                       class="hover:text-[#f2d06f] transition-colors duration-300">${article.title}</a>
+                       class="hover:text-(--card-hover-color) transition-colors duration-300">${article.title}</a>
                 </div>
                 <div class="flex items-center gap-[6px]">
                     <a href="${sourceUrl}" target="_blank" rel="noopener noreferrer"
-                       class="text-[11px] font-condensed font-bold hover:underline shrink-0"
-                       style="color:${accentColor}">${article.source}</a>
+                       class="text-[11px] font-condensed font-bold text-(--card-link-color) hover:text-(--card-hover-color) hover:underline shrink-0"
+                       style="--card-link-color:${accentColor}">${article.source}</a>
                     <span class="text-zinc-600 text-[11px]">·</span>
-                    <span class="text-[11px] text-zinc-400 font-condensed shrink-0">${timeStr}</span>
+                    <span class="text-[11px] font-condensed shrink-0" style="color:${titleColor}">${timeStr}</span>
                 </div>
             </div>
         </div>`;
@@ -159,7 +161,10 @@ function magazineFeatured(article, artIndex, categoryKey, accent, accentColor) {
     const hiddenClass = isHidden ? `hidden hidden-item-${categoryKey}` : '';
     const cardBg      = accent?.cardBg || '';
     const cardBgClass = cardBg ? '' : 'bg-main-grey';
-    const styleAttr   = cardBg ? `style="background-color:${cardBg}"` : '';
+    const bgStyle     = cardBg ? `background-color:${cardBg};` : '';
+    const styleAttr   = `style="${bgStyle}--card-source-border:${accentColor};--card-hover-color:${accent?.hoverColor || '#f2d06f'}"`;
+    const titleColor       = accent?.titleColor || '#ffffff';
+    const descriptionColor = accent?.descriptionColor || 'rgba(255,255,255,0.8)';
     const description = article.description
         ? stripHtml(article.description).substring(0, 200) + '...'
         : 'Διαβάστε περισσότερα για το θέμα στην πηγή.';
@@ -173,19 +178,19 @@ function magazineFeatured(article, artIndex, categoryKey, accent, accentColor) {
                          onerror="this.src='/icons/default-image.png'">
                 </a>
             </div>
-            <div class="p-[20px] flex flex-col flex-grow">
-                <div class="text-[20px] leading-[24px] text-white font-bold font-condensed pb-[10px]">
+            <div class="${accent?.cardPadding === false ? '' : 'p-[20px]'} flex flex-col flex-grow">
+                <div class="text-[20px] leading-[24px] font-bold font-condensed pb-[10px]" style="color:${titleColor}">
                     <a href="${article.link}" target="_blank" rel="noopener noreferrer"
-                       class="hover:text-[#f2d06f] transition-colors duration-300">${article.title}</a>
+                       class="hover:text-(--card-hover-color) transition-colors duration-300">${article.title}</a>
                 </div>
-                <div class="text-[14px] leading-[20px] text-white font-normal font-roboto pb-[16px] opacity-80 flex-grow">
+                <div class="text-[14px] leading-[20px] font-normal font-roboto pb-[16px] flex-grow" style="color:${descriptionColor}">
                     ${description}
                 </div>
-                <div class="flex items-center justify-between pt-[12px] border-t border-zinc-800">
+                <div class="flex items-center justify-between pt-[12px] border-t border-(--card-source-border)">
                     <a href="${sourceUrl}" target="_blank" rel="noopener noreferrer"
-                       class="text-[14px] font-condensed font-bold hover:underline"
-                       style="color:${accentColor}">${article.source}</a>
-                    <span class="text-[12px] text-zinc-400 font-condensed">${timeStr}</span>
+                       class="text-[14px] font-condensed font-bold text-(--card-link-color) hover:text-(--card-hover-color) hover:underline"
+                       style="--card-link-color:${accentColor}">${article.source}</a>
+                    <span class="text-[12px] font-condensed" style="color:${titleColor}">${timeStr}</span>
                 </div>
             </div>
         </div>`;
@@ -215,14 +220,18 @@ function card(article, artIndex, categoryKey, accent, accentColor) {
         ? 'w-full md:w-6/12 aspect-[1.7] max-h-[280px] md:max-h-[500px] relative shrink-0 overflow-hidden'
         : 'w-full aspect-[1.7] overflow-hidden';
 
+    const paddingClass = accent?.cardPadding === false ? '' : 'p-[20px]';
     const infoWrapperClasses = isFeatured
-        ? 'p-[20px] flex flex-col justify-center w-full md:w-6/12'
-        : 'p-[20px] flex flex-col flex-grow';
+        ? `${paddingClass} flex flex-col justify-center w-full md:w-6/12`
+        : `${paddingClass} flex flex-col flex-grow`;
 
     const charLimit   = isFeatured ? 350 : 110;
     const cardBg      = accent?.cardBg || '';
-    const cardBgAttr  = cardBg ? `style="background-color:${cardBg}"` : '';
+    const bgStyle     = cardBg ? `background-color:${cardBg};` : '';
+    const cardBgAttr  = `style="${bgStyle}--card-source-border:${accentColor};--card-hover-color:${accent?.hoverColor || '#f2d06f'}"`;
     const cardBgClass = cardBg ? '' : (accent?.cardClass || 'bg-main-grey');
+    const titleColor       = accent?.titleColor || '#ffffff';
+    const descriptionColor = accent?.descriptionColor || 'rgba(255,255,255,0.8)';
 
     const description = article.description
         ? stripHtml(article.description).substring(0, charLimit) + '...'
@@ -238,24 +247,25 @@ function card(article, artIndex, categoryKey, accent, accentColor) {
                 </a>
             </div>
             <div class="${infoWrapperClasses}">
-                <div class="title text-[16px] leading-[20px] text-white font-bold font-condensed pb-[10px] ${isFeatured ? 'text-[22px] leading-[26px]' : 'min-h-[50px]'}">
+                <div class="title text-[20px] leading-[26px] font-bold font-condensed pb-[10px] ${isFeatured ? 'text-[26px] leading-[32px]' : 'min-h-[50px]'}" style="color:${titleColor}">
                     <a href="${article.link}" target="_blank" rel="noopener noreferrer"
-                       class="hover:text-[#f2d06f] transition-colors duration-300">${article.title}</a>
+                       class="hover:text-(--card-hover-color) transition-colors duration-300">${article.title}</a>
                 </div>
-                <div class="description text-[14px] leading-[20px] text-white font-normal font-roboto pb-[20px] opacity-80 flex-grow">
+                <div class="description text-[14px] leading-[20px] font-normal font-roboto pb-[20px] flex-grow" style="color:${descriptionColor}">
                     ${description}
                 </div>
-                <div class="source text-[16px] leading-[14px] text-white font-bold font-condensed pb-[20px] border-b border-zinc-800">
+                <div class="source text-[16px] leading-[14px] font-bold font-condensed pb-[20px] border-b border-(--card-source-border)" style="color:${titleColor}">
                     Πηγή: <a href="${sourceUrl}" target="_blank" rel="noopener noreferrer"
-                              class="hover:text-[#f2d06f] hover:underline transition-colors"
-                              style="color:${accentColor}">${article.source}</a>
+                              class="text-(--card-link-color) hover:text-(--card-hover-color) hover:underline transition-colors"
+                              style="--card-link-color:${accentColor}">${article.source}</a>
                 </div>
                 <div class="card-footer flex items-center justify-between pt-[20px]">
-                    <div class="time text-[14px] leading-[16px] text-white font-bold font-condensed">${timeStr}</div>
+                    <div class="time text-[14px] leading-[16px] font-bold font-condensed" style="color:${titleColor}">${timeStr}</div>
                     <div class="flex items-center gap-3">
                         <button onclick="copyArticleLink(this, '${article.link}')"
                                 title="Αντιγραφή συνδέσμου"
-                                class="copy-btn flex items-center gap-1 text-[12px] leading-[14px] font-bold font-condensed text-zinc-500 hover:text-[#f2d06f] transition-all cursor-pointer">
+                                class="copy-btn flex items-center gap-1 text-[12px] leading-[14px] font-bold font-condensed text-(--card-link-color) hover:text-(--card-hover-color) transition-all cursor-pointer"
+                                style="--card-link-color:${descriptionColor}">
                             <svg xmlns="http://www.w3.org/2000/svg" class="copy-icon w-[13px] h-[13px]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                 <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
                                 <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
@@ -263,8 +273,8 @@ function card(article, artIndex, categoryKey, accent, accentColor) {
                             <span class="copy-label">COPY</span>
                         </button>
                         <a href="${article.link}" target="_blank" rel="noopener noreferrer"
-                           class="read-more text-[12px] leading-[14px] font-bold font-condensed hover:text-[#f2d06f] transition-all"
-                           style="color:${accentColor}">Διαβάστε -></a>
+                           class="read-more text-[12px] leading-[14px] font-bold font-condensed text-(--card-link-color) hover:text-(--card-hover-color) transition-all"
+                           style="--card-link-color:${accentColor}">Διαβάστε -></a>
                     </div>
                 </div>
             </div>
@@ -276,7 +286,7 @@ function card(article, artIndex, categoryKey, accent, accentColor) {
 function loadMoreBtn(categoryKey, totalArticles) {
     if (totalArticles <= INITIAL_VISIBLE_COUNT) return '';
     return `
-        <div class="gg-container flex justify-center mt-6">
+        <div class="gg-container flex justify-center mt-6 pb-10">
             <button id="btn-${categoryKey}" onclick="loadAllArticles('${categoryKey}')"
                     class="bg-zinc-800 cursor-pointer text-white font-condensed font-bold py-2 px-6 rounded hover:bg-[#3749bd] transition-colors border border-zinc-700 hover:border-[#3749bd]">
                 ΠΡΟΒΟΛΗ ΟΛΩΝ (${totalArticles})

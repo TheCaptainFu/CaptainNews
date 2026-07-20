@@ -15,6 +15,11 @@ body {
     color: #fff;
 }
 
+:root {
+    --card-source-border: #27272a;
+    --card-hover-color: #f2d06f;
+}
+
 @theme {
 
     /* COLORS */

@@ -50,13 +50,6 @@ const categories = {
         { name: "Mad TV",  url: "https://mad.tv/feed/" },
         { name: "Tralala", url: "https://www.tralala.gr/feed/" },
     ],
-    "mundial": [
-        { name: "BBC Sport",    url: "https://feeds.bbci.co.uk/sport/football/rss.xml" },
-        { name: "The Guardian", url: "https://www.theguardian.com/football/rss" },
-        { name: "Sky Football", url: "https://www.skysports.com/rss/12040" },
-        { name: "Gazzetta",     url: "https://www.gazzetta.gr/rss.xml" },
-        { name: "SDNA",         url: "https://www.sdna.gr/rss/all" },
-    ],
 };
 
 const MAX_PER_CAT    = 30;

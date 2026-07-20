@@ -11,7 +11,6 @@ export const categoryOrder = [
     'politics_greece',
     'world_politics',
     'sports',
-    'mundial',
     'technology',
     'music',
 ];
@@ -25,7 +24,6 @@ export const categoryDisplayNames = {
     sports:          'ΑΘΛΗΤΙΚΑ',
     technology:      'ΤΕΧΝΟΛΟΓΙΑ',
     music:           'ΜΟΥΣΙΚΗ',
-    mundial:         'MUNDIAL',
 };
 
 // ─── Per-category visual theme ─────────────────────────────────────────────────
@@ -38,75 +36,94 @@ export const categoryDisplayNames = {
 // sectionLayout  : 'default' | 'magazine'
 //   default  → 1 featured full-width + grid 3 στήλες
 //   magazine → 1 μεγάλο αριστερά + στοίβα μικρών δεξιά
+// cardPadding    : false = αφαιρεί το εσωτερικό padding του card (default: true)
+// titleColor     : χρώμα τίτλου άρθρου. Το ίδιο χρησιμοποιείται και στο "Πηγή" text και στο "πριν X ώρες"
+// descriptionColor: χρώμα περιγραφής άρθρου. Το ίδιο χρησιμοποιείται και στο κουμπί "COPY"
+// hoverColor     : χρώμα hover για όλα τα anchors/κουμπιά του card (τίτλος, πηγή, COPY, Διαβάστε ->)
 
 export const categoryAccents = {
-    greece_news: { 
-        color: '#3749bd', 
-        cardBg: '',                    
-        sectionBg: '', 
-        sectionBgImage: '',                      
-        featuredReverse: false, 
-        isNew: false, 
-        sectionLayout: 'default'  
+    greece_news: {
+        color: '#3749bd',
+        cardBg: 'none',
+        sectionBg: '#000000',
+        sectionBgImage: '',
+        featuredReverse: false,
+        isNew: false,
+        sectionLayout: 'default',
+        cardPadding: true,
+        titleColor: '#ffffff',
+        descriptionColor: 'rgba(255,255,255,0.8)',
+        hoverColor: '#f2d06f'
     },
 
-    politics_greece: { 
-        color: '#ffffff', cardBg: '',                    
-        sectionBg: '#3749bd', 
-        sectionBgImage: '',                      
-        featuredReverse: false,  
-        isNew: false, 
-        sectionLayout: 'magazine'  
+    politics_greece: {
+        color: '#ffffff',
+        cardBg: 'none',
+        sectionBg: '#151F38',
+        sectionBgImage: '',
+        featuredReverse: false,
+        isNew: false,
+        sectionLayout: 'magazine',
+        cardPadding: true,
+        titleColor: '#ffffff',
+        descriptionColor: 'rgba(255,255,255,0.8)',
+        hoverColor: '#f2d06f'
     },
 
-    world_politics:  { 
-        color: '#4f72ff', 
-        cardBg: 'transparent',                    
-        sectionBg: '', 
-        sectionBgImage: '',                      
-        featuredReverse: false, 
-        isNew: false, 
-        sectionLayout: 'default'  
+    world_politics:  {
+        color: '#4f72ff',
+        cardBg: 'transparent',
+        sectionBg: '#000000',
+        sectionBgImage: '',
+        featuredReverse: false,
+        isNew: false,
+        sectionLayout: 'default',
+        cardPadding: true,
+        titleColor: '#ffffff',
+        descriptionColor: 'rgba(255,255,255,0.8)',
+        hoverColor: '#f2d06f'
     },
 
     sports: {
-        color: '#ffffff', 
-        cardBg: 'transparent',                    
-        sectionBg: '#004d40 ', 
-        sectionBgImage: '',                      
-        featuredReverse: false, 
-        isNew: false, 
-        sectionLayout: 'default'  
+        color: '#000000',
+        cardBg: 'transparent',
+        sectionBg: '#F7F3EE',
+        sectionBgImage: '',
+        featuredReverse: false,
+        isNew: false,
+        sectionLayout: 'default',
+        cardPadding: true,
+        titleColor: '#000000',
+        descriptionColor: 'rgba(0,0,0,0.8)',
+        hoverColor: '#f2d06f'
     },
 
-    mundial: {
+    technology: {
         color: '#ffffff',
-        cardBg: 'rgba(26,18,0,0.82)', 
-        sectionBg: '',        
-        sectionBgImage: '/icons/mundial-bg.webp', 
-        featuredReverse: true,  
-        isNew: true,  
-        sectionLayout: 'default'  
+        cardBg: 'none',
+        sectionBg: '#000000',
+        sectionBgImage: '',
+        featuredReverse: false,
+        isNew: false,
+        sectionLayout: 'magazine',
+        cardPadding: true,
+        titleColor: '#ffffff',
+        descriptionColor: 'rgba(255,255,255,0.7)',
+        hoverColor: '#f2d06f'
     },
 
-    technology: { 
-        color: '#4f72ff', 
-        cardBg: '',                    
-        sectionBg: '', 
-        sectionBgImage: '',                      
-        featuredReverse: false, 
-        isNew: false, 
-        sectionLayout: 'magazine'  
-    },
-
-    music: { 
-        color: '#6100e9', 
-        cardBg: '',             
-        sectionBg: '#83b1ff', 
-        sectionBgImage: '',                      
-        featuredReverse: false, 
-        isNew: false, 
-        sectionLayout: 'default'  
+    music: {
+        color: '#000000',
+        cardBg: 'none',
+        sectionBg: '#E6ECF2',
+        sectionBgImage: '',
+        featuredReverse: false,
+        isNew: false,
+        sectionLayout: 'default',
+        cardPadding: true,
+        titleColor: 'black',
+        descriptionColor: 'rgba(0,0,0,0.8)',
+        hoverColor: '#f2d06f'
     },
 };
 
