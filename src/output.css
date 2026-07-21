@@ -220,11 +220,25 @@
   .visible {
     visibility: visible;
   }
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border-width: 0;
+  }
   .fixed {
     position: fixed;
   }
   .relative {
     position: relative;
+  }
+  .static {
+    position: static;
   }
   .inset-0 {
     inset: 0px;
@@ -283,6 +297,9 @@
   .mt-\[5px\] {
     margin-top: 5px;
   }
+  .mt-\[6px\] {
+    margin-top: 6px;
+  }
   .mt-\[20px\] {
     margin-top: 20px;
   }
@@ -328,6 +345,12 @@
   .ml-1 {
     margin-left: var(--spacing);
   }
+  .line-clamp-2 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
   .line-clamp-4 {
     overflow: hidden;
     display: -webkit-box;
@@ -354,6 +377,9 @@
   }
   .inline-block {
     display: inline-block;
+  }
+  .list-item {
+    display: list-item;
   }
   .table {
     display: table;
@@ -426,6 +452,9 @@
   }
   .w-\[38\%\] {
     width: 38%;
+  }
+  .w-\[110px\] {
+    width: 110px;
   }
   .w-full {
     width: 100%;
@@ -524,6 +553,15 @@
   .gap-\[6px\] {
     gap: 6px;
   }
+  .gap-\[8px\] {
+    gap: 8px;
+  }
+  .gap-\[10px\] {
+    gap: 10px;
+  }
+  .gap-\[14px\] {
+    gap: 14px;
+  }
   .gap-\[20px\] {
     gap: 20px;
   }
@@ -551,6 +589,12 @@
   }
   .rounded {
     border-radius: 0.25rem;
+  }
+  .rounded-\[8px\] {
+    border-radius: 8px;
+  }
+  .rounded-\[10px\] {
+    border-radius: 10px;
   }
   .rounded-\[12px\] {
     border-radius: 12px;
@@ -656,6 +700,9 @@
   }
   .p-6 {
     padding: calc(var(--spacing) * 6);
+  }
+  .p-\[10px\] {
+    padding: 10px;
   }
   .p-\[20px\] {
     padding: 20px;
@@ -797,6 +844,9 @@
   .text-\[14px\] {
     font-size: 14px;
   }
+  .text-\[15px\] {
+    font-size: 15px;
+  }
   .text-\[16px\] {
     font-size: 16px;
   }
@@ -819,6 +869,10 @@
   .leading-\[16px\] {
     --tw-leading: 16px;
     line-height: 16px;
+  }
+  .leading-\[19px\] {
+    --tw-leading: 19px;
+    line-height: 19px;
   }
   .leading-\[20px\] {
     --tw-leading: 20px;
@@ -884,6 +938,9 @@
   }
   .text-\(--card-link-color\) {
     color: var(--card-link-color);
+  }
+  .text-\(--list-title-color\) {
+    color: var(--list-title-color);
   }
   .text-\[\#80b059\] {
     color: #80b059;
@@ -1044,6 +1101,9 @@
       .group-hover\:bg-pink-400\/10:is(:where(.group):hover *) {
         background-color: color-mix(in oklab, var(--color-pink-400) 10%, transparent);
       }
+    }
+    .group-hover\:text-\(--card-hover-color\):is(:where(.group):hover *) {
+      color: var(--card-hover-color);
     }
     .hover\:border-\[\#80b059\]:hover {
       border-color: #80b059;

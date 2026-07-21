@@ -35,9 +35,10 @@ export const categoryDisplayNames = {
 // sectionBgImage : full-section background image URL. Empty = none
 // featuredReverse: true = image δεξιά στο featured άρθρο
 // isNew          : true = εμφανίζει "NEW" badge στον τίτλο και το pill
-// sectionLayout  : 'default' | 'magazine'
+// sectionLayout  : 'default' | 'magazine' | 'list'
 //   default  → 1 featured full-width + grid 3 στήλες
 //   magazine → 1 μεγάλο αριστερά + στοίβα μικρών δεξιά
+//   list     → συμπαγής λίστα: μικρό thumbnail + τίτλος + πηγή/ώρα ανά γραμμή
 // cardPadding    : false = αφαιρεί το εσωτερικό padding του card (default: true)
 // titleColor     : χρώμα τίτλου άρθρου. Το ίδιο χρησιμοποιείται και στο "Πηγή" text και στο "πριν X ώρες"
 // descriptionColor: χρώμα περιγραφής άρθρου. Το ίδιο χρησιμοποιείται και στο κουμπί "COPY"

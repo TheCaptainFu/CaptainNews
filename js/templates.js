@@ -1,7 +1,7 @@
 ﻿// ─── Imports ───────────────────────────────────────────────────────────────────
 
-import { categoryDisplayNames, categoryAccents, sourceUrls, INITIAL_VISIBLE_COUNT } from './config.js?v=24';
-import { stripHtml, timeAgo } from './utils.js?v=24';
+import { categoryDisplayNames, categoryAccents, sourceUrls, INITIAL_VISIBLE_COUNT } from './config.js?v=27';
+import { stripHtml, timeAgo } from './utils.js?v=27';
 
 // ─── Public API ────────────────────────────────────────────────────────────────
 
@@ -37,6 +37,7 @@ export function buildSection(categoryKey, articles) {
 
     switch (layout) {
         case 'magazine': body = magazineLayout(articles, categoryKey, accent, accentColor); break;
+        case 'list':     body = listLayout(articles, categoryKey, accent, accentColor); break;
         default:         body = defaultLayout(articles, categoryKey, accent, accentColor);
     }
 
@@ -116,6 +117,46 @@ function magazineLayout(articles, categoryKey, accent, accentColor) {
         ${restHtml}`;
 }
 
+// ─── Layout: list ──────────────────────────────────────────────────────────────
+
+function listLayout(articles, categoryKey, accent, accentColor) {
+    return `<div class="gg-container flex flex-col gap-[10px] pt-[10px]">` +
+        articles.map((a, i) => listItem(a, i, categoryKey, accent, accentColor)).join('') +
+        `</div>`;
+}
+
+function listItem(article, artIndex, categoryKey, accent, accentColor) {
+    const imgUrl      = article.image || '/icons/default-image.png';
+    const timeStr     = timeAgo(article.date);
+    const isHidden    = artIndex >= INITIAL_VISIBLE_COUNT;
+    const hiddenClass = isHidden ? `hidden hidden-item-${categoryKey}` : '';
+    const cardBg      = accent?.cardBg || '';
+    const cardBgClass = cardBg ? '' : 'bg-main-grey';
+    const bgStyle     = cardBg ? `background-color:${cardBg};` : '';
+    const titleColor  = accent?.titleColor || '#ffffff';
+    const styleAttr   = `style="${bgStyle}--card-hover-color:${accent?.hoverColor || '#f2d06f'};--list-title-color:${titleColor}"`;
+
+    return `
+        <a href="${article.link}" target="_blank" rel="noopener noreferrer"
+           class="list-item ${cardBgClass} flex items-center gap-[14px] p-[10px] rounded-[10px] group transition-colors duration-300 ${hiddenClass}" ${styleAttr}>
+            <div class="w-[110px] h-[70px] shrink-0 overflow-hidden rounded-[8px]">
+                <img class="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
+                     src="${imgUrl}" alt="${article.title}" width="110" height="70" loading="lazy"
+                     onerror="this.src='/icons/default-image.png'">
+            </div>
+            <div class="flex-1 min-w-0">
+                <div class="text-[15px] leading-[19px] font-bold font-condensed line-clamp-2 text-(--list-title-color) group-hover:text-(--card-hover-color) transition-colors duration-300">
+                    ${article.title}
+                </div>
+                <div class="flex items-center gap-[8px] mt-[6px]">
+                    <span class="text-[12px] font-condensed font-bold" style="color:${accentColor}">${article.source}</span>
+                    <span class="text-zinc-600 text-[11px]">·</span>
+                    <span class="text-[11px] font-condensed text-(--list-title-color)">${timeStr}</span>
+                </div>
+            </div>
+        </a>`;
+}
+
 function magazineSideCard(article, artIndex, categoryKey, accent, accentColor) {
     const imgUrl      = article.image || '/icons/default-image.png';
     const timeStr     = timeAgo(article.date);
@@ -133,7 +174,7 @@ function magazineSideCard(article, artIndex, categoryKey, accent, accentColor) {
             <div class="w-[38%] shrink-0 overflow-hidden">
                 <a href="${article.link}" target="_blank" rel="noopener noreferrer" class="block w-full h-full">
                     <img class="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
-                         src="${imgUrl}" alt="${article.title}" loading="lazy"
+                         src="${imgUrl}" alt="${article.title}" width="300" height="200" loading="lazy"
                          onerror="this.src='/icons/default-image.png'">
                 </a>
             </div>
@@ -174,7 +215,7 @@ function magazineFeatured(article, artIndex, categoryKey, accent, accentColor) {
             <div class="w-full aspect-[1.7] overflow-hidden shrink-0">
                 <a href="${article.link}" target="_blank" rel="noopener noreferrer" class="block w-full h-full">
                     <img class="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
-                         src="${imgUrl}" alt="${article.title}" loading="lazy"
+                         src="${imgUrl}" alt="${article.title}" width="800" height="470" loading="lazy"
                          onerror="this.src='/icons/default-image.png'">
                 </a>
             </div>
@@ -242,7 +283,7 @@ function card(article, artIndex, categoryKey, accent, accentColor) {
             <div class="${imageWrapperClasses}">
                 <a href="${article.link}" target="_blank" rel="noopener noreferrer" class="block w-full h-full cursor-pointer">
                     <img class="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
-                         src="${imgUrl}" alt="${article.title}" loading="lazy"
+                         src="${imgUrl}" alt="${article.title}" width="800" height="470" loading="lazy"
                          onerror="this.src='/icons/default-image.png'">
                 </a>
             </div>

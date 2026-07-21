@@ -22,11 +22,13 @@ const categoriesConfig = JSON.parse(fs.readFileSync(path.join(ROOT, 'categories.
 const CATEGORY_KEYS = Object.keys(categoriesConfig);
 
 // Non-category pages: navKey identifies which sidebar link gets the solid
-// highlight; bodyCategory is written to <body data-category="...">.
+// highlight; bodyCategory is written to <body data-category="...">. h1Text is
+// injected as a visually-hidden <h1> right inside #main-content-wrapper (SEO —
+// null skips it, e.g. policy/contact already have a visible <h1> of their own).
 const EXTRA_PAGES = [
-    { file: 'index.html',         navKey: 'home',   bodyCategory: null },
-    { file: 'policy/index.html',  navKey: 'policy',  bodyCategory: null },
-    { file: 'contact/index.html', navKey: 'contact', bodyCategory: null },
+    { file: 'index.html',         navKey: 'home',   bodyCategory: null, h1Text: 'CaptainNews.gr — Ειδήσεις σε πραγματικό χρόνο από Ελλάδα και τον κόσμο' },
+    { file: 'policy/index.html',  navKey: 'policy',  bodyCategory: null, h1Text: null },
+    { file: 'contact/index.html', navKey: 'contact', bodyCategory: null, h1Text: null },
 ];
 
 function navClass(active) {
@@ -88,6 +90,18 @@ function applyBodyCategory(html, bodyCategory) {
     );
 }
 
+// Visually-hidden <h1> for SEO — every page needs exactly one topic-defining
+// h1; the visible on-page headings are h2 (per-category section titles built
+// client-side). Idempotent: strips any h1 it previously inserted before
+// re-adding, so running the build repeatedly never duplicates it.
+const H1_SLOT = /(<main id="main-content-wrapper"[^>]*>)(\s*<h1 class="sr-only">[^<]*<\/h1>)?/;
+
+function applyH1(html, h1Text) {
+    if (!h1Text) return html;
+    if (!H1_SLOT.test(html)) throw new Error('could not locate #main-content-wrapper to inject <h1>');
+    return html.replace(H1_SLOT, (_m, mainTag) => `${mainTag}\n        <h1 class="sr-only">${h1Text}</h1>`);
+}
+
 function scaffoldPage(key) {
     const cfg = categoriesConfig[key];
     const filePath = path.join(ROOT, cfg.path.slice(1), 'index.html');
@@ -102,13 +116,14 @@ function scaffoldPage(key) {
         .replace('{{HEADER}}', buildHeader(key, key))
         .replace('{{FOOTER}}', buildFooter().trimEnd());
     html = applyBodyCategory(html, key);
+    html = applyH1(html, cfg.displayName);
 
     fs.writeFileSync(filePath, html, 'utf8');
     console.log(`scaffolded new page: ${cfg.path.slice(1)}index.html  ← edit its <meta name="description"> and add an accent in js/config.js`);
     return true;
 }
 
-function buildExistingPage({ file, navKey, bodyCategory }) {
+function buildExistingPage({ file, navKey, bodyCategory, h1Text }) {
     const filePath = path.join(ROOT, file);
     let html = fs.readFileSync(filePath, 'utf8');
 
@@ -122,6 +137,7 @@ function buildExistingPage({ file, navKey, bodyCategory }) {
     html = html.replace(FOOTER_BLOCK, buildFooter().trimEnd());
 
     html = applyBodyCategory(html, bodyCategory);
+    html = applyH1(html, h1Text);
 
     fs.writeFileSync(filePath, html, 'utf8');
     console.log(`built: ${file}`);
@@ -133,7 +149,7 @@ for (const key of CATEGORY_KEYS) {
     const cfg = categoriesConfig[key];
     const isNew = scaffoldPage(key);
     if (!isNew) {
-        buildExistingPage({ file: path.join(cfg.path.slice(1), 'index.html'), navKey: key, bodyCategory: key });
+        buildExistingPage({ file: path.join(cfg.path.slice(1), 'index.html'), navKey: key, bodyCategory: key, h1Text: cfg.displayName });
     }
 }
 

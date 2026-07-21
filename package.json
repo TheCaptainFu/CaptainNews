@@ -10,7 +10,8 @@
     "build:css": "npx @tailwindcss/cli -i ./src/main.css -o ./src/output.css",
     "build:html": "node scripts/build-pages.js",
     "build:worker": "node scripts/build-worker.js",
-    "build": "npm run build:html && npm run build:worker && npm run build:css",
+    "build:sitemap": "node scripts/build-sitemap.js",
+    "build": "npm run build:html && npm run build:worker && npm run build:sitemap && npm run build:css",
     "serve": "npx wrangler pages dev . --port 3000"
   },
   "dependencies": {
