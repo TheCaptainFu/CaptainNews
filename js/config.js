@@ -12,7 +12,8 @@ export const categoryOrder = [
     'world_politics',
     'sports',
     'technology',
-    'music'
+    'music',
+    'gossip'
 ];
 
 // ─── Category display names ────────────────────────────────────────────────────
@@ -24,6 +25,7 @@ export const categoryDisplayNames = {
     sports:          'ΑΘΛΗΤΙΚΑ',
     technology:      'ΤΕΧΝΟΛΟΓΙΑ',
     music:           'ΜΟΥΣΙΚΗ',
+    gossip:          'GOSSIP',
 };
 
 // ─── Per-category visual theme ─────────────────────────────────────────────────
@@ -124,6 +126,20 @@ export const categoryAccents = {
         titleColor: 'black',
         descriptionColor: 'rgba(0,0,0,0.8)',
         hoverColor: '#f2d06f'
+    },
+
+    gossip: {
+        color: '#ec4899',
+        cardBg: 'none',
+        sectionBg: '#FCB0BA',
+        sectionBgImage: '',
+        featuredReverse: false,
+        isNew: false,
+        sectionLayout: 'default',
+        cardPadding: true,
+        titleColor: '#000000',
+        descriptionColor: 'rgba(0,0,0,0.8)',
+        hoverColor: '#ec4899'
     },
 };
 

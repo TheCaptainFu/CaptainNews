@@ -27,7 +27,7 @@ export function buildSection(categoryKey, articles) {
     } else if (accent?.sectionBg) {
         section.style.backgroundColor = accent.sectionBg;
         section.style.borderRadius    = '0px';
-        section.style.paddingTop      = '32px';
+        section.style.paddingTop      = '10px';
         section.style.paddingBottom      = '20px';
 
     }
@@ -54,7 +54,7 @@ function sectionHeader(title, count, accentColor, accent) {
         ? `<span class="shrink-0 self-center ml-1 bg-[#f59e0b] text-black text-[10px] font-bold px-2 py-[3px] rounded-full uppercase tracking-widest animate-pulse">NEW</span>`
         : '';
     return `
-        <div class="gg-container mt-[20px] section-header">
+        <div class="gg-container section-header">
             <div class="w-full">
                 <div class="flex items-end gap-[20px] pb-[8px]">
                     <div class="shrink-0 flex items-center gap-2">
@@ -63,9 +63,9 @@ function sectionHeader(title, count, accentColor, accent) {
                         ${newBadge}
                     </div>
                     <div class="h-[3px] flex-1 rounded-full mb-[5px]"
-                         style="background: linear-gradient(to right, ${accentColor}, transparent)"></div>
+                         style="background:  ${accentColor} "></div>
                     <span class="shrink-0 whitespace-nowrap text-[13px] font-bold font-condensed"
-                          style="color:${accentColor}88">${count} ΑΡΘΡΑ</span>
+                          style="color:${accentColor}">${count} ΑΡΘΡΑ</span>
                 </div>
             </div>
         </div>`;

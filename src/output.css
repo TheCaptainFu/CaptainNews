@@ -226,9 +226,6 @@
   .relative {
     position: relative;
   }
-  .static {
-    position: static;
-  }
   .inset-0 {
     inset: 0px;
   }
@@ -267,9 +264,6 @@
   }
   .mx-6 {
     margin-inline: calc(var(--spacing) * 6);
-  }
-  .mx-auto {
-    margin-inline: auto;
   }
   .mt-1 {
     margin-top: var(--spacing);
@@ -409,9 +403,6 @@
   .min-h-\[50px\] {
     min-height: 50px;
   }
-  .min-h-\[60vh\] {
-    min-height: 60vh;
-  }
   .min-h-screen {
     min-height: 100vh;
   }
@@ -441,9 +432,6 @@
   }
   .w-max {
     width: max-content;
-  }
-  .max-w-\[1200px\] {
-    max-width: 1200px;
   }
   .min-w-0 {
     min-width: 0px;
@@ -912,9 +900,6 @@
   .text-blue-400 {
     color: var(--color-blue-400);
   }
-  .text-main-blue {
-    color: var(--color-main-blue);
-  }
   .text-main-yellow {
     color: var(--color-main-yellow);
   }
@@ -1144,15 +1129,8 @@
     .sm\:grid-cols-3 {
       grid-template-columns: repeat(3, minmax(0, 1fr));
     }
-    .sm\:px-6 {
-      padding-inline: calc(var(--spacing) * 6);
-    }
     .sm\:text-left {
       text-align: left;
-    }
-    .sm\:text-sm {
-      font-size: var(--text-sm);
-      line-height: var(--tw-leading, var(--text-sm--line-height));
     }
   }
   @media (width >= 48rem) {

@@ -73,11 +73,11 @@ function setupFilterLogic() {
         allSections.forEach(section => {
             const visible = selected === 'all' || section.getAttribute('data-category') === selected;
             section.style.display = visible ? 'block' : 'none';
-            section.querySelector('.section-header')?.classList.toggle('mt-[40px]', visible);
+            section.querySelector('.section-header')?.classList.toggle('mt-[20px]', visible);
         });
 
         const firstVisible = Array.from(allSections).find(s => s.style.display !== 'none');
-        firstVisible?.querySelector('.section-header')?.classList.remove('mt-[40px]');
+        firstVisible?.querySelector('.section-header')?.classList.remove('mt-[20px]');
 
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }

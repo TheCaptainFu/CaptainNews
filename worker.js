@@ -37,6 +37,10 @@ const categories = {
     "music": [
         { name: "Mad TV",  url: "https://mad.tv/feed/" },
         { name: "Tralala", url: "https://www.tralala.gr/feed/" },
+    ],
+    "gossip": [
+        { name: "Newsbeast", url: "https://www.newsbeast.gr/lifestyle/feed" },
+        { name: "Newsit",    url: "https://www.newsit.gr/category/lifestyle/feed/" },
     ]
 };
 

@@ -66,5 +66,15 @@
             { "name": "Mad TV",  "url": "https://mad.tv/feed/", "homepage": "https://mad.tv" },
             { "name": "Tralala", "url": "https://www.tralala.gr/feed/", "homepage": "https://www.tralala.gr" }
         ]
+    },
+    "gossip": {
+        "displayName": "GOSSIP",
+        "navLabel": "GOSSIP",
+        "navIcon": "fa-champagne-glasses",
+        "path": "/gossip/",
+        "feeds": [
+            { "name": "Newsbeast", "url": "https://www.newsbeast.gr/lifestyle/feed", "homepage": "https://www.newsbeast.gr" },
+            { "name": "Newsit",    "url": "https://www.newsit.gr/category/lifestyle/feed/", "homepage": "https://www.newsit.gr" }
+        ]
     }
 }
