@@ -53,7 +53,6 @@
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
-    --color-main-blue: #3749bd;
     --color-main-yellow: #f2d06f;
     --color-main-black: #0a0a0a;
     --color-main-grey: #1a1a1a;
@@ -303,9 +302,6 @@
   .mt-\[20px\] {
     margin-top: 20px;
   }
-  .mt-\[40px\] {
-    margin-top: 40px;
-  }
   .mr-2 {
     margin-right: calc(var(--spacing) * 2);
   }
@@ -344,6 +340,9 @@
   }
   .ml-1 {
     margin-left: var(--spacing);
+  }
+  .ml-2 {
+    margin-left: calc(var(--spacing) * 2);
   }
   .line-clamp-2 {
     overflow: hidden;
@@ -710,6 +709,12 @@
   .px-0 {
     padding-inline: 0px;
   }
+  .px-1 {
+    padding-inline: var(--spacing);
+  }
+  .px-1\.5 {
+    padding-inline: calc(var(--spacing) * 1.5);
+  }
   .px-2 {
     padding-inline: calc(var(--spacing) * 2);
   }
@@ -724,6 +729,12 @@
   }
   .px-\[14px\] {
     padding-inline: 14px;
+  }
+  .py-0 {
+    padding-block: 0px;
+  }
+  .py-0\.5 {
+    padding-block: calc(var(--spacing) * 0.5);
   }
   .py-1 {
     padding-block: var(--spacing);
@@ -803,6 +814,9 @@
   .text-center {
     text-align: center;
   }
+  .align-middle {
+    vertical-align: middle;
+  }
   .font-condensed {
     font-family: var(--font-condensed);
   }
@@ -828,6 +842,9 @@
   .text-xs {
     font-size: var(--text-xs);
     line-height: var(--tw-leading, var(--text-xs--line-height));
+  }
+  .text-\[9px\] {
+    font-size: 9px;
   }
   .text-\[10px\] {
     font-size: 10px;
@@ -1235,6 +1252,12 @@
   }
   .\[\&_img\]\:max-h-\[30px\] img {
     max-height: 30px;
+  }
+  .\[\&_img\]\:max-h-\[50px\] img {
+    max-height: 50px;
+  }
+  .\[\&_img\]\:max-h-\[60px\] img {
+    max-height: 60px;
   }
 }
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');

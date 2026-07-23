@@ -102,23 +102,23 @@ export const categoryAccents = {
     },
 
     technology: {
-        color: '#ffffff',
+        color: '#000000',
         cardBg: 'none',
-        sectionBg: '#000000',
+        sectionBg: '#E6ECF2',
         sectionBgImage: '',
         featuredReverse: false,
         isNew: false,
         sectionLayout: 'magazine',
         cardPadding: true,
-        titleColor: '#ffffff',
-        descriptionColor: 'rgba(255,255,255,0.7)',
+        titleColor: '#000000',
+        descriptionColor: 'rgba(0,0,0,0.8)',
         hoverColor: '#f2d06f'
     },
 
     music: {
         color: '#000000',
         cardBg: 'none',
-        sectionBg: '#E6ECF2',
+        sectionBg: '#F7F3EE',
         sectionBgImage: '',
         featuredReverse: false,
         isNew: false,
@@ -135,7 +135,7 @@ export const categoryAccents = {
         sectionBg: '#FCB0BA',
         sectionBgImage: '',
         featuredReverse: false,
-        isNew: false,
+        isNew: true,
         sectionLayout: 'default',
         cardPadding: true,
         titleColor: '#000000',

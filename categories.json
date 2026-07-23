@@ -72,6 +72,7 @@
         "navLabel": "GOSSIP",
         "navIcon": "fa-champagne-glasses",
         "path": "/gossip/",
+        "isNew": true,
         "feeds": [
             { "name": "Newsbeast", "url": "https://www.newsbeast.gr/lifestyle/feed", "homepage": "https://www.newsbeast.gr" },
             { "name": "Newsit",    "url": "https://www.newsit.gr/category/lifestyle/feed/", "homepage": "https://www.newsit.gr" }

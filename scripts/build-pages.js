@@ -35,13 +35,17 @@ function navClass(active) {
     return active ? 'bg-[#3749bd]' : 'hover:bg-[#3749bd]';
 }
 
+const NEW_BADGE_NAV  = `<span class="ml-2 bg-[#f59e0b] text-black text-[9px] font-black px-1.5 py-0.5 rounded-full uppercase tracking-widest align-middle animate-pulse">NEW</span>`;
+const NEW_BADGE_PILL = `<span class="ml-1 bg-[#f59e0b] text-black text-[9px] font-black px-1.5 py-0.5 rounded-full uppercase tracking-widest align-middle animate-pulse">NEW</span>`;
+
 function buildSidebarNav(navKey) {
     const lines = [];
     lines.push(`                <a href="/" class="block px-4 py-3 text-white font-condensed font-bold rounded-lg ${navClass(navKey === 'home')} transition-all"><i class="fa-solid fa-house mr-3"></i>ΑΡΧΙΚΗ</a>`);
     lines.push(`                <p class="px-4 pt-3 pb-1 text-zinc-600 text-xs font-condensed font-bold uppercase tracking-widest">Κατηγορίες</p>`);
     for (const key of CATEGORY_KEYS) {
         const cfg = categoriesConfig[key];
-        lines.push(`                <a href="${cfg.path}" class="block px-4 py-3 text-white font-condensed font-bold rounded-lg ${navClass(navKey === key)} transition-all"><i class="fa-solid ${cfg.navIcon} mr-3"></i>${cfg.navLabel}</a>`);
+        const badge = cfg.isNew ? NEW_BADGE_NAV : '';
+        lines.push(`                <a href="${cfg.path}" class="block px-4 py-3 text-white font-condensed font-bold rounded-lg ${navClass(navKey === key)} transition-all"><i class="fa-solid ${cfg.navIcon} mr-3"></i>${cfg.navLabel}${badge}</a>`);
     }
     lines.push(`                <p class="px-4 pt-3 pb-1 text-zinc-600 text-xs font-condensed font-bold uppercase tracking-widest">Άλλα</p>`);
     lines.push(`                <a href="/contact" class="block px-4 py-3 text-white font-condensed font-bold rounded-lg ${navClass(navKey === 'contact')} transition-all"><i class="fa-solid fa-envelope mr-3"></i>ΕΠΙΚΟΙΝΩΝΙΑ</a>`);
@@ -56,7 +60,8 @@ function buildFilterPills(bodyCategory) {
     for (const key of CATEGORY_KEYS) {
         const cfg = categoriesConfig[key];
         const isActive = active === key ? ' active' : '';
-        lines.push(`                <a href="${cfg.path}" data-category="${key}" class="filter-pill${isActive} font-condensed font-bold text-xs px-4 py-1.5 rounded-full border transition-all duration-200 whitespace-nowrap cursor-pointer">\n                    ${cfg.displayName}\n                </a>`);
+        const badge = cfg.isNew ? NEW_BADGE_PILL : '';
+        lines.push(`                <a href="${cfg.path}" data-category="${key}" class="filter-pill${isActive} font-condensed font-bold text-xs px-4 py-1.5 rounded-full border transition-all duration-200 whitespace-nowrap cursor-pointer">\n                    ${cfg.displayName}${badge}\n                </a>`);
     }
     return lines.join('\n');
 }
