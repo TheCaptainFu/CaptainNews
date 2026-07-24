@@ -6,7 +6,8 @@
         "path": "/greece/",
         "feeds": [
             { "name": "Protothema", "url": "https://www.protothema.gr/rss/", "homepage": "https://www.protothema.gr" },
-            { "name": "Newsbeast",  "url": "https://www.newsbeast.gr/feed", "homepage": "https://www.newsbeast.gr" },
+            { "name": "Ertnews",    "url": "https://www.ertnews.gr/feed/", "homepage": "https://www.ertnews.gr" },
+            { "name": "Iefimerida", "url": "https://www.iefimerida.gr/rss.xml", "homepage": "https://www.iefimerida.gr" },
             { "name": "Newsit",     "url": "https://www.newsit.gr/feed/", "homepage": "https://www.newsit.gr" },
             { "name": "In.gr",      "url": "https://www.in.gr/feed/", "homepage": "https://www.in.gr" }
         ]
@@ -29,9 +30,10 @@
         "path": "/world/",
         "feeds": [
             { "name": "BBC World",   "url": "https://feeds.bbci.co.uk/news/world/rss.xml", "homepage": "https://www.bbc.com/news/world" },
+            { "name": "In.gr World", "url": "https://www.in.gr/world/feed/", "homepage": "https://www.in.gr" },
             { "name": "ABC Intl",    "url": "https://abcnews.go.com/abcnews/internationalheadlines", "homepage": "https://abcnews.go.com" },
-            { "name": "The Hill",    "url": "https://thehill.com/homenews/feed/", "homepage": "https://thehill.com" },
-            { "name": "In.gr World", "url": "https://www.in.gr/world/feed/", "homepage": "https://www.in.gr" }
+            { "name": "The Guardian","url": "https://www.theguardian.com/politics/rss", "homepage": "https://www.theguardian.com/politics" },
+            { "name": "The Hill",    "url": "https://thehill.com/homenews/feed/", "homepage": "https://thehill.com" }
         ]
     },
     "sports": {
@@ -72,10 +74,36 @@
         "navLabel": "GOSSIP",
         "navIcon": "fa-champagne-glasses",
         "path": "/gossip/",
-        "isNew": true,
+        "isNew": false,
         "feeds": [
             { "name": "Newsbeast", "url": "https://www.newsbeast.gr/lifestyle/feed", "homepage": "https://www.newsbeast.gr" },
             { "name": "Newsit",    "url": "https://www.newsit.gr/category/lifestyle/feed/", "homepage": "https://www.newsit.gr" }
+        ]
+    },
+    "cinema": {
+        "displayName": "CINE",
+        "navLabel": "CINE",
+        "navIcon": "fa-film",
+        "path": "/cinema/",
+        "isNew": true,
+        "feeds": [
+            { "name": "FreeCinema",  "url": "https://freecinema.gr/feed/", "homepage": "https://freecinema.gr" },
+            { "name": "Cinepivates", "url": "https://cinepivates.gr/feed/", "homepage": "https://cinepivates.gr" },
+            { "name": "Protothema",  "url": "https://www.protothema.gr/culture/rss/", "homepage": "https://www.protothema.gr" },
+            { "name": "Newsit",      "url": "https://www.newsit.gr/category/politismos/feed/", "homepage": "https://www.newsit.gr" }
+        ]
+    },
+    "gaming": {
+        "displayName": "GAMING",
+        "navLabel": "GAMING",
+        "navIcon": "fa-gamepad",
+        "path": "/gaming/",
+        "isNew": false,
+        "feeds": [
+            { "name": "Unboxholics", "url": "https://unboxholics.com/feed", "homepage": "https://unboxholics.com" },
+            { "name": "Gameslife",   "url": "https://gameslife.gr/feed/", "homepage": "https://gameslife.gr" },
+            { "name": "VG24",       "url": "https://www.vg24.gr/feed/", "homepage": "https://www.vg24.gr" },
+            { "name": "Ragequit",   "url": "https://ragequit.gr/feed/", "homepage": "https://ragequit.gr" }
         ]
     }
 }

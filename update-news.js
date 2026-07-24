@@ -39,6 +39,14 @@ function extractImage(item) {
         if (url && url.startsWith('http')) return url;
     }
     if (item.enclosure?.url?.startsWith('http')) return item.enclosure.url;
+
+    // Many WordPress feeds (Newsit, Iefimerida, In.gr, ...) embed the featured
+    // image as a plain <img> inside the description/content HTML instead of
+    // using media:thumbnail/enclosure — fall back to scraping it from there.
+    const html = item['content:encoded'] || item.content || item.summary || '';
+    const imgMatch = html.match(/<img[^>]+src=["']([^"']+)["']/i);
+    if (imgMatch && imgMatch[1].startsWith('http')) return imgMatch[1];
+
     return '';
 }
 

@@ -13,7 +13,9 @@ export const categoryOrder = [
     'sports',
     'technology',
     'music',
-    'gossip'
+    'gossip',
+    'cinema',
+    'gaming'
 ];
 
 // ─── Category display names ────────────────────────────────────────────────────
@@ -26,6 +28,8 @@ export const categoryDisplayNames = {
     technology:      'ΤΕΧΝΟΛΟΓΙΑ',
     music:           'ΜΟΥΣΙΚΗ',
     gossip:          'GOSSIP',
+    cinema:          'CINE',
+    gaming:          'GAMING',
 };
 
 // ─── Per-category visual theme ─────────────────────────────────────────────────
@@ -135,12 +139,40 @@ export const categoryAccents = {
         sectionBg: '#FCB0BA',
         sectionBgImage: '',
         featuredReverse: false,
-        isNew: true,
+        isNew: false,
         sectionLayout: 'default',
         cardPadding: true,
         titleColor: '#000000',
         descriptionColor: 'rgba(0,0,0,0.8)',
         hoverColor: '#ec4899'
+    },
+
+    cinema: {
+        color: '#dc2626',
+        cardBg: 'none',
+        sectionBg: '#F7F3EE',
+        sectionBgImage: '',
+        featuredReverse: false,
+        isNew: true,
+        sectionLayout: 'magazine',
+        cardPadding: true,
+        titleColor: '#000000',
+        descriptionColor: 'rgba(0,0,0,0.8)',
+        hoverColor: '#dc2626'
+    },
+
+    gaming: {
+        color: '#3749BD',
+        cardBg: 'none',
+        sectionBg: '#F7F3EE',
+        sectionBgImage: '',
+        featuredReverse: false,
+        isNew: false,
+        sectionLayout: 'default',
+        cardPadding: true,
+        titleColor: '#000000',
+        descriptionColor: 'rgba(0,0,0,0.8)',
+        hoverColor: ''
     },
 };
 

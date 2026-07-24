@@ -8,7 +8,8 @@
 const categories = {
     "greece_news": [
         { name: "Protothema", url: "https://www.protothema.gr/rss/" },
-        { name: "Newsbeast",  url: "https://www.newsbeast.gr/feed" },
+        { name: "Ertnews",    url: "https://www.ertnews.gr/feed/" },
+        { name: "Iefimerida", url: "https://www.iefimerida.gr/rss.xml" },
         { name: "Newsit",     url: "https://www.newsit.gr/feed/" },
         { name: "In.gr",      url: "https://www.in.gr/feed/" },
     ],
@@ -18,10 +19,11 @@ const categories = {
         { name: "In.gr",      url: "https://www.in.gr/politics/feed/" },
     ],
     "world_politics": [
-        { name: "BBC World",   url: "https://feeds.bbci.co.uk/news/world/rss.xml" },
-        { name: "ABC Intl",    url: "https://abcnews.go.com/abcnews/internationalheadlines" },
-        { name: "The Hill",    url: "https://thehill.com/homenews/feed/" },
-        { name: "In.gr World", url: "https://www.in.gr/world/feed/" },
+        { name: "BBC World",    url: "https://feeds.bbci.co.uk/news/world/rss.xml" },
+        { name: "In.gr World",  url: "https://www.in.gr/world/feed/" },
+        { name: "ABC Intl",     url: "https://abcnews.go.com/abcnews/internationalheadlines" },
+        { name: "The Guardian", url: "https://www.theguardian.com/politics/rss" },
+        { name: "The Hill",     url: "https://thehill.com/homenews/feed/" },
     ],
     "sports": [
         { name: "Newsbeast", url: "https://www.newsbeast.gr/sports/feed" },
@@ -41,6 +43,18 @@ const categories = {
     "gossip": [
         { name: "Newsbeast", url: "https://www.newsbeast.gr/lifestyle/feed" },
         { name: "Newsit",    url: "https://www.newsit.gr/category/lifestyle/feed/" },
+    ],
+    "cinema": [
+        { name: "FreeCinema",  url: "https://freecinema.gr/feed/" },
+        { name: "Cinepivates", url: "https://cinepivates.gr/feed/" },
+        { name: "Protothema",  url: "https://www.protothema.gr/culture/rss/" },
+        { name: "Newsit",      url: "https://www.newsit.gr/category/politismos/feed/" },
+    ],
+    "gaming": [
+        { name: "Unboxholics", url: "https://unboxholics.com/feed" },
+        { name: "Gameslife",   url: "https://gameslife.gr/feed/" },
+        { name: "VG24",        url: "https://www.vg24.gr/feed/" },
+        { name: "Ragequit",    url: "https://ragequit.gr/feed/" },
     ]
 };
 

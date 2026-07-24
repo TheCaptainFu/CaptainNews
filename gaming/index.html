@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/output.css?v=15">
+    <link rel="stylesheet" href="/src/main.css?v=15">
+    <title>GAMING | CaptainNews.gr</title>
+    <meta name="description" content="Τα τελευταία νέα από τον κόσμο των videogames σε πραγματικό χρόνο.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://captainnews.gr/gaming/">
+    <meta property="og:title" content="GAMING | CaptainNews.gr">
+    <meta property="og:description" content="Τα τελευταία νέα από τον κόσμο των videogames σε πραγματικό χρόνο.">
+    <meta property="og:image" content="https://captainnews.gr/icons/og-image.png">
+    <meta property="og:locale" content="el_GR">
+    <meta property="og:site_name" content="CaptainNews.gr">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="GAMING | CaptainNews.gr">
+    <meta name="twitter:image" content="https://captainnews.gr/icons/og-image.png">
+    <link rel="canonical" href="https://captainnews.gr/gaming/">
+    <link rel="alternate" hreflang="el" href="https://captainnews.gr/gaming/">
+    <link rel="alternate" hreflang="x-default" href="https://captainnews.gr/">
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+    <link rel="icon" type="image/png" href="/icons/favicon.png">
+    <link rel="apple-touch-icon" href="/icons/pwa.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#3749bd">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v2.9.2/dist/cookieconsent.css">
+    <script type="text/plain" data-cookiecategory="analytics" async src="https://www.googletagmanager.com/gtag/js?id=G-TRLBX4N99L"></script>
+    <script type="text/plain" data-cookiecategory="analytics">
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-TRLBX4N99L');
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "name": "GAMING | CaptainNews.gr",
+      "url": "https://captainnews.gr/gaming/",
+      "inLanguage": "el-GR",
+      "isPartOf": {
+        "@type": "WebSite",
+        "url": "https://captainnews.gr/"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Αρχική",
+          "item": "https://captainnews.gr/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "GAMING",
+          "item": "https://captainnews.gr/gaming/"
+        }
+      ]
+    }
+  ]
+}
+    </script>
+</head>
+<body class="bg-main-black flex flex-col min-h-screen" data-category="gaming">
+    <header id="main-header" class="bg-zinc-900/95 backdrop-blur-xl fixed top-[38px] w-full z-50 border-b border-zinc-800 h-[70px]">
+        <nav class="gg-container flex items-center justify-between h-full">
+            <div class="logo [&_img]:max-h-[50px]">
+                <a href="/">
+                    <img src="/icons/logo.png?v=2" alt="CaptainNews Logo">
+                </a>
+            </div>
+
+            <button id="burger-btn" class="text-white hover:text-[#f2d06f] cursor-pointer focus:outline-none transition-colors p-2 z-[60]">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </nav>
+    </header>
+    <div id="news-ticker" class="fixed top-[0px] w-full z-[45] h-[38px] flex items-center bg-[#0a0f1e] border-b border-zinc-800/60">
+        <div class="shrink-0 bg-[#3749bd] text-white font-condensed font-bold text-[11px] px-3 h-full flex items-center gap-2 uppercase tracking-widest">
+            <span class="w-1.5 h-1.5 rounded-full bg-[#f2d06f] animate-pulse inline-block"></span>LIVE
+        </div>
+        <div class="flex-1 overflow-hidden h-full flex items-center">
+            <div id="ticker-content" class="ticker-track flex items-center gap-0 whitespace-nowrap px-4">
+                <span class="text-zinc-600 text-[11px] font-condensed">Φόρτωση...</span>
+            </div>
+        </div>
+    </div>
+
+    <div id="menu-overlay" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[55] opacity-0 pointer-events-none transition-opacity duration-300"></div>
+
+    <div id="sidebar-menu" class="fixed top-0 right-0 h-full w-80 bg-zinc-900 shadow-2xl z-[60] transform translate-x-full transition-transform duration-300 ease-in-out">
+        <div class="flex flex-col h-full">
+            <div class="flex items-center justify-between p-6 border-b border-zinc-800">
+                <h2 class="text-xl font-bold text-white font-condensed">ΜΕΝΟΥ</h2>
+                <button id="close-sidebar" class="text-zinc-400 hover:text-white transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+
+            <nav class="flex-1 px-4 py-6 space-y-2 overflow-y-auto">
+                <a href="/" class="block px-4 py-3 text-white font-condensed font-bold rounded-lg hover:bg-[#3749bd] transition-all"><i class="fa-solid fa-house mr-3"></i>ΑΡΧΙΚΗ</a>
+                <p class="px-4 pt-3 pb-1 text-zinc-600 text-xs font-condensed font-bold uppercase tracking-widest">Κατηγορίες</p>
+                <a href="/greece/" class="block px-4 py-3 text-white font-condensed font-bold rounded-lg hover:bg-[#3749bd] transition-all"><i class="fa-solid fa-flag mr-3"></i>ΕΛΛΑΔΑ</a>
+                <a href="/politics/" class="block px-4 py-3 text-white font-condensed font-bold rounded-lg hover:bg-[#3749bd] transition-all"><i class="fa-solid fa-landmark mr-3"></i>ΠΟΛΙΤΙΚΑ</a>
+                <a href="/world/" class="block px-4 py-3 text-white font-condensed font-bold rounded-lg hover:bg-[#3749bd] transition-all"><i class="fa-solid fa-earth-europe mr-3"></i>ΠΑΓΚΟΣΜΙΑ</a>
+                <a href="/sports/" class="block px-4 py-3 text-white font-condensed font-bold rounded-lg hover:bg-[#3749bd] transition-all"><i class="fa-solid fa-futbol mr-3"></i>ΑΘΛΗΤΙΚΑ</a>
+                <a href="/technology/" class="block px-4 py-3 text-white font-condensed font-bold rounded-lg hover:bg-[#3749bd] transition-all"><i class="fa-solid fa-microchip mr-3"></i>ΤΕΧΝΟΛΟΓΙΑ</a>
+                <a href="/music/" class="block px-4 py-3 text-white font-condensed font-bold rounded-lg hover:bg-[#3749bd] transition-all"><i class="fa-solid fa-music mr-3"></i>ΜΟΥΣΙΚΗ</a>
+                <a href="/gossip/" class="block px-4 py-3 text-white font-condensed font-bold rounded-lg hover:bg-[#3749bd] transition-all"><i class="fa-solid fa-champagne-glasses mr-3"></i>GOSSIP</a>
+                <a href="/cinema/" class="block px-4 py-3 text-white font-condensed font-bold rounded-lg hover:bg-[#3749bd] transition-all"><i class="fa-solid fa-film mr-3"></i>CINE<span class="ml-2 bg-[#f59e0b] text-black text-[9px] font-black px-1.5 py-0.5 rounded-full uppercase tracking-widest align-middle animate-pulse">NEW</span></a>
+                <a href="/gaming/" class="block px-4 py-3 text-white font-condensed font-bold rounded-lg bg-[#3749bd] transition-all"><i class="fa-solid fa-gamepad mr-3"></i>GAMING</a>
+                <p class="px-4 pt-3 pb-1 text-zinc-600 text-xs font-condensed font-bold uppercase tracking-widest">Άλλα</p>
+                <a href="/contact" class="block px-4 py-3 text-white font-condensed font-bold rounded-lg hover:bg-[#3749bd] transition-all"><i class="fa-solid fa-envelope mr-3"></i>ΕΠΙΚΟΙΝΩΝΙΑ</a>
+                <a href="/policy" class="block px-4 py-3 text-white font-condensed font-bold rounded-lg hover:bg-[#3749bd] transition-all"><i class="fa-solid fa-shield-halved mr-3"></i>ΠΟΛΙΤΙΚΗ ΑΠΟΡΡΗΤΟΥ</a>
+            </nav>
+
+            <div class="p-6 border-t border-zinc-800">
+                <p class="text-zinc-500 text-xs font-condensed">⚓ CaptainNews.gr</p>
+                <p class="text-zinc-600 text-xs mt-1">Ειδήσεις σε πραγματικό χρόνο</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="category-bar" class="fixed top-[108px] w-full bg-[#111] z-40 border-b border-zinc-800 shadow-md h-[50px] flex items-center overflow-hidden">
+        <div class="gg-container w-full overflow-x-auto" style="scrollbar-width:none; -ms-overflow-style:none;">
+            <div id="category-filter" class="flex items-center gap-2 w-max min-w-full px-0">
+                <a href="/" data-category="all" class="filter-pill font-condensed font-bold text-xs px-4 py-1.5 rounded-full border transition-all duration-200 whitespace-nowrap cursor-pointer">
+                    ΟΛΕΣ ΟΙ ΚΑΤΗΓΟΡΙΕΣ
+                </a>
+                <a href="/greece/" data-category="greece_news" class="filter-pill font-condensed font-bold text-xs px-4 py-1.5 rounded-full border transition-all duration-200 whitespace-nowrap cursor-pointer">
+                    ΕΛΛΑΔΑ ΕΠΙΚΑΙΡΟΤΗΤΑ
+                </a>
+                <a href="/politics/" data-category="politics_greece" class="filter-pill font-condensed font-bold text-xs px-4 py-1.5 rounded-full border transition-all duration-200 whitespace-nowrap cursor-pointer">
+                    ΠΟΛΙΤΙΚΑ ΕΛΛΑΔΑ
+                </a>
+                <a href="/world/" data-category="world_politics" class="filter-pill font-condensed font-bold text-xs px-4 py-1.5 rounded-full border transition-all duration-200 whitespace-nowrap cursor-pointer">
+                    ΠΑΓΚΟΣΜΙΑ ΠΟΛΙΤΙΚΗ
+                </a>
+                <a href="/sports/" data-category="sports" class="filter-pill font-condensed font-bold text-xs px-4 py-1.5 rounded-full border transition-all duration-200 whitespace-nowrap cursor-pointer">
+                    ΑΘΛΗΤΙΚΑ
+                </a>
+                <a href="/technology/" data-category="technology" class="filter-pill font-condensed font-bold text-xs px-4 py-1.5 rounded-full border transition-all duration-200 whitespace-nowrap cursor-pointer">
+                    ΤΕΧΝΟΛΟΓΙΑ
+                </a>
+                <a href="/music/" data-category="music" class="filter-pill font-condensed font-bold text-xs px-4 py-1.5 rounded-full border transition-all duration-200 whitespace-nowrap cursor-pointer">
+                    ΜΟΥΣΙΚΗ
+                </a>
+                <a href="/gossip/" data-category="gossip" class="filter-pill font-condensed font-bold text-xs px-4 py-1.5 rounded-full border transition-all duration-200 whitespace-nowrap cursor-pointer">
+                    GOSSIP
+                </a>
+                <a href="/cinema/" data-category="cinema" class="filter-pill font-condensed font-bold text-xs px-4 py-1.5 rounded-full border transition-all duration-200 whitespace-nowrap cursor-pointer">
+                    CINE<span class="ml-1 bg-[#f59e0b] text-black text-[9px] font-black px-1.5 py-0.5 rounded-full uppercase tracking-widest align-middle animate-pulse">NEW</span>
+                </a>
+                <a href="/gaming/" data-category="gaming" class="filter-pill active font-condensed font-bold text-xs px-4 py-1.5 rounded-full border transition-all duration-200 whitespace-nowrap cursor-pointer">
+                    GAMING
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <main id="main-content-wrapper" class="pt-[160px] pb-10 flex-grow">
+        <h1 class="sr-only">GAMING</h1>
+        <div class="gg-container text-white font-condensed pt-10 text-center animate-pulse">Φόρτωση ειδήσεων...</div>
+    </main>
+    <footer class="bg-zinc-950 border-t border-zinc-900">
+        <div class="gg-container py-12">
+            <div class="flex flex-col items-center mb-14">
+                <a href="/"><img src="/icons/logo.png?v=2" alt="CaptainNews Logo" class="h-8"></a>
+                <p class="mt-2 text-xs text-white">Ενημέρωση σε πραγματικό χρόνο μέσω RSS Feeds</p>
+            </div>
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8 mb-10 pb-[20px] text-center sm:text-left">
+                <div>
+                    <h3 class="text-white font-condensed font-bold text-xs uppercase tracking-wider mb-3">ΕΛΛΑΔΑ ΕΠΙΚΑΙΡΟΤΗΤΑ</h3>
+                    <ul class="space-y-2">
+                        <li><a href="https://www.protothema.gr" target="_blank" rel="noopener noreferrer" class="text-zinc-500 hover:text-main-yellow text-xs transition-colors">Protothema</a></li>
+                        <li><a href="https://www.ertnews.gr" target="_blank" rel="noopener noreferrer" class="text-zinc-500 hover:text-main-yellow text-xs transition-colors">Ertnews</a></li>
+                        <li><a href="https://www.iefimerida.gr" target="_blank" rel="noopener noreferrer" class="text-zinc-500 hover:text-main-yellow text-xs transition-colors">Iefimerida</a></li>
+                        <li><a href="https://www.newsit.gr" target="_blank" rel="noopener noreferrer" class="text-zinc-500 hover:text-main-yellow text-xs transition-colors">Newsit</a></li>
+                        <li><a href="https://www.in.gr" target="_blank" rel="noopener noreferrer" class="text-zinc-500 hover:text-main-yellow text-xs transition-colors">In.gr</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-condensed font-bold text-xs uppercase tracking-wider mb-3">ΠΟΛΙΤΙΚΑ ΕΛΛΑΔΑ</h3>
+                    <ul class="space-y-2">
+                        <li><a href="https://www.protothema.gr" target="_blank" rel="noopener noreferrer" class="text-zinc-500 hover:text-main-yellow text-xs transition-colors">Protothema</a></li>
+                        <li><a href="https://www.newsit.gr" target="_blank" rel="noopener noreferrer" class="text-zinc-500 hover:text-main-yellow text-xs transition-colors">Newsit</a></li>
+                        <li><a href="https://www.in.gr" target="_blank" rel="noopener noreferrer" class="text-zinc-500 hover:text-main-yellow text-xs transition-colors">In.gr</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-condensed font-bold text-xs uppercase tracking-wider mb-3">ΠΑΓΚΟΣΜΙΑ ΠΟΛΙΤΙΚΗ</h3>
+                    <ul class="space-y-2">
+                        <li><a href="https://www.bbc.com/news/world" target="_blank" rel="noopener noreferrer" class="text-zinc-500 hover:text-main-yellow text-xs transition-colors">BBC World</a></li>
+                        <li><a href="https://www.in.gr" target="_blank" rel="noopener noreferrer" class="text-zinc-500 hover:text-main-yellow text-xs transition-colors">In.gr World</a></li>
+                        <li><a href="https://abcnews.go.com" target="_blank" rel="noopener noreferrer" class="text-zinc-500 hover:text-main-yellow text-xs transition-colors">ABC Intl</a></li>
+                        <li><a href="https://www.theguardian.com/politics" target="_blank" rel="noopener noreferrer" class="text-zinc-500 hover:text-main-yellow text-xs transition-colors">The Guardian</a></li>
+                        <li><a href="https://thehill.com" target="_blank" rel="noopener noreferrer" class="text-zinc-500 hover:text-main-yellow text-xs transition-colors">The Hill</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-condensed font-bold text-xs uppercase tracking-wider mb-3">ΑΘΛΗΤΙΚΑ</h3>
+                    <ul class="space-y-2">
+                        <li><a href="https://www.newsbeast.gr" target="_blank" rel="noopener noreferrer" class="text-zinc-500 hover:text-main-yellow text-xs transition-colors">Newsbeast</a></li>
+                        <li><a href="https://www.newsit.gr" target="_blank" rel="noopener noreferrer" class="text-zinc-500 hover:text-main-yellow text-xs transition-colors">Newsit</a></li>
+                        <li><a href="https://www.in.gr" target="_blank" rel="noopener noreferrer" class="text-zinc-500 hover:text-main-yellow text-xs transition-colors">In.gr</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-condensed font-bold text-xs uppercase tracking-wider mb-3">ΤΕΧΝΟΛΟΓΙΑ</h3>
+                    <ul class="space-y-2">
+                        <li><a href="https://www.techgear.gr" target="_blank" rel="noopener noreferrer" class="text-zinc-500 hover:text-main-yellow text-xs transition-colors">Techgear</a></li>
+                        <li><a href="https://techblog.gr" target="_blank" rel="noopener noreferrer" class="text-zinc-500 hover:text-main-yellow text-xs transition-colors">Techblog</a></li>
+                        <li><a href="https://techmaniacs.gr" target="_blank" rel="noopener noreferrer" class="text-zinc-500 hover:text-main-yellow text-xs transition-colors">Techmaniacs</a></li>
+                        <li><a href="https://iguru.gr" target="_blank" rel="noopener noreferrer" class="text-zinc-500 hover:text-main-yellow text-xs transition-colors">IGuru</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-condensed font-bold text-xs uppercase tracking-wider mb-3">ΜΟΥΣΙΚΗ</h3>
+                    <ul class="space-y-2">
+                        <li><a href="https://mad.tv" target="_blank" rel="noopener noreferrer" class="text-zinc-500 hover:text-main-yellow text-xs transition-colors">Mad TV</a></li>
+                        <li><a href="https://www.tralala.gr" target="_blank" rel="noopener noreferrer" class="text-zinc-500 hover:text-main-yellow text-xs transition-colors">Tralala</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-condensed font-bold text-xs uppercase tracking-wider mb-3">GOSSIP</h3>
+                    <ul class="space-y-2">
+                        <li><a href="https://www.newsbeast.gr" target="_blank" rel="noopener noreferrer" class="text-zinc-500 hover:text-main-yellow text-xs transition-colors">Newsbeast</a></li>
+                        <li><a href="https://www.newsit.gr" target="_blank" rel="noopener noreferrer" class="text-zinc-500 hover:text-main-yellow text-xs transition-colors">Newsit</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-condensed font-bold text-xs uppercase tracking-wider mb-3">CINE</h3>
+                    <ul class="space-y-2">
+                        <li><a href="https://freecinema.gr" target="_blank" rel="noopener noreferrer" class="text-zinc-500 hover:text-main-yellow text-xs transition-colors">FreeCinema</a></li>
+                        <li><a href="https://cinepivates.gr" target="_blank" rel="noopener noreferrer" class="text-zinc-500 hover:text-main-yellow text-xs transition-colors">Cinepivates</a></li>
+                        <li><a href="https://www.protothema.gr" target="_blank" rel="noopener noreferrer" class="text-zinc-500 hover:text-main-yellow text-xs transition-colors">Protothema</a></li>
+                        <li><a href="https://www.newsit.gr" target="_blank" rel="noopener noreferrer" class="text-zinc-500 hover:text-main-yellow text-xs transition-colors">Newsit</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-condensed font-bold text-xs uppercase tracking-wider mb-3">GAMING</h3>
+                    <ul class="space-y-2">
+                        <li><a href="https://unboxholics.com" target="_blank" rel="noopener noreferrer" class="text-zinc-500 hover:text-main-yellow text-xs transition-colors">Unboxholics</a></li>
+                        <li><a href="https://gameslife.gr" target="_blank" rel="noopener noreferrer" class="text-zinc-500 hover:text-main-yellow text-xs transition-colors">Gameslife</a></li>
+                        <li><a href="https://www.vg24.gr" target="_blank" rel="noopener noreferrer" class="text-zinc-500 hover:text-main-yellow text-xs transition-colors">VG24</a></li>
+                        <li><a href="https://ragequit.gr" target="_blank" rel="noopener noreferrer" class="text-zinc-500 hover:text-main-yellow text-xs transition-colors">Ragequit</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-zinc-900 pt-6 text-center text-white text-sm">
+                <p><a href="/policy" class="text-white hover:text-main-yellow transition-colors">Πολιτική Απορρήτου</a> · <a href="/contact" class="text-white hover:text-main-yellow transition-colors">Επικοινωνία</a></p>
+            </div>
+        </div>
+    </footer>
+    <script type="module" src="/js/main.js?v=35"></script>
+    <script>if ('serviceWorker' in navigator) navigator.serviceWorker.register('/sw.js');</script>
+    <script defer src="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v2.9.2/dist/cookieconsent.js"></script>
+    <script defer src="/js/cookieconsent-init.js"></script>
+</body>
+</html>
