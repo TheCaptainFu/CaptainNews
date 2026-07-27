@@ -126,7 +126,7 @@ function listLayout(articles, categoryKey, accent, accentColor) {
 }
 
 function listItem(article, artIndex, categoryKey, accent, accentColor) {
-    const imgUrl      = article.image || '/icons/default-image.png';
+    const imgUrl      = article.image || '/icons/default-image.png?v=2';
     const timeStr     = timeAgo(article.date);
     const isHidden    = artIndex >= INITIAL_VISIBLE_COUNT;
     const hiddenClass = isHidden ? `hidden hidden-item-${categoryKey}` : '';
@@ -142,7 +142,7 @@ function listItem(article, artIndex, categoryKey, accent, accentColor) {
             <div class="w-[110px] h-[70px] shrink-0 overflow-hidden rounded-[8px]">
                 <img class="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
                      src="${imgUrl}" alt="${article.title}" width="110" height="70" loading="lazy"
-                     onerror="this.src='/icons/default-image.png'">
+                     onerror="this.src='/icons/default-image.png?v=2'">
             </div>
             <div class="flex-1 min-w-0">
                 <div class="text-[15px] leading-[19px] font-bold font-condensed line-clamp-2 text-(--list-title-color) group-hover:text-(--card-hover-color) transition-colors duration-300">
@@ -158,7 +158,7 @@ function listItem(article, artIndex, categoryKey, accent, accentColor) {
 }
 
 function magazineSideCard(article, artIndex, categoryKey, accent, accentColor) {
-    const imgUrl      = article.image || '/icons/default-image.png';
+    const imgUrl      = article.image || '/icons/default-image.png?v=2';
     const timeStr     = timeAgo(article.date);
     const sourceUrl   = sourceUrls[article.source] || '#';
     const isHidden    = artIndex >= INITIAL_VISIBLE_COUNT;
@@ -175,7 +175,7 @@ function magazineSideCard(article, artIndex, categoryKey, accent, accentColor) {
                 <a href="${article.link}" target="_blank" rel="noopener noreferrer" class="block w-full h-full">
                     <img class="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
                          src="${imgUrl}" alt="${article.title}" width="300" height="200" loading="lazy"
-                         onerror="this.src='/icons/default-image.png'">
+                         onerror="this.src='/icons/default-image.png?v=2'">
                 </a>
             </div>
             <div class="flex flex-col justify-between flex-1 px-[14px] py-[14px] min-w-0">
@@ -195,7 +195,7 @@ function magazineSideCard(article, artIndex, categoryKey, accent, accentColor) {
 }
 
 function magazineFeatured(article, artIndex, categoryKey, accent, accentColor) {
-    const imgUrl      = article.image || '/icons/default-image.png';
+    const imgUrl      = article.image || '/icons/default-image.png?v=2';
     const timeStr     = timeAgo(article.date);
     const sourceUrl   = sourceUrls[article.source] || '#';
     const isHidden    = artIndex >= INITIAL_VISIBLE_COUNT;
@@ -216,7 +216,7 @@ function magazineFeatured(article, artIndex, categoryKey, accent, accentColor) {
                 <a href="${article.link}" target="_blank" rel="noopener noreferrer" class="block w-full h-full">
                     <img class="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
                          src="${imgUrl}" alt="${article.title}" width="800" height="470" loading="lazy"
-                         onerror="this.src='/icons/default-image.png'">
+                         onerror="this.src='/icons/default-image.png?v=2'">
                 </a>
             </div>
             <div class="${accent?.cardPadding === false ? '' : 'p-[20px]'} flex flex-col flex-grow">
@@ -241,7 +241,7 @@ function magazineFeatured(article, artIndex, categoryKey, accent, accentColor) {
 // ─── Card ──────────────────────────────────────────────────────────────────────
 
 function card(article, artIndex, categoryKey, accent, accentColor) {
-    const imgUrl     = article.image || '/icons/default-image.png';
+    const imgUrl     = article.image || '/icons/default-image.png?v=2';
     const timeStr    = timeAgo(article.date);
     const sourceUrl  = sourceUrls[article.source] || '#';
     const isFeatured = artIndex === 0;
@@ -284,7 +284,7 @@ function card(article, artIndex, categoryKey, accent, accentColor) {
                 <a href="${article.link}" target="_blank" rel="noopener noreferrer" class="block w-full h-full cursor-pointer">
                     <img class="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
                          src="${imgUrl}" alt="${article.title}" width="800" height="470" loading="lazy"
-                         onerror="this.src='/icons/default-image.png'">
+                         onerror="this.src='/icons/default-image.png?v=2'">
                 </a>
             </div>
             <div class="${infoWrapperClasses}">

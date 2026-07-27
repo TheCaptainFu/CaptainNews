@@ -10,13 +10,13 @@
   "orientation": "portrait-primary",
   "icons": [
     {
-      "src": "/icons/pwa.png",
+      "src": "/icons/pwa.png?v=2",
       "sizes": "any",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/icons/pwa.png",
+      "src": "/icons/pwa.png?v=2",
       "sizes": "any",
       "type": "image/png",
       "purpose": "maskable"

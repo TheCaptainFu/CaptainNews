@@ -1,11 +1,11 @@
-const CACHE_NAME = 'captainnews-v3';
+const CACHE_NAME = 'captainnews-v4';
 const PRECACHE = [
     '/',
     '/contact/',
     '/policy/',
     '/manifest.json',
-    '/icons/logo.png',
-    '/icons/favicon.png'
+    '/icons/logo.png?v=2',
+    '/icons/favicon.png?v=2'
 ];
 
 self.addEventListener('install', e => {
