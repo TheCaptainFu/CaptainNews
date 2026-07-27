@@ -63,13 +63,13 @@ const NEW_BADGE_PILL = `<span class="ml-1 bg-[#f59e0b] text-black text-[9px] fon
 function buildSidebarNav(navKey) {
     const lines = [];
     lines.push(`                <a href="/" class="block px-4 py-3 text-white font-condensed font-bold rounded-lg ${navClass(navKey === 'home')} transition-all"><i class="fa-solid fa-house mr-3"></i>ΑΡΧΙΚΗ</a>`);
-    lines.push(`                <p class="px-4 pt-3 pb-1 text-zinc-600 text-xs font-condensed font-bold uppercase tracking-widest">Κατηγορίες</p>`);
+    lines.push(`                <p class="px-4 pt-3 pb-1 text-zinc-400 text-xs font-condensed font-bold uppercase tracking-widest">Κατηγορίες</p>`);
     for (const key of CATEGORY_KEYS) {
         const cfg = categoriesConfig[key];
         const badge = cfg.isNew ? NEW_BADGE_NAV : '';
         lines.push(`                <a href="${cfg.path}" class="block px-4 py-3 text-white font-condensed font-bold rounded-lg ${navClass(navKey === key)} transition-all"><i class="fa-solid ${cfg.navIcon} mr-3"></i>${cfg.navLabel}${badge}</a>`);
     }
-    lines.push(`                <p class="px-4 pt-3 pb-1 text-zinc-600 text-xs font-condensed font-bold uppercase tracking-widest">Άλλα</p>`);
+    lines.push(`                <p class="px-4 pt-3 pb-1 text-zinc-400 text-xs font-condensed font-bold uppercase tracking-widest">Άλλα</p>`);
     lines.push(`                <a href="/contact" class="block px-4 py-3 text-white font-condensed font-bold rounded-lg ${navClass(navKey === 'contact')} transition-all"><i class="fa-solid fa-envelope mr-3"></i>ΕΠΙΚΟΙΝΩΝΙΑ</a>`);
     lines.push(`                <a href="/policy" class="block px-4 py-3 text-white font-condensed font-bold rounded-lg ${navClass(navKey === 'policy')} transition-all"><i class="fa-solid fa-shield-halved mr-3"></i>ΠΟΛΙΤΙΚΗ ΑΠΟΡΡΗΤΟΥ</a>`);
     return lines.join('\n');
@@ -100,7 +100,7 @@ function buildFooter() {
     const columns = CATEGORY_KEYS.map(key => {
         const cfg = categoriesConfig[key];
         const items = cfg.feeds.map(f =>
-            `                        <li><a href="${f.homepage}" target="_blank" rel="noopener noreferrer" class="text-zinc-500 hover:text-main-yellow text-xs transition-colors">${f.name}</a></li>`
+            `                        <li><a href="${f.homepage}" target="_blank" rel="noopener noreferrer" class="text-zinc-400 hover:text-main-yellow text-xs transition-colors">${f.name}</a></li>`
         ).join('\n');
         return `                <div>\n                    <h3 class="text-white font-condensed font-bold text-xs uppercase tracking-wider mb-3">${cfg.displayName}</h3>\n                    <ul class="space-y-2">\n${items}\n                    </ul>\n                </div>`;
     }).join('\n');
