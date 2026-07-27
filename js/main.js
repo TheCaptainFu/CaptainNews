@@ -1,7 +1,7 @@
-﻿// ─── Imports ───────────────────────────────────────────────────────────────────
+// ─── Imports ───────────────────────────────────────────────────────────────────
 
-import { WORKER_URL, IS_LOCAL, categoryOrder } from './config.js?v=37';
-import { buildSection } from './templates.js?v=37';
+import { WORKER_URL, IS_LOCAL, categoryOrder } from './config.js?v=38';
+import { buildSection } from './templates.js?v=38';
 
 // ─── News loader ───────────────────────────────────────────────────────────────
 
@@ -135,11 +135,12 @@ window.copyArticleLink = (btn, url) => {
         const icon  = btn.querySelector('.copy-icon');
         icon.innerHTML    = '<polyline points="20 6 9 17 4 12"></polyline>';
         label.textContent = 'COPIED!';
-        btn.classList.replace('text-zinc-500', 'text-[#f2d06f]');
+        const hoverColor = getComputedStyle(btn).getPropertyValue('--card-hover-color').trim();
+        if (hoverColor) btn.style.setProperty('--card-link-color', hoverColor);
         setTimeout(() => {
             icon.innerHTML    = '<rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>';
             label.textContent = 'COPY';
-            btn.classList.replace('text-[#f2d06f]', 'text-zinc-500');
+            btn.style.removeProperty('--card-link-color');
         }, 2000);
     });
 };
