@@ -1,0 +1,21 @@
+# CaptainNews.gr
+
+> Ελληνικό news aggregator που συγκεντρώνει ειδήσεις σε πραγματικό χρόνο από κορυφαίες ελληνικές και διεθνείς πηγές μέσω RSS feeds, οργανωμένες σε κατηγορίες. Κάθε άρθρο δείχνει τίτλο, σύντομη περιγραφή και εικόνα, με link πίσω στην αρχική πηγή.
+
+## Κατηγορίες
+
+- [Ελλάδα Επικαιρότητα](https://captainnews.gr/greece/): Ελληνικές ειδήσεις γενικού ενδιαφέροντος
+- [Πολιτικά Ελλάδα](https://captainnews.gr/politics/): Ελληνική πολιτική επικαιρότητα
+- [Παγκόσμια Πολιτική](https://captainnews.gr/world/): Διεθνή πολιτικά νέα
+- [Αθλητικά](https://captainnews.gr/sports/): Ελληνικά και διεθνή αθλητικά νέα
+- [Τεχνολογία](https://captainnews.gr/technology/): Νέα τεχνολογίας
+- [Μουσική](https://captainnews.gr/music/): Μουσικά νέα
+- [Gossip](https://captainnews.gr/gossip/): Lifestyle και κουτσομπολιά
+- [Cine](https://captainnews.gr/cinema/): Νέα κινηματογράφου
+- [Gaming](https://captainnews.gr/gaming/): Νέα βιντεοπαιχνιδιών
+
+## Άλλες σελίδες
+
+- [Επικοινωνία](https://captainnews.gr/contact/)
+- [Πολιτική Απορρήτου](https://captainnews.gr/policy/)
+- [Sitemap](https://captainnews.gr/sitemap.xml)
