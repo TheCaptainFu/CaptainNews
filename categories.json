@@ -65,8 +65,7 @@
         "navIcon": "fa-music",
         "path": "/music/",
         "feeds": [
-            { "name": "Mad TV",  "url": "https://mad.tv/feed/", "homepage": "https://mad.tv" },
-            { "name": "Tralala", "url": "https://www.tralala.gr/feed/", "homepage": "https://www.tralala.gr" }
+            { "name": "Mad TV",  "url": "https://mad.tv/feed/", "homepage": "https://mad.tv" }
         ]
     },
     "gossip": {

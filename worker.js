@@ -37,8 +37,7 @@ const categories = {
         { name: "IGuru",       url: "https://iguru.gr/feed/" },
     ],
     "music": [
-        { name: "Mad TV",  url: "https://mad.tv/feed/" },
-        { name: "Tralala", url: "https://www.tralala.gr/feed/" },
+        { name: "Mad TV", url: "https://mad.tv/feed/" },
     ],
     "gossip": [
         { name: "Newsbeast", url: "https://www.newsbeast.gr/lifestyle/feed" },
