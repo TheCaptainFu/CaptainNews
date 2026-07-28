@@ -1,7 +1,7 @@
 // ─── Imports ───────────────────────────────────────────────────────────────────
 
-import { WORKER_URL, IS_LOCAL, categoryOrder } from './config.js?v=39';
-import { buildSection } from './templates.js?v=39';
+import { WORKER_URL, IS_LOCAL, categoryOrder } from './config.js?v=40';
+import { buildSection } from './templates.js?v=40';
 
 // ─── News loader ───────────────────────────────────────────────────────────────
 
@@ -155,10 +155,11 @@ window.loadAllArticles = categoryKey => {
 // Edge) that already meet the install criteria — iOS Safari has no equivalent
 // API, so there's no reliable way to trigger a custom prompt there.
 (() => {
-    const banner  = document.getElementById('install-banner');
-    const btn     = document.getElementById('install-btn');
-    const dismiss = document.getElementById('install-dismiss');
-    if (!banner || !btn || !dismiss) return;
+    const banner    = document.getElementById('install-banner');
+    const btn       = document.getElementById('install-btn');
+    const dismiss   = document.getElementById('install-dismiss');
+    const menuBtn   = document.getElementById('install-menu-btn');
+    if ((!banner || !btn || !dismiss) && !menuBtn) return;
 
     const DISMISS_KEY  = 'installBannerDismissedAt';
     const DISMISS_DAYS = 14;
@@ -170,26 +171,34 @@ window.loadAllArticles = categoryKey => {
 
     let deferredPrompt = null;
 
-    window.addEventListener('beforeinstallprompt', e => {
-        e.preventDefault();
-        deferredPrompt = e;
-        if (!wasDismissedRecently()) banner.classList.remove('hidden');
-    });
-
-    btn.addEventListener('click', async () => {
-        banner.classList.add('hidden');
+    async function triggerInstall() {
+        banner?.classList.add('hidden');
         if (!deferredPrompt) return;
         deferredPrompt.prompt();
         await deferredPrompt.userChoice;
         deferredPrompt = null;
+        menuBtn?.classList.add('hidden');
+    }
+
+    window.addEventListener('beforeinstallprompt', e => {
+        e.preventDefault();
+        deferredPrompt = e;
+        if (banner && !wasDismissedRecently()) banner.classList.remove('hidden');
+        menuBtn?.classList.remove('hidden');
     });
 
-    dismiss.addEventListener('click', () => {
+    btn?.addEventListener('click', triggerInstall);
+    menuBtn?.addEventListener('click', triggerInstall);
+
+    dismiss?.addEventListener('click', () => {
         banner.classList.add('hidden');
         localStorage.setItem(DISMISS_KEY, String(Date.now()));
     });
 
-    window.addEventListener('appinstalled', () => banner.classList.add('hidden'));
+    window.addEventListener('appinstalled', () => {
+        banner?.classList.add('hidden');
+        menuBtn?.classList.add('hidden');
+    });
 })();
 
 // ─── Init ──────────────────────────────────────────────────────────────────────
