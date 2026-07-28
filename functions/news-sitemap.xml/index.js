@@ -1,13 +1,14 @@
+import categoriesConfig from '../../categories.json';
+
 const WORKER_URL = 'https://captainnews-worker.g-gsmks.workers.dev';
 
-const categoryPages = {
-    greece_news:     'https://captainnews.gr/greece/',
-    politics_greece: 'https://captainnews.gr/politics/',
-    world_politics:  'https://captainnews.gr/world/',
-    sports:          'https://captainnews.gr/sports/',
-    technology:      'https://captainnews.gr/technology/',
-    music:           'https://captainnews.gr/music/',
-};
+// Single source of truth — derived from categories.json so a new category
+// (added via categories.json + npm run build) shows up here automatically,
+// instead of silently missing from the Google News sitemap like gossip/
+// cinema/gaming did while this was a hand-maintained, hardcoded list.
+const categoryPages = Object.fromEntries(
+    Object.entries(categoriesConfig).map(([key, cfg]) => [key, `https://captainnews.gr${cfg.path}`])
+);
 
 function escapeXml(str) {
     return String(str)
