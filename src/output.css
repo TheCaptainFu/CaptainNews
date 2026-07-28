@@ -488,9 +488,6 @@
   .w-8 {
     width: calc(var(--spacing) * 8);
   }
-  .w-10 {
-    width: var(--spacing-10);
-  }
   .w-14 {
     width: calc(var(--spacing) * 14);
   }
@@ -509,9 +506,6 @@
   .w-\[70px\] {
     width: 70px;
   }
-  .w-\[92\%\] {
-    width: 92%;
-  }
   .w-\[110px\] {
     width: 110px;
   }
@@ -520,6 +514,9 @@
   }
   .w-max {
     width: max-content;
+  }
+  .max-w-10 {
+    max-width: var(--spacing-10);
   }
   .max-w-\[420px\] {
     max-width: 420px;
