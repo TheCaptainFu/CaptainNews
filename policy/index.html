@@ -179,6 +179,20 @@
         </div>
     </div>
 
+    <div id="install-banner" class="hidden fixed bottom-4 left-1/2 -translate-x-1/2 z-[70] w-[92%] max-w-[420px] bg-zinc-900 border border-zinc-700 rounded-xl shadow-2xl p-4 flex items-center gap-3">
+        <img src="/icons/pwa.png?v=2" alt="" class="w-10 h-10 rounded-lg shrink-0" width="40" height="40">
+        <div class="flex-1 min-w-0">
+            <p class="text-white font-condensed font-bold text-sm">Εγκατάστησε το CaptainNews</p>
+            <p class="text-zinc-400 text-xs">Γρήγορη πρόσβαση από την οθόνη σου</p>
+        </div>
+        <button id="install-btn" class="shrink-0 bg-[#3749bd] hover:bg-[#2c3a99] text-white text-xs font-condensed font-bold px-3 py-2 rounded-lg transition-colors cursor-pointer">Εγκατάσταση</button>
+        <button id="install-dismiss" aria-label="Κλείσιμο" class="shrink-0 text-zinc-500 hover:text-white transition-colors cursor-pointer">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+    </div>
+
     <div id="main-content-wrapper" style="display:none"></div>
 
     <main class="gg-container pt-[178px] pb-20 flex-grow">
@@ -331,7 +345,7 @@
         </div>
     </footer>
 
-    <script type="module" src="/js/main.js?v=38"></script>
+    <script type="module" src="/js/main.js?v=39"></script>
     <script>if ('serviceWorker' in navigator) navigator.serviceWorker.register('/sw.js');</script>
     <script defer src="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v2.9.2/dist/cookieconsent.js"></script>
     <script defer src="/js/cookieconsent-init.js"></script>
