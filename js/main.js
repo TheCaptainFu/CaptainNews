@@ -1,7 +1,7 @@
 // ─── Imports ───────────────────────────────────────────────────────────────────
 
-import { WORKER_URL, IS_LOCAL, categoryOrder } from './config.js?v=41';
-import { buildSection } from './templates.js?v=41';
+import { WORKER_URL, IS_LOCAL, categoryOrder } from './config.js?v=43';
+import { buildSection } from './templates.js?v=43';
 
 // ─── News loader ───────────────────────────────────────────────────────────────
 
@@ -63,6 +63,9 @@ function setupFilterLogic() {
     if (!filterContainer) return;
 
     const pills = filterContainer.querySelectorAll('.filter-pill');
+    const mainWrapper = document.getElementById('main-content-wrapper');
+
+    if (!mainWrapper || mainWrapper.style.display === 'none') return;
 
     function applyFilter(selected) {
         pills.forEach(p =>
