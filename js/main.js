@@ -1,7 +1,7 @@
 // ─── Imports ───────────────────────────────────────────────────────────────────
 
-import { WORKER_URL, IS_LOCAL, categoryOrder } from './config.js?v=40';
-import { buildSection } from './templates.js?v=40';
+import { WORKER_URL, IS_LOCAL, categoryOrder } from './config.js?v=41';
+import { buildSection } from './templates.js?v=41';
 
 // ─── News loader ───────────────────────────────────────────────────────────────
 
@@ -177,14 +177,12 @@ window.loadAllArticles = categoryKey => {
         deferredPrompt.prompt();
         await deferredPrompt.userChoice;
         deferredPrompt = null;
-        menuBtn?.classList.add('hidden');
     }
 
     window.addEventListener('beforeinstallprompt', e => {
         e.preventDefault();
         deferredPrompt = e;
         if (banner && !wasDismissedRecently()) banner.classList.remove('hidden');
-        menuBtn?.classList.remove('hidden');
     });
 
     btn?.addEventListener('click', triggerInstall);
@@ -195,10 +193,7 @@ window.loadAllArticles = categoryKey => {
         localStorage.setItem(DISMISS_KEY, String(Date.now()));
     });
 
-    window.addEventListener('appinstalled', () => {
-        banner?.classList.add('hidden');
-        menuBtn?.classList.add('hidden');
-    });
+    window.addEventListener('appinstalled', () => banner?.classList.add('hidden'));
 })();
 
 // ─── Init ──────────────────────────────────────────────────────────────────────
