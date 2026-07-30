@@ -137,7 +137,7 @@ function skeletonSectionHeader() {
         </div>`;
 }
 
-function skeletonFeatured() {
+function skeletonFeaturedCard() {
     return `
         <div class="col-span-1 md:col-span-2 lg:col-span-3 flex flex-col md:flex-row rounded-[12px] overflow-hidden animate-pulse bg-main-grey">
             <div class="w-full md:w-6/12 aspect-[1.7] max-h-[280px] md:max-h-[500px] bg-zinc-800 shrink-0"></div>
@@ -147,6 +147,28 @@ function skeletonFeatured() {
                 <div class="h-[16px] bg-zinc-700 rounded w-full mt-2"></div>
                 <div class="h-[16px] bg-zinc-700 rounded w-5/6"></div>
                 <div class="h-[16px] bg-zinc-700 rounded w-2/3"></div>
+                <div class="h-[16px] bg-zinc-700 rounded w-1/3 mt-[20px]"></div>
+                <div class="flex items-center justify-between mt-[20px]">
+                    <div class="h-[14px] w-[60px] bg-zinc-700 rounded"></div>
+                    <div class="h-[14px] w-[80px] bg-zinc-700 rounded"></div>
+                </div>
+            </div>
+        </div>`;
+}
+
+function skeletonMagazineFeatured() {
+    return `
+        <div class="rounded-[12px] overflow-hidden animate-pulse bg-main-grey h-full flex flex-col">
+            <div class="w-full aspect-[1.7] bg-zinc-800 shrink-0"></div>
+            <div class="p-[20px] flex flex-col flex-grow gap-[12px]">
+                <div class="h-[24px] bg-zinc-700 rounded w-full"></div>
+                <div class="h-[24px] bg-zinc-700 rounded w-3/4"></div>
+                <div class="h-[16px] bg-zinc-700 rounded w-full mt-2"></div>
+                <div class="h-[16px] bg-zinc-700 rounded w-5/6"></div>
+                <div class="flex items-center justify-between mt-[12px]">
+                    <div class="h-[14px] w-[60px] bg-zinc-700 rounded"></div>
+                    <div class="h-[14px] w-[80px] bg-zinc-700 rounded"></div>
+                </div>
             </div>
         </div>`;
 }
@@ -160,6 +182,11 @@ function skeletonCard() {
                 <div class="h-[20px] bg-zinc-700 rounded w-2/3"></div>
                 <div class="h-[14px] bg-zinc-700 rounded w-full mt-2"></div>
                 <div class="h-[14px] bg-zinc-700 rounded w-5/6"></div>
+                <div class="h-[16px] bg-zinc-700 rounded w-1/3 mt-[20px]"></div>
+                <div class="flex items-center justify-between mt-[20px]">
+                    <div class="h-[14px] w-[60px] bg-zinc-700 rounded"></div>
+                    <div class="h-[14px] w-[80px] bg-zinc-700 rounded"></div>
+                </div>
             </div>
         </div>`;
 }
@@ -188,9 +215,16 @@ function skeletonListItem() {
         </div>`;
 }
 
+function skeletonLoadMoreBtn() {
+    return `
+        <div class="gg-container flex justify-center mt-6 pb-10">
+            <div class="h-[38px] w-[180px] bg-zinc-800 rounded animate-pulse"></div>
+        </div>`;
+}
+
 function skeletonDefaultLayout() {
     const cards = Array.from({ length: 6 }, skeletonCard).join('');
-    return `<div class="gg-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[20px] pt-[10px]">${skeletonFeatured()}${cards}</div>`;
+    return `<div class="gg-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[20px] pt-[10px]">${skeletonFeaturedCard()}${cards}</div>`;
 }
 
 function skeletonMagazineLayout() {
@@ -198,7 +232,7 @@ function skeletonMagazineLayout() {
     const belowHtml = Array.from({ length: 3 }, skeletonCard).join('');
     return `
         <div class="gg-container grid grid-cols-1 md:grid-cols-2 grid-rows-1 mb-[20px] gap-[20px] pt-[10px] md:items-stretch">
-            <div class="flex flex-col">${skeletonFeatured()}</div>
+            <div class="flex flex-col">${skeletonMagazineFeatured()}</div>
             <div class="flex flex-col gap-[20px] h-full">${sideHtml}</div>
         </div>
         <div class="gg-container grid grid-cols-1 md:grid-cols-3 gap-[20px]">${belowHtml}</div>`;
@@ -226,7 +260,7 @@ function skeletonSection(key) {
         style = `background-color:${accent.sectionBg};border-radius:0px;padding-top:0px;padding-bottom:20px;`;
     }
 
-    return `        <section class="category-group pb-10"${style ? ` style="${style}"` : ''}>${skeletonSectionHeader()}${body}\n        </section>`;
+    return `        <section class="category-group pb-10"${style ? ` style="${style}"` : ''}>${skeletonSectionHeader()}${body}${skeletonLoadMoreBtn()}\n        </section>`;
 }
 
 function buildSkeleton(keys) {

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/src/output.css?v=21">
+    <link rel="stylesheet" href="/src/output.css?v=22">
     <title>Επικοινωνία | CaptainNews.gr</title>
     <meta name="description" content="Στείλτε email στο CaptainNews.gr για ερωτήσεις, προτάσεις ή συνεργασία.">
 
@@ -145,7 +145,42 @@
         </div>
     </div>
 
-
+    <div id="category-bar" class="fixed top-[108px] w-full bg-[#111] z-40 border-b border-zinc-800 shadow-md h-[50px] flex items-center overflow-hidden">
+        <div class="gg-container w-full overflow-x-auto" style="scrollbar-width:none; -ms-overflow-style:none;">
+            <div id="category-filter" class="flex items-center gap-2 w-max min-w-full px-0">
+                <a href="/" data-category="all" class="filter-pill active font-condensed font-bold text-xs px-4 py-1.5 rounded-full border transition-all duration-200 whitespace-nowrap cursor-pointer">
+                    ΟΛΕΣ ΟΙ ΚΑΤΗΓΟΡΙΕΣ
+                </a>
+                <a href="/greece/" data-category="greece_news" class="filter-pill font-condensed font-bold text-xs px-4 py-1.5 rounded-full border transition-all duration-200 whitespace-nowrap cursor-pointer">
+                    ΕΛΛΑΔΑ ΕΠΙΚΑΙΡΟΤΗΤΑ
+                </a>
+                <a href="/politics/" data-category="politics_greece" class="filter-pill font-condensed font-bold text-xs px-4 py-1.5 rounded-full border transition-all duration-200 whitespace-nowrap cursor-pointer">
+                    ΠΟΛΙΤΙΚΑ ΕΛΛΑΔΑ
+                </a>
+                <a href="/world/" data-category="world_politics" class="filter-pill font-condensed font-bold text-xs px-4 py-1.5 rounded-full border transition-all duration-200 whitespace-nowrap cursor-pointer">
+                    ΠΑΓΚΟΣΜΙΑ ΠΟΛΙΤΙΚΗ
+                </a>
+                <a href="/sports/" data-category="sports" class="filter-pill font-condensed font-bold text-xs px-4 py-1.5 rounded-full border transition-all duration-200 whitespace-nowrap cursor-pointer">
+                    ΑΘΛΗΤΙΚΑ
+                </a>
+                <a href="/technology/" data-category="technology" class="filter-pill font-condensed font-bold text-xs px-4 py-1.5 rounded-full border transition-all duration-200 whitespace-nowrap cursor-pointer">
+                    ΤΕΧΝΟΛΟΓΙΑ
+                </a>
+                <a href="/music/" data-category="music" class="filter-pill font-condensed font-bold text-xs px-4 py-1.5 rounded-full border transition-all duration-200 whitespace-nowrap cursor-pointer">
+                    ΜΟΥΣΙΚΗ
+                </a>
+                <a href="/gossip/" data-category="gossip" class="filter-pill font-condensed font-bold text-xs px-4 py-1.5 rounded-full border transition-all duration-200 whitespace-nowrap cursor-pointer">
+                    GOSSIP
+                </a>
+                <a href="/cinema/" data-category="cinema" class="filter-pill font-condensed font-bold text-xs px-4 py-1.5 rounded-full border transition-all duration-200 whitespace-nowrap cursor-pointer">
+                    CINE<span class="ml-1 bg-[#f59e0b] text-black text-[9px] font-black px-1.5 py-0.5 rounded-full uppercase tracking-widest align-middle animate-pulse">NEW</span>
+                </a>
+                <a href="/gaming/" data-category="gaming" class="filter-pill font-condensed font-bold text-xs px-4 py-1.5 rounded-full border transition-all duration-200 whitespace-nowrap cursor-pointer">
+                    GAMING
+                </a>
+            </div>
+        </div>
+    </div>
 
     <div id="install-banner" class="hidden fixed bottom-4 left-1/2 -translate-x-1/2 z-[70] w-full max-w-[420px] bg-zinc-900 border border-zinc-700 rounded-xl shadow-2xl p-4 flex items-center gap-3">
         <img src="/icons/pwa.png?v=2" alt="" class="max-w-10 h-10 rounded-lg" width="40" height="40">
@@ -164,56 +199,6 @@
     <div id="main-content-wrapper" style="display:none"></div>
 
     <main class="gg-container pt-[178px] pb-20 flex-grow">
-        <!-- <div class="pb-[10px]">
-            <div class="title flex items-end gap-4 w-full pb-[5px]">
-                <h1 class="text-[36px] leading-[36px] font-bold text-[#3749bd] font-condensed uppercase whitespace-nowrap">ΕΠΙΚΟΙΝΩΝΙΑ</h1>
-                <div class="flex-1 h-[2px] bg-[#3749bd] mb-[6px]"></div>
-            </div>
-            <p class="text-main-yellow mt-[5px] mb-12">Στείλτε μας email για ερωτήσεις, προτάσεις ή συνεργασία.</p>
-
-            <div class="mx-auto">
-                <a id="email-card" href="#" class="relative block overflow-hidden text-center p-12 md:p-16 bg-linear-to-b from-[#161b2e] to-[#0d1018] rounded-3xl border border-zinc-800 hover:border-main-blue shadow-2xl transition-colors group">
-                    <div class="absolute -top-16 -right-16 w-56 h-56 rounded-full bg-main-blue/20 blur-3xl group-hover:bg-main-blue/30 transition-colors"></div>
-                    <div class="absolute -bottom-20 -left-16 w-56 h-56 rounded-full bg-main-yellow/10 blur-3xl"></div>
-
-                    <div class="relative">
-                        <div class="w-20 h-20 mx-auto rounded-2xl bg-main-blue/15 border border-main-blue/40 flex items-center justify-center mb-6 group-hover:bg-main-blue/25 transition-colors">
-                            <i class="fa-solid fa-envelope text-4xl text-main-yellow"></i>
-                        </div>
-                        <h2 class="text-xl font-condensed font-bold text-white uppercase tracking-wide mb-3">Στείλτε μας email</h2>
-                        <span id="email-display" class="block text-2xl md:text-3xl font-condensed font-bold text-main-yellow break-all mb-6"></span>
-                        <span class="inline-flex items-center gap-2 bg-main-blue group-hover:bg-[#2c3a99] text-white font-condensed font-bold text-sm px-6 py-3 rounded-lg transition-colors">
-                            <i class="fa-solid fa-paper-plane"></i> Άνοιγμα email
-                        </span>
-                    </div>
-                </a>
-                <script>
-                    (function() {
-                        var u = "info", d = "captainnews.gr";
-                        var el = document.getElementById("email-display");
-                        var card = document.getElementById("email-card");
-                        var email = u + "@" + d;
-                        el.textContent = email;
-                        card.href = "mailto:" + email;
-                    })();
-                </script>
-
-                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8">
-                    <div class="flex items-center gap-3 p-4 bg-main-grey rounded-xl border border-zinc-800">
-                        <i class="fa-solid fa-clock text-main-yellow text-lg"></i>
-                        <span class="text-zinc-300 text-sm font-condensed">Απάντηση εντός 24-48 ωρών</span>
-                    </div>
-                    <div class="flex items-center gap-3 p-4 bg-main-grey rounded-xl border border-zinc-800">
-                        <i class="fa-solid fa-comments text-main-yellow text-lg"></i>
-                        <span class="text-zinc-300 text-sm font-condensed">Ερωτήσεις &amp; προτάσεις</span>
-                    </div>
-                    <div class="flex items-center gap-3 p-4 bg-main-grey rounded-xl border border-zinc-800">
-                        <i class="fa-solid fa-handshake text-main-yellow text-lg"></i>
-                        <span class="text-zinc-300 text-sm font-condensed">Συνεργασίες</span>
-                    </div>
-                </div>
-            </div>
-        </div> -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-[50px]">
             <div class="info flex flex-col h-full">
                 <div class="title flex items-end gap-4 w-full pb-[5px]">
