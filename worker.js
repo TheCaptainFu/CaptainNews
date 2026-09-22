@@ -37,7 +37,9 @@ const categories = {
         { name: "IGuru",       url: "https://iguru.gr/feed/" },
     ],
     "music": [
-        { name: "Mad TV", url: "https://mad.tv/feed/" },
+        { name: "Mad TV",    url: "https://mad.tv/feed/" },
+        { name: "Popaganda", url: "https://popaganda.gr/category/music/feed" },
+        { name: "Monopoli",  url: "https://www.monopoli.gr/tag/mousiki/feed" },
     ],
     "gossip": [
         { name: "Newsbeast", url: "https://www.newsbeast.gr/lifestyle/feed" },

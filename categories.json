@@ -65,7 +65,9 @@
         "navIcon": "fa-music",
         "path": "/music/",
         "feeds": [
-            { "name": "Mad TV",  "url": "https://mad.tv/feed/", "homepage": "https://mad.tv" }
+            { "name": "Mad TV",    "url": "https://mad.tv/feed/", "homepage": "https://mad.tv" },
+            { "name": "Popaganda", "url": "https://popaganda.gr/category/music/feed", "homepage": "https://popaganda.gr/category/art/music/" },
+            { "name": "Monopoli",  "url": "https://www.monopoli.gr/tag/mousiki/feed", "homepage": "https://www.monopoli.gr/tag/mousiki/" }
         ]
     },
     "gossip": {

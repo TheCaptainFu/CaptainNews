@@ -11,7 +11,8 @@
     "build:html": "node scripts/build-pages.js",
     "build:worker": "node scripts/build-worker.js",
     "build:sitemap": "node scripts/build-sitemap.js",
-    "build": "npm run build:html && npm run build:worker && npm run build:sitemap && npm run build:css",
+    "build:sourceurls": "node scripts/build-sourceurls.js",
+    "build": "npm run build:sourceurls && npm run build:html && npm run build:worker && npm run build:sitemap && npm run build:css",
     "serve": "npx wrangler pages dev . --port 3000"
   },
   "dependencies": {
