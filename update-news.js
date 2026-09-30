@@ -2,12 +2,12 @@ const Parser = require('rss-parser');
 const fs     = require('fs');
 const path   = require('path');
 
+const FETCH_HEADERS = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+    'Accept': 'application/rss+xml, application/xml, text/xml, */*',
+};
+
 const parser = new Parser({
-    timeout: 10000,
-    headers: {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
-        'Accept': 'application/rss+xml, application/xml, text/xml, */*',
-    },
     customFields: {
         item: [
             ['media:thumbnail', 'mediaThumbnail'],
@@ -50,11 +50,20 @@ function extractImage(item) {
     return '';
 }
 
+// Unboxholics ships `<link />https://unboxholics.com</link>`, which the strict
+// XML parser rejects; worker.js parses with regexes so it's unaffected live.
+async function fetchFeed(url) {
+    const res = await fetch(url, { headers: FETCH_HEADERS, signal: AbortSignal.timeout(10000) });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const xml = (await res.text()).replace(/<link\s*\/>(?=[^<]*<\/link>)/g, '<link>');
+    return parser.parseString(xml);
+}
+
 async function fetchCategory(catKey, sources) {
     const results = await Promise.allSettled(
         sources.map(async src => {
             try {
-                const feed = await parser.parseURL(src.url);
+                const feed = await fetchFeed(src.url);
                 const articles = feed.items.slice(0, MAX_PER_SOURCE).map(item => ({
                     title:       (item.title || '').replace(/<[^>]+>/g, '').trim(),
                     link:        item.link || item.guid || '',

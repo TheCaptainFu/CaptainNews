@@ -35,7 +35,7 @@ export const categoryDisplayNames = {
 };
 
 // ─── Per-category visual theme ─────────────────────────────────────────────────
-// color          : accent color for heading, gradient line, source link, read-more
+// color          : accent color for heading, gradient line, source link
 // cardBg         : card background (hex/rgba). Empty = default dark grey
 // sectionBg      : full-section solid background. Empty = none
 // sectionBgImage : full-section background image URL. Empty = none
@@ -48,7 +48,7 @@ export const categoryDisplayNames = {
 // cardPadding    : false = αφαιρεί το εσωτερικό padding του card (default: true)
 // titleColor     : χρώμα τίτλου άρθρου. Το ίδιο χρησιμοποιείται και στο "Πηγή" text και στο "πριν X ώρες"
 // descriptionColor: χρώμα περιγραφής άρθρου. Το ίδιο χρησιμοποιείται και στο κουμπί "COPY"
-// hoverColor     : χρώμα hover για όλα τα anchors/κουμπιά του card (τίτλος, πηγή, COPY, Διαβάστε ->)
+// hoverColor     : χρώμα hover για όλα τα anchors/κουμπιά του card (τίτλος, πηγή, share, COPY)
 
 export const categoryAccents = {
     greece_news: {
@@ -155,7 +155,7 @@ export const categoryAccents = {
         sectionBg: '#F7F3EE',
         sectionBgImage: '',
         featuredReverse: false,
-        isNew: true,
+        isNew: false,
         sectionLayout: 'magazine',
         cardPadding: true,
         titleColor: '#000000',

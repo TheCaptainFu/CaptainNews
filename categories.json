@@ -86,7 +86,7 @@
         "navLabel": "CINE",
         "navIcon": "fa-film",
         "path": "/cinema/",
-        "isNew": true,
+        "isNew": false,
         "feeds": [
             { "name": "FreeCinema",  "url": "https://freecinema.gr/feed/", "homepage": "https://freecinema.gr" },
             { "name": "Cinepivates", "url": "https://cinepivates.gr/feed/", "homepage": "https://cinepivates.gr" },

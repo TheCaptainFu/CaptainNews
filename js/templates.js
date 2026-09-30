@@ -1,7 +1,7 @@
 // ─── Imports ───────────────────────────────────────────────────────────────────
 
-import { categoryDisplayNames, categoryAccents, sourceUrls, INITIAL_VISIBLE_COUNT } from './config.js?v=52';
-import { stripHtml, timeAgo } from './utils.js?v=52';
+import { categoryDisplayNames, categoryAccents, sourceUrls, INITIAL_VISIBLE_COUNT } from './config.js?v=55';
+import { stripHtml, timeAgo } from './utils.js?v=55';
 
 // ─── Public API ────────────────────────────────────────────────────────────────
 
@@ -307,6 +307,7 @@ function card(article, artIndex, categoryKey, accent, accentColor) {
                 <div class="card-footer flex items-center justify-between pt-[20px]">
                     <div class="time text-[14px] leading-[16px] font-bold font-condensed" style="color:${titleColor}">${timeStr}</div>
                     <div class="flex items-center gap-3">
+                        ${shareButtons(article, descriptionColor)}
                         <button onclick="copyArticleLink(this, '${article.link}')"
                                 title="Αντιγραφή συνδέσμου"
                                 class="copy-btn flex items-center gap-1 text-[12px] leading-[14px] font-bold font-condensed text-(--card-link-color) hover:text-(--card-hover-color) transition-all cursor-pointer"
@@ -317,13 +318,26 @@ function card(article, artIndex, categoryKey, accent, accentColor) {
                             </svg>
                             <span class="copy-label">COPY</span>
                         </button>
-                        <a href="${article.link}" target="_blank" rel="noopener noreferrer"
-                           class="read-more text-[12px] leading-[14px] font-bold font-condensed text-(--card-link-color) hover:text-(--card-hover-color) transition-all"
-                           style="--card-link-color:${accentColor}">Διαβάστε -></a>
                     </div>
                 </div>
             </div>
         </div>`;
+}
+
+// ─── Share buttons ─────────────────────────────────────────────────────────────
+
+// The "μέσω captainnews.gr" line is what brings recipients back to the site,
+// since there are no per-article pages of our own to link to.
+function shareButtons(article, color) {
+    const text = encodeURIComponent(`${article.title}\n${article.link}\n\nμέσω captainnews.gr`);
+    const cls  = 'share-btn text-[15px] leading-none text-(--card-link-color) hover:text-(--card-hover-color) transition-all';
+    return `
+        <a href="https://wa.me/?text=${text}" target="_blank" rel="noopener noreferrer"
+           title="Κοινοποίηση στο WhatsApp" aria-label="Κοινοποίηση στο WhatsApp"
+           class="${cls}" style="--card-link-color:${color}"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="viber://forward?text=${text}"
+           title="Κοινοποίηση στο Viber" aria-label="Κοινοποίηση στο Viber"
+           class="${cls}" style="--card-link-color:${color}"><i class="fa-brands fa-viber"></i></a>`;
 }
 
 // ─── Load more button ──────────────────────────────────────────────────────────
