@@ -1,7 +1,7 @@
 // ─── Imports ───────────────────────────────────────────────────────────────────
 
-import { categoryDisplayNames, categoryAccents, sourceUrls, INITIAL_VISIBLE_COUNT } from './config.js?v=45';
-import { stripHtml, timeAgo } from './utils.js?v=45';
+import { categoryDisplayNames, categoryAccents, sourceUrls, INITIAL_VISIBLE_COUNT } from './config.js?v=52';
+import { stripHtml, timeAgo } from './utils.js?v=52';
 
 // ─── Public API ────────────────────────────────────────────────────────────────
 
@@ -41,7 +41,8 @@ export function buildSection(categoryKey, articles) {
         default:         body = defaultLayout(articles, categoryKey, accent, accentColor);
     }
 
-    const content = header + body + loadMoreBtn(categoryKey, articles.length);
+    const visibleCount = layout === 'list' ? LIST_VISIBLE_COUNT : INITIAL_VISIBLE_COUNT;
+    const content = header + body + loadMoreBtn(categoryKey, articles.length, visibleCount);
 
     section.innerHTML = content;
 
@@ -119,8 +120,11 @@ function magazineLayout(articles, categoryKey, accent, accentColor) {
 
 // ─── Layout: list ──────────────────────────────────────────────────────────────
 
+// Even, so the 2-column desktop grid never ends on a half-empty row.
+const LIST_VISIBLE_COUNT = 10;
+
 function listLayout(articles, categoryKey, accent, accentColor) {
-    return `<div class="gg-container flex flex-col gap-[10px] pt-[10px]">` +
+    return `<div class="gg-container grid grid-cols-1 lg:grid-cols-2 gap-x-[20px] gap-y-[10px] pt-[10px]">` +
         articles.map((a, i) => listItem(a, i, categoryKey, accent, accentColor)).join('') +
         `</div>`;
 }
@@ -128,7 +132,7 @@ function listLayout(articles, categoryKey, accent, accentColor) {
 function listItem(article, artIndex, categoryKey, accent, accentColor) {
     const imgUrl      = article.image || '/icons/default-image.png?v=2';
     const timeStr     = timeAgo(article.date);
-    const isHidden    = artIndex >= INITIAL_VISIBLE_COUNT;
+    const isHidden    = artIndex >= LIST_VISIBLE_COUNT;
     const hiddenClass = isHidden ? `hidden hidden-item-${categoryKey}` : '';
     const cardBg      = accent?.cardBg || '';
     const cardBgClass = cardBg ? '' : 'bg-main-grey';
@@ -138,14 +142,14 @@ function listItem(article, artIndex, categoryKey, accent, accentColor) {
 
     return `
         <a href="${article.link}" target="_blank" rel="noopener noreferrer"
-           class="list-item ${cardBgClass} flex items-center gap-[14px] p-[10px] rounded-[10px] group transition-colors duration-300 ${hiddenClass}" ${styleAttr}>
-            <div class="w-[110px] h-[70px] shrink-0 overflow-hidden rounded-[8px]">
+           class="list-row ${cardBgClass} flex items-center gap-[14px] p-[10px] rounded-[10px] group transition-colors duration-300 ${hiddenClass}" ${styleAttr}>
+            <div class="w-[110px] h-[70px] md:w-[180px] md:h-[110px] shrink-0 overflow-hidden rounded-[8px]">
                 <img class="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
-                     src="${imgUrl}" alt="${article.title}" width="110" height="70" loading="lazy"
+                     src="${imgUrl}" alt="${article.title}" width="180" height="110" loading="lazy"
                      onerror="this.src='/icons/default-image.png?v=2'">
             </div>
             <div class="flex-1 min-w-0">
-                <div class="text-[15px] leading-[19px] font-bold font-condensed line-clamp-2 text-(--list-title-color) group-hover:text-(--card-hover-color) transition-colors duration-300">
+                <div class="text-[15px] leading-[19px] md:text-[18px] md:leading-[23px] font-bold font-condensed line-clamp-2 md:line-clamp-3 text-(--list-title-color) group-hover:text-(--card-hover-color) transition-colors duration-300">
                     ${article.title}
                 </div>
                 <div class="flex items-center gap-[8px] mt-[6px]">
@@ -324,8 +328,8 @@ function card(article, artIndex, categoryKey, accent, accentColor) {
 
 // ─── Load more button ──────────────────────────────────────────────────────────
 
-function loadMoreBtn(categoryKey, totalArticles) {
-    if (totalArticles <= INITIAL_VISIBLE_COUNT) return '';
+function loadMoreBtn(categoryKey, totalArticles, visibleCount) {
+    if (totalArticles <= visibleCount) return '';
     return `
         <div class="gg-container flex justify-center mt-6 pb-10">
             <button id="btn-${categoryKey}" onclick="loadAllArticles('${categoryKey}')"

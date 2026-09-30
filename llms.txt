@@ -13,6 +13,7 @@
 - [Gossip](https://captainnews.gr/gossip/): Lifestyle και κουτσομπολιά
 - [Cine](https://captainnews.gr/cinema/): Νέα κινηματογράφου
 - [Gaming](https://captainnews.gr/gaming/): Νέα βιντεοπαιχνιδιών
+- [Απεργίες](https://captainnews.gr/apergies/): Απεργίες και στάσεις εργασίας σε ΜΜΜ, πλοία, αεροδρόμια και δημόσιο
 
 ## Άλλες σελίδες
 

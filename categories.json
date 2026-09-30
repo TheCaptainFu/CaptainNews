@@ -106,5 +106,24 @@
             { "name": "VG24",       "url": "https://www.vg24.gr/feed/", "homepage": "https://www.vg24.gr" },
             { "name": "Ragequit",   "url": "https://ragequit.gr/feed/", "homepage": "https://ragequit.gr" }
         ]
+    },
+    "strikes": {
+        "displayName": "ΑΠΕΡΓΙΕΣ",
+        "navLabel": "ΑΠΕΡΓΙΕΣ",
+        "navIcon": "fa-bullhorn",
+        "path": "/apergies/",
+        "isNew": true,
+        "description": "Απεργίες σήμερα και στάσεις εργασίας σε ΜΜΜ, πλοία, αεροδρόμια και δημόσιο. Όλες οι κινητοποιήσεις σε πραγματικό χρόνο από τις κορυφαίες ελληνικές πηγές.",
+        "feeds": [
+            { "name": "Efsyn",       "url": "https://www.efsyn.gr/tag/stasi-ergasias/rss", "homepage": "https://www.efsyn.gr" },
+            { "name": "Efsyn",       "url": "https://www.efsyn.gr/tag/apergia/rss", "homepage": "https://www.efsyn.gr" },
+            { "name": "CNN.gr",      "url": "https://www.cnn.gr/tag/stasi-ergasias?format=feed", "homepage": "https://www.cnn.gr" },
+            { "name": "CNN.gr",      "url": "https://www.cnn.gr/tag/apergia?format=feed", "homepage": "https://www.cnn.gr" },
+            { "name": "Newsbeast",   "url": "https://www.newsbeast.gr/tag/stasi-ergasias/feed", "homepage": "https://www.newsbeast.gr" },
+            { "name": "Newsbeast",   "url": "https://www.newsbeast.gr/tag/apergia/feed", "homepage": "https://www.newsbeast.gr" },
+            { "name": "Ertnews",     "url": "https://www.ertnews.gr/tag/stasi-ergasias/feed/", "homepage": "https://www.ertnews.gr" },
+            { "name": "Ertnews",     "url": "https://www.ertnews.gr/tag/apergia/feed/", "homepage": "https://www.ertnews.gr" },
+            { "name": "Naftemporiki","url": "https://www.naftemporiki.gr/tag/apergia/feed/", "homepage": "https://www.naftemporiki.gr" }
+        ]
     }
 }

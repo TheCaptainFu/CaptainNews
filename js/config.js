@@ -15,7 +15,8 @@ export const categoryOrder = [
     'music',
     'gossip',
     'cinema',
-    'gaming'
+    'gaming',
+    'strikes'
 ];
 
 // ─── Category display names ────────────────────────────────────────────────────
@@ -30,6 +31,7 @@ export const categoryDisplayNames = {
     gossip:          'GOSSIP',
     cinema:          'CINE',
     gaming:          'GAMING',
+    strikes:         'ΑΠΕΡΓΙΕΣ',
 };
 
 // ─── Per-category visual theme ─────────────────────────────────────────────────
@@ -174,6 +176,20 @@ export const categoryAccents = {
         descriptionColor: 'rgba(0,0,0,0.8)',
         hoverColor: ''
     },
+
+    strikes: {
+        color: '#b91c1c',
+        cardBg: 'none',
+        sectionBg: '#F7F3EE',
+        sectionBgImage: '',
+        featuredReverse: false,
+        isNew: true,
+        sectionLayout: 'list',
+        cardPadding: true,
+        titleColor: '#000000',
+        descriptionColor: 'rgba(0,0,0,0.8)',
+        hoverColor: '#b91c1c'
+    },
 };
 
 // ─── Source homepage URLs ──────────────────────────────────────────────────────
@@ -182,6 +198,8 @@ export const sourceUrls = {
     'ABC Intl':      'https://abcnews.go.com',
     'BBC World':     'https://www.bbc.com/news/world',
     'Cinepivates':   'https://cinepivates.gr',
+    'CNN.gr':        'https://www.cnn.gr',
+    'Efsyn':         'https://www.efsyn.gr',
     'Ertnews':       'https://www.ertnews.gr',
     'FreeCinema':    'https://freecinema.gr',
     'Gameslife':     'https://gameslife.gr',
@@ -191,6 +209,7 @@ export const sourceUrls = {
     'In.gr World':   'https://www.in.gr',
     'Mad TV':        'https://mad.tv',
     'Monopoli':      'https://www.monopoli.gr/tag/mousiki/',
+    'Naftemporiki':  'https://www.naftemporiki.gr',
     'Newsbeast':     'https://www.newsbeast.gr',
     'Newsit':        'https://www.newsit.gr',
     'Popaganda':     'https://popaganda.gr/category/art/music/',

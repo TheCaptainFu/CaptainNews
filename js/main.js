@@ -1,20 +1,34 @@
 // ─── Imports ───────────────────────────────────────────────────────────────────
 
-import { WORKER_URL, IS_LOCAL, categoryOrder } from './config.js?v=45';
-import { buildSection } from './templates.js?v=45';
+import { WORKER_URL, IS_LOCAL, categoryOrder } from './config.js?v=52';
+import { buildSection } from './templates.js?v=52';
 
 // ─── News loader ───────────────────────────────────────────────────────────────
+
+// functions/_middleware.js embeds the news JSON into the page on the edge.
+function readEmbeddedNews() {
+    const el = document.getElementById('news-data');
+    if (!el) return null;
+    try {
+        return JSON.parse(el.textContent);
+    } catch {
+        return null;
+    }
+}
+
+async function fetchNews() {
+    const url      = IS_LOCAL ? `/news.json?t=${Date.now()}` : WORKER_URL;
+    const response = await fetch(url);
+    if (!response.ok) throw new Error('Failed to load news');
+    return response.json();
+}
 
 async function loadNews() {
     const mainWrapper = document.getElementById('main-content-wrapper');
     if (!mainWrapper) return;
 
     try {
-        const url      = IS_LOCAL ? `/news.json?t=${Date.now()}` : WORKER_URL;
-        const response = await fetch(url);
-        if (!response.ok) throw new Error('Failed to load news');
-
-        const data = await response.json();
+        const data = readEmbeddedNews() ?? await fetchNews();
         mainWrapper.innerHTML = '';
 
         const orderedKeys = [
@@ -118,6 +132,31 @@ burgerBtn?.addEventListener('click', e => { e.stopPropagation(); openSidebar(); 
 closeSidebar?.addEventListener('click', closeSidebarFn);
 menuOverlay?.addEventListener('click', closeSidebarFn);
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeSidebarFn(); });
+
+// ─── Header weather + clock ────────────────────────────────────────────────────
+// Open-Meteo is free, keyless and CORS-enabled, so the browser calls it directly
+// and it doesn't count against the Cloudflare Worker request limits.
+
+(() => {
+    const el = document.getElementById('header-info');
+    if (!el) return;
+
+    let temp = null;
+    const clock = () => new Date().toLocaleTimeString('el-GR', {
+        timeZone: 'Europe/Athens', hour: '2-digit', minute: '2-digit', hourCycle: 'h23',
+    });
+    const render = () => {
+        el.textContent = temp === null ? clock() : `${temp}° ATH · ${clock()}`;
+    };
+
+    render();
+    setInterval(render, 15000);
+
+    fetch('https://api.open-meteo.com/v1/forecast?latitude=37.98&longitude=23.73&current=temperature_2m&timezone=Europe%2FAthens')
+        .then(r => r.ok ? r.json() : Promise.reject(r.status))
+        .then(d => { temp = Math.round(Number(d.current.temperature_2m)); render(); })
+        .catch(e => console.error('header weather:', e));
+})();
 
 // ─── Ticker scroll hide/show ───────────────────────────────────────────────────
 

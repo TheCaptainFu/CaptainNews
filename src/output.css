@@ -388,9 +388,6 @@
   .inline-flex {
     display: inline-flex;
   }
-  .list-item {
-    display: list-item;
-  }
   .aspect-\[1\.7\] {
     aspect-ratio: 1.7;
   }
@@ -645,6 +642,12 @@
     --tw-space-y-reverse: 0;
     margin-block-start: calc(20px * var(--tw-space-y-reverse));
     margin-block-end: calc(20px * calc(1 - var(--tw-space-y-reverse)));
+  }
+  .gap-x-\[20px\] {
+    column-gap: 20px;
+  }
+  .gap-y-\[10px\] {
+    row-gap: 10px;
   }
   .self-center {
     align-self: center;
@@ -1091,6 +1094,10 @@
   .uppercase {
     text-transform: uppercase;
   }
+  .tabular-nums {
+    --tw-numeric-spacing: tabular-nums;
+    font-variant-numeric: var(--tw-ordinal,) var(--tw-slashed-zero,) var(--tw-numeric-figure,) var(--tw-numeric-spacing,) var(--tw-numeric-fraction,);
+  }
   .opacity-0 {
     opacity: 0%;
   }
@@ -1287,11 +1294,23 @@
     .md\:col-span-2 {
       grid-column: span 2 / span 2;
     }
+    .md\:line-clamp-3 {
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+    }
+    .md\:h-\[110px\] {
+      height: 110px;
+    }
     .md\:max-h-\[500px\] {
       max-height: 500px;
     }
     .md\:w-6\/12 {
       width: calc(6 / 12 * 100%);
+    }
+    .md\:w-\[180px\] {
+      width: 180px;
     }
     .md\:grid-cols-2 {
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1318,13 +1337,26 @@
       font-size: var(--text-3xl);
       line-height: var(--tw-leading, var(--text-3xl--line-height));
     }
+    .md\:text-\[13px\] {
+      font-size: 13px;
+    }
+    .md\:text-\[18px\] {
+      font-size: 18px;
+    }
     .md\:text-\[52px\] {
       font-size: 52px;
+    }
+    .md\:leading-\[23px\] {
+      --tw-leading: 23px;
+      line-height: 23px;
     }
   }
   @media (width >= 64rem) {
     .lg\:col-span-3 {
       grid-column: span 3 / span 3;
+    }
+    .lg\:grid-cols-2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
     }
     .lg\:grid-cols-3 {
       grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1497,6 +1529,26 @@ body.ticker-hidden #category-bar {
   inherits: false;
 }
 @property --tw-tracking {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-ordinal {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-slashed-zero {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-numeric-figure {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-numeric-spacing {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-numeric-fraction {
   syntax: "*";
   inherits: false;
 }
@@ -1698,6 +1750,11 @@ body.ticker-hidden #category-bar {
       --tw-leading: initial;
       --tw-font-weight: initial;
       --tw-tracking: initial;
+      --tw-ordinal: initial;
+      --tw-slashed-zero: initial;
+      --tw-numeric-figure: initial;
+      --tw-numeric-spacing: initial;
+      --tw-numeric-fraction: initial;
       --tw-shadow: 0 0 #0000;
       --tw-shadow-color: initial;
       --tw-shadow-alpha: 100%;

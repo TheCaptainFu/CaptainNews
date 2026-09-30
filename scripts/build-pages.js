@@ -99,7 +99,8 @@ function buildFooter() {
     const template = fs.readFileSync(path.join(ROOT, 'partials/footer.html'), 'utf8');
     const columns = CATEGORY_KEYS.map(key => {
         const cfg = categoriesConfig[key];
-        const items = cfg.feeds.map(f =>
+        const uniqueFeeds = cfg.feeds.filter((f, i, all) => all.findIndex(o => o.name === f.name) === i);
+        const items = uniqueFeeds.map(f =>
             `                        <li><a href="${f.homepage}" target="_blank" rel="noopener noreferrer" class="text-zinc-400 hover:text-main-yellow text-xs transition-colors">${f.name}</a></li>`
         ).join('\n');
         return `                <div>\n                    <h3 class="text-white font-condensed font-bold text-xs uppercase tracking-wider mb-3">${cfg.displayName}</h3>\n                    <ul class="space-y-2">\n${items}\n                    </ul>\n                </div>`;
@@ -206,7 +207,7 @@ function skeletonSideCard() {
 function skeletonListItem() {
     return `
         <div class="flex items-center gap-[14px] p-[10px] rounded-[10px] animate-pulse">
-            <div class="w-[110px] h-[70px] shrink-0 bg-zinc-800 rounded-[8px]"></div>
+            <div class="w-[110px] h-[70px] md:w-[180px] md:h-[110px] shrink-0 bg-zinc-800 rounded-[8px]"></div>
             <div class="flex-1 min-w-0 flex flex-col gap-[8px]">
                 <div class="h-[15px] bg-zinc-700 rounded w-full"></div>
                 <div class="h-[15px] bg-zinc-700 rounded w-1/2"></div>
@@ -239,7 +240,7 @@ function skeletonMagazineLayout() {
 }
 
 function skeletonListLayout() {
-    return `<div class="gg-container flex flex-col gap-[10px] pt-[10px]">${Array.from({ length: 7 }, skeletonListItem).join('')}</div>`;
+    return `<div class="gg-container grid grid-cols-1 lg:grid-cols-2 gap-x-[20px] gap-y-[10px] pt-[10px]">${Array.from({ length: 10 }, skeletonListItem).join('')}</div>`;
 }
 
 function skeletonSection(key) {

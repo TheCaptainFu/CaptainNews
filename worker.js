@@ -56,6 +56,17 @@ const categories = {
         { name: "Gameslife",   url: "https://gameslife.gr/feed/" },
         { name: "VG24",        url: "https://www.vg24.gr/feed/" },
         { name: "Ragequit",    url: "https://ragequit.gr/feed/" },
+    ],
+    "strikes": [
+        { name: "Efsyn",        url: "https://www.efsyn.gr/tag/stasi-ergasias/rss" },
+        { name: "Efsyn",        url: "https://www.efsyn.gr/tag/apergia/rss" },
+        { name: "CNN.gr",       url: "https://www.cnn.gr/tag/stasi-ergasias?format=feed" },
+        { name: "CNN.gr",       url: "https://www.cnn.gr/tag/apergia?format=feed" },
+        { name: "Newsbeast",    url: "https://www.newsbeast.gr/tag/stasi-ergasias/feed" },
+        { name: "Newsbeast",    url: "https://www.newsbeast.gr/tag/apergia/feed" },
+        { name: "Ertnews",      url: "https://www.ertnews.gr/tag/stasi-ergasias/feed/" },
+        { name: "Ertnews",      url: "https://www.ertnews.gr/tag/apergia/feed/" },
+        { name: "Naftemporiki", url: "https://www.naftemporiki.gr/tag/apergia/feed/" },
     ]
 };
 

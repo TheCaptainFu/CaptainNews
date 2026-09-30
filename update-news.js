@@ -97,4 +97,8 @@ async function main() {
     console.log(`Done! ${total} total articles saved to news.json`);
 }
 
-main().catch(console.error);
+// Some feeds leave sockets open after responding, which keeps Node alive
+// indefinitely once news.json is already written.
+main()
+    .then(() => process.exit(0))
+    .catch(e => { console.error(e); process.exit(1); });
