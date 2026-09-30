@@ -1,7 +1,7 @@
 // ─── Imports ───────────────────────────────────────────────────────────────────
 
-import { categoryDisplayNames, categoryAccents, sourceUrls, INITIAL_VISIBLE_COUNT } from './config.js?v=55';
-import { stripHtml, timeAgo } from './utils.js?v=55';
+import { categoryDisplayNames, categoryAccents, sourceUrls, INITIAL_VISIBLE_COUNT } from './config.js?v=56';
+import { stripHtml, timeAgo } from './utils.js?v=56';
 
 // ─── Public API ────────────────────────────────────────────────────────────────
 
@@ -330,14 +330,18 @@ function card(article, artIndex, categoryKey, accent, accentColor) {
 // since there are no per-article pages of our own to link to.
 function shareButtons(article, color) {
     const text = encodeURIComponent(`${article.title}\n${article.link}\n\nμέσω captainnews.gr`);
-    const cls  = 'share-btn text-[15px] leading-none text-(--card-link-color) hover:text-(--card-hover-color) transition-all';
+    // 34×36 tap target around an 18px icon; the negative margin keeps the
+    // card footer the same height as before.
+    const cls  = 'share-btn inline-flex items-center justify-center w-[34px] h-[36px] -my-[10px] text-[18px] leading-none text-(--card-link-color) hover:text-(--card-hover-color) transition-all';
     return `
-        <a href="https://wa.me/?text=${text}" target="_blank" rel="noopener noreferrer"
-           title="Κοινοποίηση στο WhatsApp" aria-label="Κοινοποίηση στο WhatsApp"
-           class="${cls}" style="--card-link-color:${color}"><i class="fa-brands fa-whatsapp"></i></a>
-        <a href="viber://forward?text=${text}"
-           title="Κοινοποίηση στο Viber" aria-label="Κοινοποίηση στο Viber"
-           class="${cls}" style="--card-link-color:${color}"><i class="fa-brands fa-viber"></i></a>`;
+        <span class="flex items-center">
+            <a href="https://wa.me/?text=${text}" target="_blank" rel="noopener noreferrer"
+               title="Κοινοποίηση στο WhatsApp" aria-label="Κοινοποίηση στο WhatsApp"
+               class="${cls}" style="--card-link-color:${color}"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="viber://forward?text=${text}"
+               title="Κοινοποίηση στο Viber" aria-label="Κοινοποίηση στο Viber"
+               class="${cls}" style="--card-link-color:${color}"><i class="fa-brands fa-viber"></i></a>
+        </span>`;
 }
 
 // ─── Load more button ──────────────────────────────────────────────────────────

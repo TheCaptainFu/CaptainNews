@@ -286,6 +286,9 @@
   .mx-6 {
     margin-inline: calc(var(--spacing) * 6);
   }
+  .-my-\[10px\] {
+    margin-block: calc(10px * -1);
+  }
   .mt-1 {
     margin-top: var(--spacing);
   }
@@ -436,6 +439,9 @@
   .h-\[26px\] {
     height: 26px;
   }
+  .h-\[36px\] {
+    height: 36px;
+  }
   .h-\[38px\] {
     height: 38px;
   }
@@ -498,6 +504,9 @@
   }
   .w-\[13px\] {
     width: 13px;
+  }
+  .w-\[34px\] {
+    width: 34px;
   }
   .w-\[38\%\] {
     width: 38%;
@@ -956,6 +965,9 @@
   }
   .text-\[16px\] {
     font-size: 16px;
+  }
+  .text-\[18px\] {
+    font-size: 18px;
   }
   .text-\[20px\] {
     font-size: 20px;
