@@ -1,7 +1,7 @@
 // ─── Imports ───────────────────────────────────────────────────────────────────
 
-import { categoryDisplayNames, categoryAccents, sourceUrls, INITIAL_VISIBLE_COUNT } from './config.js?v=56';
-import { stripHtml, timeAgo } from './utils.js?v=56';
+import { categoryDisplayNames, categoryAccents, sourceUrls, INITIAL_VISIBLE_COUNT } from './config.js?v=57';
+import { stripHtml, timeAgo } from './utils.js?v=57';
 
 // ─── Public API ────────────────────────────────────────────────────────────────
 
@@ -140,25 +140,30 @@ function listItem(article, artIndex, categoryKey, accent, accentColor) {
     const titleColor  = accent?.titleColor || '#ffffff';
     const styleAttr   = `style="${bgStyle}--card-hover-color:${accent?.hoverColor || '#f2d06f'};--list-title-color:${titleColor}"`;
 
+    // A <div>, not an <a>: the share/copy buttons can't live inside a link.
     return `
-        <a href="${article.link}" target="_blank" rel="noopener noreferrer"
-           class="list-row ${cardBgClass} flex items-center gap-[14px] p-[10px] rounded-[10px] group transition-colors duration-300 ${hiddenClass}" ${styleAttr}>
-            <div class="w-[110px] h-[70px] md:w-[180px] md:h-[110px] shrink-0 overflow-hidden rounded-[8px]">
+        <div class="list-row ${cardBgClass} flex items-center gap-[14px] p-[10px] rounded-[10px] group transition-colors duration-300 ${hiddenClass}" ${styleAttr}>
+            <a href="${article.link}" target="_blank" rel="noopener noreferrer"
+               class="block w-[110px] h-[70px] md:w-[180px] md:h-[110px] shrink-0 overflow-hidden rounded-[8px]">
                 <img class="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
                      src="${imgUrl}" alt="${article.title}" width="180" height="110" loading="lazy"
                      onerror="this.src='/icons/default-image.png?v=2'">
-            </div>
+            </a>
             <div class="flex-1 min-w-0">
-                <div class="text-[15px] leading-[19px] md:text-[18px] md:leading-[23px] font-bold font-condensed line-clamp-2 md:line-clamp-3 text-(--list-title-color) group-hover:text-(--card-hover-color) transition-colors duration-300">
+                <a href="${article.link}" target="_blank" rel="noopener noreferrer"
+                   class="block text-[15px] leading-[19px] md:text-[18px] md:leading-[23px] font-bold font-condensed line-clamp-2 md:line-clamp-3 text-(--list-title-color) hover:text-(--card-hover-color) transition-colors duration-300">
                     ${article.title}
-                </div>
-                <div class="flex items-center gap-[8px] mt-[6px]">
-                    <span class="text-[12px] font-condensed font-bold" style="color:${accentColor}">${article.source}</span>
-                    <span class="text-zinc-600 text-[11px]">·</span>
-                    <span class="text-[11px] font-condensed text-(--list-title-color)">${timeStr}</span>
+                </a>
+                <div class="flex flex-wrap items-center justify-between gap-x-2 gap-y-[4px] mt-[6px]">
+                    <div class="flex items-center gap-[8px] min-w-0">
+                        <span class="text-[12px] font-condensed font-bold whitespace-nowrap" style="color:${accentColor}">${article.source}</span>
+                        <span class="text-zinc-600 text-[11px]">·</span>
+                        <span class="text-[11px] font-condensed whitespace-nowrap text-(--list-title-color)">${timeStr}</span>
+                    </div>
+                    ${shareActions(article, accent?.descriptionColor || 'rgba(255,255,255,0.8)', true)}
                 </div>
             </div>
-        </a>`;
+        </div>`;
 }
 
 function magazineSideCard(article, artIndex, categoryKey, accent, accentColor) {
@@ -187,12 +192,15 @@ function magazineSideCard(article, artIndex, categoryKey, accent, accentColor) {
                     <a href="${article.link}" target="_blank" rel="noopener noreferrer"
                        class="hover:text-(--card-hover-color) transition-colors duration-300">${article.title}</a>
                 </div>
-                <div class="flex items-center gap-[6px]">
-                    <a href="${sourceUrl}" target="_blank" rel="noopener noreferrer"
-                       class="text-[11px] font-condensed font-bold text-(--card-link-color) hover:text-(--card-hover-color) hover:underline shrink-0"
-                       style="--card-link-color:${accentColor}">${article.source}</a>
-                    <span class="text-zinc-600 text-[11px]">·</span>
-                    <span class="text-[11px] font-condensed shrink-0" style="color:${titleColor}">${timeStr}</span>
+                <div class="flex flex-wrap items-center justify-between gap-x-2 gap-y-[4px]">
+                    <div class="flex items-center gap-[6px] min-w-0">
+                        <a href="${sourceUrl}" target="_blank" rel="noopener noreferrer"
+                           class="text-[11px] font-condensed font-bold text-(--card-link-color) hover:text-(--card-hover-color) hover:underline whitespace-nowrap"
+                           style="--card-link-color:${accentColor}">${article.source}</a>
+                        <span class="text-zinc-600 text-[11px]">·</span>
+                        <span class="text-[11px] font-condensed whitespace-nowrap" style="color:${titleColor}">${timeStr}</span>
+                    </div>
+                    ${shareActions(article, accent?.descriptionColor || 'rgba(255,255,255,0.8)', true)}
                 </div>
             </div>
         </div>`;
@@ -231,11 +239,15 @@ function magazineFeatured(article, artIndex, categoryKey, accent, accentColor) {
                 <div class="text-[14px] leading-[20px] font-normal font-roboto pb-[16px] flex-grow" style="color:${descriptionColor}">
                     ${description}
                 </div>
-                <div class="flex items-center justify-between pt-[12px] border-t border-(--card-source-border)">
-                    <a href="${sourceUrl}" target="_blank" rel="noopener noreferrer"
-                       class="text-[14px] font-condensed font-bold text-(--card-link-color) hover:text-(--card-hover-color) hover:underline"
-                       style="--card-link-color:${accentColor}">${article.source}</a>
-                    <span class="text-[12px] font-condensed" style="color:${titleColor}">${timeStr}</span>
+                <div class="flex flex-wrap items-center justify-between gap-x-2 gap-y-[4px] pt-[12px] border-t border-(--card-source-border)">
+                    <div class="flex items-center gap-[6px] min-w-0">
+                        <a href="${sourceUrl}" target="_blank" rel="noopener noreferrer"
+                           class="text-[14px] font-condensed font-bold text-(--card-link-color) hover:text-(--card-hover-color) hover:underline whitespace-nowrap"
+                           style="--card-link-color:${accentColor}">${article.source}</a>
+                        <span class="text-zinc-600 text-[11px]">·</span>
+                        <span class="text-[12px] font-condensed whitespace-nowrap" style="color:${titleColor}">${timeStr}</span>
+                    </div>
+                    ${shareActions(article, descriptionColor)}
                 </div>
             </div>
         </div>`;
@@ -306,19 +318,7 @@ function card(article, artIndex, categoryKey, accent, accentColor) {
                 </div>
                 <div class="card-footer flex items-center justify-between pt-[20px]">
                     <div class="time text-[14px] leading-[16px] font-bold font-condensed" style="color:${titleColor}">${timeStr}</div>
-                    <div class="flex items-center gap-3">
-                        ${shareButtons(article, descriptionColor)}
-                        <button onclick="copyArticleLink(this, '${article.link}')"
-                                title="Αντιγραφή συνδέσμου"
-                                class="copy-btn flex items-center gap-1 text-[12px] leading-[14px] font-bold font-condensed text-(--card-link-color) hover:text-(--card-hover-color) transition-all cursor-pointer"
-                                style="--card-link-color:${descriptionColor}">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="copy-icon w-[13px] h-[13px]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                            </svg>
-                            <span class="copy-label">COPY</span>
-                        </button>
-                    </div>
+                    ${shareActions(article, descriptionColor)}
                 </div>
             </div>
         </div>`;
@@ -342,6 +342,28 @@ function shareButtons(article, color) {
                title="Κοινοποίηση στο Viber" aria-label="Κοινοποίηση στο Viber"
                class="${cls}" style="--card-link-color:${color}"><i class="fa-brands fa-viber"></i></a>
         </span>`;
+}
+
+// compact: icon-only COPY for narrow cards. The label stays in the DOM (sr-only)
+// because window.copyArticleLink in main.js swaps its text to "COPIED!".
+function copyButton(article, color, compact = false) {
+    const label = compact ? 'copy-label sr-only' : 'copy-label';
+    const size  = compact ? 'w-[34px] h-[36px] -my-[10px] justify-center' : 'gap-1';
+    return `
+        <button onclick="copyArticleLink(this, '${article.link}')"
+                title="Αντιγραφή συνδέσμου" aria-label="Αντιγραφή συνδέσμου"
+                class="copy-btn inline-flex items-center ${size} text-[12px] leading-[14px] font-bold font-condensed text-(--card-link-color) hover:text-(--card-hover-color) transition-all cursor-pointer"
+                style="--card-link-color:${color}">
+            <svg xmlns="http://www.w3.org/2000/svg" class="copy-icon ${compact ? 'w-[16px] h-[16px]' : 'w-[13px] h-[13px]'}" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+            </svg>
+            <span class="${label}">COPY</span>
+        </button>`;
+}
+
+function shareActions(article, color, compact = false) {
+    return `<div class="flex items-center ${compact ? '' : 'gap-3'} shrink-0 ml-auto">${shareButtons(article, color)}${copyButton(article, color, compact)}</div>`;
 }
 
 // ─── Load more button ──────────────────────────────────────────────────────────

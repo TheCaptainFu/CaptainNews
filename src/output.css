@@ -355,6 +355,9 @@
   .ml-2 {
     margin-left: calc(var(--spacing) * 2);
   }
+  .ml-auto {
+    margin-left: auto;
+  }
   .line-clamp-2 {
     overflow: hidden;
     display: -webkit-box;
@@ -505,6 +508,9 @@
   .w-\[13px\] {
     width: 13px;
   }
+  .w-\[16px\] {
+    width: 16px;
+  }
   .w-\[34px\] {
     width: 34px;
   }
@@ -594,6 +600,9 @@
   .flex-row {
     flex-direction: row;
   }
+  .flex-wrap {
+    flex-wrap: wrap;
+  }
   .items-center {
     align-items: center;
   }
@@ -652,8 +661,14 @@
     margin-block-start: calc(20px * var(--tw-space-y-reverse));
     margin-block-end: calc(20px * calc(1 - var(--tw-space-y-reverse)));
   }
+  .gap-x-2 {
+    column-gap: calc(var(--spacing) * 2);
+  }
   .gap-x-\[20px\] {
     column-gap: 20px;
+  }
+  .gap-y-\[4px\] {
+    row-gap: 4px;
   }
   .gap-y-\[10px\] {
     row-gap: 10px;
@@ -1198,9 +1213,6 @@
     }
     .group-hover\:bg-\[\#2c3a99\]:is(:where(.group):hover *) {
       background-color: #2c3a99;
-    }
-    .group-hover\:text-\(--card-hover-color\):is(:where(.group):hover *) {
-      color: var(--card-hover-color);
     }
     .hover\:border-\[\#3749bd\]:hover {
       border-color: #3749bd;
