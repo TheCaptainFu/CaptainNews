@@ -1,6 +1,13 @@
 @import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
+.no-scrollbar {
+    scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
 .gg-container {
     max-width: 1230px;
     width: 100%;

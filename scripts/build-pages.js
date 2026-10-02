@@ -48,7 +48,7 @@ const categoryAccents = loadCategoryAccents();
 // skeletonKeys lists which categories' skeleton loading placeholder to render
 // inside #main-content-wrapper (null skips it — policy/contact show no feed).
 const EXTRA_PAGES = [
-    { file: 'index.html',         navKey: 'home',   bodyCategory: null, h1Text: 'CaptainNews.gr — Ειδήσεις σε πραγματικό χρόνο από Ελλάδα και τον κόσμο', skeletonKeys: CATEGORY_KEYS },
+    { file: 'index.html',         navKey: 'home',   bodyCategory: null, h1Text: 'CaptainNews.gr — Ειδήσεις σε πραγματικό χρόνο από Ελλάδα και τον κόσμο', skeletonKeys: CATEGORY_KEYS, home: true },
     { file: 'policy/index.html',  navKey: 'policy',  bodyCategory: null, h1Text: null, skeletonKeys: null },
     { file: 'contact/index.html', navKey: 'contact', bodyCategory: null, h1Text: null, skeletonKeys: null },
 ];
@@ -243,16 +243,35 @@ function skeletonListLayout() {
     return `<div class="gg-container grid grid-cols-1 lg:grid-cols-2 gap-x-[20px] gap-y-[10px] pt-[10px]">${Array.from({ length: 10 }, skeletonListItem).join('')}</div>`;
 }
 
-function skeletonSection(key) {
+// Same card width classes as CAROUSEL_CARD_WIDTH in js/templates.js.
+function skeletonCarouselLayout() {
+    const card = `
+            <div class="shrink-0 w-[78%] min-[560px]:w-[46%] lg:w-[calc((100%-48px)/4)] flex flex-col animate-pulse">
+                <div class="w-full aspect-[1.7] bg-zinc-800 rounded-[12px]"></div>
+                <div class="pt-[12px] px-[4px] flex flex-col gap-[8px]">
+                    <div class="h-[17px] bg-zinc-700 rounded w-full"></div>
+                    <div class="h-[17px] bg-zinc-700 rounded w-2/3"></div>
+                    <div class="h-[12px] bg-zinc-700 rounded w-1/3 mt-[10px]"></div>
+                </div>
+            </div>`;
+    return `<div class="gg-container flex gap-[16px] overflow-hidden pt-[10px] pb-[4px]">${card.repeat(4)}</div>`;
+}
+
+function skeletonSection(key, isHome) {
     const accent = categoryAccents[key];
     if (!accent) return '';
 
+    // Mirrors buildSection(): carousel only on the homepage.
+    const layout = accent.sectionLayout === 'carousel' && !isHome ? 'default' : accent.sectionLayout;
+
     let body;
-    switch (accent.sectionLayout) {
+    switch (layout) {
         case 'magazine': body = skeletonMagazineLayout(); break;
         case 'list':     body = skeletonListLayout(); break;
+        case 'carousel': body = skeletonCarouselLayout(); break;
         default:         body = skeletonDefaultLayout();
     }
+    const loadMore = layout === 'carousel' ? '' : skeletonLoadMoreBtn();
 
     let style = '';
     if (accent.sectionBgImage) {
@@ -261,12 +280,12 @@ function skeletonSection(key) {
         style = `background-color:${accent.sectionBg};border-radius:0px;padding-top:0px;padding-bottom:20px;`;
     }
 
-    return `        <section class="category-group pb-10"${style ? ` style="${style}"` : ''}>${skeletonSectionHeader()}${body}${skeletonLoadMoreBtn()}\n        </section>`;
+    return `        <section class="category-group pb-10"${style ? ` style="${style}"` : ''}>${skeletonSectionHeader()}${body}${loadMore}\n        </section>`;
 }
 
-function buildSkeleton(keys) {
+function buildSkeleton(keys, isHome) {
     if (!keys || !keys.length) return '';
-    return keys.map(skeletonSection).join('\n');
+    return keys.map(k => skeletonSection(k, isHome)).join('\n');
 }
 
 const MAIN_CONTENT_RE = /(<main id="main-content-wrapper"[^>]*>)[\s\S]*?(<\/main>)/;
@@ -275,10 +294,10 @@ const MAIN_CONTENT_RE = /(<main id="main-content-wrapper"[^>]*>)[\s\S]*?(<\/main
 // loading placeholder matching the real layout, so there's near-zero visual
 // jump once js/main.js swaps in the real fetched articles. Pages that use a
 // hidden <div id="main-content-wrapper"> (policy/contact) are left alone.
-function applyMainContent(html, h1Text, skeletonKeys) {
+function applyMainContent(html, h1Text, skeletonKeys, isHome = false) {
     if (!MAIN_CONTENT_RE.test(html)) return html;
     const h1Block = h1Text ? `\n        <h1 class="sr-only">${h1Text}</h1>` : '';
-    const skeletonHtml = buildSkeleton(skeletonKeys);
+    const skeletonHtml = buildSkeleton(skeletonKeys, isHome);
     return html.replace(MAIN_CONTENT_RE, (_m, openTag, closeTag) =>
         `${openTag}${h1Block}\n${skeletonHtml}\n    ${closeTag}`
     );
@@ -305,7 +324,7 @@ function scaffoldPage(key) {
     return true;
 }
 
-function buildExistingPage({ file, navKey, bodyCategory, h1Text, skeletonKeys }) {
+function buildExistingPage({ file, navKey, bodyCategory, h1Text, skeletonKeys, home }) {
     const filePath = path.join(ROOT, file);
     let html = fs.readFileSync(filePath, 'utf8');
 
@@ -319,7 +338,7 @@ function buildExistingPage({ file, navKey, bodyCategory, h1Text, skeletonKeys })
     html = html.replace(FOOTER_BLOCK, buildFooter().trimEnd());
 
     html = applyBodyCategory(html, bodyCategory);
-    html = applyMainContent(html, h1Text, skeletonKeys);
+    html = applyMainContent(html, h1Text, skeletonKeys, home);
 
     fs.writeFileSync(filePath, html, 'utf8');
     console.log(`built: ${file}`);

@@ -14,8 +14,8 @@ export const categoryOrder = [
     'technology',
     'music',
     'gossip',
-    'cinema',
     'gaming',
+    'cinema',
     'strikes'
 ];
 
@@ -41,10 +41,11 @@ export const categoryDisplayNames = {
 // sectionBgImage : full-section background image URL. Empty = none
 // featuredReverse: true = image δεξιά στο featured άρθρο
 // isNew          : true = εμφανίζει "NEW" badge στον τίτλο και το pill
-// sectionLayout  : 'default' | 'magazine' | 'list'
+// sectionLayout  : 'default' | 'magazine' | 'list' | 'carousel'
 //   default  → 1 featured full-width + grid 3 στήλες
 //   magazine → 1 μεγάλο αριστερά + στοίβα μικρών δεξιά
 //   list     → συμπαγής λίστα: μικρό thumbnail + τίτλος + πηγή/ώρα ανά γραμμή
+//   carousel → οριζόντια σειρά που σέρνεται (μόνο στην αρχική· στη σελίδα κατηγορίας γίνεται default)
 // cardPadding    : false = αφαιρεί το εσωτερικό padding του card (default: true)
 // titleColor     : χρώμα τίτλου άρθρου. Το ίδιο χρησιμοποιείται και στο "Πηγή" text και στο "πριν X ώρες"
 // descriptionColor: χρώμα περιγραφής άρθρου. Το ίδιο χρησιμοποιείται και στο κουμπί "COPY"
@@ -150,17 +151,17 @@ export const categoryAccents = {
     },
 
     cinema: {
-        color: '#dc2626',
+        color: '#F7F3EE',
         cardBg: 'none',
-        sectionBg: '#F7F3EE',
+        sectionBg: '#dc2626',
         sectionBgImage: '',
         featuredReverse: false,
         isNew: false,
-        sectionLayout: 'magazine',
+        sectionLayout: 'carousel',
         cardPadding: true,
         titleColor: '#000000',
         descriptionColor: 'rgba(0,0,0,0.8)',
-        hoverColor: '#dc2626'
+        hoverColor: '#F7F3EE'
     },
 
     gaming: {

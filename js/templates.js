@@ -1,7 +1,7 @@
 // ─── Imports ───────────────────────────────────────────────────────────────────
 
-import { categoryDisplayNames, categoryAccents, sourceUrls, INITIAL_VISIBLE_COUNT } from './config.js?v=57';
-import { stripHtml, timeAgo } from './utils.js?v=57';
+import { categoryDisplayNames, categoryAccents, sourceUrls, INITIAL_VISIBLE_COUNT } from './config.js?v=59';
+import { stripHtml, timeAgo } from './utils.js?v=59';
 
 // ─── Public API ────────────────────────────────────────────────────────────────
 
@@ -9,7 +9,10 @@ export function buildSection(categoryKey, articles) {
     const accent      = categoryAccents[categoryKey];
     const accentColor = accent?.color || '#4f72ff';
     const title       = categoryDisplayNames[categoryKey] || categoryKey.toUpperCase();
-    const layout      = (accent?.sectionLayout || 'default').trim();
+    const configured  = (accent?.sectionLayout || 'default').trim();
+    // A single horizontal row makes no sense when the category is the whole
+    // page, so category pages fall back to the regular grid.
+    const layout      = configured === 'carousel' && document.body.dataset.category ? 'default' : configured;
 
     const section = document.createElement('section');
     section.id        = `section-${categoryKey}`;
@@ -38,10 +41,13 @@ export function buildSection(categoryKey, articles) {
     switch (layout) {
         case 'magazine': body = magazineLayout(articles, categoryKey, accent, accentColor); break;
         case 'list':     body = listLayout(articles, categoryKey, accent, accentColor); break;
+        case 'carousel': body = carouselLayout(articles, categoryKey, accent, accentColor); break;
         default:         body = defaultLayout(articles, categoryKey, accent, accentColor);
     }
 
-    const visibleCount = layout === 'list' ? LIST_VISIBLE_COUNT : INITIAL_VISIBLE_COUNT;
+    const visibleCount = layout === 'list' ? LIST_VISIBLE_COUNT
+                       : layout === 'carousel' ? articles.length
+                       : INITIAL_VISIBLE_COUNT;
     const content = header + body + loadMoreBtn(categoryKey, articles.length, visibleCount);
 
     section.innerHTML = content;
@@ -116,6 +122,64 @@ function magazineLayout(articles, categoryKey, accent, accentColor) {
         </div>
         ${belowHtml}
         ${restHtml}`;
+}
+
+// ─── Layout: carousel ──────────────────────────────────────────────────────────
+
+// Keep in sync with skeletonCarouselLayout() in scripts/build-pages.js.
+// Mobile shows ~1.3 cards so the next one peeks in; desktop shows exactly 4.
+const CAROUSEL_CARD_WIDTH = 'w-[78%] min-[560px]:w-[46%] lg:w-[calc((100%-48px)/4)]';
+
+function carouselLayout(articles, categoryKey, accent, accentColor) {
+    const arrow = (dir, icon, label, side) => `
+        <button onclick="scrollCarousel('${categoryKey}', ${dir})" aria-label="${label}"
+                class="hidden lg:flex absolute ${side} top-[40%] -translate-y-1/2 z-10 w-[40px] h-[40px] rounded-full bg-zinc-900/90 text-white items-center justify-center shadow-lg hover:bg-[#3749bd] transition-colors cursor-pointer">
+            <i class="fa-solid ${icon}"></i>
+        </button>`;
+    return `
+        <div class="gg-container relative">
+            <div id="carousel-${categoryKey}" class="no-scrollbar relative flex gap-[16px] overflow-x-auto snap-x snap-mandatory scroll-smooth pt-[10px] pb-[4px]">
+                ${articles.map(a => carouselCard(a, accent, accentColor)).join('')}
+            </div>
+            ${arrow(-1, 'fa-chevron-left', 'Προηγούμενα', 'left-[-6px]')}
+            ${arrow(1, 'fa-chevron-right', 'Επόμενα', 'right-[-6px]')}
+        </div>`;
+}
+
+function carouselCard(article, accent, accentColor) {
+    const imgUrl      = article.image || '/icons/default-image.png?v=2';
+    const timeStr     = timeAgo(article.date);
+    const sourceUrl   = sourceUrls[article.source] || '#';
+    const cardBg      = accent?.cardBg || '';
+    const cardBgClass = cardBg ? '' : 'bg-main-grey';
+    const bgStyle     = cardBg ? `background-color:${cardBg};` : '';
+    const titleColor       = accent?.titleColor || '#ffffff';
+    const descriptionColor = accent?.descriptionColor || 'rgba(255,255,255,0.8)';
+
+    return `
+        <div class="item snap-start shrink-0 ${CAROUSEL_CARD_WIDTH} ${cardBgClass} rounded-[12px] overflow-hidden flex flex-col group"
+             style="${bgStyle}--card-hover-color:${accent?.hoverColor || '#f2d06f'}">
+            <a href="${article.link}" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[1.7] overflow-hidden rounded-[12px]">
+                <img class="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
+                     src="${imgUrl}" alt="${article.title}" width="400" height="235" loading="lazy"
+                     onerror="this.src='/icons/default-image.png?v=2'">
+            </a>
+            <div class="flex flex-col flex-grow pt-[12px] px-[4px]">
+                <a href="${article.link}" target="_blank" rel="noopener noreferrer"
+                   class="text-[17px] leading-[21px] font-bold font-condensed line-clamp-3 hover:text-(--card-hover-color) transition-colors duration-300"
+                   style="color:${titleColor}">${article.title}</a>
+                <div class="mt-auto pt-[10px] flex flex-wrap items-center justify-between gap-x-2 gap-y-[4px]">
+                    <div class="flex items-center gap-[6px] min-w-0">
+                        <a href="${sourceUrl}" target="_blank" rel="noopener noreferrer"
+                           class="text-[12px] font-condensed font-bold text-(--card-link-color) hover:text-(--card-hover-color) hover:underline whitespace-nowrap"
+                           style="--card-link-color:${accentColor}">${article.source}</a>
+                        <span class="text-zinc-500 text-[11px]">·</span>
+                        <span class="text-[11px] font-condensed whitespace-nowrap" style="color:${titleColor}">${timeStr}</span>
+                    </div>
+                    ${shareActions(article, descriptionColor, true)}
+                </div>
+            </div>
+        </div>`;
 }
 
 // ─── Layout: list ──────────────────────────────────────────────────────────────

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/src/output.css?v=31">
+    <link rel="stylesheet" href="/src/output.css?v=33">
     <title>Τεχνολογία | CaptainNews.gr</title>
     <meta name="description" content="Τελευταίες ειδήσεις τεχνολογίας σε πραγματικό χρόνο. Gadgets, AI, software και τεχνολογικές εξελίξεις.">
     <meta property="og:type" content="website">
@@ -82,6 +82,9 @@
 
             <div class="flex items-center gap-3">
                 <span id="header-info" class="text-zinc-400 font-condensed font-bold text-[12px] md:text-[13px] tracking-wide whitespace-nowrap tabular-nums"></span>
+                <button id="search-btn" aria-label="Αναζήτηση" title="Αναζήτηση" class="text-zinc-300 hover:text-[#f2d06f] cursor-pointer transition-colors p-2 -mr-2">
+                    <i class="fa-solid fa-magnifying-glass text-[17px]"></i>
+                </button>
                 <button id="burger-btn" aria-label="Άνοιγμα μενού" class="text-white hover:text-[#f2d06f] cursor-pointer focus:outline-none transition-colors p-2 z-[60]">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -124,8 +127,8 @@
                 <a href="/technology/" class="block px-4 py-3 text-white font-condensed font-bold rounded-lg bg-[#3749bd] transition-all"><i class="fa-solid fa-microchip mr-3"></i>ΤΕΧΝΟΛΟΓΙΑ</a>
                 <a href="/music/" class="block px-4 py-3 text-white font-condensed font-bold rounded-lg hover:bg-[#3749bd] transition-all"><i class="fa-solid fa-music mr-3"></i>ΜΟΥΣΙΚΗ</a>
                 <a href="/gossip/" class="block px-4 py-3 text-white font-condensed font-bold rounded-lg hover:bg-[#3749bd] transition-all"><i class="fa-solid fa-champagne-glasses mr-3"></i>GOSSIP</a>
-                <a href="/cinema/" class="block px-4 py-3 text-white font-condensed font-bold rounded-lg hover:bg-[#3749bd] transition-all"><i class="fa-solid fa-film mr-3"></i>CINE</a>
                 <a href="/gaming/" class="block px-4 py-3 text-white font-condensed font-bold rounded-lg hover:bg-[#3749bd] transition-all"><i class="fa-solid fa-gamepad mr-3"></i>GAMING</a>
+                <a href="/cinema/" class="block px-4 py-3 text-white font-condensed font-bold rounded-lg hover:bg-[#3749bd] transition-all"><i class="fa-solid fa-film mr-3"></i>CINE</a>
                 <a href="/apergies/" class="block px-4 py-3 text-white font-condensed font-bold rounded-lg hover:bg-[#3749bd] transition-all"><i class="fa-solid fa-bullhorn mr-3"></i>ΑΠΕΡΓΙΕΣ<span class="ml-2 bg-[#f59e0b] text-black text-[9px] font-black px-1.5 py-0.5 rounded-full uppercase tracking-widest align-middle animate-pulse">NEW</span></a>
                 <p class="px-4 pt-3 pb-1 text-zinc-400 text-xs font-condensed font-bold uppercase tracking-widest">Άλλα</p>
                 <a href="/contact" class="block px-4 py-3 text-white font-condensed font-bold rounded-lg hover:bg-[#3749bd] transition-all"><i class="fa-solid fa-envelope mr-3"></i>ΕΠΙΚΟΙΝΩΝΙΑ</a>
@@ -169,11 +172,11 @@
                 <a href="/gossip/" data-category="gossip" class="filter-pill font-condensed font-bold text-xs px-4 py-1.5 rounded-full border transition-all duration-200 whitespace-nowrap cursor-pointer">
                     GOSSIP
                 </a>
-                <a href="/cinema/" data-category="cinema" class="filter-pill font-condensed font-bold text-xs px-4 py-1.5 rounded-full border transition-all duration-200 whitespace-nowrap cursor-pointer">
-                    CINE
-                </a>
                 <a href="/gaming/" data-category="gaming" class="filter-pill font-condensed font-bold text-xs px-4 py-1.5 rounded-full border transition-all duration-200 whitespace-nowrap cursor-pointer">
                     GAMING
+                </a>
+                <a href="/cinema/" data-category="cinema" class="filter-pill font-condensed font-bold text-xs px-4 py-1.5 rounded-full border transition-all duration-200 whitespace-nowrap cursor-pointer">
+                    CINE
                 </a>
                 <a href="/apergies/" data-category="strikes" class="filter-pill font-condensed font-bold text-xs px-4 py-1.5 rounded-full border transition-all duration-200 whitespace-nowrap cursor-pointer">
                     ΑΠΕΡΓΙΕΣ<span class="ml-1 bg-[#f59e0b] text-black text-[9px] font-black px-1.5 py-0.5 rounded-full uppercase tracking-widest align-middle animate-pulse">NEW</span>
@@ -365,21 +368,21 @@
                     </ul>
                 </div>
                 <div>
-                    <h3 class="text-white font-condensed font-bold text-xs uppercase tracking-wider mb-3">CINE</h3>
-                    <ul class="space-y-2">
-                        <li><a href="https://freecinema.gr" target="_blank" rel="noopener noreferrer" class="text-zinc-400 hover:text-main-yellow text-xs transition-colors">FreeCinema</a></li>
-                        <li><a href="https://cinepivates.gr" target="_blank" rel="noopener noreferrer" class="text-zinc-400 hover:text-main-yellow text-xs transition-colors">Cinepivates</a></li>
-                        <li><a href="https://www.protothema.gr" target="_blank" rel="noopener noreferrer" class="text-zinc-400 hover:text-main-yellow text-xs transition-colors">Protothema</a></li>
-                        <li><a href="https://www.newsit.gr" target="_blank" rel="noopener noreferrer" class="text-zinc-400 hover:text-main-yellow text-xs transition-colors">Newsit</a></li>
-                    </ul>
-                </div>
-                <div>
                     <h3 class="text-white font-condensed font-bold text-xs uppercase tracking-wider mb-3">GAMING</h3>
                     <ul class="space-y-2">
                         <li><a href="https://unboxholics.com" target="_blank" rel="noopener noreferrer" class="text-zinc-400 hover:text-main-yellow text-xs transition-colors">Unboxholics</a></li>
                         <li><a href="https://gameslife.gr" target="_blank" rel="noopener noreferrer" class="text-zinc-400 hover:text-main-yellow text-xs transition-colors">Gameslife</a></li>
                         <li><a href="https://www.vg24.gr" target="_blank" rel="noopener noreferrer" class="text-zinc-400 hover:text-main-yellow text-xs transition-colors">VG24</a></li>
                         <li><a href="https://ragequit.gr" target="_blank" rel="noopener noreferrer" class="text-zinc-400 hover:text-main-yellow text-xs transition-colors">Ragequit</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-condensed font-bold text-xs uppercase tracking-wider mb-3">CINE</h3>
+                    <ul class="space-y-2">
+                        <li><a href="https://freecinema.gr" target="_blank" rel="noopener noreferrer" class="text-zinc-400 hover:text-main-yellow text-xs transition-colors">FreeCinema</a></li>
+                        <li><a href="https://cinepivates.gr" target="_blank" rel="noopener noreferrer" class="text-zinc-400 hover:text-main-yellow text-xs transition-colors">Cinepivates</a></li>
+                        <li><a href="https://www.protothema.gr" target="_blank" rel="noopener noreferrer" class="text-zinc-400 hover:text-main-yellow text-xs transition-colors">Protothema</a></li>
+                        <li><a href="https://www.newsit.gr" target="_blank" rel="noopener noreferrer" class="text-zinc-400 hover:text-main-yellow text-xs transition-colors">Newsit</a></li>
                     </ul>
                 </div>
                 <div>
@@ -398,7 +401,7 @@
             </div>
         </div>
     </footer>
-    <script type="module" src="/js/main.js?v=57"></script>
+    <script type="module" src="/js/main.js?v=59"></script>
     <script>if ('serviceWorker' in navigator) navigator.serviceWorker.register('/sw.js');</script>
     <script defer src="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v2.9.2/dist/cookieconsent.js"></script>
     <script defer src="/js/cookieconsent-init.js"></script>

@@ -1,7 +1,8 @@
 // ─── Imports ───────────────────────────────────────────────────────────────────
 
-import { WORKER_URL, IS_LOCAL, categoryOrder } from './config.js?v=57';
-import { buildSection } from './templates.js?v=57';
+import { WORKER_URL, IS_LOCAL, categoryOrder } from './config.js?v=59';
+import { buildSection } from './templates.js?v=59';
+import { initSearch } from './search.js?v=59';
 
 // ─── News loader ───────────────────────────────────────────────────────────────
 
@@ -42,6 +43,7 @@ async function loadNews() {
 
         setupFilterLogic();
         populateTicker(data);
+        initSearch(data);
 
     } catch (err) {
         console.error('loadNews error:', err);
@@ -185,6 +187,11 @@ window.copyArticleLink = (btn, url) => {
             btn.style.removeProperty('--card-link-color');
         }, 2000);
     });
+};
+
+window.scrollCarousel = (categoryKey, dir) => {
+    const track = document.getElementById(`carousel-${categoryKey}`);
+    track?.scrollBy({ left: dir * track.clientWidth * 0.9, behavior: 'smooth' });
 };
 
 window.loadAllArticles = categoryKey => {

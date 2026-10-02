@@ -81,19 +81,6 @@
             { "name": "Newsit",    "url": "https://www.newsit.gr/category/lifestyle/feed/", "homepage": "https://www.newsit.gr" }
         ]
     },
-    "cinema": {
-        "displayName": "CINE",
-        "navLabel": "CINE",
-        "navIcon": "fa-film",
-        "path": "/cinema/",
-        "isNew": false,
-        "feeds": [
-            { "name": "FreeCinema",  "url": "https://freecinema.gr/feed/", "homepage": "https://freecinema.gr" },
-            { "name": "Cinepivates", "url": "https://cinepivates.gr/feed/", "homepage": "https://cinepivates.gr" },
-            { "name": "Protothema",  "url": "https://www.protothema.gr/culture/rss/", "homepage": "https://www.protothema.gr" },
-            { "name": "Newsit",      "url": "https://www.newsit.gr/category/politismos/feed/", "homepage": "https://www.newsit.gr" }
-        ]
-    },
     "gaming": {
         "displayName": "GAMING",
         "navLabel": "GAMING",
@@ -105,6 +92,19 @@
             { "name": "Gameslife",   "url": "https://gameslife.gr/feed/", "homepage": "https://gameslife.gr" },
             { "name": "VG24",       "url": "https://www.vg24.gr/feed/", "homepage": "https://www.vg24.gr" },
             { "name": "Ragequit",   "url": "https://ragequit.gr/feed/", "homepage": "https://ragequit.gr" }
+        ]
+    },
+    "cinema": {
+        "displayName": "CINE",
+        "navLabel": "CINE",
+        "navIcon": "fa-film",
+        "path": "/cinema/",
+        "isNew": false,
+        "feeds": [
+            { "name": "FreeCinema",  "url": "https://freecinema.gr/feed/", "homepage": "https://freecinema.gr" },
+            { "name": "Cinepivates", "url": "https://cinepivates.gr/feed/", "homepage": "https://cinepivates.gr" },
+            { "name": "Protothema",  "url": "https://www.protothema.gr/culture/rss/", "homepage": "https://www.protothema.gr" },
+            { "name": "Newsit",      "url": "https://www.newsit.gr/category/politismos/feed/", "homepage": "https://www.newsit.gr" }
         ]
     },
     "strikes": {

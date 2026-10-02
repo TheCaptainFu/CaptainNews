@@ -45,17 +45,17 @@ const categories = {
         { name: "Newsbeast", url: "https://www.newsbeast.gr/lifestyle/feed" },
         { name: "Newsit",    url: "https://www.newsit.gr/category/lifestyle/feed/" },
     ],
-    "cinema": [
-        { name: "FreeCinema",  url: "https://freecinema.gr/feed/" },
-        { name: "Cinepivates", url: "https://cinepivates.gr/feed/" },
-        { name: "Protothema",  url: "https://www.protothema.gr/culture/rss/" },
-        { name: "Newsit",      url: "https://www.newsit.gr/category/politismos/feed/" },
-    ],
     "gaming": [
         { name: "Unboxholics", url: "https://unboxholics.com/feed" },
         { name: "Gameslife",   url: "https://gameslife.gr/feed/" },
         { name: "VG24",        url: "https://www.vg24.gr/feed/" },
         { name: "Ragequit",    url: "https://ragequit.gr/feed/" },
+    ],
+    "cinema": [
+        { name: "FreeCinema",  url: "https://freecinema.gr/feed/" },
+        { name: "Cinepivates", url: "https://cinepivates.gr/feed/" },
+        { name: "Protothema",  url: "https://www.protothema.gr/culture/rss/" },
+        { name: "Newsit",      url: "https://www.newsit.gr/category/politismos/feed/" },
     ],
     "strikes": [
         { name: "Efsyn",        url: "https://www.efsyn.gr/tag/stasi-ergasias/rss" },
