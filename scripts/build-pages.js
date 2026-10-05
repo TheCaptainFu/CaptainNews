@@ -119,8 +119,8 @@ function applyBodyCategory(html, bodyCategory) {
 }
 
 // ─── Skeleton loading placeholders ──────────────────────────────────────────
-// Mirrors js/templates.js's card()/magazineFeatured()/magazineSideCard()/
-// listItem() dimensions exactly (same aspect ratios, same px sizes) so the
+// Mirrors js/templates.js's card()/magazineFeatured()/magazineSideCard()
+// dimensions exactly (same aspect ratios, same px sizes) so the
 // swap from skeleton -> real content in main.js causes near-zero layout
 // shift. Pure gray pulsing blocks — no real content, no article count known
 // yet at build time.
@@ -204,18 +204,6 @@ function skeletonSideCard() {
         </div>`;
 }
 
-function skeletonListItem() {
-    return `
-        <div class="flex items-center gap-[14px] p-[10px] rounded-[10px] animate-pulse">
-            <div class="w-[110px] h-[70px] md:w-[180px] md:h-[110px] shrink-0 bg-zinc-800 rounded-[8px]"></div>
-            <div class="flex-1 min-w-0 flex flex-col gap-[8px]">
-                <div class="h-[15px] bg-zinc-700 rounded w-full"></div>
-                <div class="h-[15px] bg-zinc-700 rounded w-1/2"></div>
-                <div class="h-[11px] bg-zinc-700 rounded w-1/4 mt-1"></div>
-            </div>
-        </div>`;
-}
-
 function skeletonLoadMoreBtn() {
     return `
         <div class="gg-container flex justify-center mt-6 pb-10">
@@ -239,8 +227,36 @@ function skeletonMagazineLayout() {
         <div class="gg-container grid grid-cols-1 md:grid-cols-3 gap-[20px]">${belowHtml}</div>`;
 }
 
-function skeletonListLayout() {
-    return `<div class="gg-container grid grid-cols-1 lg:grid-cols-2 gap-x-[20px] gap-y-[10px] pt-[10px]">${Array.from({ length: 10 }, skeletonListItem).join('')}</div>`;
+// Same row grid as TIMELINE_ROW in js/templates.js.
+function skeletonTimelineLayout() {
+    const row = 'grid grid-cols-[46px_22px_1fr] md:grid-cols-[60px_28px_1fr]';
+    const item = `
+            <div class="${row} animate-pulse">
+                <div class="pr-[6px] flex justify-end pt-[4px]"><div class="h-[12px] w-[34px] bg-zinc-700 rounded"></div></div>
+                <div class="relative"><span class="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-[2px] bg-zinc-700"></span></div>
+                <div class="pb-[20px] flex flex-col gap-[8px]">
+                    <div class="h-[18px] bg-zinc-700 rounded w-full"></div>
+                    <div class="h-[18px] bg-zinc-700 rounded w-2/3"></div>
+                    <div class="h-[12px] bg-zinc-700 rounded w-[80px]"></div>
+                </div>
+            </div>`;
+    const header = `<div class="${row}"><div></div><div></div><div class="py-[10px]"><div class="h-[16px] w-[90px] bg-zinc-700 rounded animate-pulse"></div></div></div>`;
+    return `<div class="gg-container pt-[6px]"><div class="max-w-[900px]">${header}${item.repeat(5)}</div></div>`;
+}
+
+// Same grid/tile sizes as bentoLayout()/bentoTile() in js/templates.js.
+function skeletonBentoLayout() {
+    const tile = cls => `<div class="${cls} rounded-[12px] bg-zinc-800 animate-pulse"></div>`;
+    const tiles = tile('col-span-2 md:row-span-2 h-[300px] min-[480px]:h-[360px] md:h-auto') + tile('h-[190px] md:h-auto').repeat(4);
+    return `
+        <div class="gg-container grid grid-cols-2 md:grid-cols-4 md:grid-rows-[230px_230px] gap-[12px] md:gap-[16px] pt-[10px]">${tiles}</div>
+        <div class="gg-container grid grid-cols-2 md:grid-cols-4 gap-[12px] md:gap-[16px] mt-[12px] md:mt-[16px]">${tile('h-[190px] md:h-[230px]').repeat(4)}</div>`;
+}
+
+// Same card width classes as POSTER_CARD_WIDTH in js/templates.js.
+function skeletonPosterLayout() {
+    const card = `<div class="shrink-0 w-[62%] min-[560px]:w-[38%] lg:w-[calc((100%-24px)/4)] aspect-[3/5] rounded-[10px] bg-zinc-800 animate-pulse"></div>`;
+    return `<div class="gg-container flex gap-[8px] overflow-hidden pt-[10px] pb-[4px]">${card.repeat(4)}</div>`;
 }
 
 // Same card width classes as CAROUSEL_CARD_WIDTH in js/templates.js.
@@ -261,17 +277,23 @@ function skeletonSection(key, isHome) {
     const accent = categoryAccents[key];
     if (!accent) return '';
 
-    // Mirrors buildSection(): carousel only on the homepage.
-    const layout = accent.sectionLayout === 'carousel' && !isHome ? 'default' : accent.sectionLayout;
+    // Mirrors buildSection(): swipe layouts only on the homepage.
+    const configured = accent.sectionLayout;
+    const layout = isHome ? configured
+                 : configured === 'carousel' ? 'default'
+                 : configured === 'poster' ? 'bento'
+                 : configured;
 
     let body;
     switch (layout) {
         case 'magazine': body = skeletonMagazineLayout(); break;
-        case 'list':     body = skeletonListLayout(); break;
         case 'carousel': body = skeletonCarouselLayout(); break;
+        case 'poster':   body = skeletonPosterLayout(); break;
+        case 'bento':    body = skeletonBentoLayout(); break;
+        case 'timeline': body = skeletonTimelineLayout(); break;
         default:         body = skeletonDefaultLayout();
     }
-    const loadMore = layout === 'carousel' ? '' : skeletonLoadMoreBtn();
+    const loadMore = layout === 'carousel' || layout === 'poster' ? '' : skeletonLoadMoreBtn();
 
     let style = '';
     if (accent.sectionBgImage) {

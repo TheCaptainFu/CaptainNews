@@ -1,7 +1,7 @@
 // ─── Header search over the articles already loaded on the page ───────────────
 
-import { categoryDisplayNames } from './config.js?v=59';
-import { timeAgo } from './utils.js?v=59';
+import { categoryDisplayNames } from './config.js?v=67';
+import { timeAgo } from './utils.js?v=67';
 
 const MAX_RESULTS = 30;
 

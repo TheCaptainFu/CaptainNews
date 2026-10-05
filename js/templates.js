@@ -1,7 +1,7 @@
 // ─── Imports ───────────────────────────────────────────────────────────────────
 
-import { categoryDisplayNames, categoryAccents, sourceUrls, INITIAL_VISIBLE_COUNT } from './config.js?v=59';
-import { stripHtml, timeAgo } from './utils.js?v=59';
+import { categoryDisplayNames, categoryAccents, sourceUrls, INITIAL_VISIBLE_COUNT } from './config.js?v=67';
+import { stripHtml, timeAgo } from './utils.js?v=67';
 
 // ─── Public API ────────────────────────────────────────────────────────────────
 
@@ -11,8 +11,13 @@ export function buildSection(categoryKey, articles) {
     const title       = categoryDisplayNames[categoryKey] || categoryKey.toUpperCase();
     const configured  = (accent?.sectionLayout || 'default').trim();
     // A single horizontal row makes no sense when the category is the whole
-    // page, so category pages fall back to the regular grid.
-    const layout      = configured === 'carousel' && document.body.dataset.category ? 'default' : configured;
+    // page, so on category pages the swipe layouts fall back to a grid:
+    // carousel → default, poster → bento (same photo-overlay look).
+    const onCategoryPage = !!document.body.dataset.category;
+    const layout = !onCategoryPage ? configured
+                 : configured === 'carousel' ? 'default'
+                 : configured === 'poster' ? 'bento'
+                 : configured;
 
     const section = document.createElement('section');
     section.id        = `section-${categoryKey}`;
@@ -40,13 +45,16 @@ export function buildSection(categoryKey, articles) {
 
     switch (layout) {
         case 'magazine': body = magazineLayout(articles, categoryKey, accent, accentColor); break;
-        case 'list':     body = listLayout(articles, categoryKey, accent, accentColor); break;
         case 'carousel': body = carouselLayout(articles, categoryKey, accent, accentColor); break;
+        case 'poster':   body = posterLayout(articles, categoryKey, accent, accentColor); break;
+        case 'bento':    body = bentoLayout(articles, categoryKey, accent, accentColor); break;
+        case 'timeline': body = timelineLayout(articles, categoryKey, accent, accentColor); break;
         default:         body = defaultLayout(articles, categoryKey, accent, accentColor);
     }
 
-    const visibleCount = layout === 'list' ? LIST_VISIBLE_COUNT
-                       : layout === 'carousel' ? articles.length
+    const visibleCount = layout === 'timeline' ? TIMELINE_VISIBLE_COUNT
+                       : layout === 'carousel' || layout === 'poster' ? articles.length
+                       : layout === 'bento' ? BENTO_VISIBLE_COUNT
                        : INITIAL_VISIBLE_COUNT;
     const content = header + body + loadMoreBtn(categoryKey, articles.length, visibleCount);
 
@@ -124,6 +132,197 @@ function magazineLayout(articles, categoryKey, accent, accentColor) {
         ${restHtml}`;
 }
 
+// ─── Layout: timeline ──────────────────────────────────────────────────────────
+
+// Grouped by Athens calendar day: ΣΗΜΕΡΑ / ΧΘΕΣ / ΤΡΙΤΗ 29/9. Relies on the
+// articles already being sorted newest-first (update-news.js / worker.js do).
+const TZ = 'Europe/Athens';
+const dayKey = d => new Date(d).toLocaleDateString('en-CA', { timeZone: TZ });
+const stripAccents = s => s.normalize('NFD').replace(/[̀-ͯ]/g, '');
+
+function dayLabel(dateString) {
+    const key = dayKey(dateString);
+    if (key === dayKey(Date.now())) return 'ΣΗΜΕΡΑ';
+    if (key === dayKey(Date.now() - 864e5)) return 'ΧΘΕΣ';
+    const d = new Date(dateString);
+    const weekday = stripAccents(d.toLocaleDateString('el-GR', { timeZone: TZ, weekday: 'long' }).toUpperCase());
+    return `${weekday} ${d.toLocaleDateString('el-GR', { timeZone: TZ, day: 'numeric', month: 'numeric' })}`;
+}
+
+const clockTime = d => new Date(d).toLocaleTimeString('el-GR', { timeZone: TZ, hour: '2-digit', minute: '2-digit', hourCycle: 'h23' });
+
+const TIMELINE_VISIBLE_COUNT = 10;
+const TIMELINE_ROW = 'grid grid-cols-[46px_22px_1fr] md:grid-cols-[60px_28px_1fr]';
+
+function timelineLayout(articles, categoryKey, accent, accentColor) {
+    const valid = articles.filter(a => !isNaN(new Date(a.date)));
+    const groups = [];
+    valid.forEach((a, i) => {
+        const key = dayKey(a.date);
+        if (!groups.length || groups.at(-1).key !== key) groups.push({ key, label: dayLabel(a.date), items: [] });
+        groups.at(-1).items.push([a, i]);
+    });
+
+    const hiddenCls = i => (i >= TIMELINE_VISIBLE_COUNT ? `hidden hidden-item-${categoryKey}` : '');
+    const line = `<span class="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-[2px] opacity-30" style="background:${accentColor}"></span>`;
+
+    const html = groups.map((g, gi) => {
+        const isToday = g.label === 'ΣΗΜΕΡΑ';
+        const header = `
+            <div class="${TIMELINE_ROW} ${hiddenCls(g.items[0][1])}">
+                <div></div>
+                <div class="relative">
+                    ${gi > 0 ? line : ''}
+                    <span class="absolute left-1/2 -translate-x-1/2 top-[50%] -translate-y-1/2 w-[14px] h-[14px] rounded-full ${isToday ? 'animate-pulse' : ''}" style="background:${accentColor}"></span>
+                </div>
+                <div class="py-[10px] font-condensed font-black text-[15px] md:text-[17px] tracking-widest" style="color:${accentColor}">${g.label}</div>
+            </div>`;
+        return header + g.items.map(([a, i]) => timelineItem(a, accent, accentColor, line, hiddenCls(i))).join('');
+    }).join('');
+
+    return `<div class="gg-container pt-[6px]"><div class="max-w-[900px]">${html}</div></div>`;
+}
+
+function timelineItem(article, accent, accentColor, line, hiddenClass) {
+    const titleColor = accent?.titleColor || '#ffffff';
+    const sourceUrl  = sourceUrls[article.source] || '#';
+
+    return `
+        <div class="${TIMELINE_ROW} group ${hiddenClass}" style="--card-hover-color:${accent?.hoverColor || '#f2d06f'}">
+            <div class="pt-[2px] pr-[6px] text-right font-condensed font-bold text-[13px] md:text-[14px] tabular-nums" style="color:${accentColor}">${clockTime(article.date)}</div>
+            <div class="relative">
+                ${line}
+                <span class="absolute left-1/2 -translate-x-1/2 top-[6px] w-[10px] h-[10px] rounded-full border-2 bg-white" style="border-color:${accentColor}"></span>
+            </div>
+            <div class="pb-[20px] min-w-0">
+                <div class="min-w-0">
+                    <a href="${article.link}" target="_blank" rel="noopener noreferrer"
+                       class="block text-[16px] leading-[20px] md:text-[18px] md:leading-[23px] font-bold font-condensed text-(--title-color) hover:text-(--card-hover-color) transition-colors duration-300"
+                       style="--title-color:${titleColor}">${article.title}</a>
+                    <div class="flex flex-wrap items-center justify-between gap-x-2 gap-y-[2px] mt-[6px]">
+                        <a href="${sourceUrl}" target="_blank" rel="noopener noreferrer"
+                           class="text-[12px] font-condensed font-bold whitespace-nowrap text-(--card-link-color) hover:text-(--card-hover-color) hover:underline"
+                           style="--card-link-color:${accentColor}">${article.source}</a>
+                        ${shareActions(article, titleColor, true)}
+                    </div>
+                </div>
+            </div>
+        </div>`;
+}
+
+// ─── Layout: bento ─────────────────────────────────────────────────────────────
+
+// 5 photo tiles, then the rest as the same small photo tiles in 4 columns,
+// lined up with the tile grid above. One extra row is visible initially.
+// Keep the grid/tile sizes in sync with skeletonBentoLayout() in scripts/build-pages.js.
+const BENTO_TILES         = 5;
+const BENTO_VISIBLE_COUNT = BENTO_TILES + 4;
+
+function bentoLayout(articles, categoryKey, accent, accentColor) {
+    if (!articles.length) return '';
+    const tiles = articles.slice(0, BENTO_TILES)
+        .map((a, i) => bentoTile(a, i === 0, accent, accentColor)).join('');
+    const rest = articles.slice(BENTO_TILES);
+    const restHtml = rest.length
+        ? `<div class="gg-container grid grid-cols-2 md:grid-cols-4 gap-[12px] md:gap-[16px] mt-[12px] md:mt-[16px]">` +
+          rest.map((a, i) => {
+              const hidden = i + BENTO_TILES >= BENTO_VISIBLE_COUNT ? `hidden hidden-item-${categoryKey}` : '';
+              return bentoTile(a, false, accent, accentColor, `h-[190px] md:h-[230px] ${hidden}`);
+          }).join('') +
+          `</div>`
+        : '';
+    return `
+        <div class="gg-container grid grid-cols-2 md:grid-cols-4 md:grid-rows-[230px_230px] gap-[12px] md:gap-[16px] pt-[10px]">
+            ${tiles}
+        </div>
+        ${restHtml}`;
+}
+
+// Title sits on the photo over a dark gradient, so text and icons are white
+// here regardless of the category's titleColor (which is meant for its bg).
+function bentoTile(article, isBig, accent, accentColor, sizeOverride = '') {
+    const imgUrl  = article.image || '/icons/default-image.png?v=2';
+    const timeStr = timeAgo(article.date);
+    const size    = sizeOverride || (isBig
+        ? 'col-span-2 md:row-span-2 h-[300px] min-[480px]:h-[360px] md:h-auto'
+        : 'h-[190px] md:h-auto');
+    const titleCls = isBig
+        ? 'text-[22px] leading-[26px] md:text-[30px] md:leading-[34px] line-clamp-3'
+        : 'text-[15px] leading-[19px] md:text-[17px] md:leading-[21px] line-clamp-3';
+    const overlayText = '#ffffff';
+
+    return `
+        <div class="item relative ${size} rounded-[12px] overflow-hidden group bg-zinc-800"
+             style="--card-hover-color:${accent?.hoverColor || '#f2d06f'}">
+            <a href="${article.link}" target="_blank" rel="noopener noreferrer" class="absolute inset-0 block" aria-hidden="true" tabindex="-1">
+                <img class="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
+                     src="${imgUrl}" alt="${article.title}" width="${isBig ? 800 : 400}" height="${isBig ? 600 : 300}" loading="lazy"
+                     onerror="this.src='/icons/default-image.png?v=2'">
+            </a>
+            <div class="pointer-events-none absolute inset-0 bg-linear-to-t from-black/90 via-black/40 to-transparent"></div>
+            <div class="absolute inset-x-0 bottom-0 ${isBig ? 'p-[16px] md:p-[22px]' : 'p-[10px] md:p-[14px]'} flex flex-col gap-[6px]">
+                <a href="${article.link}" target="_blank" rel="noopener noreferrer"
+                   class="font-condensed font-bold ${titleCls} text-(--title-color) hover:text-(--card-hover-color) transition-colors duration-300"
+                   style="--title-color:${overlayText}">${article.title}</a>
+                <div class="flex flex-wrap items-center justify-between gap-x-2 gap-y-[2px]">
+                    <div class="flex items-center gap-[6px] min-w-0">
+                        <span class="text-[11px] md:text-[12px] font-condensed font-bold whitespace-nowrap" style="color:${accentColor}">${article.source}</span>
+                        <span class="text-white/50 text-[11px]">·</span>
+                        <span class="text-[11px] font-condensed whitespace-nowrap text-white/80">${timeStr}</span>
+                    </div>
+                    ${shareActions(article, overlayText, true)}
+                </div>
+            </div>
+        </div>`;
+}
+
+// ─── Layout: poster ────────────────────────────────────────────────────────────
+
+// Tall swipeable posters with a big uppercase title on the photo.
+// Keep in sync with skeletonPosterLayout() in scripts/build-pages.js.
+const POSTER_CARD_WIDTH = 'w-[62%] min-[560px]:w-[38%] lg:w-[calc((100%-24px)/4)]';
+
+function posterLayout(articles, categoryKey, accent, accentColor) {
+    const arrow = (dir, icon, label, side) => `
+        <button onclick="scrollCarousel('${categoryKey}', ${dir})" aria-label="${label}"
+                class="hidden lg:flex absolute ${side} top-1/2 -translate-y-1/2 z-10 w-[44px] h-[44px] rounded-full bg-white text-black items-center justify-center shadow-lg hover:bg-[#f2d06f] transition-colors cursor-pointer">
+            <i class="fa-solid ${icon}"></i>
+        </button>`;
+    return `
+        <div class="gg-container relative">
+            <div id="carousel-${categoryKey}" class="no-scrollbar relative flex gap-[8px] overflow-x-auto snap-x snap-mandatory scroll-smooth pt-[10px] pb-[4px]">
+                ${articles.map(a => posterCard(a, accent)).join('')}
+            </div>
+            ${arrow(-1, 'fa-chevron-left', 'Προηγούμενα', 'left-[-8px]')}
+            ${arrow(1, 'fa-chevron-right', 'Επόμενα', 'right-[-8px]')}
+        </div>`;
+}
+
+// Text sits on the photo, so it's white regardless of the category's titleColor.
+function posterCard(article, accent) {
+    const imgUrl  = article.image || '/icons/default-image.png?v=2';
+    const overlay = '#ffffff';
+    return `
+        <div class="item relative snap-start shrink-0 ${POSTER_CARD_WIDTH} aspect-[3/5] rounded-[10px] overflow-hidden group bg-zinc-800"
+             style="--card-hover-color:${accent?.hoverColor || '#f2d06f'}">
+            <a href="${article.link}" target="_blank" rel="noopener noreferrer" class="absolute inset-0 block" aria-hidden="true" tabindex="-1">
+                <img class="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
+                     src="${imgUrl}" alt="${article.title}" width="360" height="600" loading="lazy"
+                     onerror="this.src='/icons/default-image.png?v=2'">
+            </a>
+            <div class="pointer-events-none absolute inset-x-0 bottom-0 h-[70%] bg-linear-to-t from-black/95 via-black/50 to-transparent"></div>
+            <div class="absolute inset-x-0 bottom-0 p-[14px] md:p-[20px] flex flex-col gap-[10px]">
+                <a href="${article.link}" target="_blank" rel="noopener noreferrer"
+                   class="font-condensed font-black uppercase text-[20px] leading-[22px] md:text-[25px] md:leading-[27px] line-clamp-5 text-(--title-color) hover:text-(--card-hover-color) transition-colors duration-300"
+                   style="--title-color:${overlay}">${article.title}</a>
+                <div class="flex items-center justify-between gap-2">
+                    <span class="min-w-0 truncate text-[11px] font-condensed font-bold text-white/70">${article.source} · ${timeAgo(article.date)}</span>
+                    ${shareActions(article, overlay, true)}
+                </div>
+            </div>
+        </div>`;
+}
+
 // ─── Layout: carousel ──────────────────────────────────────────────────────────
 
 // Keep in sync with skeletonCarouselLayout() in scripts/build-pages.js.
@@ -166,8 +365,8 @@ function carouselCard(article, accent, accentColor) {
             </a>
             <div class="flex flex-col flex-grow pt-[12px] px-[4px]">
                 <a href="${article.link}" target="_blank" rel="noopener noreferrer"
-                   class="text-[17px] leading-[21px] font-bold font-condensed line-clamp-3 hover:text-(--card-hover-color) transition-colors duration-300"
-                   style="color:${titleColor}">${article.title}</a>
+                   class="text-[17px] leading-[21px] font-bold font-condensed line-clamp-3 text-(--title-color) hover:text-(--card-hover-color) transition-colors duration-300"
+                   style="--title-color:${titleColor}">${article.title}</a>
                 <div class="mt-auto pt-[10px] flex flex-wrap items-center justify-between gap-x-2 gap-y-[4px]">
                     <div class="flex items-center gap-[6px] min-w-0">
                         <a href="${sourceUrl}" target="_blank" rel="noopener noreferrer"
@@ -176,55 +375,7 @@ function carouselCard(article, accent, accentColor) {
                         <span class="text-zinc-500 text-[11px]">·</span>
                         <span class="text-[11px] font-condensed whitespace-nowrap" style="color:${titleColor}">${timeStr}</span>
                     </div>
-                    ${shareActions(article, descriptionColor, true)}
-                </div>
-            </div>
-        </div>`;
-}
-
-// ─── Layout: list ──────────────────────────────────────────────────────────────
-
-// Even, so the 2-column desktop grid never ends on a half-empty row.
-const LIST_VISIBLE_COUNT = 10;
-
-function listLayout(articles, categoryKey, accent, accentColor) {
-    return `<div class="gg-container grid grid-cols-1 lg:grid-cols-2 gap-x-[20px] gap-y-[10px] pt-[10px]">` +
-        articles.map((a, i) => listItem(a, i, categoryKey, accent, accentColor)).join('') +
-        `</div>`;
-}
-
-function listItem(article, artIndex, categoryKey, accent, accentColor) {
-    const imgUrl      = article.image || '/icons/default-image.png?v=2';
-    const timeStr     = timeAgo(article.date);
-    const isHidden    = artIndex >= LIST_VISIBLE_COUNT;
-    const hiddenClass = isHidden ? `hidden hidden-item-${categoryKey}` : '';
-    const cardBg      = accent?.cardBg || '';
-    const cardBgClass = cardBg ? '' : 'bg-main-grey';
-    const bgStyle     = cardBg ? `background-color:${cardBg};` : '';
-    const titleColor  = accent?.titleColor || '#ffffff';
-    const styleAttr   = `style="${bgStyle}--card-hover-color:${accent?.hoverColor || '#f2d06f'};--list-title-color:${titleColor}"`;
-
-    // A <div>, not an <a>: the share/copy buttons can't live inside a link.
-    return `
-        <div class="list-row ${cardBgClass} flex items-center gap-[14px] p-[10px] rounded-[10px] group transition-colors duration-300 ${hiddenClass}" ${styleAttr}>
-            <a href="${article.link}" target="_blank" rel="noopener noreferrer"
-               class="block w-[110px] h-[70px] md:w-[180px] md:h-[110px] shrink-0 overflow-hidden rounded-[8px]">
-                <img class="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
-                     src="${imgUrl}" alt="${article.title}" width="180" height="110" loading="lazy"
-                     onerror="this.src='/icons/default-image.png?v=2'">
-            </a>
-            <div class="flex-1 min-w-0">
-                <a href="${article.link}" target="_blank" rel="noopener noreferrer"
-                   class="block text-[15px] leading-[19px] md:text-[18px] md:leading-[23px] font-bold font-condensed line-clamp-2 md:line-clamp-3 text-(--list-title-color) hover:text-(--card-hover-color) transition-colors duration-300">
-                    ${article.title}
-                </a>
-                <div class="flex flex-wrap items-center justify-between gap-x-2 gap-y-[4px] mt-[6px]">
-                    <div class="flex items-center gap-[8px] min-w-0">
-                        <span class="text-[12px] font-condensed font-bold whitespace-nowrap" style="color:${accentColor}">${article.source}</span>
-                        <span class="text-zinc-600 text-[11px]">·</span>
-                        <span class="text-[11px] font-condensed whitespace-nowrap text-(--list-title-color)">${timeStr}</span>
-                    </div>
-                    ${shareActions(article, accent?.descriptionColor || 'rgba(255,255,255,0.8)', true)}
+                    ${shareActions(article, titleColor, true)}
                 </div>
             </div>
         </div>`;
@@ -264,7 +415,7 @@ function magazineSideCard(article, artIndex, categoryKey, accent, accentColor) {
                         <span class="text-zinc-600 text-[11px]">·</span>
                         <span class="text-[11px] font-condensed whitespace-nowrap" style="color:${titleColor}">${timeStr}</span>
                     </div>
-                    ${shareActions(article, accent?.descriptionColor || 'rgba(255,255,255,0.8)', true)}
+                    ${shareActions(article, titleColor, true)}
                 </div>
             </div>
         </div>`;
@@ -311,7 +462,7 @@ function magazineFeatured(article, artIndex, categoryKey, accent, accentColor) {
                         <span class="text-zinc-600 text-[11px]">·</span>
                         <span class="text-[12px] font-condensed whitespace-nowrap" style="color:${titleColor}">${timeStr}</span>
                     </div>
-                    ${shareActions(article, descriptionColor)}
+                    ${shareActions(article, titleColor)}
                 </div>
             </div>
         </div>`;
@@ -320,12 +471,12 @@ function magazineFeatured(article, artIndex, categoryKey, accent, accentColor) {
 
 // ─── Card ──────────────────────────────────────────────────────────────────────
 
-function card(article, artIndex, categoryKey, accent, accentColor) {
+function card(article, artIndex, categoryKey, accent, accentColor, visibleCount = INITIAL_VISIBLE_COUNT) {
     const imgUrl     = article.image || '/icons/default-image.png?v=2';
     const timeStr    = timeAgo(article.date);
     const sourceUrl  = sourceUrls[article.source] || '#';
     const isFeatured = artIndex === 0;
-    const isHidden   = artIndex >= INITIAL_VISIBLE_COUNT;
+    const isHidden   = artIndex >= visibleCount;
 
     const hiddenClass = isHidden ? `hidden hidden-item-${categoryKey}` : '';
     const baseHover   = accent
@@ -382,7 +533,7 @@ function card(article, artIndex, categoryKey, accent, accentColor) {
                 </div>
                 <div class="card-footer flex items-center justify-between pt-[20px]">
                     <div class="time text-[14px] leading-[16px] font-bold font-condensed" style="color:${titleColor}">${timeStr}</div>
-                    ${shareActions(article, descriptionColor)}
+                    ${shareActions(article, titleColor)}
                 </div>
             </div>
         </div>`;

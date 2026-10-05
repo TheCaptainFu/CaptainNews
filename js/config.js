@@ -41,11 +41,13 @@ export const categoryDisplayNames = {
 // sectionBgImage : full-section background image URL. Empty = none
 // featuredReverse: true = image δεξιά στο featured άρθρο
 // isNew          : true = εμφανίζει "NEW" badge στον τίτλο και το pill
-// sectionLayout  : 'default' | 'magazine' | 'list' | 'carousel'
+// sectionLayout  : 'default' | 'magazine' | 'carousel' | 'poster' | 'bento' | 'timeline'
 //   default  → 1 featured full-width + grid 3 στήλες
 //   magazine → 1 μεγάλο αριστερά + στοίβα μικρών δεξιά
-//   list     → συμπαγής λίστα: μικρό thumbnail + τίτλος + πηγή/ώρα ανά γραμμή
 //   carousel → οριζόντια σειρά που σέρνεται (μόνο στην αρχική· στη σελίδα κατηγορίας γίνεται default)
+//   poster   → ψηλές κάρτες που σέρνονται, με μεγάλο τίτλο πάνω στη φωτογραφία (μόνο στην αρχική· στη σελίδα κατηγορίας γίνεται bento)
+//   bento    → 1 μεγάλη + 4 μικρές κάρτες με τίτλο πάνω στη φωτογραφία, και από κάτω grid
+//   timeline → κάθετη γραμμή χρόνου, ομαδοποιημένη ανά μέρα (ΣΗΜΕΡΑ / ΧΘΕΣ / …)
 // cardPadding    : false = αφαιρεί το εσωτερικό padding του card (default: true)
 // titleColor     : χρώμα τίτλου άρθρου. Το ίδιο χρησιμοποιείται και στο "Πηγή" text και στο "πριν X ώρες"
 // descriptionColor: χρώμα περιγραφής άρθρου. Το ίδιο χρησιμοποιείται και στο κουμπί "COPY"
@@ -101,7 +103,7 @@ export const categoryAccents = {
         sectionBgImage: '',
         featuredReverse: false,
         isNew: false,
-        sectionLayout: 'default',
+        sectionLayout: 'poster',
         cardPadding: true,
         titleColor: '#000000',
         descriptionColor: 'rgba(0,0,0,0.8)',
@@ -143,7 +145,7 @@ export const categoryAccents = {
         sectionBgImage: '',
         featuredReverse: false,
         isNew: false,
-        sectionLayout: 'default',
+        sectionLayout: 'bento',
         cardPadding: true,
         titleColor: '#000000',
         descriptionColor: 'rgba(0,0,0,0.8)',
@@ -159,9 +161,9 @@ export const categoryAccents = {
         isNew: false,
         sectionLayout: 'carousel',
         cardPadding: true,
-        titleColor: '#000000',
+        titleColor: '#F7F3EE',
         descriptionColor: 'rgba(0,0,0,0.8)',
-        hoverColor: '#F7F3EE'
+        hoverColor: '#000000'
     },
 
     gaming: {
@@ -185,7 +187,7 @@ export const categoryAccents = {
         sectionBgImage: '',
         featuredReverse: false,
         isNew: true,
-        sectionLayout: 'list',
+        sectionLayout: 'timeline',
         cardPadding: true,
         titleColor: '#000000',
         descriptionColor: 'rgba(0,0,0,0.8)',

@@ -1,8 +1,8 @@
 // ─── Imports ───────────────────────────────────────────────────────────────────
 
-import { WORKER_URL, IS_LOCAL, categoryOrder } from './config.js?v=59';
-import { buildSection } from './templates.js?v=59';
-import { initSearch } from './search.js?v=59';
+import { WORKER_URL, IS_LOCAL, categoryOrder } from './config.js?v=67';
+import { buildSection } from './templates.js?v=67';
+import { initSearch } from './search.js?v=67';
 
 // ─── News loader ───────────────────────────────────────────────────────────────
 
@@ -189,9 +189,13 @@ window.copyArticleLink = (btn, url) => {
     });
 };
 
+// One card per click: card width + the flex gap between cards.
 window.scrollCarousel = (categoryKey, dir) => {
     const track = document.getElementById(`carousel-${categoryKey}`);
-    track?.scrollBy({ left: dir * track.clientWidth * 0.9, behavior: 'smooth' });
+    const card  = track?.firstElementChild;
+    if (!card) return;
+    const step = card.getBoundingClientRect().width + (parseFloat(getComputedStyle(track).columnGap) || 0);
+    track.scrollBy({ left: dir * step, behavior: 'smooth' });
 };
 
 window.loadAllArticles = categoryKey => {
