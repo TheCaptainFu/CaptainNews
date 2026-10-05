@@ -1,7 +1,7 @@
 // ─── Header search over the articles already loaded on the page ───────────────
 
-import { categoryDisplayNames } from './config.js?v=68';
-import { timeAgo } from './utils.js?v=68';
+import { categoryDisplayNames } from './config.js?v=71';
+import { timeAgo } from './utils.js?v=71';
 
 const MAX_RESULTS = 30;
 
@@ -92,7 +92,8 @@ export function initSearch(data) {
     const btn = document.getElementById('search-btn');
     if (!btn || !data) return;
 
-    const index   = buildIndex(data);
+    // Built on first open, not on page load: most visitors never search.
+    let index = null;
     const overlay = buildOverlay();
     const input   = overlay.querySelector('#search-input');
     const results = overlay.querySelector('#search-results');
@@ -102,6 +103,7 @@ export function initSearch(data) {
     function render() {
         const q = input.value.trim();
         if (normalize(q).replace(/\s/g, '').length < 2) { results.innerHTML = hint; return; }
+        index ??= buildIndex(data);
         const found = search(index, q);
         results.innerHTML = found.length
             ? `<div class="text-zinc-500 font-condensed text-[12px] px-2 pb-1">${found.length === MAX_RESULTS ? `${MAX_RESULTS}+` : found.length} αποτελέσματα</div>` + found.map(resultHtml).join('')

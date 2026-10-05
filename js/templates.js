@@ -1,7 +1,7 @@
 // ─── Imports ───────────────────────────────────────────────────────────────────
 
-import { categoryDisplayNames, categoryAccents, sourceUrls, INITIAL_VISIBLE_COUNT } from './config.js?v=68';
-import { stripHtml, timeAgo } from './utils.js?v=68';
+import { categoryDisplayNames, categoryAccents, sourceUrls, INITIAL_VISIBLE_COUNT } from './config.js?v=71';
+import { stripHtml, timeAgo } from './utils.js?v=71';
 
 // ─── Public API ────────────────────────────────────────────────────────────────
 
@@ -137,29 +137,35 @@ function magazineLayout(articles, categoryKey, accent, accentColor) {
 // Grouped by Athens calendar day: ΣΗΜΕΡΑ / ΧΘΕΣ / ΤΡΙΤΗ 29/9. Relies on the
 // articles already being sorted newest-first (update-news.js / worker.js do).
 const TZ = 'Europe/Athens';
-const dayKey = d => new Date(d).toLocaleDateString('en-CA', { timeZone: TZ });
+// Intl formatters are expensive to create, so build them once, not per article.
+const DAY_KEY_FMT = new Intl.DateTimeFormat('en-CA', { timeZone: TZ });
+const WEEKDAY_FMT = new Intl.DateTimeFormat('el-GR', { timeZone: TZ, weekday: 'long' });
+const DAY_MONTH_FMT = new Intl.DateTimeFormat('el-GR', { timeZone: TZ, day: 'numeric', month: 'numeric' });
+const CLOCK_FMT = new Intl.DateTimeFormat('el-GR', { timeZone: TZ, hour: '2-digit', minute: '2-digit', hourCycle: 'h23' });
+
+const dayKey = d => DAY_KEY_FMT.format(new Date(d));
 const stripAccents = s => s.normalize('NFD').replace(/[̀-ͯ]/g, '');
+const clockTime = d => CLOCK_FMT.format(new Date(d));
 
-function dayLabel(dateString) {
+function dayLabel(dateString, todayKey, yesterdayKey) {
     const key = dayKey(dateString);
-    if (key === dayKey(Date.now())) return 'ΣΗΜΕΡΑ';
-    if (key === dayKey(Date.now() - 864e5)) return 'ΧΘΕΣ';
+    if (key === todayKey) return 'ΣΗΜΕΡΑ';
+    if (key === yesterdayKey) return 'ΧΘΕΣ';
     const d = new Date(dateString);
-    const weekday = stripAccents(d.toLocaleDateString('el-GR', { timeZone: TZ, weekday: 'long' }).toUpperCase());
-    return `${weekday} ${d.toLocaleDateString('el-GR', { timeZone: TZ, day: 'numeric', month: 'numeric' })}`;
+    return `${stripAccents(WEEKDAY_FMT.format(d).toUpperCase())} ${DAY_MONTH_FMT.format(d)}`;
 }
-
-const clockTime = d => new Date(d).toLocaleTimeString('el-GR', { timeZone: TZ, hour: '2-digit', minute: '2-digit', hourCycle: 'h23' });
 
 const TIMELINE_VISIBLE_COUNT = 10;
 const TIMELINE_ROW = 'grid grid-cols-[46px_22px_1fr] md:grid-cols-[60px_28px_1fr]';
 
 function timelineLayout(articles, categoryKey, accent, accentColor) {
     const valid = articles.filter(a => !isNaN(new Date(a.date)));
+    const todayKey     = dayKey(Date.now());
+    const yesterdayKey = dayKey(Date.now() - 864e5);
     const groups = [];
     valid.forEach((a, i) => {
         const key = dayKey(a.date);
-        if (!groups.length || groups.at(-1).key !== key) groups.push({ key, label: dayLabel(a.date), items: [] });
+        if (!groups.length || groups.at(-1).key !== key) groups.push({ key, label: dayLabel(a.date, todayKey, yesterdayKey), items: [] });
         groups.at(-1).items.push([a, i]);
     });
 
@@ -255,7 +261,7 @@ function bentoTile(article, isBig, accent, accentColor, sizeOverride = '') {
         <div class="item relative ${size} rounded-[12px] overflow-hidden group bg-zinc-800"
              style="--card-hover-color:${accent?.hoverColor || '#f2d06f'}">
             <a href="${article.link}" target="_blank" rel="noopener noreferrer" class="absolute inset-0 block" aria-hidden="true" tabindex="-1">
-                <img class="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
+                <img class="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-105"
                      src="${imgUrl}" alt="${article.title}" width="${isBig ? 800 : 400}" height="${isBig ? 600 : 300}" loading="lazy"
                      onerror="this.src='/icons/default-image.png?v=2'">
             </a>
@@ -306,7 +312,7 @@ function posterCard(article, accent) {
         <div class="item relative snap-start shrink-0 ${POSTER_CARD_WIDTH} aspect-[3/5] rounded-[10px] overflow-hidden group bg-zinc-800"
              style="--card-hover-color:${accent?.hoverColor || '#f2d06f'}">
             <a href="${article.link}" target="_blank" rel="noopener noreferrer" class="absolute inset-0 block" aria-hidden="true" tabindex="-1">
-                <img class="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
+                <img class="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-105"
                      src="${imgUrl}" alt="${article.title}" width="360" height="600" loading="lazy"
                      onerror="this.src='/icons/default-image.png?v=2'">
             </a>
@@ -359,7 +365,7 @@ function carouselCard(article, accent, accentColor) {
         <div class="item snap-start shrink-0 ${CAROUSEL_CARD_WIDTH} ${cardBgClass} rounded-[12px] overflow-hidden flex flex-col group"
              style="${bgStyle}--card-hover-color:${accent?.hoverColor || '#f2d06f'}">
             <a href="${article.link}" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[1.7] overflow-hidden rounded-[12px]">
-                <img class="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
+                <img class="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-110"
                      src="${imgUrl}" alt="${article.title}" width="400" height="235" loading="lazy"
                      onerror="this.src='/icons/default-image.png?v=2'">
             </a>
@@ -397,7 +403,7 @@ function magazineSideCard(article, artIndex, categoryKey, accent, accentColor) {
         <div class="item ${cardBgClass} rounded-[12px] overflow-hidden flex flex-row group flex-1 min-h-0 ${hiddenClass}" ${styleAttr}>
             <div class="w-[38%] shrink-0 overflow-hidden">
                 <a href="${article.link}" target="_blank" rel="noopener noreferrer" class="block w-full h-full">
-                    <img class="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
+                    <img class="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-105"
                          src="${imgUrl}" alt="${article.title}" width="300" height="200" loading="lazy"
                          onerror="this.src='/icons/default-image.png?v=2'">
                 </a>
@@ -441,7 +447,7 @@ function magazineFeatured(article, artIndex, categoryKey, accent, accentColor) {
         <div class="item ${cardBgClass} rounded-[12px] overflow-hidden flex flex-col group h-full ${hiddenClass}" ${styleAttr}>
             <div class="w-full aspect-[1.7] overflow-hidden shrink-0">
                 <a href="${article.link}" target="_blank" rel="noopener noreferrer" class="block w-full h-full">
-                    <img class="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
+                    <img class="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-110"
                          src="${imgUrl}" alt="${article.title}" width="800" height="470" loading="lazy"
                          onerror="this.src='/icons/default-image.png?v=2'">
                 </a>
@@ -513,7 +519,7 @@ function card(article, artIndex, categoryKey, accent, accentColor, visibleCount 
         <div class="item ${cardBgClass} rounded-[12px] overflow-hidden ${wrapperClasses}" ${cardBgAttr}>
             <div class="${imageWrapperClasses}">
                 <a href="${article.link}" target="_blank" rel="noopener noreferrer" class="block w-full h-full cursor-pointer">
-                    <img class="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
+                    <img class="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-110"
                          src="${imgUrl}" alt="${article.title}" width="800" height="470" loading="lazy"
                          onerror="this.src='/icons/default-image.png?v=2'">
                 </a>
