@@ -41,6 +41,15 @@ function loadCategoryAccents() {
 
 const categoryAccents = loadCategoryAccents();
 
+// Icons are a hand-picked set in src/icons.css (not the full Font Awesome CDN),
+// so a navIcon that isn't defined there would render as an empty box.
+const iconsCss = fs.readFileSync(path.join(ROOT, 'src/icons.css'), 'utf8');
+for (const [key, cfg] of Object.entries(categoriesConfig)) {
+    if (cfg.navIcon && !iconsCss.includes(`.${cfg.navIcon} {`)) {
+        console.warn(`⚠ categories.json "${key}": navIcon "${cfg.navIcon}" is not in src/icons.css, add its SVG there`);
+    }
+}
+
 // Non-category pages: navKey identifies which sidebar link gets the solid
 // highlight; bodyCategory is written to <body data-category="...">. h1Text is
 // injected as a visually-hidden <h1> right inside #main-content-wrapper (SEO —

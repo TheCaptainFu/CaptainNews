@@ -1,9 +1,9 @@
 // ─── String ────────────────────────────────────────────────────────────────────
 
+// DOMParser documents are inert: unlike innerHTML on a live element, no images
+// load and no onerror/onload handlers from a feed's HTML can run.
 export function stripHtml(html) {
-    const tmp = document.createElement('div');
-    tmp.innerHTML = html;
-    return tmp.textContent || tmp.innerText || '';
+    return new DOMParser().parseFromString(String(html ?? ''), 'text/html').body.textContent || '';
 }
 
 // ─── Date ──────────────────────────────────────────────────────────────────────

@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "./icons.css";
 
 /* Off-screen sections skip layout/paint until the user scrolls near them.
    The intrinsic size is only a placeholder height; "auto" remembers the real one. */

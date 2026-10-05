@@ -65,7 +65,7 @@ export const categoryAccents = {
         cardPadding: true,
         titleColor: '#000000',
         descriptionColor: 'rgba(0,0,0,0.8)',
-        hoverColor: '#f2d06f'
+        hoverColor: '#3749bd'
     },
 
     politics_greece: {
@@ -93,7 +93,7 @@ export const categoryAccents = {
         cardPadding: true,
         titleColor: '#000000',
         descriptionColor: 'rgba(0,0,0,0.8)',
-        hoverColor: '#f2d06f'
+        hoverColor: '#3749bd'
     },
 
     sports: {
@@ -121,7 +121,7 @@ export const categoryAccents = {
         cardPadding: true,
         titleColor: '#000000',
         descriptionColor: 'rgba(0,0,0,0.8)',
-        hoverColor: '#f2d06f'
+        hoverColor: '#3749bd'
     },
 
     music: {
@@ -135,7 +135,7 @@ export const categoryAccents = {
         cardPadding: true,
         titleColor: 'black',
         descriptionColor: 'rgba(0,0,0,0.8)',
-        hoverColor: '#f2d06f'
+        hoverColor: '#3749bd'
     },
 
     gossip: {
@@ -177,7 +177,7 @@ export const categoryAccents = {
         cardPadding: true,
         titleColor: '#000000',
         descriptionColor: 'rgba(0,0,0,0.8)',
-        hoverColor: ''
+        hoverColor: '#3749bd'
     },
 
     strikes: {

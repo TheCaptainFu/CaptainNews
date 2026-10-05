@@ -1,7 +1,7 @@
 // ─── Imports ───────────────────────────────────────────────────────────────────
 
-import { categoryDisplayNames, categoryAccents, sourceUrls, INITIAL_VISIBLE_COUNT } from './config.js?v=71';
-import { stripHtml, timeAgo } from './utils.js?v=71';
+import { categoryDisplayNames, categoryAccents, sourceUrls, INITIAL_VISIBLE_COUNT } from './config.js?v=76';
+import { stripHtml, timeAgo } from './utils.js?v=76';
 
 // ─── Public API ────────────────────────────────────────────────────────────────
 
@@ -525,7 +525,7 @@ function card(article, artIndex, categoryKey, accent, accentColor, visibleCount 
                 </a>
             </div>
             <div class="${infoWrapperClasses}">
-                <div class="title text-[20px] leading-[26px] font-bold font-condensed pb-[10px] ${isFeatured ? 'text-[26px] leading-[32px]' : 'min-h-[50px]'}" style="color:${titleColor}">
+                <div class="title font-bold font-condensed pb-[10px] ${isFeatured ? 'text-[21px] leading-[25px] md:text-[26px] md:leading-[32px]' : 'text-[20px] leading-[26px] min-h-[50px]'}" style="color:${titleColor}">
                     <a href="${article.link}" target="_blank" rel="noopener noreferrer"
                        class="hover:text-(--card-hover-color) transition-colors duration-300">${article.title}</a>
                 </div>
