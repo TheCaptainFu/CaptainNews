@@ -20,11 +20,15 @@
   Cache-Control: no-cache, must-revalidate
   ! Content-Security-Policy
 
+# JS/CSS: browsers keep them a day (the ?v= in the URL busts that), but Cloudflare's
+# edge must not: during a deploy it cached the OLD file under the NEW ?v URL three times.
 /src/*.css
   Cache-Control: public, max-age=86400
+  Cloudflare-CDN-Cache-Control: no-store
 
 /js/*.js
   Cache-Control: public, max-age=86400
+  Cloudflare-CDN-Cache-Control: no-store
 
 /icons/*
   Cache-Control: public, max-age=604800, immutable
