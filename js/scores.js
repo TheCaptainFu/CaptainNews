@@ -2,7 +2,7 @@
 // Data from /api/scores (functions/api/scores.js). Hidden when there are no
 // games today; refreshes every 60s only while a game is live and the tab is visible.
 
-import { escapeHtml } from './utils.js?v=84';
+import { escapeHtml } from './utils.js?v=85';
 
 const REFRESH_MS = 60_000;
 const COMP_KEY   = 'scoresCompetition';
