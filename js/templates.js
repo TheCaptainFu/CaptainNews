@@ -1,7 +1,7 @@
 // ─── Imports ───────────────────────────────────────────────────────────────────
 
-import { categoryDisplayNames, categoryAccents, sourceUrls, INITIAL_VISIBLE_COUNT } from './config.js?v=78';
-import { stripHtml, timeAgo, escapeHtml, safeUrl } from './utils.js?v=78';
+import { categoryDisplayNames, categoryAccents, sourceUrls, INITIAL_VISIBLE_COUNT } from './config.js?v=79';
+import { stripHtml, timeAgo, escapeHtml, safeUrl } from './utils.js?v=79';
 
 // ─── Public API ────────────────────────────────────────────────────────────────
 
@@ -393,7 +393,7 @@ function carouselCard(article, accent, accentColor) {
     return `
         <div class="item snap-start shrink-0 ${CAROUSEL_CARD_WIDTH} ${cardBgClass} rounded-[12px] overflow-hidden flex flex-col group"
              style="${bgStyle}--card-hover-color:${accent?.hoverColor || '#f2d06f'}">
-            <a href="${article.link}" target="_blank" rel="noopener noreferrer" class="block w-full aspect-[1.7] overflow-hidden rounded-[12px]">
+            <a href="${article.link}" target="_blank" rel="noopener noreferrer" class="block w-full aspect-square overflow-hidden rounded-[12px]">
                 <img class="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-110"
                      src="${imgUrl}" alt="${article.title}" width="400" height="235" loading="lazy"
                      onerror="this.src='/icons/default-image.png?v=2'">

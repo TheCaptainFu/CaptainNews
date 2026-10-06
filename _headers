@@ -14,8 +14,11 @@
 /policy
   Cache-Control: no-cache, must-revalidate
 
+# The service worker proxies images from every news site; under the page CSP
+# its fetch() would be limited to connect-src and all photos would break.
 /sw.js
   Cache-Control: no-cache, must-revalidate
+  ! Content-Security-Policy
 
 /src/*.css
   Cache-Control: public, max-age=86400

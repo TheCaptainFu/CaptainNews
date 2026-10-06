@@ -1,10 +1,10 @@
 // ─── Imports ───────────────────────────────────────────────────────────────────
 
-import { WORKER_URL, IS_LOCAL, categoryOrder } from './config.js?v=78';
-import { buildSection } from './templates.js?v=78';
-import { initSearch } from './search.js?v=78';
-import { escapeHtml, safeUrl } from './utils.js?v=78';
-import { dedupeNews } from './dedupe.js?v=78';
+import { WORKER_URL, IS_LOCAL, categoryOrder } from './config.js?v=79';
+import { buildSection } from './templates.js?v=79';
+import { initSearch } from './search.js?v=79';
+import { escapeHtml, safeUrl } from './utils.js?v=79';
+import { dedupeNews } from './dedupe.js?v=79';
 
 // ─── News loader ───────────────────────────────────────────────────────────────
 

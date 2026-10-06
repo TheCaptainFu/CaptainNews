@@ -1,4 +1,4 @@
-const CACHE_NAME = 'captainnews-v4';
+const CACHE_NAME = 'captainnews-v5';
 const PRECACHE = [
     '/',
     '/contact/',

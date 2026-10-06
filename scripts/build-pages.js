@@ -272,7 +272,7 @@ function skeletonPosterLayout() {
 function skeletonCarouselLayout() {
     const card = `
             <div class="shrink-0 w-[78%] min-[560px]:w-[46%] lg:w-[calc((100%-48px)/4)] flex flex-col animate-pulse">
-                <div class="w-full aspect-[1.7] bg-zinc-800 rounded-[12px]"></div>
+                <div class="w-full aspect-square bg-zinc-800 rounded-[12px]"></div>
                 <div class="pt-[12px] px-[4px] flex flex-col gap-[8px]">
                     <div class="h-[17px] bg-zinc-700 rounded w-full"></div>
                     <div class="h-[17px] bg-zinc-700 rounded w-2/3"></div>
