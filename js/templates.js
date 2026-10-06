@@ -1,11 +1,35 @@
 // ─── Imports ───────────────────────────────────────────────────────────────────
 
-import { categoryDisplayNames, categoryAccents, sourceUrls, INITIAL_VISIBLE_COUNT } from './config.js?v=76';
-import { stripHtml, timeAgo } from './utils.js?v=76';
+import { categoryDisplayNames, categoryAccents, sourceUrls, INITIAL_VISIBLE_COUNT } from './config.js?v=78';
+import { stripHtml, timeAgo, escapeHtml, safeUrl } from './utils.js?v=78';
 
 // ─── Public API ────────────────────────────────────────────────────────────────
 
-export function buildSection(categoryKey, articles) {
+// Feed fields are untrusted. Every article is escaped once here, so the
+// templates below can interpolate its fields into HTML as-is.
+function toSafeArticle(a) {
+    const link  = safeUrl(a.link);
+    const image = safeUrl(a.image);
+    return {
+        date:            a.date,
+        title:           escapeHtml(a.title),
+        source:          escapeHtml(a.source),
+        sourceUrl:       escapeHtml(safeUrl(sourceUrls[a.source])),
+        link:            escapeHtml(link),
+        image:           image === '#' ? '' : escapeHtml(image),
+        descriptionText: stripHtml(a.description).trim(),           // plain text; escape after truncating
+        shareText:       `${stripHtml(a.title)}\n${link}\n\nμέσω captainnews.gr`, // raw, for encodeURIComponent
+        // Other sources for the same story (js/dedupe.js). JSON in a data attribute,
+        // read by window.showSources in main.js, which builds the list with DOM APIs.
+        relatedCount:    a.related?.length || 0,
+        relatedJson:     a.related?.length
+            ? escapeHtml(JSON.stringify(a.related.map(r => ({ source: String(r.source || ''), title: stripHtml(r.title), link: safeUrl(r.link) }))))
+            : '',
+    };
+}
+
+export function buildSection(categoryKey, rawArticles) {
+    const articles    = (rawArticles || []).map(toSafeArticle);
     const accent      = categoryAccents[categoryKey];
     const accentColor = accent?.color || '#4f72ff';
     const title       = categoryDisplayNames[categoryKey] || categoryKey.toUpperCase();
@@ -191,7 +215,7 @@ function timelineLayout(articles, categoryKey, accent, accentColor) {
 
 function timelineItem(article, accent, accentColor, line, hiddenClass) {
     const titleColor = accent?.titleColor || '#ffffff';
-    const sourceUrl  = sourceUrls[article.source] || '#';
+    const sourceUrl  = article.sourceUrl;
 
     return `
         <div class="${TIMELINE_ROW} group ${hiddenClass}" style="--card-hover-color:${accent?.hoverColor || '#f2d06f'}">
@@ -209,6 +233,7 @@ function timelineItem(article, accent, accentColor, line, hiddenClass) {
                         <a href="${sourceUrl}" target="_blank" rel="noopener noreferrer"
                            class="text-[12px] font-condensed font-bold whitespace-nowrap text-(--card-link-color) hover:text-(--card-hover-color) hover:underline"
                            style="--card-link-color:${accentColor}">${article.source}</a>
+                        ${moreSources(article, accentColor)}
                         ${shareActions(article, titleColor, true)}
                     </div>
                 </div>
@@ -273,6 +298,7 @@ function bentoTile(article, isBig, accent, accentColor, sizeOverride = '') {
                 <div class="flex flex-wrap items-center justify-between gap-x-2 gap-y-[2px]">
                     <div class="flex items-center gap-[6px] min-w-0">
                         <span class="text-[11px] md:text-[12px] font-condensed font-bold whitespace-nowrap" style="color:${accentColor}">${article.source}</span>
+                        ${moreSources(article, '#ffffff')}
                         <span class="text-white/50 text-[11px]">·</span>
                         <span class="text-[11px] font-condensed whitespace-nowrap text-white/80">${timeStr}</span>
                     </div>
@@ -322,7 +348,10 @@ function posterCard(article, accent) {
                    class="font-condensed font-black uppercase text-[20px] leading-[22px] md:text-[25px] md:leading-[27px] line-clamp-5 text-(--title-color) hover:text-(--card-hover-color) transition-colors duration-300"
                    style="--title-color:${overlay}">${article.title}</a>
                 <div class="flex items-center justify-between gap-2">
-                    <span class="min-w-0 truncate text-[11px] font-condensed font-bold text-white/70">${article.source} · ${timeAgo(article.date)}</span>
+                    <span class="min-w-0 flex items-center gap-[6px]">
+                        <span class="min-w-0 truncate text-[11px] font-condensed font-bold text-white/70">${article.source} · ${timeAgo(article.date)}</span>
+                        ${moreSources(article, '#ffffff')}
+                    </span>
                     ${shareActions(article, overlay, true)}
                 </div>
             </div>
@@ -354,7 +383,7 @@ function carouselLayout(articles, categoryKey, accent, accentColor) {
 function carouselCard(article, accent, accentColor) {
     const imgUrl      = article.image || '/icons/default-image.png?v=2';
     const timeStr     = timeAgo(article.date);
-    const sourceUrl   = sourceUrls[article.source] || '#';
+    const sourceUrl   = article.sourceUrl;
     const cardBg      = accent?.cardBg || '';
     const cardBgClass = cardBg ? '' : 'bg-main-grey';
     const bgStyle     = cardBg ? `background-color:${cardBg};` : '';
@@ -378,6 +407,7 @@ function carouselCard(article, accent, accentColor) {
                         <a href="${sourceUrl}" target="_blank" rel="noopener noreferrer"
                            class="text-[12px] font-condensed font-bold text-(--card-link-color) hover:text-(--card-hover-color) hover:underline whitespace-nowrap"
                            style="--card-link-color:${accentColor}">${article.source}</a>
+                        ${moreSources(article, accentColor)}
                         <span class="text-zinc-500 text-[11px]">·</span>
                         <span class="text-[11px] font-condensed whitespace-nowrap" style="color:${titleColor}">${timeStr}</span>
                     </div>
@@ -390,7 +420,7 @@ function carouselCard(article, accent, accentColor) {
 function magazineSideCard(article, artIndex, categoryKey, accent, accentColor) {
     const imgUrl      = article.image || '/icons/default-image.png?v=2';
     const timeStr     = timeAgo(article.date);
-    const sourceUrl   = sourceUrls[article.source] || '#';
+    const sourceUrl   = article.sourceUrl;
     const isHidden    = artIndex >= INITIAL_VISIBLE_COUNT;
     const hiddenClass = isHidden ? `hidden hidden-item-${categoryKey}` : '';
     const cardBg      = accent?.cardBg || '';
@@ -418,6 +448,7 @@ function magazineSideCard(article, artIndex, categoryKey, accent, accentColor) {
                         <a href="${sourceUrl}" target="_blank" rel="noopener noreferrer"
                            class="text-[11px] font-condensed font-bold text-(--card-link-color) hover:text-(--card-hover-color) hover:underline whitespace-nowrap"
                            style="--card-link-color:${accentColor}">${article.source}</a>
+                        ${moreSources(article, accentColor)}
                         <span class="text-zinc-600 text-[11px]">·</span>
                         <span class="text-[11px] font-condensed whitespace-nowrap" style="color:${titleColor}">${timeStr}</span>
                     </div>
@@ -430,7 +461,7 @@ function magazineSideCard(article, artIndex, categoryKey, accent, accentColor) {
 function magazineFeatured(article, artIndex, categoryKey, accent, accentColor) {
     const imgUrl      = article.image || '/icons/default-image.png?v=2';
     const timeStr     = timeAgo(article.date);
-    const sourceUrl   = sourceUrls[article.source] || '#';
+    const sourceUrl   = article.sourceUrl;
     const isHidden    = artIndex >= INITIAL_VISIBLE_COUNT;
     const hiddenClass = isHidden ? `hidden hidden-item-${categoryKey}` : '';
     const cardBg      = accent?.cardBg || '';
@@ -439,8 +470,8 @@ function magazineFeatured(article, artIndex, categoryKey, accent, accentColor) {
     const styleAttr   = `style="${bgStyle}--card-source-border:${accentColor};--card-hover-color:${accent?.hoverColor || '#f2d06f'}"`;
     const titleColor       = accent?.titleColor || '#ffffff';
     const descriptionColor = accent?.descriptionColor || 'rgba(255,255,255,0.8)';
-    const description = article.description
-        ? stripHtml(article.description).substring(0, 200) + '...'
+    const description = article.descriptionText
+        ? escapeHtml(article.descriptionText.substring(0, 200)) + '...'
         : 'Διαβάστε περισσότερα για το θέμα στην πηγή.';
 
     return `
@@ -465,6 +496,7 @@ function magazineFeatured(article, artIndex, categoryKey, accent, accentColor) {
                         <a href="${sourceUrl}" target="_blank" rel="noopener noreferrer"
                            class="text-[14px] font-condensed font-bold text-(--card-link-color) hover:text-(--card-hover-color) hover:underline whitespace-nowrap"
                            style="--card-link-color:${accentColor}">${article.source}</a>
+                        ${moreSources(article, accentColor)}
                         <span class="text-zinc-600 text-[11px]">·</span>
                         <span class="text-[12px] font-condensed whitespace-nowrap" style="color:${titleColor}">${timeStr}</span>
                     </div>
@@ -480,7 +512,7 @@ function magazineFeatured(article, artIndex, categoryKey, accent, accentColor) {
 function card(article, artIndex, categoryKey, accent, accentColor, visibleCount = INITIAL_VISIBLE_COUNT) {
     const imgUrl     = article.image || '/icons/default-image.png?v=2';
     const timeStr    = timeAgo(article.date);
-    const sourceUrl  = sourceUrls[article.source] || '#';
+    const sourceUrl  = article.sourceUrl;
     const isFeatured = artIndex === 0;
     const isHidden   = artIndex >= visibleCount;
 
@@ -511,8 +543,8 @@ function card(article, artIndex, categoryKey, accent, accentColor, visibleCount 
     const titleColor       = accent?.titleColor || '#ffffff';
     const descriptionColor = accent?.descriptionColor || 'rgba(255,255,255,0.8)';
 
-    const description = article.description
-        ? stripHtml(article.description).substring(0, charLimit) + '...'
+    const description = article.descriptionText
+        ? escapeHtml(article.descriptionText.substring(0, charLimit)) + '...'
         : 'Διαβάστε περισσότερα για το θέμα στην πηγή.';
 
     return `
@@ -536,6 +568,7 @@ function card(article, artIndex, categoryKey, accent, accentColor, visibleCount 
                     Πηγή: <a href="${sourceUrl}" target="_blank" rel="noopener noreferrer"
                               class="text-(--card-link-color) hover:text-(--card-hover-color) hover:underline transition-colors"
                               style="--card-link-color:${accentColor}">${article.source}</a>
+                    ${moreSources(article, accentColor)}
                 </div>
                 <div class="card-footer flex items-center justify-between pt-[20px]">
                     <div class="time text-[14px] leading-[16px] font-bold font-condensed" style="color:${titleColor}">${timeStr}</div>
@@ -545,12 +578,23 @@ function card(article, artIndex, categoryKey, accent, accentColor, visibleCount 
         </div>`;
 }
 
+// ─── "+N πηγές" ────────────────────────────────────────────────────────────────
+
+function moreSources(article, color) {
+    if (!article.relatedCount) return '';
+    const n = article.relatedCount;
+    return `<button type="button" onclick="showSources(this)" data-sources="${article.relatedJson}"
+                    title="Το ίδιο θέμα και από άλλες πηγές" aria-label="Δες ${n} ακόμα ${n === 1 ? 'πηγή' : 'πηγές'}"
+                    class="more-sources shrink-0 whitespace-nowrap cursor-pointer rounded-full border px-[6px] py-[1px] text-[10px] leading-[14px] font-condensed font-bold opacity-80 hover:opacity-100 transition-opacity"
+                    style="color:${color};border-color:${color}">+${n} ${n === 1 ? 'πηγή' : 'πηγές'}</button>`;
+}
+
 // ─── Share buttons ─────────────────────────────────────────────────────────────
 
 // The "μέσω captainnews.gr" line is what brings recipients back to the site,
 // since there are no per-article pages of our own to link to.
 function shareButtons(article, color) {
-    const text = encodeURIComponent(`${article.title}\n${article.link}\n\nμέσω captainnews.gr`);
+    const text = encodeURIComponent(article.shareText);
     // 34×36 tap target around an 18px icon; the negative margin keeps the
     // card footer the same height as before.
     const cls  = 'share-btn inline-flex items-center justify-center w-[34px] h-[36px] -my-[10px] text-[18px] leading-none text-(--card-link-color) hover:text-(--card-hover-color) transition-all';
@@ -571,7 +615,7 @@ function copyButton(article, color, compact = false) {
     const label = compact ? 'copy-label sr-only' : 'copy-label';
     const size  = compact ? 'w-[34px] h-[36px] -my-[10px] justify-center' : 'gap-1';
     return `
-        <button onclick="copyArticleLink(this, '${article.link}')"
+        <button data-link="${article.link}" onclick="copyArticleLink(this)"
                 title="Αντιγραφή συνδέσμου" aria-label="Αντιγραφή συνδέσμου"
                 class="copy-btn inline-flex items-center ${size} text-[12px] leading-[14px] font-bold font-condensed text-(--card-link-color) hover:text-(--card-hover-color) transition-all cursor-pointer"
                 style="--card-link-color:${color}">

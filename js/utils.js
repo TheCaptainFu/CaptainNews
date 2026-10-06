@@ -1,5 +1,17 @@
 // ─── String ────────────────────────────────────────────────────────────────────
 
+// Feed data is untrusted: anything going into HTML must pass through these.
+export function escapeHtml(s) {
+    return String(s ?? '')
+        .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+}
+
+// Only http(s) links; blocks javascript:, data: and the like.
+export function safeUrl(u) {
+    return /^https?:\/\//i.test(String(u ?? '').trim()) ? String(u).trim() : '#';
+}
+
 // DOMParser documents are inert: unlike innerHTML on a live element, no images
 // load and no onerror/onload handlers from a feed's HTML can run.
 export function stripHtml(html) {

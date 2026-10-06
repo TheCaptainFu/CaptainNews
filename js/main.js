@@ -1,8 +1,10 @@
 // ─── Imports ───────────────────────────────────────────────────────────────────
 
-import { WORKER_URL, IS_LOCAL, categoryOrder } from './config.js?v=76';
-import { buildSection } from './templates.js?v=76';
-import { initSearch } from './search.js?v=76';
+import { WORKER_URL, IS_LOCAL, categoryOrder } from './config.js?v=78';
+import { buildSection } from './templates.js?v=78';
+import { initSearch } from './search.js?v=78';
+import { escapeHtml, safeUrl } from './utils.js?v=78';
+import { dedupeNews } from './dedupe.js?v=78';
 
 // ─── News loader ───────────────────────────────────────────────────────────────
 
@@ -29,7 +31,7 @@ async function loadNews() {
     if (!mainWrapper) return;
 
     try {
-        const data = readEmbeddedNews() ?? await fetchNews();
+        const data = dedupeNews(readEmbeddedNews() ?? await fetchNews(), categoryOrder);
         mainWrapper.innerHTML = '';
 
         const orderedKeys = [
@@ -63,9 +65,9 @@ function populateTicker(data) {
 
     const sep   = '<span class="text-zinc-700 mx-6 select-none">⚓</span>';
     const items = headlines.map(a =>
-        `<a href="${a.link}" target="_blank" rel="noopener noreferrer"
+        `<a href="${escapeHtml(safeUrl(a.link))}" target="_blank" rel="noopener noreferrer"
             class="text-zinc-300 hover:text-[#f2d06f] text-[11px] font-condensed font-bold uppercase tracking-wide transition-colors cursor-pointer whitespace-nowrap">
-            ${a.title}
+            ${escapeHtml(a.title)}
          </a>`
     ).join(sep);
 
@@ -173,8 +175,10 @@ window.addEventListener('scroll', () => {
 
 // ─── Global helpers (called from inline onclick in templates) ──────────────────
 
-window.copyArticleLink = (btn, url) => {
-    navigator.clipboard.writeText(url).then(() => {
+// The link comes from the button's data-link attribute, never from an inline
+// JS string, so a quote in a feed URL can't break out of the onclick handler.
+window.copyArticleLink = btn => {
+    navigator.clipboard.writeText(btn.dataset.link || '').then(() => {
         const label = btn.querySelector('.copy-label');
         const icon  = btn.querySelector('.copy-icon');
         icon.innerHTML    = '<polyline points="20 6 9 17 4 12"></polyline>';
@@ -197,6 +201,62 @@ window.scrollCarousel = (categoryKey, dir) => {
     const step = card.getBoundingClientRect().width + (parseFloat(getComputedStyle(track).columnGap) || 0);
     track.scrollBy({ left: dir * step, behavior: 'smooth' });
 };
+
+// "+N πηγές": small popover listing the other sources of a merged story.
+// Built with DOM APIs from the button's data attribute (feed data, untrusted).
+(() => {
+    let pop = null;
+    const close = () => { pop?.remove(); pop = null; };
+
+    window.showSources = btn => {
+        const wasOpenForThis = pop && pop.dataset.for === btn.dataset.sources;
+        close();
+        if (wasOpenForThis) return;
+
+        let items = [];
+        try { items = JSON.parse(btn.dataset.sources || '[]'); } catch { return; }
+
+        pop = document.createElement('div');
+        pop.dataset.for = btn.dataset.sources;
+        pop.setAttribute('role', 'dialog');
+        pop.className = 'fixed z-[90] w-[min(320px,calc(100vw-24px))] bg-zinc-900 text-white border border-zinc-700 rounded-[10px] shadow-2xl p-[10px]';
+
+        const head = document.createElement('div');
+        head.className = 'text-zinc-400 font-condensed font-bold text-[11px] uppercase tracking-widest px-[6px] pb-[6px]';
+        head.textContent = 'Το ίδιο θέμα από';
+        pop.appendChild(head);
+
+        for (const it of items) {
+            const a = document.createElement('a');
+            a.href = safeUrl(it.link);
+            a.target = '_blank';
+            a.rel = 'noopener noreferrer';
+            a.className = 'block px-[6px] py-[6px] rounded-[6px] hover:bg-zinc-800 transition-colors';
+            const src = document.createElement('div');
+            src.className = 'text-[#f2d06f] font-condensed font-bold text-[12px]';
+            src.textContent = it.source;
+            const title = document.createElement('div');
+            title.className = 'text-[13px] leading-[17px] font-condensed line-clamp-2';
+            title.textContent = it.title;
+            a.append(src, title);
+            pop.appendChild(a);
+        }
+        document.body.appendChild(pop);
+
+        const r = btn.getBoundingClientRect();
+        const left = Math.min(Math.max(12, r.left), window.innerWidth - pop.offsetWidth - 12);
+        const below = r.bottom + 6 + pop.offsetHeight < window.innerHeight;
+        pop.style.left = `${left}px`;
+        pop.style.top  = `${below ? r.bottom + 6 : Math.max(12, r.top - pop.offsetHeight - 6)}px`;
+    };
+
+    document.addEventListener('click', e => {
+        if (pop && !pop.contains(e.target) && !e.target.closest('.more-sources')) close();
+    });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
+    window.addEventListener('scroll', close, { passive: true });
+    window.addEventListener('resize', close);
+})();
 
 window.loadAllArticles = categoryKey => {
     document.querySelectorAll(`.hidden-item-${categoryKey}`).forEach(el => el.classList.remove('hidden'));

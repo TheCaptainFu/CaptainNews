@@ -1,1 +1,16 @@
-# No redirects needed - clean URLs handled by contact/ and policy/ folders
+# The whole repo is the Pages output directory, so source/build files would
+# otherwise be downloadable. Send them to the homepage instead.
+# (news.json stays reachable: the local dev server reads it.)
+/package.json        /  301
+/package-lock.json   /  301
+/worker.js           /  301
+/update-news.js      /  301
+/categories.json     /  301
+/js/update_news.js   /  301
+/_headers            /  301
+/_routes.json        /  301
+/.gitignore          /  301
+/.htaccess           /  301
+/scripts/*           /  301
+/partials/*          /  301
+/functions/*         /  301

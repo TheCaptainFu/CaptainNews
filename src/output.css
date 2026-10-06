@@ -319,6 +319,9 @@
   .z-\[80\] {
     z-index: 80;
   }
+  .z-\[90\] {
+    z-index: 90;
+  }
   .col-span-1 {
     grid-column: span 1 / span 1;
   }
@@ -664,6 +667,9 @@
   .w-\[calc\(100\%-24px\)\] {
     width: calc(100% - 24px);
   }
+  .w-\[min\(320px\,calc\(100vw-24px\)\)\] {
+    width: min(320px, calc(100vw - 24px));
+  }
   .w-full {
     width: 100%;
   }
@@ -717,6 +723,9 @@
   }
   .cursor-pointer {
     cursor: pointer;
+  }
+  .resize {
+    resize: both;
   }
   .snap-x {
     scroll-snap-type: x var(--tw-scroll-snap-strictness);
@@ -1081,6 +1090,9 @@
   .px-\[4px\] {
     padding-inline: 4px;
   }
+  .px-\[6px\] {
+    padding-inline: 6px;
+  }
   .px-\[14px\] {
     padding-inline: 14px;
   }
@@ -1105,8 +1117,14 @@
   .py-12 {
     padding-block: calc(var(--spacing) * 12);
   }
+  .py-\[1px\] {
+    padding-block: 1px;
+  }
   .py-\[3px\] {
     padding-block: 3px;
+  }
+  .py-\[6px\] {
+    padding-block: 6px;
   }
   .py-\[10px\] {
     padding-block: 10px;
@@ -1167,6 +1185,9 @@
   }
   .pb-\[5px\] {
     padding-bottom: 5px;
+  }
+  .pb-\[6px\] {
+    padding-bottom: 6px;
   }
   .pb-\[8px\] {
     padding-bottom: 8px;
@@ -1272,6 +1293,10 @@
     --tw-leading: 16px;
     line-height: 16px;
   }
+  .leading-\[17px\] {
+    --tw-leading: 17px;
+    line-height: 17px;
+  }
   .leading-\[19px\] {
     --tw-leading: 19px;
     line-height: 19px;
@@ -1358,6 +1383,9 @@
   .text-\[\#3749bd\] {
     color: #3749bd;
   }
+  .text-\[\#f2d06f\] {
+    color: #f2d06f;
+  }
   .text-black {
     color: var(--color-black);
   }
@@ -1421,6 +1449,9 @@
   }
   .opacity-30 {
     opacity: 30%;
+  }
+  .opacity-80 {
+    opacity: 80%;
   }
   .shadow-2xl {
     --tw-shadow: 0 25px 50px -12px var(--tw-shadow-color, rgb(0 0 0 / 0.25));
@@ -1554,6 +1585,9 @@
     }
     .hover\:underline:hover {
       text-decoration-line: underline;
+    }
+    .hover\:opacity-100:hover {
+      opacity: 100%;
     }
     .hover\:shadow-\[0_0_20px_rgba\(55\,73\,189\,0\.3\)\]:hover {
       --tw-shadow: 0 0 20px var(--tw-shadow-color, rgba(55,73,189,0.3));
