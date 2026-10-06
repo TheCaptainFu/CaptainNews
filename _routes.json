@@ -33,7 +33,8 @@
     "/apergies",
     "/apergies/",
     "/apergies/index.html",
-    "/news-sitemap.xml"
+    "/news-sitemap.xml",
+    "/api/*"
   ],
   "exclude": []
 }

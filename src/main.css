@@ -1,6 +1,16 @@
 @import "tailwindcss";
 @import "./icons.css";
 
+/* Section titles (ΑΘΛΗΤΙΚΑ, CINE …). PF DIN Text Comp Pro has full Greek but only
+   this one weight, so titles use font-medium and the browser must not fake a bolder one. */
+@font-face {
+    font-family: "PF DIN Text Comp";
+    src: url("/fonts/PFDin-Medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
 /* Off-screen sections skip layout/paint until the user scrolls near them.
    The intrinsic size is only a placeholder height; "auto" remembers the real one. */
 .category-group {
@@ -49,6 +59,7 @@ body {
     /* FONTS */
     --font-roboto: "Roboto", sans-serif;
     --font-condensed: "Roboto Condensed", sans-serif;
+    --font-label: "PF DIN Text Comp", "Roboto Condensed", sans-serif;
 
     /* SPACINGS */
     --spacing-10: "10px",
@@ -154,4 +165,8 @@ body.ticker-hidden #category-bar { top: 70px; }
     --cc-btn-secondary-hover-bg: #3f3f46; 
     --cc-toggle-on-bg: #3749bd;
     --cc-font-family: 'Roboto Condensed', sans-serif; 
+}
+
+.font-label {
+    font-synthesis-weight: none;
 }

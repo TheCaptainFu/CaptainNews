@@ -1,10 +1,11 @@
 // ─── Imports ───────────────────────────────────────────────────────────────────
 
-import { WORKER_URL, IS_LOCAL, categoryOrder } from './config.js?v=79';
-import { buildSection } from './templates.js?v=79';
-import { initSearch } from './search.js?v=79';
-import { escapeHtml, safeUrl } from './utils.js?v=79';
-import { dedupeNews } from './dedupe.js?v=79';
+import { WORKER_URL, IS_LOCAL, categoryOrder } from './config.js?v=84';
+import { buildSection } from './templates.js?v=84';
+import { initSearch } from './search.js?v=84';
+import { escapeHtml, safeUrl } from './utils.js?v=84';
+import { dedupeNews } from './dedupe.js?v=84';
+import { initScores } from './scores.js?v=84';
 
 // ─── News loader ───────────────────────────────────────────────────────────────
 
@@ -46,6 +47,7 @@ async function loadNews() {
         setupFilterLogic();
         populateTicker(data);
         initSearch(data);
+        initScores();
 
     } catch (err) {
         console.error('loadNews error:', err);
