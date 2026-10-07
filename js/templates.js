@@ -1,7 +1,7 @@
 // ─── Imports ───────────────────────────────────────────────────────────────────
 
-import { categoryDisplayNames, categoryAccents, sourceUrls, INITIAL_VISIBLE_COUNT } from './config.js?v=85';
-import { stripHtml, timeAgo, escapeHtml, safeUrl } from './utils.js?v=85';
+import { categoryDisplayNames, categoryAccents, sourceUrls, INITIAL_VISIBLE_COUNT } from './config.js?v=88';
+import { stripHtml, timeAgo, escapeHtml, safeUrl } from './utils.js?v=88';
 
 // ─── Public API ────────────────────────────────────────────────────────────────
 
